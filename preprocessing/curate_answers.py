@@ -12,13 +12,10 @@ answer_value coded as:
 1: Ye
 0: No
 -1: Field doesn't know / I don't know (we recode this to np.nan)
-
-n answers = 321.007 (many values before subsetting questions)
-n entries = 1.463
 """
 
 # load data
-data = pd.read_csv("../data/raw/raw_data.csv")
+data = pd.read_csv("../data/raw/answersets.csv")
 data = data.rename(columns={"value": "answer_value"})
 
 # take out the relevant columns
@@ -37,58 +34,8 @@ answers = data[
 answers["parent_question_id"] = answers["parent_question_id"].fillna(0).astype(int)
 check_data(answers)
 
-### Questions that could be relevant for the analysis ###
-# Are other religious groups in cultural contact with target religion:
-# --> Is there violent conflict (within sample region):
-# --> Is there violent conflict (with groups outside the sample region):
-# Does membership in this religious group require permanent scarring or painful bodily alterations:
-# --> Tattoos/scarification:
-# --> Circumcision:
-# Are extra-ritual in-group markers present: (are we using this one?)
-
-### plan for analysis ###
-
-## preprocessing ##
-# take all group entries (v5, v6).
-# map related questions between these.
-# infer "no" from super-questions to sub-questions (alternative is to only work with those that have "yes" for super-questions, but in this case I think that is a bad idea).
-# (potentially; check effects by region--they have this control in their paper).
-
-## analysis ##
-# split cultural contact into 4 categories:
-# --> no violent conflict (this includes cases with no cultural contact).
-# --> only violent conflict within sample region
-# --> only violent conflict outside sample region
-# --> violent conflict within and outside sample region
-
-# figure 1, 2, 3:
-# --> these we cannot really make because they require a measure of "strength" (not just presence/absence).
-
-# figure 4:
-# --> collapse predictor into external vs. no external.
-# --> genital mutilation (their paper) = circumcision (our data)
-# --> tattooing and scarification (their paper) = collapsed into 1 category in our data.
-# --> piercing (their paper) = not in our data?
-
-# figure 5:
-# --> not clear to me that we have painting, ingestion, isolation (i.e., this resolution in "rites").
-
-## statistical tests ##
-# --> their tests are against a composite "cost rating" which we do not really have in the DRH.
-# --> we could run the following models:
-# --> permanent scarring or bodily alterations ~ violent conflict (yes/no).
-# --> permanent scarring or bodily alterations ~ violent conflict (no/within/outside/both).
-# --> (could do the same for the sub-questions--i.e., tatoos/scarrification, circumcision).
-# --> (maybe also for extra-ritual in-group markers).
-
 """ 
-Related questions. 
-For each question (id) find the related question (id) in the "Religious Group (v6)" poll.
-This is important for subsetting questions from various polls that correspond 
-to each other, but might be named differently. 
-
-n answers = 243.080
-n entries = 1.463
+notes:
 """
 
 question_relation = pd.read_csv("../data/raw/question_relation.csv")
@@ -109,15 +56,7 @@ answers = answers.merge(related_questions, on=["question_id", "poll"], how="inne
 check_data(answers)
 
 """ 
-Select all of the questions in "question_coding".
-
-These are: 
-- "A supreme high god is present:"
-- "Is supernatural monitoring present:"
-and most of their child questions. 
-
-n answers = 25.256 (1: 15.158, 0: 7.828, -1: 2.270)
-n entries = 1.422
+notes:
 """
 
 # could also include the additional question we discussed with Ted.
@@ -227,24 +166,6 @@ check_data(answers_subset)
 
 """ 
 notes:
-228: unclear to me why we have inconsistency here (not reflected on website).
-574: I think this is a good case for not including inconsistent (borderline case). 
-638: unclear to me why we have inconsistency here (not reflected on website).
-727: this is a case where it makes sense (history). 
-775: another good case for not including (borderline case). 
-893: another case where only 1 answer is "active". 
-
-to-do: 
-- check if these are consistent from the api.
-- check if the variable (Partheeban) is any good. 
-- contact Partheeban.
-"""
-
-""" 
-Fill in missing values with np.nan 
-
-n answers = 27.875 (1: 11.621, 0: 5.899, NaN: 10.355) 
-n entries = 774
 """
 
 # rename to related

@@ -1,7 +1,7 @@
 import pandas as pd
 
 # load the data dump
-data_raw = pd.read_csv("../data/raw/data_dump.csv")
+data_raw = pd.read_csv("../data/raw/answersets_dump.csv")
 
 # select relevant columns
 data_raw = data_raw[
@@ -20,4 +20,4 @@ data_raw = data_raw[
 ]
 
 # save the data
-data_raw.to_csv("../data/raw/raw_data.csv", index=False)
+data_raw.to_csv("../data/raw/answersets.csv", index=False)
