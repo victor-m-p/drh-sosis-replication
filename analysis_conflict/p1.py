@@ -6,7 +6,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-answers = pd.read_csv("../data/preprocessed/answers.csv")
+answers = pd.read_csv("../data/preprocessed/answers_conflict.csv")
 answers.groupby(["question_id", "question_short"]).size()
 
 # make a first plot with permanent scarring and extra-ritual in-group markers against warfare.

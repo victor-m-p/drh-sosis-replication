@@ -1,5 +1,7 @@
 """
-vmp 2023-04-04
+Willis idea for study.
+Not clear that we have any effect here.
+Might want to delete this again and focus on replication.
 """
 
 import pandas as pd
@@ -36,50 +38,6 @@ answers = data[
 # fillna with placeholder value to convert to int
 answers["parent_question_id"] = answers["parent_question_id"].fillna(0).astype(int)
 check_data(answers)
-
-### Questions that could be relevant for the analysis ###
-# Are other religious groups in cultural contact with target religion:
-# --> Is there violent conflict (within sample region):
-# --> Is there violent conflict (with groups outside the sample region):
-# Does membership in this religious group require permanent scarring or painful bodily alterations:
-# --> Tattoos/scarification:
-# --> Circumcision:
-# Are extra-ritual in-group markers present: (are we using this one?)
-
-### plan for analysis ###
-
-## preprocessing ##
-# take all group entries (v5, v6).
-# map related questions between these.
-# infer "no" from super-questions to sub-questions (alternative is to only work with those that have "yes" for super-questions, but in this case I think that is a bad idea).
-# (potentially; check effects by region--they have this control in their paper).
-
-## analysis ##
-# split cultural contact into 4 categories:
-# --> no violent conflict (this includes cases with no cultural contact).
-# --> only violent conflict within sample region
-# --> only violent conflict outside sample region
-# --> violent conflict within and outside sample region
-
-# figure 1, 2, 3:
-# --> these we cannot really make because they require a measure of "strength" (not just presence/absence).
-
-# figure 4:
-# --> collapse predictor into external vs. no external.
-# --> genital mutilation (their paper) = circumcision (our data)
-# --> tattooing and scarification (their paper) = collapsed into 1 category in our data.
-# --> piercing (their paper) = not in our data?
-
-# figure 5:
-# --> not clear to me that we have painting, ingestion, isolation (i.e., this resolution in "rites").
-
-## statistical tests ##
-# --> their tests are against a composite "cost rating" which we do not really have in the DRH.
-# --> we could run the following models:
-# --> permanent scarring or bodily alterations ~ violent conflict (yes/no).
-# --> permanent scarring or bodily alterations ~ violent conflict (no/within/outside/both).
-# --> (could do the same for the sub-questions--i.e., tatoos/scarrification, circumcision).
-# --> (maybe also for extra-ritual in-group markers).
 
 """ 
 Related questions. 
@@ -120,15 +78,15 @@ n answers = 25.256 (1: 15.158, 0: 7.828, -1: 2.270)
 n entries = 1.422
 """
 
+# key question:
+# -- including places (will have cremation variable)
+# -- including texts (will often have spirit-body but many do not have special treatment)
 # could also include the additional question we discussed with Ted.
 question_coding = {
-    "Are extra-ritual in-group markers present:": "extra-ritual in-group markers",
-    "Are other religious groups in cultural contact with target religion:": "cultural contact",
-    "Is there violent conflict (within sample region):": "violent internal",
-    "Is there violent conflict (with groups outside the sample region):": "violent external",
-    "Does membership in this religious group require permanent scarring or painful bodily alterations:": "permanent scarring",
-    "Tattoos/scarification:": "tattoos/scarification",
-    "Circumcision:": "circumcision",
+    "Are there special treatments for adherents' corpses:": "special corpse treatment",
+    "Cremation:": "Cremation",
+    "Is a spirit-body distinction present:": "spirit-body distinction",
+    "Spirit-mind is conceived of as non-material, ontologically distinct from body:": "ontologically distinct",
 }
 
 # from constants import question_coding
@@ -138,7 +96,9 @@ short_question_names = pd.DataFrame(
 
 # subset questions
 answers_subset = answers.merge(short_question_names, on="question_name", how="inner")
-answers_subset.groupby(["question_id", "question_name"]).size()
+
+# only group polls
+answers_subset = answers_subset[answers_subset["poll"].str.contains("Group")]
 
 # now set related questions as the actual question ID that we use
 answers_subset = answers_subset.drop(columns=["question_id"])
@@ -165,43 +125,25 @@ answers_inconsistent = (
 )
 answers_inconsistent = answers_inconsistent[answers_inconsistent["n"] > 1]
 answers_inconsistent = answers_inconsistent.sort_values(by=["entry_id", "question_id"])
-answers_inconsistent
 
 correct_answers = [
-    [192, 5161, 1],  # yes and don't know
-    [228, 4654, 1],  # yes (not clear why I have 2 answers here)
-    [455, 5161, 1],  # yes
-    [455, 5161, 0],  # no
-    [572, 4658, 0],  # no
-    [572, 4658, 1],  # yes
-    [574, 4658, 0],  # no
-    [574, 4658, 1],  # yes
-    [574, 4659, 0],  # no
-    [574, 4659, 1],  # yes
-    [638, 4654, 1],  # yes (not clear why I have 2 answers here)
-    [645, 5161, 1],  # yes
-    [727, 4658, 1],  # yes
-    [741, 5161, 1],  # yes
-    [741, 5161, 0],  # no
-    [775, 4658, 0],  # no
-    [775, 4658, 1],  # yes
-    [775, 4659, 0],  # no
-    [775, 4659, 1],  # yes
-    [893, 4658, -1],  # don't know
-    [967, 4658, 1],  # yes
-    [967, 4658, 0],  # no
-    [1016, 4659, 1],  # yes
-    [1016, 4659, 0],  # no
-    [1038, 5161, 1],  # yes
-    [1175, 4654, 1],  # yes
-    [1268, 5162, 1],  # yes and don't know (weak yes)
-    [1466, 4658, 1],  # yes
-    [1466, 4658, 0],  # no
-    [1466, 4659, 1],  # yes
-    [1466, 4659, 0],  # no
-    [1619, 4654, 1],  # yes
-    [1621, 4654, 1],  # yes
-    [1805, 4654, 1],  # yes (not clear why I have 2 answers here)
+    [586, 4776, 1],  # yes
+    [599, 4795, 1],  # yes
+    [599, 4795, 0],  # no
+    [607, 4794, 0],  # no
+    [623, 4776, 1],  # also don't know
+    [645, 4794, 1],  # yes
+    [649, 4794, 1],  # yes
+    [967, 4776, 1],  # yes
+    [1041, 4794, 1],  # yes
+    [1268, 4776, 1],  # also don't know
+    [1488, 4776, 1],  # yes
+    [1488, 4776, 0],  # no
+    [1805, 4776, 1],  # yes
+    [1805, 4776, 0],  # no
+    [1805, 4794, 1],  # yes
+    [1805, 4794, 0],  # no
+    [2052, 4778, 0],  # no
 ]
 
 correct_answers = pd.DataFrame(
@@ -225,20 +167,10 @@ assert len(df_filtered) <= len(answers_subset)
 answers_subset = df_filtered.drop(columns=["answer_value_small"])
 check_data(answers_subset)
 
-""" 
-notes:
-228: unclear to me why we have inconsistency here (not reflected on website).
-574: I think this is a good case for not including inconsistent (borderline case). 
-638: unclear to me why we have inconsistency here (not reflected on website).
-727: this is a case where it makes sense (history). 
-775: another good case for not including (borderline case). 
-893: another case where only 1 answer is "active". 
+# remove sample entry
+remove_entries = [1505]
+answers_subset = answers_subset[~answers_subset["entry_id"].isin(remove_entries)]
 
-to-do: 
-- check if these are consistent from the api.
-- check if the variable (Partheeban) is any good. 
-- contact Partheeban.
-"""
 
 """ 
 Fill in missing values with np.nan 
@@ -277,20 +209,17 @@ check_data(answers_subset)
 # first code questions into parents and children.
 answers_subset.groupby(["question_id", "question_name"]).size()
 question_level = [
-    (4654, "parent"),
-    (4658, "child"),
-    (4659, "child"),
-    (5161, "parent"),
-    (5130, "parent"),
-    (5162, "child"),
-    (5163, "child"),
+    (4776, "parent"),
+    (4778, "child"),
+    (4794, "parent"),
+    (4795, "child"),
 ]
 question_level = pd.DataFrame(question_level, columns=["question_id", "level"])
 answers_subset = answers_subset.merge(question_level, on="question_id", how="inner")
 
 # the hard part is what we do for sub-questions if parents are inconsistent
 # I think for now we simply remove all entries with inconsistent data
-# This removes n=9 entries.
+# This removes n=3 entries.
 n_questions = len(question_level)
 answers_inconsistent = (
     answers_subset.groupby(["entry_id"]).size().reset_index(name="count")
@@ -317,4 +246,4 @@ for num, row in answers_subset.iterrows():
                 answers_subset.loc[num, "answer_inferred"] = "Yes"
 
 # save the data
-answers_subset.to_csv("../data/preprocessed/answers.csv", index=False)
+answers_subset.to_csv("../data/preprocessed/answers_cremation.csv", index=False)
