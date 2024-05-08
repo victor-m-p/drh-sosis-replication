@@ -105,24 +105,22 @@ Southwest Asia: 77
 """
 
 # make regions simpler
-region_replacements = {
-    "North America": "Americas",
-    "South America": "Americas",
-    "Central Eurasia": "Europe",
-    "South Asia": "Asia",
-    "East Asia": "Asia",
-    "Southeast Asia": "Asia",
-    "Southwest Asia": "Asia",
-}
+# region_replacements = {
+#    "North America": "Americas",
+#    "South America": "Americas",
+#    "Central Eurasia": "Europe",
+#    "South Asia": "Asia",
+#    "East Asia": "Asia",
+#    "Southeast Asia": "Asia",
+#    "Southwest Asia": "Asia",
+# }
 
-answerset["world_region_simple"] = answerset["world_region"].replace(
-    region_replacements
-)
+# answerset["world_region_simple"] = answerset["world_region"].replace(
+#    region_replacements
+# )
 
 # check amount of data now
-entry_regions = answerset[
-    ["entry_id", "entry_name", "world_region_simple"]
-].drop_duplicates()
+entry_regions = answerset[["entry_id", "entry_name", "world_region"]].drop_duplicates()
 entry_regions.groupby("world_region_simple").size()
 
 """
@@ -137,7 +135,7 @@ Oceania-Australia: 25
 circumcision = subset_question(answerset, 5163)
 circumcision_trace = fit_logistic_model(circumcision)
 circumcision_summary = get_summary(
-    circumcision_trace, circumcision["world_region_simple"].cat.categories.tolist()
+    circumcision_trace, circumcision["world_region"].cat.categories.tolist()
 )
 plot_summary(
     circumcision_summary, outcome="Circumcision", outpath="../figures/supplementary"

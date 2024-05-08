@@ -17,7 +17,13 @@ answers_wide = answers.pivot(
 
 # take out relevant columns for now
 wide_subset = answers_wide[
-    ["circumcision", "tattoos/scarification", "permanent scarring", "violent external"]
+    [
+        "extra-ritual in-group markers",
+        "circumcision",
+        "tattoos/scarification",
+        "permanent scarring",
+        "violent external",
+    ]
 ]
 # only drop nan values for the violent external column
 wide_subset = wide_subset.dropna(subset=["violent external"])
@@ -55,21 +61,33 @@ def run_chi2_test(df, marker):
     return chi2, p
 
 
-markers = ["circumcision", "tattoos/scarification", "permanent scarring"]
+markers = [
+    "extra-ritual in-group markers",
+    "circumcision",
+    "tattoos/scarification",
+    "permanent scarring",
+]
 chi2_results = {marker: run_chi2_test(df_long, marker) for marker in markers}
 
 # Prepare labels
 labels = [
     (
-        f"{marker}\n(χ²={result[0]:.2f}; p<{result[1]:.2f})"
+        f"{marker}\n(χ²={result[0]:.2f}; p<0.05)"
         if result[1] < 0.05
         else f"{marker}\n(χ²={result[0]:.2f}; ns)"
     )
     for marker, result in chi2_results.items()
 ]
 
+# Fix labels
+labels[0] = labels[0].replace(
+    "extra-ritual in-group markers", "extra-ritual \nin-group markers"
+)
+labels[2] = labels[2].replace("tattoos/scarification", "tattoos/\nscarification")
+labels[3] = labels[3].replace("permanent scarring", "permanent\nscarring")
+
 # Assuming the data transformation is done
-plt.figure(figsize=(7, 4))
+plt.figure(figsize=(9, 4))
 sns.set_style("white")
 bar_plot = sns.barplot(
     data=df_long,
@@ -90,6 +108,5 @@ plt.title(
 plt.ylabel("Fraction Yes", fontsize=14)
 plt.xlabel("")
 plt.legend(title="", loc="upper right")
-plt.ylim(0, 0.5)
-plt.savefig("../figures/external_warfare_markers.png", bbox_inches="tight", dpi=300)
-plt.savefig("../figures/external_warfare_markers.pdf", bbox_inches="tight")
+plt.ylim(0, 0.7)
+plt.savefig("../figures/external_conflict_simple.pdf", bbox_inches="tight")
