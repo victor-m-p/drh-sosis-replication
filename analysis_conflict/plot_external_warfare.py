@@ -77,7 +77,7 @@ bar_plot = sns.barplot(
     y="value",
     hue="conflict_type_collapsed",
     # palette="gray",
-    errorbar=("ci", 95),
+    errorbar=("ci", 95),  # straight confidence intervals of mean
 )
 
 # Add annotations

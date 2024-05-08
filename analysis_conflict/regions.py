@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import pymc as pm
 import arviz as az
+from model_functions import logistic_to_percent
 
 
 def subset_question(answerset, question_id):
@@ -14,7 +15,7 @@ def subset_question(answerset, question_id):
     return subset
 
 
-def fit_logistic_model(subset):
+def fit_logistic_model(data):
 
     with pm.Model() as model:
         # Setting up a separate intercept for each region
@@ -22,32 +23,24 @@ def fit_logistic_model(subset):
             "intercepts",
             mu=0,
             sigma=5,
-            shape=len(subset["world_region_simple"].cat.categories),
+            shape=len(data["world_region_simple"].cat.categories),
         )
 
         # Get the index for each region from the categorical variable
         region_idx = pm.ConstantData(
-            "region_idx", subset["world_region_simple"].cat.codes
+            "region_idx", data["world_region_simple"].cat.codes
         )
 
         # Probability of circumcision for each observation based on its region
         p = pm.Deterministic("p", pm.math.sigmoid(intercepts[region_idx]))
 
         # Likelihood
-        observed = pm.Binomial("y", n=1, p=p, observed=subset["answer_value"])
+        observed = pm.Binomial("y", n=1, p=p, observed=data["answer_value"])
 
         # Sample from the posterior
         trace = pm.sample(2000, return_inferencedata=True)
 
     return trace
-
-
-def logistic_to_fraction(x):
-    return 1 / (1 + np.exp(-x))
-
-
-def logistic_to_percent(x):
-    return 100 * logistic_to_fraction(x)
 
 
 def get_summary(trace, region_labels):

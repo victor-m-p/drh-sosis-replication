@@ -67,6 +67,5 @@ entrydata = entrydata[["entry_id", "region_id", "geom"]].drop_duplicates()
 entry_world_region = entry_world_region.merge(entrydata, on="entry_id", how="inner")
 entry_world_region = entry_world_region.sort_values("entry_id")
 
-entry_world_region
 # save data
 entry_world_region.to_csv("../data/preprocessed/entry_regions.csv", index=False)
