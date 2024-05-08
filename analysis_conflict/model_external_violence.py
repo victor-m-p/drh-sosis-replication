@@ -354,9 +354,9 @@ def fit_region_logistic_pymc(data, outcome):
         region_idx = pm.Data("region_idx", data["world_region"].cat.codes)
 
         # Logit function incorporating random slopes and intercepts
-        logit_p = intercepts[region_idx] + slopes[region_idx] * data[
-            "violent external"
-        ].astype(float)
+        logit_p = (
+            intercepts[region_idx] + slopes[region_idx] * data["violent external"]
+        )  # .astype(float)
         p = pm.Deterministic("p", pm.math.sigmoid(logit_p))
         observed = pm.Binomial("y", n=1, p=p, observed=data[outcome].astype(int))
 
@@ -375,11 +375,9 @@ extra_ritual_region = preprocess_data_region(
     "extra-ritual in-group markers",
     "world_region",
 )
-
 extra_ritual_trace = fit_region_logistic_pymc(
     extra_ritual_region, "extra-ritual in-group markers"
 )
-
 extra_ritual_summary = az.summary(
     extra_ritual_trace,
     var_names=[
@@ -389,6 +387,10 @@ extra_ritual_summary = az.summary(
         "slopes",
     ],
     hdi_prob=0.95,
+)
+extra_ritual_summary["var_names"] = extra_ritual_summary.index
+extra_ritual_summary.to_csv(
+    "../tables/external_violence_regions/extra_ritual_summary.csv", index=False
 )
 
 # circumcision
@@ -403,7 +405,10 @@ circumcision_region_summary = az.summary(
     var_names=["mu_intercept", "mu_slope", "intercepts", "slopes"],
     hdi_prob=0.95,
 )
-circumcision_region_summary
+circumcision_region_summary["var_names"] = circumcision_region_summary.index
+circumcision_region_summary.to_csv(
+    "../tables/external_violence_regions/circumcision_summary.csv", index=False
+)
 
 # tattoos/scarification
 tattoos_region = preprocess_data_region(
@@ -419,7 +424,10 @@ tattoos_region_summary = az.summary(
     var_names=["mu_intercept", "mu_slope", "intercepts", "slopes"],
     hdi_prob=0.95,
 )
-tattoos_region_summary
+tattoos_region_summary["var_names"] = tattoos_region_summary.index
+tattoos_region_summary.to_csv(
+    "../tables/external_violence_regions/tattoos_summary.csv", index=False
+)
 
 # permanent scarring
 scarring_region = preprocess_data_region(
@@ -435,7 +443,151 @@ scarring_region_summary = az.summary(
     var_names=["mu_intercept", "mu_slope", "intercepts", "slopes"],
     hdi_prob=0.95,
 )
-scarring_region_summary
+scarring_region_summary.to_csv(
+    "../tables/external_violence_regions/scarring_summary.csv", index=False
+)
 
 #### testing one at a time is problematic ####
 #### I do think that we need the shared model to work ####
+
+
+# one last model to rule them all #
+def fit_region_time_logistic_pymc(data, outcome):
+    with pm.Model() as model:
+        # Prior for time
+        b_time = pm.Normal("b_time", mu=0, sigma=5)
+
+        # Hyperpriors for intercepts
+        mu_intercept = pm.Normal("mu_intercept", mu=0, sigma=5)
+        sigma_intercept = pm.HalfCauchy("sigma_intercept", beta=5)
+
+        # Hyperpriors for slopes
+        mu_slope = pm.Normal("mu_slope", mu=0, sigma=5)
+        sigma_slope = pm.HalfCauchy("sigma_slope", beta=5)
+
+        # Non-centered random intercepts for regions
+        offsets_intercepts = pm.Normal(
+            "offsets_intercepts",
+            mu=0,
+            sigma=1,
+            shape=len(data["world_region"].unique()),
+        )
+        intercepts = pm.Deterministic(
+            "intercepts", mu_intercept + sigma_intercept * offsets_intercepts
+        )
+
+        # Non-centered random slopes for regions
+        offsets_slopes = pm.Normal(
+            "offsets_slopes", mu=0, sigma=1, shape=len(data["world_region"].unique())
+        )
+        slopes = pm.Deterministic("slopes", mu_slope + sigma_slope * offsets_slopes)
+
+        # Data indexing for regions
+        region_idx = pm.Data("region_idx", data["world_region"].cat.codes)
+
+        # Logit function incorporating random slopes and intercepts
+        logit_p = (
+            b_time * data["time_scaled"]
+            + intercepts[region_idx]
+            + slopes[region_idx] * data["violent external"].astype(float)
+        )
+        p = pm.Deterministic("p", pm.math.sigmoid(logit_p))
+        observed = pm.Binomial("y", n=1, p=p, observed=data[outcome].astype(int))
+
+        # Sampling
+        trace = pm.sample(
+            draws=2000, tune=2000, target_accept=0.99, return_inferencedata=True
+        )
+        return trace
+
+
+# entry region and time
+entry_region = pd.read_csv("../data/preprocessed/entry_regions.csv")
+entry_region = entry_region[["entry_id", "world_region"]]
+entry_time = pd.read_csv("../data/preprocessed/entry_time.csv")
+entry_time = entry_time[["entry_id", "year_from"]]
+answers_wide_region_time = answers_wide.merge(entry_region, on="entry_id", how="inner")
+answers_wide_region_time = answers_wide_region_time.merge(
+    entry_time, on="entry_id", how="inner"
+)
+
+
+def process_data_time_region(data, id, predictor, outcome, time, region):
+    data_subset = data[[id, predictor, outcome, time, region]]
+    data_subset = data_subset.dropna()
+    data_subset[predictor] = data_subset[predictor].astype(int)
+    data_subset[outcome] = data_subset[outcome].astype(int)
+    data_subset["time_scaled"] = (
+        data_subset[time] - data_subset[time].mean()
+    ) / data_subset[time].std()
+    data_subset[region] = pd.Categorical(data_subset[region])
+    return data_subset
+
+
+# circumcision
+circumcision_region_time = process_data_time_region(
+    answers_wide_region_time,
+    "entry_id",
+    "violent external",
+    "circumcision",
+    "year_from",
+    "world_region",
+)
+circumcision_region_time_trace = fit_region_time_logistic_pymc(
+    circumcision_region_time, "circumcision"
+)
+az.summary(
+    circumcision_region_time_trace,
+    var_names=["b_time", "mu_intercept", "mu_slope", "intercepts", "slopes"],
+)
+
+# tattoos/scarification
+tattoos_region_time = process_data_time_region(
+    answers_wide_region_time,
+    "entry_id",
+    "violent external",
+    "tattoos/scarification",
+    "year_from",
+    "world_region",
+)
+tattoos_region_time_trace = fit_region_time_logistic_pymc(
+    tattoos_region_time, "tattoos/scarification"
+)
+az.summary(
+    tattoos_region_time_trace,
+    var_names=["b_time", "mu_intercept", "mu_slope", "intercepts", "slopes"],
+)
+
+# permanent scarring
+scarring_region_time = process_data_time_region(
+    answers_wide_region_time,
+    "entry_id",
+    "violent external",
+    "permanent scarring",
+    "year_from",
+    "world_region",
+)
+scarring_region_time_trace = fit_region_time_logistic_pymc(
+    scarring_region_time, "permanent scarring"
+)
+az.summary(
+    scarring_region_time_trace,
+    var_names=["b_time", "mu_intercept", "mu_slope", "intercepts", "slopes"],
+)
+
+# extra-ritual in-group markers
+extra_ritual_region_time = process_data_time_region(
+    answers_wide_region_time,
+    "entry_id",
+    "violent external",
+    "extra-ritual in-group markers",
+    "year_from",
+    "world_region",
+)
+extra_ritual_region_time_trace = fit_region_time_logistic_pymc(
+    extra_ritual_region_time, "extra-ritual in-group markers"
+)
+az.summary(
+    extra_ritual_region_time_trace,
+    var_names=["b_time", "mu_intercept", "mu_slope", "intercepts", "slopes"],
+)
