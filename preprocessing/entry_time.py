@@ -13,6 +13,7 @@ entrydata = entrydata[["entry_id", "entry_name", "year_from", "year_to", "region
 
 
 # 1. fix dates
+# this should be removed once we have the clean dump.
 corrected_dates = {
     # entry_id, year_from, year_to
     1570: [1900, 2024],

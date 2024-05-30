@@ -21,6 +21,7 @@ wide_subset = answers_wide[
         "hair",
         "dress",
         "ornaments",
+        "transitory pain",
         "violent external",
         "violent internal",
     ]
@@ -51,12 +52,7 @@ df_long = df_long.dropna()
 # run statistical tests
 from helper_functions import run_chi2_test
 
-markers = [
-    "food taboos",
-    "hair",
-    "dress",
-    "ornaments",
-]
+markers = ["food taboos", "hair", "dress", "ornaments", "transitory pain"]
 chi2_results = {marker: run_chi2_test(df_long, marker) for marker in markers}
 
 # Prepare labels
@@ -70,7 +66,7 @@ labels = [
 ]
 
 # Assuming the data transformation is done
-plt.figure(figsize=(9, 4))
+plt.figure(figsize=(11, 4))
 sns.set_style("white")
 bar_plot = sns.barplot(
     data=df_long,

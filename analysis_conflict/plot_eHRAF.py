@@ -1,14 +1,21 @@
-"""
-External violent conflict vs. Extra-ritual in-group markers
-"""
-
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-answers = pd.read_csv("../data/preprocessed/answers_conflict.csv")
-answers.groupby(["question_id", "question_short"]).size()
+# find entries that are eHRAF or Pulotu
+entry_data = pd.read_csv("../data/raw/entry_data.csv")
+entry_data = entry_data[["entry_id", "data_source"]].drop_duplicates()
+entry_data = entry_data[
+    (entry_data["data_source"] == "eHRAF")
+    | (entry_data["data_source"].str.contains("Pulotu"))
+]
 
+# inner join with answer data
+answers = pd.read_csv("../data/preprocessed/answers_conflict.csv")
+answers = answers.merge(entry_data, on="entry_id", how="inner")
+
+### external violent conflict ###
 # make a first plot with permanent scarring and extra-ritual in-group markers against warfare.
 answers_wide = answers.pivot(
     index="entry_id", columns="question_short", values="answer_value"
@@ -17,14 +24,16 @@ answers_wide = answers.pivot(
 # take out relevant columns for now
 wide_subset = answers_wide[
     [
-        "food taboos",
-        "hair",
-        "dress",
-        "ornaments",
-        "transitory pain",
+        "extra-ritual in-group markers",
+        "circumcision",
+        "tattoos/scarification",
+        "permanent scarring",
         "violent external",
     ]
 ]
+
+wide_subset.isna().sum()  # explains why this is infeasible.
+
 # only drop nan values for the violent external column
 wide_subset = wide_subset.dropna(subset=["violent external"])
 
@@ -49,11 +58,10 @@ df_long = df_long.dropna()
 from helper_functions import run_chi2_test
 
 markers = [
-    "food taboos",
-    "hair",
-    "dress",
-    "ornaments",
-    "transitory pain",
+    "extra-ritual in-group markers",
+    "circumcision",
+    "tattoos/scarification",
+    "permanent scarring",
 ]
 chi2_results = {marker: run_chi2_test(df_long, marker) for marker in markers}
 
@@ -67,8 +75,15 @@ labels = [
     for marker, result in chi2_results.items()
 ]
 
+# Fix labels
+labels[0] = labels[0].replace(
+    "extra-ritual in-group markers", "extra-ritual \nin-group markers"
+)
+labels[2] = labels[2].replace("tattoos/scarification", "tattoos/\nscarification")
+labels[3] = labels[3].replace("permanent scarring", "permanent\nscarring")
+
 # Assuming the data transformation is done
-plt.figure(figsize=(11, 4))
+plt.figure(figsize=(9, 4))
 sns.set_style("white")
 bar_plot = sns.barplot(
     data=df_long,
@@ -87,6 +102,7 @@ plt.title("")
 plt.ylabel("Fraction Yes", fontsize=14)
 plt.xlabel("")
 plt.legend(title="", loc="upper right")
-plt.ylim(0, 0.6)
-plt.savefig("../figures/transitory_external.pdf", bbox_inches="tight")
-plt.savefig("../figures/png/transitory_external.png", bbox_inches="tight", dpi=300)
+
+### clearly unfeasible for sub-questions ###
+
+### try with super-questions ###

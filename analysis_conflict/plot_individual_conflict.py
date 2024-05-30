@@ -17,6 +17,12 @@ dependent_variable_list = [
         "markers_conflict",
     ),
     ("archaic ritual language", "Archaic ritual language", "archaic_conflict"),
+    (
+        "permanent scarring",
+        "Permanent Scarring",
+        "scarring_conflict",
+    ),
+    ("transitory pain", "Transitory Pain", "transitory_conflict"),
 ]
 
 # make a first plot with permanent scarring and extra-ritual in-group markers against warfare.
@@ -51,7 +57,7 @@ for variable in dependent_variable_list:
     group_counts = wide_subset.groupby("conflict_type").size()
 
     # Create plot
-    fig, ax = plt.subplots(figsize=(8, 4))
+    fig, ax = plt.subplots(figsize=(10, 4))
     sns.set_style("white")
     sns.barplot(
         x="conflict_type",

@@ -20,18 +20,23 @@ data = pd.read_csv("../data/raw/answerset.csv")
 
 # Define the questions to investigate and create mapping dataframe
 question_coding = {
-    "Are extra-ritual in-group markers present:": "extra-ritual in-group markers",
+    # independent variables
     "Are other religious groups in cultural contact with target religion:": "cultural contact",
     "Is there violent conflict (within sample region):": "violent internal",
     "Is there violent conflict (with groups outside the sample region):": "violent external",
+    # dependent variables
+    "Are extra-ritual in-group markers present:": "extra-ritual in-group markers",
     "Does membership in this religious group require permanent scarring or painful bodily alterations:": "permanent scarring",
+    "Does membership in this religious group require painful physical positions or transitory painful wounds:": "transitory pain",
+    # sub-questions of extra-ritual in-group markers
     "Tattoos/scarification:": "tattoos/scarification",  # sub of extra-ritual in-group markers
     "Circumcision:": "circumcision",  # sub of extra-ritual in-group markers
     "Food taboos:": "food taboos",  # sub of extra-ritual in-group markers
     "Hair:": "hair",  # sub of extra-ritual in-group markers
     "Dress:": "dress",  # sub of extra-ritual in-group markers
     "Ornaments:": "ornaments",  # sub of extra-ritual in-group markers
-    "Archaic ritual language:": "archaic ritual language",
+    # other (ask ted whether we need this)
+    "Archaic ritual language:": "archaic ritual language",  # ask ted whether we use this
 }
 
 # Take out the relevant columns
