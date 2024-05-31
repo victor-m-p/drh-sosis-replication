@@ -37,6 +37,15 @@ question_coding = {
     "Ornaments:": "ornaments",  # sub of extra-ritual in-group markers
     # other (ask ted whether we need this)
     "Archaic ritual language:": "archaic ritual language",  # ask ted whether we use this
+    # for eHRAFT and Pulotu (maybe temporary)
+    "Does the religious group in question provide an institutionalized police force:": "group police force",
+    "Does the religious group in question provide institutionalized judges:": "group judges",
+    "Do the group’s adherents interact with an institutionalized judicial system provided by an an institution(s) other than the religious group in question:": "other judicial system",
+    "Does the religious group in question enforce institutionalized punishment:": "group punishment",
+    "Does the religious group in question have a formal legal code:": "group legal code",
+    "Do the group’s adherents interact with an institutionalized police force provided by an institution(s) other than the religious group in question:": "other police force",
+    "Are the group’s adherents subject to institutionalized punishment enforced by an institution(s) other than the religious group in question:": "other punishment",
+    "Are the group’s adherents subject to a formal legal code provided by institution(s) other than the religious group in question:": "other legal code",
 }
 
 # Take out the relevant columns
@@ -57,6 +66,10 @@ answers_subset["question_short"] = answers_subset["question_name"].map(question_
 
 # Make sure that we are only working with groups
 answers_subset = answers_subset[answers_subset["poll_name"].str.contains("Group")]
+
+# find problems
+pd.set_option("display.max_colwidth", None)
+answers[answers["question_name"].str.contains("police force provided by")]
 
 # Merge with questionrelation to get related names
 questionrelations = pd.read_csv("../data/raw/questionrelation.csv")
