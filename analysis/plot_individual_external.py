@@ -42,9 +42,9 @@ for variable in dependent_variable_list:
     wide_subset = wide_subset.dropna(subset=["violent external"])
 
     # collapse groups into has external vs. does not have external
-    from helper_functions import code_conflict_collapsed
+    from helper_functions import code_external_conflict
 
-    wide_subset["conflict_type"] = wide_subset.apply(code_conflict_collapsed, axis=1)
+    wide_subset["conflict_type"] = wide_subset.apply(code_external_conflict, axis=1)
     wide_subset = wide_subset.drop("violent external", axis=1)
     wide_subset["entry_id"] = wide_subset.index
 

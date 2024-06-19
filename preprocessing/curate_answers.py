@@ -21,31 +21,20 @@ data = pd.read_csv("../data/raw/answerset.csv")
 # Define the questions to investigate and create mapping dataframe
 question_coding = {
     # independent variables
-    "Are other religious groups in cultural contact with target religion:": "cultural contact",
-    "Is there violent conflict (within sample region):": "violent internal",
-    "Is there violent conflict (with groups outside the sample region):": "violent external",
+    "Are other religious groups in cultural contact with target religion:": "cultural_contact",
+    "Is there violent conflict (within sample region):": "violent_internal",
+    "Is there violent conflict (with groups outside the sample region):": "violent_external",
     # dependent variables
-    "Are extra-ritual in-group markers present:": "extra-ritual in-group markers",
-    "Does membership in this religious group require permanent scarring or painful bodily alterations:": "permanent scarring",
-    "Does membership in this religious group require painful physical positions or transitory painful wounds:": "transitory pain",
+    "Are extra-ritual in-group markers present:": "extra_ritual_group_markers",
+    "Does membership in this religious group require permanent scarring or painful bodily alterations:": "permanent_scarring",
+    "Does membership in this religious group require painful physical positions or transitory painful wounds:": "transitory_pain",
     # sub-questions of extra-ritual in-group markers
-    "Tattoos/scarification:": "tattoos/scarification",  # sub of extra-ritual in-group markers
+    "Tattoos/scarification:": "tattoos_scarification",  # sub of extra-ritual in-group markers
     "Circumcision:": "circumcision",  # sub of extra-ritual in-group markers
-    "Food taboos:": "food taboos",  # sub of extra-ritual in-group markers
+    "Food taboos:": "food_taboos",  # sub of extra-ritual in-group markers
     "Hair:": "hair",  # sub of extra-ritual in-group markers
     "Dress:": "dress",  # sub of extra-ritual in-group markers
     "Ornaments:": "ornaments",  # sub of extra-ritual in-group markers
-    # other (ask ted whether we need this)
-    "Archaic ritual language:": "archaic ritual language",  # ask ted whether we use this
-    # for eHRAFT and Pulotu (maybe temporary)
-    "Does the religious group in question provide an institutionalized police force:": "group police force",
-    "Does the religious group in question provide institutionalized judges:": "group judges",
-    "Do the group’s adherents interact with an institutionalized judicial system provided by an an institution(s) other than the religious group in question:": "other judicial system",
-    "Does the religious group in question enforce institutionalized punishment:": "group punishment",
-    "Does the religious group in question have a formal legal code:": "group legal code",
-    "Do the group’s adherents interact with an institutionalized police force provided by an institution(s) other than the religious group in question:": "other police force",
-    "Are the group’s adherents subject to institutionalized punishment enforced by an institution(s) other than the religious group in question:": "other punishment",
-    "Are the group’s adherents subject to a formal legal code provided by institution(s) other than the religious group in question:": "other legal code",
 }
 
 # Take out the relevant columns

@@ -4,16 +4,16 @@ from scipy.stats import chi2_contingency
 
 def code_conflict(row):
     if row["violent external"] == 1 and row["violent internal"] == 0:
-        return "External only"
+        return "External Only"
     elif row["violent external"] == 0 and row["violent internal"] == 1:
-        return "Internal only"
+        return "Internal Only"
     elif row["violent external"] == 1 and row["violent internal"] == 1:
-        return "Internal and external"
+        return "Internal and External"
     else:
-        return "No violent conflict"
+        return "No Violent Conflict"
 
 
-def code_conflict_collapsed(row):
+def code_external_conflict(row):
     if row["violent external"] == 1:
         return "External Violent Conflict"
     else:
@@ -22,11 +22,11 @@ def code_conflict_collapsed(row):
 
 def code_internal_conflict(row):
     if row["violent internal"] == 1 and row["violent external"] == 0:
-        return "Internal only"
+        return "Internal Conflict only"
     if row["violent internal"] == 0:
-        return "No internal"
+        return "No Internal Conflict"
     else:
-        return "Internal and external"
+        return "Internal and External"
 
 
 def run_chi2_test(df, marker):
