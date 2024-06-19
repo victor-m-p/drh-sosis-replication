@@ -24,7 +24,7 @@ for (file_path in file_paths) {
         data = data,
         family = bernoulli(link=logit),
         #formula = formula,
-        violent_external ~ 1 + iv + year_scaled + (1+iv|world_region), 
+        dv ~ 1 + violent_external + year_scaled + (1+violent_external|world_region), 
         prior = c(
             prior(normal(0, 5), class=b),
             prior(normal(0, 5), class=Intercept),
@@ -44,7 +44,7 @@ for (file_path in file_paths) {
     write_csv(coef_summary, file = paste0("data/mdl_output/", predictor_name, "_summary.csv"))
     # Extract samples for conversion to natural scale
     alpha_samples <- as_draws_df(fit)$b_Intercept
-    beta_samples <- as_draws_df(fit)$b_iv
+    beta_samples <- as_draws_df(fit)$b_violent_external
     alpha_converted <- plogis(alpha_samples)
     beta_converted <- plogis(alpha_samples + beta_samples)
     effect <- beta_converted - alpha_converted
@@ -64,48 +64,3 @@ for (file_path in file_paths) {
     )
     write_csv(results, file = paste0("data/mdl_output/", predictor_name, "_results.csv"))
 }
-
-## everything below might be outdated now ## 
-data <- read_csv(file_path)
-colnames(data)
-predictor_name <- strsplit(basename(file_path), "\\.csv$", `[`, 1)[[1]]
-data <- data |> rename(iv = predictor_name)
-
-# set up model 
-# fit the model
-fit <- brm(
-    data = data,
-    family = bernoulli(link=logit),
-    #formula = formula,
-    violent_external ~ 1 + iv + year_scaled + (1+iv|world_region), 
-    prior = c(
-        prior(normal(0, 5), class=b),
-        prior(normal(0, 5), class=Intercept),
-        prior(lkj_corr_cholesky(1), class=L),
-        prior(normal(0, 5), class=sd)
-    ),
-    iter = 8000,
-    warmup = 4000,
-    chains = 4,
-    cores = 4,
-    control = list(adapt_delta = .999, max_treedepth = 20),
-    seed = 1342)
-
-alpha_samples <- as_draws_df(fit)$b_Intercept
-beta_samples <- as_draws_df(fit)$b_iv
-alpha_converted <- plogis(alpha_samples)
-beta_converted <- plogis(alpha_samples + beta_samples)
-effect <- beta_converted - alpha_converted
-
-df <- tibble(
-    intercept = alpha_converted, 
-    beta = beta_converted, 
-    effect = effect
-)
-
-# could look into: 
-# file:///home/vmp/Downloads/v80i01.pdf 
-'''In general, every parameter is summarized using the mean (Estimate) and the standard de-
-viation (Est.Error) of the posterior distribution as well as two-sided 95% credible intervals
-(l-95% CI and u-95% CI) based on quantiles)'''
-# https://easystats.github.io/see/articles/bayestestR.html

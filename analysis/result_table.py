@@ -38,23 +38,24 @@ for filename, label in convert_labels.items():
     data_logit = pd.read_csv("../data/mdl_output/" + filename + "_summary.csv")
     data_percent = pd.read_csv("../data/mdl_output/" + filename + "_results.csv")
     # extract params
-    estimate_logit = extract_param(data_logit, "iv")
+    estimate_logit = extract_param(data_logit, "violent_external")
     year_logit = extract_param(data_logit, "year_scaled")
     intercept_logit = extract_param(data_logit, "Intercept")
     estimate_percent = extract_param(data_percent, "effect")
     # collect
     summary_row = pd.DataFrame(
         {
-            "Marker": label,
+            "Outcome": label,
             "Intercept": intercept_logit,
-            "Estimate": estimate_logit,
-            "Estimate (%)": estimate_percent,
-            "Year": year_logit,
+            "E. V. Conflict": estimate_logit,
+            "E. V. Conflict (%)": estimate_percent,
+            "Start Year": year_logit,
         },
         index=[0],
     )
     summary_list.append(summary_row)
 summary_df = pd.concat(summary_list)
+summary_df
 
 # rename columns and save as latex
 summary_df.to_latex("../tables/brms_table.tex", index=False)
