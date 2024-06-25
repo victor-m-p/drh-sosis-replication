@@ -1,0 +1,1579 @@
+entry_id,entry_name,year_from,year_to,region_id,world_region
+23,Late Shang Religion,-1250,-1045,7,East Asia
+173,Johannine Christianity,90,120,483,Southwest Asia
+174,Matthew-James-Didache Movement,50,160,352,Southwest Asia
+176,Qumran Movement,-150,68,486,Southwest Asia
+177,Jesus movement,30,70,485,Southwest Asia
+178,Ancestral Cult of the Han,-206,220,104,East Asia
+180,Chinese Folk Religion,-350,200,10,East Asia
+182,Pauline Christianity,48,56,489,Europe
+184,Chinese Buddhism (Northern Wei),386,534,7,East Asia
+185,Shinnyo-en,1936,2013,86,East Asia
+186,Buddhism (Late Ming),1590,1644,138,East Asia
+187,Chinese State Religion (Shang and Western Zhou),-1750,-850,7,East Asia
+189,Israelite Religion,-1200,-515,44,Southwest Asia
+190,Sri Lankan Buddhism (1948-Present),1948,2015,488,South Asia
+191,Early Khalsa Sikhs,1699,1799,85,South Asia
+192,Fijian Religion (pre-conversion),1835,1854,32,Oceania-Australia
+193,Fijian Religion (contemporary),2000,2013,32,Oceania-Australia
+195,Shakta Religion,500,1100,43,South Asia
+196,Pauline Christianity (ca. 45-60 CE),45,60,479,Europe
+197,Gönlung Monastery (dgon lung byams pa gling),1604,1958,490,East Asia
+198,Religion in Attica (600-300BCE),-600,-300,50,Europe
+199,Mithraism,100,400,132,Europe
+200,Nechung Cult,1650,1850,96,South Asia
+201,Mediterranean,-500,500,6,Europe
+202,Early Zhou Religion,-1046,-771,79,East Asia
+203,Pre-imperial Chu Religion,-790,-223,78,East Asia
+204,Han Confucianism,-206,220,104,East Asia
+207,Buddhism in the Tang,600,1000,482,Central Eurasia
+209,Ancient Egypt,-2000,-30,136,Africa
+210,Jesus Associations and the Synoptic Gospels,50,150,6,Europe
+211,Amarna Religion,-1350,-1320,34,Africa
+212,Warring States (China) Religion,-481,-206,467,East Asia
+216,Mesopotamia,-3200,-612,476,Southwest Asia
+217,Roman private religion,-202,-44,498,Europe
+222,Late Classic Lowland Maya,600,900,56,North America
+224,Old Norse Fornsed,600,1100,31,Europe
+227,Hindu Goddess Worship in Northwest India—Modern Period,1980,2000,481,South Asia
+228,Late Chosŏn Korea,1600,1900,42,East Asia
+230,Religion in Mesopotamia,-3300,-539,494,Southwest Asia
+231,Roman private religion,-600,-202,540,Europe
+232,Pre-Dynastic Lower Egypt,-5050,-3050,529,Africa
+233,Khartoum Neolithic,-3750,-1600,530,Africa
+234,East African Neolithic I,-3050,750,533,Africa
+236,East African Neolithic II,-1050,750,532,Africa
+237,Central African Neolithic,-2950,-50,536,Africa
+238,Central African Iron Age,-400,1450,537,Africa
+239,North African Proto-Historic,-2050,-1050,526,Africa
+240,Late Medieval Chinese State Religion,775,960,1443,East Asia
+244,Early Tokugawa Neo-Confucianism,1600,1700,41,East Asia
+245,Warring States Confucian Thought,-450,-221,81,East Asia
+246,Acacus Mountains and Tassili n'Ajjer Neolithic,-6050,-1050,525,Africa
+247,Air and Tenere Neolithic,-4050,-1050,525,Africa
+249,Tyva Republic (Animism-Totemism-Shamanism),1990,2013,52,Central Eurasia
+250,"Tiantai Buddhism (Song Dynasty, Liangzhe Circuit)",960,1279,546,East Asia
+252,Wilton,-8050,-50,512,Africa
+255,Talismanic Religion,-200,500,130,East Asia
+256,Etruscan Religion,-10,-1,498,Europe
+257,Classic Zapotec,250,850,550,North America
+263,Irish Catholicism,2000,2015,554,Europe
+284,Yolngu religion,-3500,2015,567,Oceania-Australia
+287,Mithraism,100,400,132,Europe
+294,Xuanxue 玄學,200,600,574,East Asia
+299,Shang State Religion,-1250,-1046,7,East Asia
+300,Israelite Religion,-1200,-515,44,Southwest Asia
+308,Neo-Assyrian Scholars,-900,-501,582,Southwest Asia
+310,Aztec Imperial Core,1325,1519,585,North America
+325,Religion at Mawangdui,-193,-168,598,East Asia
+337,Inca,1300,1550,400,South America
+338,Kwakwaka'wakw Indigenous Canadian Religion,1800,1950,608,North America
+341,Pauline Christianity,45,60,479,Europe
+342,Jesus Associations and the Synoptic Gospels,50,150,6,Europe
+348,Yanshi Shangcheng,-1600,-1365,613,East Asia
+354,Priests and Scholars of Hellenistic Uruk,-330,-125,640,Southwest Asia
+355,Paul the Apostle,50,60,6,Europe
+358,16th-17th c. Gauḍīya Vaiṣṇava Tradition,1500,1699,620,South Asia
+361,Classical Greek Religion,-500,-300,588,Europe
+364,Chittagong Plain Buddhists,1860,2010,634,South Asia
+374,Non-dual Śaiva Tantra,800,1600,496,South Asia
+378,Bahinabai Chaudhari's Songs: A Performance Tradition in Maharashtra,1880,1951,814,South Asia
+381,Sikhism: Guru Nanak to Guru Arjan,1469,1606,481,South Asia
+383,Varkaris,1200,1700,649,South Asia
+386,Kapingamarangi,1877,1877,650,South America
+387,Ahmadi; Ahmadiyya Muslim Jama'at; Ahmadiya,1889,2016,652,South Asia
+389,Iban traditional religion,1840,1970,656,Southeast Asia
+390,Dasara,1610,2016,654,South Asia
+392,Sikhism: Guru Hargobind to Guru Gobind Singh,1606,1708,652,South Asia
+395,International Society for Krishna Consciousness (ISKCON),1966,2016,660,Africa
+400,Singaporean Mega-Churches,1980,2015,381,Southeast Asia
+406,Daoism,142,2014,45,East Asia
+415,Shaiva World Renouncers,1970,2015,667,South Asia
+416,Edinoverie,1800,1918,669,Europe
+418,Tikopia Religion,1900,1950,672,Europe
+419,The Worship of Jagannath in Puri (Odisha),1970,2016,673,South Asia
+420,Swaminarayan Sampraday,1800,2017,660,Africa
+422,Demeter Cult,-1500,396,50,Europe
+423,Mediterranean,-500,500,6,Europe
+424,Achaemenid Religion,-550,-330,548,Southwest Asia
+430,Yahgan,1865,1933,682,South America
+432,Tehuelche,1871,1914,684,South America
+435,Mongol Religion,1206,1368,685,Southwest Asia
+436,Mapuche,500,2002,686,South America
+437,Abipon,1500,1770,687,South America
+438,Aweikoma,1850,1998,688,South America
+439,Śaiva Magic,800,1500,689,South Asia
+440,"Jain Digambara Tantra, Karnataka",900,1200,654,South Asia
+441,Worshipers of Śītalā,1690,2017,690,South Asia
+442,Donatism,311,427,691,Africa
+443,Tyva (Buddhism),1634,2017,52,Central Eurasia
+444,Sursurunga,1920,2017,692,Oceania-Australia
+446,Tupinamba,1500,1750,694,South America
+447,Trumai,1820,1940,695,South America
+448,Nambicuara,1718,1990,696,South America
+450,Sirionó,1580,2006,698,South America
+451,Aymara,1430,1987,699,South America
+453,Guangzhou (Buddhism),1985,2017,701,East Asia
+455,Lan Na Buddhism,1292,1558,703,Southeast Asia
+456,The Essenes,-165,75,485,Southwest Asia
+457,Kananga - Pentacostal,2013,2017,704,Africa
+458,Tanna - Christian,1869,2017,705,Oceania-Australia
+459,Tanna - Kastom,-1100,2017,705,Oceania-Australia
+460,Jivaro,1956,2000,706,South America
+461,Cayapa,1597,1998,707,South America
+462,Tukano,1550,1989,708,South America
+463,Mundurucu,1770,1980,709,South America
+464,Saramacca,1762,1989,710,South America
+465,Mysore,2014,2016,711,South Asia
+468,Turkana,1870,2017,715,Africa
+469,Won-Buddhism,1916,2017,717,East Asia
+470,Archaic Spartan Cults,-800,-500,719,Europe
+471,Urban Northern Ireland,2015,2016,720,Europe
+472,Karma Kagyu or Kamtsang Kagyu,1110,2017,96,South Asia
+476,Cham Bani,1000,2015,724,Southeast Asia
+477,Tractarian Movement,1833,1845,725,Europe
+478,Early Indian Buddhism,-450,1,726,South Asia
+479,Mesopotamian city-state cults of the Early Dynastic periods,-2900,-2300,476,Southwest Asia
+481,Huichol,1780,2000,728,North America
+482,Miskito,1700,2000,729,North America
+483,Northern Irish Roman Catholics,2015,2016,720,Europe
+484,Northern Irish Protestants,2015,2016,720,Europe
+485,Sámi pre-Christian religion,500,1500,730,Europe
+486,Church of Jesus Christ of Latter-day Saints (early),1830,1951,731,North America
+487,Bribri,1502,2010,732,North America
+488,Yanomamo,1750,2010,733,South America
+489,Callinago,1750,2010,734,North America
+490,Guglielmites,1260,1302,738,Europe
+491,Anglican Church,1530,2017,735,Africa
+492,Roman Divination,-800,380,737,Europe
+493,Krishna Worship in North India - Modern Period,1858,2017,739,South Asia
+494,Cuna,1800,1995,740,North America
+495,Goajiro,1499,2012,741,South America
+496,Haitians,1791,2006,742,North America
+497,Carib,1890,1970,743,South America
+498,Papago,1700,2000,744,North America
+499,Huvasupai,1700,2005,745,North America
+500,Zuni,700,2000,746,North America
+501,Chiricahua,1800,2010,747,North America
+502,Comanche,1700,2000,748,North America
+503,Creek,1700,2001,749,North America
+509,Omaha,1700,1994,751,North America
+510,Pawnee,1830,2010,752,North America
+511,Gros Ventre,1700,2000,753,North America
+512,Klamath,1700,1990,754,North America
+513,Yokuts,1750,1990,755,North America
+514,Pomo (Eastern),1800,2000,756,North America
+515,Yurok,1775,2000,757,North America
+516,Bellacoola,1750,2010,758,North America
+517,Haida,1750,2010,759,North America
+518,Kaska,1800,2000,760,North America
+519,Saulteaux,1600,2000,761,North America
+520,Cham Ahiér,1600,2015,762,Southeast Asia
+522,Mi'kmaq,1500,2011,763,North America
+524,Montagnais,1600,1990,765,North America
+525,Church of Jesus Christ of Latter-day Saints (modern),1951,2018,660,Africa
+526,Hmong Christianity,1900,2018,766,Southeast Asia
+528,Copper Inuit,1771,1980,767,North America
+529,Aleut,1741,1995,768,Europe
+530,Ingalik,1830,2010,769,North America
+531,Chukchee,1641,1989,770,Europe
+532,Gilyak,1650,1989,771,Central Eurasia
+533,Ainu,1263,2007,772,Central Eurasia
+534,Roman Imperial Cult,-42,518,132,Europe
+535,Pāśupatas,200,1200,798,South Asia
+536,Manchu,947,2000,773,East Asia
+537,Ifugao,1550,1970,774,Southeast Asia
+538,Yapese,1526,2003,775,Oceania-Australia
+539,Trukese,1880,1988,776,Oceania-Australia
+540,Tikopia,1606,1980,777,Europe
+541,Siuai,1900,2000,778,Oceania-Australia
+542,New Ireland,1884,1975,692,Oceania-Australia
+543,Manus,1884,2000,780,Oceania-Australia
+544,Kwoma,1900,2003,781,Oceania-Australia
+545,Kapauku,1938,1990,782,Southeast Asia
+546,Orokaiva,1988,1989,783,Oceania-Australia
+547,Aranda,1860,2000,784,Oceania-Australia
+548,Tiwi,1750,1986,785,Oceania-Australia
+549,Alorese,1854,1980,786,Southeast Asia
+550,Iban,1841,1989,653,Southeast Asia
+551,Tanala,1810,1998,788,Africa
+552,Vedda,1000,1970,789,South Asia
+553,Andamanese,1788,1983,790,South Asia
+554,Nicobarese,1750,2011,791,South Asia
+555,Semang,1900,1986,792,Southeast Asia
+556,Lolo,1000,2000,793,Africa
+557,Burusho,1878,2000,794,South Asia
+558,Uttar Pradesh,1500,2010,795,South Asia
+559,Santal,1854,1991,796,South Asia
+562,Medieval Śrīvaiṣṇavism,1017,1445,480,South Asia
+563,"Gaddi, a Hindu community of the Western Himalayas",1845,2018,797,South Asia
+564,Tribal Christianity (and allied castes) in the Himalayas,1950,2018,799,South Asia
+565,Fellahin,1925,1960,803,Africa
+567,Gay and Lesbian Vaishnava Association (GALVA-108),2001,2024,802,Europe
+569,Khalka Mongols,1895,1930,805,Central Eurasia
+570,Supreme Master Ching Hai World Society,1986,2018,806,Southeast Asia
+571,Abkhaz,1855,1890,807,Central Eurasia
+572,Trobrianders,1890,1930,808,Oceania-Australia
+574,Konso,1920,1967,810,Africa
+576,Kuy traditional religions,1000,2018,811,Southeast Asia
+577,Ganda,1860,1900,812,Africa
+578,Gond,1875,1910,815,South Asia
+580,Nāth Sampradāya,1700,2018,817,South Asia
+581,Mentawai (Rereiket),1970,2018,818,Southeast Asia
+582,Siamese (Central Thai),1930,1960,819,Southeast Asia
+586,Kelantanese Thai Religion,1900,2017,821,Southeast Asia
+588,Nyakyusa,1905,1940,822,Africa
+589,Warrau,1915,1945,823,South America
+590,Huayan School (Early Tang),670,712,824,East Asia
+591,Koreans,1925,1950,825,East Asia
+592,Veerashaivas,1200,2018,826,South Asia
+594,Wolof,1925,1955,828,Africa
+595,Western Samoans,1804,1840,829,Oceania-Australia
+597,Confucianism - Eastern Zhou,-600,-200,467,East Asia
+598,Masai,1875,1915,833,Africa
+599,Lepcha,1920,1938,834,South Asia
+600,Riffians,1900,1930,835,Africa
+602,Amhara,1930,1960,837,Africa
+604,Bambara,1890,1923,838,Africa
+605,Burmese,1940,1965,839,Southeast Asia
+607,Mohism,-400,-200,467,East Asia
+608,Kurd,1926,1955,841,Southwest Asia
+609,Tallensi,1915,1940,842,Africa
+610,Somali,1900,1960,843,Africa
+611,Javanese,1930,1960,844,Southeast Asia
+612,Marshallese,1880,1915,845,Oceania-Australia
+613,Maori,1800,1830,846,Oceania-Australia
+614,!Kung,1925,1960,847,Africa
+616,Balinese,1933,1960,849,Southeast Asia
+618,Nuxalk,1860,1890,851,North America
+619,Gilyak,1865,1900,852,Central Eurasia
+620,Papago,1900,1935,853,North America
+621,Haitians,1910,1935,854,North America
+622,Miskito,1896,1921,855,North America
+623,Diasporic American Hinduism,1893,2020,1131,North America
+624,The Roshaniyya,1550,1640,857,South Asia
+625,Copper Inuit,1890,1915,858,North America
+626,Barama River Carib,1907,1935,859,South America
+627,Tikopia,1905,1935,860,Europe
+629,Newar Buddhists,1200,2018,861,South Asia
+630,Aranda,1886,1913,862,Oceania-Australia
+631,Cayapa,1879,1909,863,South America
+632,Local Religion at Selinous,-650,-409,864,Europe
+633,Mādhva,1238,2018,865,South Asia
+634,Classical Daoism,-350,-100,467,East Asia
+635,Ifugao,1890,1920,866,Southeast Asia
+636,Balinese Śaiva priests (pedanda siwa),1500,2018,867,Southeast Asia
+637,Yahgan,1900,1924,868,South America
+638,Klamath,1855,1900,869,North America
+639,Chinese Esoteric Buddhism (Tang Tantrism),716,900,1415,East Asia
+642,The Arch of Titus,81,81,872,Europe
+645,"Meo Muslim, Mev, Mewati Muslim",1100,2020,873,South Asia
+646,Lakota Religious Traditions,1889,2018,894,North America
+647,Havasupai,1893,1921,876,North America
+648,Haida,1870,1901,877,North America
+649,"Worshippers at the Chidambaram Nataraja Temple, Modern Period",700,2019,480,South Asia
+650,Manus,1918,1945,878,Oceania-Australia
+651,Kapauku,1930,1955,879,Southeast Asia
+652,Tiwi,1904,1930,880,Oceania-Australia
+653,The Arch of Constantine,312,315,872,Europe
+654,12th-13th c Cistercians,1198,1250,493,Europe
+655,Siriono,1917,1943,881,South America
+657,Trukese,1912,1949,883,South America
+658,Mapuche,1925,1951,884,South America
+659,Delphi,-800,393,885,Europe
+660,Iban,1941,1966,886,Southeast Asia
+661,Congregation of Savigny,1113,1147,887,Europe
+662,Goajiro,1922,1947,888,South America
+663,Temples of Mater Matuta and Fortuna at Sant'Omobono,-600,400,889,Europe
+665,Elche Synagogue (Spain),200,700,902,Europe
+666,Siuai,1914,1939,890,Oceania-Australia
+667,Ainu,1855,1880,891,East Asia
+669,Orokaiva,1900,1925,893,Oceania-Australia
+670,"Aedes Minerva, Rome",-260,315,872,Europe
+671,Mbau Fijians,1820,1840,895,Oceania-Australia
+672,Qasr al-Bint,-30,400,896,Southwest Asia
+673,Pawnee,1842,1870,897,North America
+674,Aymara,1915,1940,898,South America
+675,Chukchee,1885,1910,899,Europe
+676,"The Order of the Holy Trinity for the Redemption of Captives, 1198-1500",1198,1500,900,Europe
+677,Yapese,1885,1910,901,Oceania-Australia
+678,"Elche, Spain Synagogue",250,350,902,Europe
+679,Santal,1915,1940,903,South Asia
+680,Gujarati Mata Worshipers,1850,2019,677,South Asia
+681,Sargonic Empire,-2350,-2150,904,Southwest Asia
+682,Lakher,1905,1935,910,South Asia
+683,"The Ppo Romé temple-tower complex (Bimong Kalan Ppo Romé, Tháp Ppo Romé)",1600,2015,906,Southeast Asia
+684,Huron,1615,1640,907,North America
+685,Badjau,1940,1966,908,Southeast Asia
+686,Popoluca,1915,1945,909,North America
+687,"Temple of Minerva, Forum Transitorium",85,315,943,Europe
+688,Darul Uloom Deoband,1866,2019,496,South Asia
+689,Lengua,1869,1895,911,South America
+690,Ahl-e-Sunnat wa Jamaat,1880,2019,496,South Asia
+691,Fur,1870,1895,912,Africa
+694,Eyak,1880,1910,915,North America
+710,Hidatsa,1816,1840,923,North America
+711,Kwoma,1912,1937,924,Oceania-Australia
+712,Huichol,1880,1934,925,North America
+713,Northern Saulteaux,1910,1940,926,North America
+714,Tamil Śaiva Bhakti,550,850,480,South Asia
+717,Igbo,1910,1940,927,Africa
+719,Hinduism in Trinidad,1845,2018,342,North America
+721,Semang,1910,1940,929,Southeast Asia
+722,Gros Ventre,1835,1885,930,North America
+723,Trumai,1910,1940,931,South America
+724,Aweikoma,1909,1934,932,South America
+726,Early Śramaṇas,-700,500,934,South Asia
+727,Raglai,1160,2017,935,Southeast Asia
+728,Pentecost,1928,1959,936,Oceania-Australia
+729,Kikuyu,1895,1930,937,Africa
+732,Marquesans,1800,1875,938,Oceania-Australia
+733,Kaska,1870,1915,939,North America
+736,Jivaro,1895,1929,941,South America
+737,Nama Hottentot,1855,1900,942,Africa
+738,Ancient Egyptian,-3000,300,944,Africa
+739,Lakalai,1885,1910,945,Oceania-Australia
+741,Śākta Hinduism,-450,2019,947,South Asia
+742,Thai Bhikkhunis,2003,2020,348,Southeast Asia
+744,Rwala Bedouin,1887,1915,949,Southwest Asia
+745,Buka,1860,1885,950,Oceania-Australia
+748,Lamet,1915,1945,953,Southeast Asia
+749,Korean shamanism,1800,2020,717,East Asia
+750,Mekeo,1850,1875,954,Oceania-Australia
+751,Buddhism in the Mekong Delta,2000,2020,1005,Southeast Asia
+752,Haroi,1470,2019,955,Southeast Asia
+755,Uyghur Islam,1850,2020,960,Central Eurasia
+756,"Punjab/Delhi, India",-750,-250,1918,South Asia
+757,Kiribati,1795,1820,962,Oceania-Australia
+759,Comanche,1855,1880,964,North America
+760,"Punjab/Delhi, India",-250,1200,1919,South Asia
+761,"Punjab/Delhi, India",1200,1600,1920,South Asia
+762,"Punjab/Delhi, India",1600,2020,1921,South Asia
+763,Moriori,1810,1835,968,Oceania-Australia
+764,Timbira (Canela),1900,1936,969,South America
+765,The Oneida Community,1848,1881,970,North America
+766,Garo,1930,1960,971,South Asia
+768,Mundurucu,1850,1900,973,South America
+769,Wogeo,1910,1935,974,South America
+770,Thai Forest Tradition,1920,2020,348,Southeast Asia
+771,Muscular Christianity,1762,2020,975,Europe
+772,The Apollonion at Syracuse,-580,-212,976,Europe
+774,Altar of Hieron II,-269,-215,978,Europe
+775,Jainism,-600,2020,492,South Asia
+776,Rock Relief of Kurangun,-1700,700,980,Southwest Asia
+777,Syria,-538,-515,981,Southwest Asia
+778,Syria,-538,-60,981,Southwest Asia
+779,Syria,-514,-60,981,Southwest Asia
+780,Chogha Zanbil (Al Untash-Napirisha),-1250,-1000,982,Southwest Asia
+781,Syria,381,500,981,Southwest Asia
+782,Syria,1206,1368,981,Southwest Asia
+783,Upper Egypt: Archaic/Early Dynastic Period,-3150,-2686,983,Africa
+784,Upper Egypt: Old Kingdom,-2686,-2181,983,Africa
+785,Upper Egypt: First Intermediate Period,-2181,-2055,983,Africa
+786,Upper Egypt: Middle Kingdom,-2055,-1650,983,Africa
+787,Upper Egypt: Second Intermediate Period,-1650,-1550,983,Africa
+788,The Late Bronze Age City-State of Ugarit,-1500,-1200,984,Southwest Asia
+790,Upper Egypt: New Kingdom,-1550,-1069,983,Africa
+791,Upper Egypt: Third Intermediate Period,-1069,-664,983,Africa
+792,Upper Egypt: Late Period,-664,-332,983,Africa
+793,Upper Egypt: Alexander and the Ptolemies,-332,-30,983,Africa
+794,Omaha,1840,1880,986,North America
+795,"Micronesia, Guam, Commonwealth of the Northern Mariana Islands; the Fed. States of Micronesia (Yap, Chuuk, Pohnpei, Kosrae); Palau, Marshals",1700,1945,570,Oceania-Australia
+799,Upper Egypt: Roman Egypt,-30,390,983,Africa
+801,"Wat Preah Vihear Sour: A Popular Pilgrimage Site outside Phnom Penh, Cambodia",1000,2020,990,Southeast Asia
+802,Chinese Nunnery in Myanmar,1945,2020,450,Southeast Asia
+803,Italy: The Catholic Church,1530,1760,991,Europe
+804,Italy: The Catholic Church,1760,1870,991,Europe
+805,Italy: The Catholic Church,1870,1920,991,Europe
+806,Italy: The Catholic Church,1929,2017,991,Europe
+807,British Isles I: Pre-Roman Britain,-500,-43,992,Europe
+808,British Isles II: Pre-Theodosian Roman Britain,-43,380,992,Europe
+809,British Isles III: Pre-Theodosian Roman Britain Continued,-43,380,992,Europe
+810,British Isles IV: Pre-Theodosian Roman Britain Continued,-43,380,992,Europe
+811,British Isles V: Christian Roman Britain,380,500,992,Europe
+812,Temple of the Jedi Order,2007,2020,993,Africa
+813,Đồng Dương Temple,900,1000,995,Southeast Asia
+814,British Isles VI: Christian Roman Britain,380,500,992,Europe
+815,British Isles VII: Christian Roman Britain,380,500,992,Europe
+816,British Paganism.,-500,350,992,Europe
+817,Early Medieval British Christianity,350,650,992,Europe
+818,"West Bengal, India",-300,600,996,South Asia
+819,"West Bengal, India",600,1200,996,South Asia
+820,"West Bengal, India",-1200,-300,996,South Asia
+821,"West Bengal, India",1200,1800,996,South Asia
+822,"West Bengal, India",1800,1950,996,South Asia
+823,"West Bengal, India",1950,2020,996,South Asia
+824,"Central Macedonia, Greece: Eastern Orthodoxy",1260,1302,997,Europe
+825,"Central Macedonia, Greece: Eastern Orthodoxy",1530,1912,997,Europe
+826,"The Church of Christ, Scientist",1866,2020,1940,Europe
+827,"Central Macedonia, Greece: Eastern Orthodoxy",1913,2017,997,Europe
+828,Italy: The Franciscan Order,1209,1312,991,Europe
+829,Italy: The Jesuit Order,1540,2017,991,Europe
+831,Mỹ Sơn Sanctuary,500,1400,1000,Southeast Asia
+832,Temple of Prey Angkor Knung,700,2020,1001,Southeast Asia
+833,Dobu,1870,1895,1002,South America
+834,The Plum Village Sangha of Thich Nhat Hanh,1982,2020,1003,Southeast Asia
+835,British Isles: Pre-Roman,-500,43,992,Europe
+836,British Isles: Romano-British,43,500,992,Europe
+838,Phnom Oudong: A Sacred Mountain of Pre-colonial Khmer Royal Cities,1600,2020,1007,Southeast Asia
+839,19th century German Protestantism,1788,1914,1008,Europe
+841,Sa skya,1073,2020,1010,South Asia
+842,American Evangelicalism,1730,2020,1011,North America
+843,Bnay Qyāmā and Bnāt Qyāmā,300,900,1012,Southwest Asia
+845,Sо̄tо̄ Mission of San Francisco—Sо̄kо̄ji,1934,2020,1014,North America
+846,Xuanzang's Yogācāra Tradition,645,696,1015,East Asia
+848,Sadducees,-200,70,485,Southwest Asia
+849,"""Gaiwiio Religion,"" ""Longhouse Religion,"" or ""The Way of Handsome Lake"" of the Seneca Tribe",1750,1850,1016,North America
+850,Pre-Christian Religion / Paganism in Gaul,-600,-51,1017,Europe
+851,Sikhism in the United States,1899,2020,1018,North America
+852,Pre-Christian Religion / Paganism in Ireland,-500,900,1019,Europe
+853,Pre-Christian Religion / Paganism in Northern Britain (Pictland / Scotland),-500,900,1020,Europe
+854,pre-Christian Irish,-400,900,554,Europe
+855,Middle-Class Migrant Muslims in the UAE,1900,2020,1021,Southwest Asia
+857,Wesleyanism,1738,2020,1097,Africa
+858,"The New Prophecy or ""Montanism""",165,550,1024,Europe
+859,Valentinians,135,400,6,Europe
+860,Kimpa Vita,1704,2020,1025,Africa
+862,Ilm-e-Khshnoom,1907,2020,1027,South Asia
+863,Orphism,-550,450,132,Europe
+866,Taigu School,1762,1950,1030,East Asia
+867,Nyingma Treasure,1200,1500,96,South Asia
+869,Sichuan Esoteric Buddhist Cult,855,1279,1031,East Asia
+870,Postsocialist Mongolian Buddhism,1990,2020,1032,Central Eurasia
+871,Spiritualism,1848,2020,1033,North America
+873,The Branch Davidians,1962,1993,1035,North America
+877,The International Network of Engaged Buddhists - INEB,1989,2022,1542,Southeast Asia
+879,Free Methodist Church,1860,2020,1103,Africa
+880,Egyptian Salafism (inluding North Africa and West Asia),1870,2015,1038,Southwest Asia
+882,Orphism,-450,425,1040,Europe
+883,Catholics in the People's Republic of China (PRC),1949,2020,1132,Central Eurasia
+884,Sub Saharan Africa Pentecostalism,1907,2022,1041,Africa
+885,Contemporary West African Vodun,-1960,2022,1071,Africa
+886,Pushtimarg (The Path of Grace) in the UK and Gujarat,1990,2020,1042,Europe
+887,Postsocialist Mongolian Shamanism,1990,2020,1043,Central Eurasia
+888,Céli Dé monks,780,900,1044,Europe
+891,Peruvian Mormons,1956,2020,1047,South America
+892,Charismatic Renewal Movement in Christianity - Second Wave Pentecostalism,1960,2020,1018,North America
+893,Sethian Gnostic,100,400,1048,Europe
+894,Universal Fellowship of Metropolitan Community Churches,1968,2020,1049,North America
+896,Sannō Shintō,800,1571,1050,East Asia
+897,Gaengjeongyudo,1928,2020,717,East Asia
+898,Rastafari of Jamaica,1930,2020,1067,North America
+899,Nahdlatul Ulama (NU),1926,2020,1053,Southeast Asia
+900,Pharisees,-150,70,485,Southwest Asia
+902,British Isles: Christian,300,500,992,Europe
+903,The Buddhist community on Mount Lu during early medieval China,350,450,1055,East Asia
+904,Euboea/Central Macedonia: Nicaean-Chalcedonian Christianity,397,500,997,Europe
+905,Euboea/Central Macedonia: Constantinopolitan Chalcedonian Christianity,1260,1302,997,Europe
+906,The Church of England,1963,2020,725,Europe
+908,Sino-Christian Theology,1980,2020,1119,East Asia
+910,Christian Base Community movement,1968,1998,1062,North America
+911,Italy: Roman Catholic Christianity,1260,1302,991,Europe
+912,Ganden Monastery (Dga' ldan),1409,1959,1063,East Asia
+914,Tariqa Shadhiliyya,1258,2020,1064,Africa
+915,Protestantism welcoming People with Disabilities,2000,2020,1065,North America
+916,Italy: Roman Catholic Christianity II,1530,2017,991,Europe
+917,British Isles: Predominantly Celtic Polytheism,-500,-50,992,Europe
+918,Fangshi,-475,220,10,East Asia
+919,Catholicism in contemporary Croatia,1995,2020,1068,Europe
+921,Bhils,1700,2020,1070,South Asia
+922,British Isles: Mixed Roman and British Polytheism,-50,400,992,Europe
+923,British Isles: Introduction of Early Christianity through the End of Columban/Irish Christianity,200,700,992,Europe
+924,Muridiyya of Senegal,1853,2022,1072,Africa
+925,Rabbinic Judaism (Babylonia),220,650,1073,Southwest Asia
+926,Ladakhi Buddhism,842,2020,1074,South Asia
+927,Zealots,0,74,485,Southwest Asia
+928,The Ghost Dance Movement and the Lakota Sioux,1860,1910,1075,North America
+929,Drikung Kagyu,1143,2020,1076,South Asia
+931,The Society of Jesus (Jesuits) in Britain,1580,2020,1078,Europe
+933,Marcionites,144,1000,1080,Europe
+934,Mongolian Buddhism during the Revolutionary Period,1911,1940,1081,Central Eurasia
+935,Nigerian Pentecostalism,1910,2020,1082,Africa
+937,Vestal Virgins,-800,394,872,Europe
+938,Ugarit,-1600,-1185,1084,Southwest Asia
+939,Goodenough and Fergusson Islanders,1875,1900,1085,Oceania-Australia
+940,Julio-Claudian Imperial Cult,-31,68,132,Europe
+941,Chan Buddhists in early Qing period,1600,1700,1087,East Asia
+942,African Methodist Episcopal Church,1816,2020,1095,Africa
+943,Moravian Missionaries in Nunatsiavut,1752,2020,1091,North America
+944,Mohyla's Ukrainian Church,1620,1700,1101,Europe
+945,Vasco-Aquitanian Religion,100,400,1106,Europe
+946,Nyingma (rnying ma),700,1959,1129,South Asia
+948,Christianity in Ephesus,120,300,1094,Southwest Asia
+949,The Church of All Worlds,1963,2020,1096,North America
+950,The Religious Society of Friends,1652,2020,1125,Africa
+952,Ethiopian Jews,1980,2020,1104,Southwest Asia
+953,Sachchai,1975,2020,1140,South Asia
+955,British Isles: Augustinian/Roman Christianity,600,800,992,Europe
+956,Iron Age Britain: Mid to Late Pre-Roman Iron Age,-500,-55,992,Europe
+957,Spartan Religion,-800,-300,1142,Europe
+958,Society of Jesus,1540,1773,498,Europe
+959,Iron Age Britain: Romano-Celtic Era,-55,286,992,Europe
+960,Bön (Bon),1000,2020,1107,South Asia
+961,Romanian Orthodox Church,1885,2020,1108,Europe
+962,Amdo Gelukpa,1400,2000,1109,East Asia
+963,The Knights Templar,1119,1312,1110,Europe
+964,Baul Fakirs of Bengal,1800,2020,1111,South Asia
+965,Pachomian Monasticism,323,548,1112,Africa
+966,"Naqshbandī Order, Naqshbandī Tarīqa, Naqshbandīyyah, Khwājagān,",1318,2020,1113,Central Eurasia
+967,Unitarian Universalism,1825,2020,1123,Europe
+968,"Anabaptist Mennonites in North America, 1683-2021",1683,2021,1115,North America
+969,Adi Dravida/Valluva Sakya Buddhism,1891,1940,1117,South Asia
+970,Cult of Isis (Mysteries of Isis),-323,500,132,Europe
+971,Gāṇapatya,500,2020,1135,South Asia
+972,Nestorian Christianity,431,1500,1121,Southwest Asia
+973,The Sarna religion of the Oraons of Jharkhand,1845,2019,1136,South Asia
+974,"Greek Chalcedonian Christians, Nicaea",1204,1261,1124,Southwest Asia
+975,Neo-Charismatic Movement - Third Wave Charismatic Movement,1980,2020,1018,North America
+976,Mising Community,1187,2019,1133,South Asia
+977,Chishti Sufis,1200,2020,1127,South Asia
+978,Indonesian Catholicism,1500,2020,1053,Southeast Asia
+980,Pure Land Buddhist Schools in Early Medieval Japan,1175,1333,1141,East Asia
+981,Nation of Islam,1930,2020,1153,North America
+982,The Samaritans (Persian to early Roman periods),-499,100,1138,Southwest Asia
+983,Tibetan and Himalayan Mundane and Landscape Cults,600,2020,1107,South Asia
+984,Calvinism (Early/Reformation),1520,1565,1139,Europe
+985,The Victorines,1108,1299,1143,Europe
+986,Theurgy,150,529,1144,Europe
+987,"Parsis, Zoroastrians of India",1600,2020,1145,South Asia
+988,Churches of Christ- United States,1832,2020,1146,North America
+989,Opus Dei,1928,2020,1147,Europe
+991,Beat Buddhism,1944,1969,1149,North America
+993,Pontifex Maximus and Pontifices (Pontifical College),-712,380,872,Europe
+994,"Monastic Communities of Lower Egypt: Nitria, Kellia, Scetis",330,470,1150,Africa
+995,Tamil Neo-Saivism,1841,2020,1151,South Asia
+997,Ancient Egypt - Early Dynastic Period,-2950,-2670,535,Africa
+1004,Religion in Roman Ostia,-200,300,1158,Europe
+1005,Religion in Elam,-2600,-539,1159,South Asia
+1006,Ancient Egypt - Old Kingdom,-2670,-2168,535,Africa
+1008,Ancient Egypt - First Intermediate Period,-2168,-2010,535,Africa
+1010,Pythagoreanism,-530,200,1163,Europe
+1011,Kingdom of Edom,-800,-550,1208,Southwest Asia
+1012,Inhabitants of Medieval Kurgus,550,1500,1178,Africa
+1013,Estado da Índia Renegades in Deccan,1510,1640,1165,South Asia
+1015,Ancient Egypt - Predynastic Period - Early Naqada Culture,-4000,-2950,517,Africa
+1016,Ancient Egypt - Predynastic Period - Cultures of Lower Egypt,-4000,-3400,529,Africa
+1018,Goa,1510,1600,1166,South Asia
+1024,Universal Salvation Ritual,1200,1920,1170,East Asia
+1025,Dalikal Ppo Klaong Garai,1151,2020,762,Southeast Asia
+1026,Temple of Confucius (Kong Temple),-200,1900,1180,East Asia
+1028,German Pietists (Hasidei Ashkenaz),1100,1250,1173,Europe
+1029,Zigao 子羔,-325,-278,1174,East Asia
+1030,The Way of Tang and Yu (Tang yu zhi dao 唐虞之道),-325,-278,1175,East Asia
+1031,Eastern Roman Manichaeism,300,600,1177,Europe
+1034,Rongchengshi 容成氏,-325,-278,1179,East Asia
+1037,Third Intermediate Period in Ancient Egypt,-1100,-650,535,Africa
+1038,Sino-Muslims in Qing China,1644,1911,1183,East Asia
+1039,(Archaeology of) Religion in New Kingdom Nubia,-1550,-1070,1184,Africa
+1040,Tomb of Tutankhamun (KV 62),-1334,-1325,1185,Africa
+1041,Korean Catholicism,1600,2021,1188,East Asia
+1042,Zichiji 資持記,1078,1085,1248,East Asia
+1043,Islam in Aceh,1500,2020,1187,Southeast Asia
+1044,Han Imperial Cult under Emperor Wu,-141,-87,89,East Asia
+1048,The Sanctuaries of the Egyptian Gods at Delos,-230,-60,1191,Africa
+1049,Chalcolithic Southern Levant,-4500,-3600,44,Southwest Asia
+1050,All Things Flow Into Form (Fanwu liuxing 凡物流形),-300,-278,1174,East Asia
+1051,Religion at Tell el-Dab'a (ancient Avaris) in Ancient Egypt,-1960,-1550,1296,Africa
+1052,The Dunhuang Platform Sūtra,780,1000,1193,East Asia
+1054,Wenzi 文子,-202,2021,1195,East Asia
+1055,Taijitu shuo 太極圖說,1050,2021,1216,East Asia
+1056,The ancient Egyptian Amduat - tomb of Thutmose III,-1479,-1425,1196,Southwest Asia
+1057,Fuzi 傅子,217,278,1197,East Asia
+1058,Syŏnggyŏng chikhae kwang-ik,1780,1920,1198,East Asia
+1060,The Taizhou Movement,1500,1600,1225,East Asia
+1062,"Shangshu 尚書 (""Higher Writings""; also, ""Documents"")",-500,1911,809,East Asia
+1063,"Lunyu 論語, The Analects",-500,1911,809,East Asia
+1065,Ancient Egypt- Tomb of Nefertari,-1250,-1250,1205,Africa
+1067,"*Xing zi ming chu 性自命出, Natural Dispositions Come from Endowment",-400,-200,809,East Asia
+1068,"Longmen Grottoes in Luoyang, Henan Province of P. R. China",1,2021,1316,East Asia
+1069,Religion at Deir el-Medina,-1504,-1069,1207,Africa
+1070,The Sanctuary of the Egyptian Gods in Marathon,150,200,1209,Europe
+1071,Digital Shinto Communities,2001,2021,1435,Africa
+1072,Ancient Egypt - The Temple of Mentuhotep II,-2055,-2004,1211,Africa
+1074,Chuci zhangju,-139,140,1272,East Asia
+1075,Dazhidu lun 大智度論,402,406,1212,East Asia
+1076,Inquisitors of Goa's Santo Ofício,1560,1773,1166,South Asia
+1077,The Cherished Instruction (Baoxun 保訓),-325,-278,1214,East Asia
+1078,Hymns to the Aten,-1352,-1336,34,Africa
+1079,Tongshu 通書,1050,2021,1216,East Asia
+1080,Cheng weishi lun 成唯識論,659,660,1426,East Asia
+1081,The Abydos Temple of Khentiamentiu,-2750,-2150,1218,Africa
+1082,Lion Temple (Apedemak Temple) at Musawwarat es-Sufra,-235,300,1219,Africa
+1083,Drukpa Kagyü School (Bhutan),1625,2021,1227,South Asia
+1087,The Bogomils,969,1400,1224,Europe
+1089,"The ""Sarapeion"" of Thessalonica",-210,300,1228,Europe
+1094,The Temple Complex at Jebel Barkal,-1500,300,1233,Africa
+1095,Punjabi (West),1947,1958,1237,South Asia
+1096,The Tomb of Meresankh III,-2620,-2570,1238,Africa
+1098,Shuzi gua excavated material,-1200,300,1240,East Asia
+1100,Fanyin,-200,-100,1253,East Asia
+1101,Natchez,1710,1730,1243,North America
+1102,The Royal Cache - Theban Tomb 320,-1069,-945,1244,Africa
+1104,Tomb of Nefermaat and Itet (Meidum 16),-2613,-2589,1247,Africa
+1105,The Tomb of Paser TT367,-1427,602,1249,Africa
+1106,Old Kingdom Religion at Abydos,-2750,-2150,1266,Africa
+1108,Early Christianity and Monasticism in Egypt,0,600,1254,Southwest Asia
+1109,Chan Buddhism in the Song,960,1279,1255,East Asia
+1110,Twana,1845,1875,1256,North America
+1112,Xifang Helun 西方合論,1599,1599,1258,East Asia
+1113,The Double-Basilica at Thasos (Aliki),350,500,601,Europe
+1117,Ancient Egyptian Book of the Earth – Tomb of Ramesses VI,-1145,-1139,1260,Africa
+1119,Karnak Temple (New Kingdom),-1550,-1086,1262,Africa
+1120,Liji 禮記,-551,1911,1263,East Asia
+1121,Sahyadri Khanda (Purana),1400,1800,1264,South Asia
+1123,Ancient Egypt - Tomb of Amenmose TT318,-1500,-1400,136,Africa
+1124,The ancient Egyptian Book of Two Ways,-2000,-1840,1267,Africa
+1125,Ancient Egypt - the Ramesside Period,-1292,-1070,1269,Africa
+1126,The Tomb of Khnumhotep I at Beni Hassan,-1992,-1956,1270,Africa
+1127,Anglican Church of Korea,1890,2021,1271,East Asia
+1129,Ancient Thessalians,-700,476,1274,Europe
+1130,The Sanctuary of the Egyptian Gods in Dion,-200,300,1275,Europe
+1133,Religion in Greco-Roman Egypt,-305,284,1287,Africa
+1134,Tiantai,538,2022,1278,East Asia
+1135,Tiger Hill,-496,2021,1279,East Asia
+1136,The Fellowship of Goodness 同善社 (Tongshanshe),1910,1951,1280,East Asia
+1138,Sanctuary of Malophoros,-699,-250,1282,Europe
+1140,Early Medieval Confucianism,220,589,1373,East Asia
+1141,The Master of the Golden Tower (Jinlouzi 金樓子),502,557,1289,East Asia
+1143,Temple of Hatshepsut at Deir el-Bahri,-1473,348,1211,Africa
+1144,The Yijing 易經 (The Classic of Changes),-1554,2021,1290,Africa
+1146,The Great Temple at Abu Simbel,-1279,1968,1294,Africa
+1148,The Pyramid of Unas,-2345,-2315,1295,Africa
+1149,Christianity in Tang China,618,906,1297,East Asia
+1153,Russian Orthodox Mission in Alaska,1784,1867,1300,North America
+1154,The Cult of the Fox,1500,1950,1299,East Asia
+1155,The Pyramid Texts: Pyramid of King Unas (Wnjs),-2375,-2345,1295,Africa
+1156,Solovetski monastery,1429,1939,1302,Central Eurasia
+1157,Ancient Egypt - The Tomb of Meryre II at Amarna (TA 2),-1335,-1332,1303,Africa
+1158,Early Daoist text—Commands and Admonitions for the Families of the Great Dao (Dadaojia lingjie大道家令戒),200,500,1304,East Asia
+1160,Wuzhen pian 悟真篇,1075,1078,1378,East Asia
+1161,The Pharsalos Metroon,-399,-100,1306,Europe
+1162,Lingbao dafa,400,1400,1307,East Asia
+1164,The Sanctuary of the Egyptian Gods at Gortyn,100,300,1309,Europe
+1168,Pagodes of Portuguese Goa,1510,1600,1166,South Asia
+1169,Sanctuary of Zeus Thaulios and Ennodia at Pherai (Makalorema),-800,100,1312,Europe
+1170,Chongyang Lijiao Shiwu Lun 重陽立教十五論,1200,2021,1313,East Asia
+1172,Twofold Mystery (Chongxuan 重玄),500,700,1317,East Asia
+1173,Heliopolis Project,-3500,2021,1318,Africa
+1174,Temple at Busayra,-750,-300,1319,Southwest Asia
+1175,Religion in Northern Hejaz,-1500,-300,1320,Southwest Asia
+1176,Shijing 詩經 (Classic/Book of Odes/Songs),-700,1911,809,East Asia
+1177,Orphic Tablets,-500,391,1321,Europe
+1178,Modern Mystery School (MMS),1997,2021,1322,South America
+1180,Batak Traditional Religions,1600,2020,1325,Southeast Asia
+1181,Numinous Cliff Mountain Temple (Lingyan shan si 靈岩山寺),-494,2021,1326,East Asia
+1182,Huainanzi 淮南子,-140,220,1327,East Asia
+1183,Religion at Nippur in the Ur III period,-2100,-2000,1936,Southwest Asia
+1184,South Sea God Temple (Nanhai shen miao 南海神廟),594,2021,1329,North America
+1185,Religion of Roman Palmyra,-44,272,1363,Southwest Asia
+1186,Shrine at Horvat Qitmit,-800,-586,1342,Southwest Asia
+1187,Sanctuary at Tell Damiyah,-850,-700,1331,Southwest Asia
+1188,Marmarini Stele,-199,-150,1332,Europe
+1189,Yādiya/Sam'al,-920,-713,1333,Southwest Asia
+1190,Ancient state of Urartu,-850,-580,1334,Southwest Asia
+1191,Religion in Greco-Roman Alexandria,-300,200,1335,Africa
+1192,Kaharingan,1945,2021,1336,Southeast Asia
+1193,The Cave of the Nymphs at Pharsalos,-499,-30,1337,Europe
+1196,K’iche’ (Quiché),1910,1940,1343,North America
+1197,Atheism in the Soviet Union,1917,1991,669,Europe
+1198,Yazılıkaya Hittite Rock Sanctuary,-1500,-1200,1344,Southwest Asia
+1199,Tiv,1905,1934,1345,Africa
+1201,The Sanctuary of Demeter and Kore at Eleusis,-1480,394,1347,Europe
+1202,The Metroon at Demetrias,-250,-150,1348,Europe
+1203,Book(s) of Daniel,-586,100,1349,Southwest Asia
+1207,Female alchemy Tradition,1550,2021,1352,East Asia
+1210,Mende,1920,1950,1355,Africa
+1211,Religion in Samuha during the Hittite period,-1600,-1200,1356,Southwest Asia
+1212,Hephaisteion,-480,267,1359,Europe
+1213,Eleusinion,-650,396,1360,Europe
+1214,Temple at Tel Arad,-750,-705,1361,Southwest Asia
+1215,Metroon (Athens),-409,267,1362,Europe
+1216,Mawangdui (tombs),-186,-168,1364,East Asia
+1217,Sanctuary at Tell Qasile,-1150,-586,1365,Southwest Asia
+1218,Yiguan Dao/I-Kuan Tao 一貫道,1870,2021,1366,East Asia
+1219,Chunqiu fanlu,-2,7,1367,East Asia
+1220,The Cult of Chinggis Khan (a.k.a. Genghis Khan) in Mongolia,1227,2023,1409,Central Eurasia
+1221,Temple at Tell Deir 'Alla,-1550,-1185,1368,Southwest Asia
+1223,Toda,1885,1910,1370,South Asia
+1224,Duren jing,400,500,1372,East Asia
+1226,Tainaron,-500,500,1375,Africa
+1227,Polytheistic Pre-Islamic South Arabia,-800,360,1376,Africa
+1228,Lesu,1915,1940,1377,Oceania-Australia
+1229,Three Self Patriotic Movement (TSPM),1950,2021,1132,Central Eurasia
+1230,Cult at the Athenian Agora,-600,276,1379,Europe
+1231,"Shenxiao 神霄 (""Divine Empyrean"") Daoism",1100,2021,1248,East Asia
+1232,Book of Nut,-1300,200,1380,Africa
+1234,Ashanti,1880,1910,1382,Africa
+1239,Book(s) of Esther,-400,70,1386,Southwest Asia
+1240,Azande,1900,1935,1387,Africa
+1241,Taiping 太平 Movement,1837,1866,1388,East Asia
+1243,Shengjing zhijie,1636,1900,1420,East Asia
+1245,"Tabernacle, The",-1200,-1000,1391,Southwest Asia
+1246,Shilluk,1895,1925,1392,Africa
+1247,Exovedate,1885,1885,1393,North America
+1248,Religion in the Old Assyrian Period,-1972,-1718,1394,Southwest Asia
+1249,Cult of the Egyptian Gods at Demetrias,-294,14,1395,Europe
+1250,Hanbalism,850,1350,1396,Southwest Asia
+1251,Tsonga,1880,1910,1397,Africa
+1252,Shedachenglun 攝大乘論,525,650,1398,East Asia
+1253,Damascus Document,-200,50,1399,Southwest Asia
+1254,Stoudios Monastery,790,1453,1548,Central Eurasia
+1255,Julian Romance,361,599,1401,Southwest Asia
+1257,Ammonite Religion,-1000,-500,1403,Southwest Asia
+1258,Religion in Judah,-1000,-586,1404,Southwest Asia
+1259,"The LuWang School, the School of Lu Xiangshan and Wang Yangming",1200,1900,2149,Central Eurasia
+1260,Qiṣṣat Dhī al-Qarnayn,850,1250,1407,Europe
+1261,Anyang,-1300,-1046,1408,East Asia
+1263,Judean/Yehudite Colony at Elephantine (Persian period),-500,-399,1411,Africa
+1264,Judeans in Babylonia,-598,-447,1412,Southwest Asia
+1265,Mozi 墨子,-400,200,467,East Asia
+1266,"The Baoshan Cemetery, Jingmen, Hubei Province",-400,-278,1413,East Asia
+1268,Monotheistic Pre-Islamic South Arabia,360,570,1414,Southwest Asia
+1269,Ji shenzhou sanbao gantong lu 集神州三寶感通錄,266,664,1416,East Asia
+1270,The Zhuangzi,-551,1911,1417,East Asia
+1271,Command to Fu Yue 傅說之命,-400,-300,467,East Asia
+1272,"*The Heart is what is at the center, *Xin shi wei Zhong 心是謂中",-400,-300,1452,East Asia
+1274,Russian orthodox mission in Japan,1861,1945,1419,East Asia
+1276,The Old Monastery of Baramus,380,1500,1150,Africa
+1278,Peak Sanctuary of Petsofas,-2000,-1500,1427,Europe
+1279,Mandarese Muslims,1593,2004,1424,Southeast Asia
+1280,"(Shanghai) Xiaotaoyuan Mosque, Small Peach Garden Mosque (上海)小桃園清真寺",1917,2022,1425,East Asia
+1281,Otoro Nuba,1910,1945,1428,Africa
+1283,Butonese Muslims,1500,2002,1431,Southeast Asia
+1284,Religion of Phoenicia,-1200,-330,1432,Southwest Asia
+1285,The Small Temple at Abu Simbel,-1279,1968,1441,Africa
+1287,Peak Sanctuary of Mt. Juktas,-2000,-1200,1436,Europe
+1288,Bailadeiras of Goa,1510,1650,1166,South Asia
+1289,Buginese Muslims,1500,2004,1437,Southeast Asia
+1290,4QInstruction,-100,50,1440,Southwest Asia
+1292,Kourion Episcopal Basilica and Urban Precinct,431,700,1442,Europe
+1293,The Zapotec or Ben 'Zaa (The Cloud People),-2000,2022,1444,North America
+1294,The Autobiography of Adad-guppi,-649,-539,1445,Southwest Asia
+1295,Donatism,311,600,1446,Africa
+1297,Chen-Wei Texts,56,907,1272,East Asia
+1298,Masjid Al-Hilal,1603,1980,1448,Southeast Asia
+1299,Russians (of Viriatino Village),1940,1965,1449,Central Eurasia
+1300,"Enlace de Agentes de Pastoral Indígena (EAPI, Network of Indigenous Ministry Agents)",1990,2022,1450,North America
+1301,Moche (Mochica),-200,1000,1451,South America
+1303,Emar: A Hittite Vassal in Late Bronze Age Syria,-1400,-1200,1564,Southwest Asia
+1304,Peyote Religion (Peyotism) and the Native American Church,1875,2022,1600,North America
+1305,Three Tianzhu Monasteries 三天竺寺,595,2022,1455,East Asia
+1306,Philistine Religion,-1200,-600,1456,Southwest Asia
+1307,Southern Baptists,1845,2022,1538,North America
+1308,Jews and Jewish-Sympathizers in South Arabia,275,530,1458,Southwest Asia
+1309,Circumcellions,315,500,526,Africa
+1310,"The byzantine cemetery-hermitage of Saint Onufrius (Onoufrios) in Methoni, south-western Messinia, Peloponnese, Greece)",300,1500,1459,Europe
+1311,Jehovah's Witnesses,1870,2022,1460,North America
+1312,Bishnoi,1400,2022,1461,South Asia
+1313,Masjid Tua Palopo,1604,1905,1462,Southeast Asia
+1318,"The byzantine church of Prophet Ilias (Elijah), in Abysoles, Thalames, messinian Mani, Greece",1250,2022,1467,Europe
+1319,Reginistas,1968,2022,1468,North America
+1320,"The church/(mosque) of Transfiguration of Savior, at Niokastro, Pylos, south-western Messinia, Peloponnese, Greece",1570,2022,1469,Europe
+1321,Mourides (Muridiyya),1853,2022,382,Africa
+1322,Pagans under the Emperor Julian,361,363,132,Europe
+1323,Luguru,1910,1935,1470,Africa
+1324,Taiping jing,150,2022,1132,Central Eurasia
+1326,Meher Kapısı inscription (Urartian text),-820,-580,1473,Southwest Asia
+1327,Tomb of Sunan Gresik,1419,2020,1474,Southeast Asia
+1328,Táin Bó Cúailnge,500,1300,1475,Europe
+1329,Pre-Pottery Neolithic in the Near East,-9700,-6600,1476,Southwest Asia
+1330,Papyrus Amherst 63,-399,-100,1411,Africa
+1331,The Sanctuary of Pasikrata at Demetrias,-294,200,1478,Europe
+1332,Temple of ʿAthtar dhū-Qabḍ,-600,100,1616,Southwest Asia
+1333,Cult of Thecla,150,600,1487,Europe
+1334,No-debt Movement in US Evangelicalism,1980,2022,1608,North America
+1335,Congregation of the Oratory,1575,1700,991,Europe
+1336,Labrang Tashi Khyi Monastery,1710,2022,1762,East Asia
+1337,Tell Afis (Syria),-1200,-600,1488,Southwest Asia
+1338,The Sayings of the Desert Fathers,390,500,1489,Southwest Asia
+1339,The Temple of Millions of Years of Thutmose III,-1470,-1213,1492,Africa
+1340,International Sivananda Yoga Vedanta Centers,1957,2023,1493,Europe
+1341,Muslim Students Association of the United States and Canada,1960,2022,1494,North America
+1342,Pauline Epistles,50,62,1495,Southwest Asia
+1343,Psychro Cave,-1900,1000,1496,Europe
+1344,Tibetan Nonsectarianism (ris med),1840,1920,1497,East Asia
+1345,A Sogdian Zoroastrian Prayer,400,900,1522,Central Eurasia
+1346,Sanctuary of Athena Pronaia at Delphi,-750,395,1499,Europe
+1347,"The Praise of the Bees, Exultet Hymn",500,1500,1500,Europe
+1348,Disability-focused Christianity for Palestinians,2012,2022,1502,Southwest Asia
+1349,The Dingxiang Wang Cult,1124,1991,1503,Central Eurasia
+1350,Mt. Emei 峨眉山,100,2022,1504,East Asia
+1351,KV 14: Tomb of Tausert and Setnakht,-1186,1184,1260,Africa
+1352,Śākadvīpīya Brāhmaṇas,2,21,1505,South Asia
+1356,The Lausiac History,419,420,1510,Southwest Asia
+1357,Encratites,100,400,1517,Southwest Asia
+1358,"Deir el-Bala’izah, Monastery of Abba Apollo",650,800,1512,Africa
+1359,Shrine at En Hazeva,-700,-550,1513,Southwest Asia
+1361,The Sanctuary of Apollo Pythios at Delphi,-900,395,1515,Europe
+1363,Moche,200,900,1451,South America
+1367,Targums,70,601,1521,Southwest Asia
+1368,"Quarrying Cult at Simitthus (Chemtou, Tunisia)",-150,299,1523,Africa
+1369,Astronomers in Babylon,-750,80,1524,Southwest Asia
+1370,Teda,1935,1960,1525,Africa
+1371,Twelver Shi'ism in post-revolutionary Iran,1979,2022,1526,Southwest Asia
+1374,The Reformed Church (Early Orthodoxy),1560,1620,1527,Europe
+1375,Epic of Gilgamesh,-1900,-130,1531,Southwest Asia
+1376,African Initiated Churches,1900,2022,1529,Africa
+1377,Sídhe,600,1800,1532,Europe
+1378,Monastery of Apa Apollo in Bawit,390,900,1533,Africa
+1386,Liumen (Liu School),1807,1950,1541,East Asia
+1387,Spring and Autumn annals of Master Lü,-247,-239,1546,East Asia
+1389,Writ of the Three Sovereigns,200,1200,1544,East Asia
+1390,Eastern Apache,1855,1880,1545,North America
+1391,The Sanctuary of Artemis Orthia (Sparta),-800,400,1547,Europe
+1392,Messalians,360,900,1549,Southwest Asia
+1393,The Ladder of Divine Ascent,579,650,1550,Africa
+1395,The First Temple in Jerusalem,-950,-586,2190,Southwest Asia
+1396,Ptolemaic Egypt - Egyptian Religion,-304,-30,1551,Africa
+1397,The Classic Period Peripheral Coastal Lowlands Ritual Ballgame Cult,400,1000,1552,North America
+1398,Leifeng Pagoda (Leifeng ta 雷峰塔),971,2022,1553,East Asia
+1399,Religion in the Mittani Empire,-1550,-1350,1554,Southwest Asia
+1400,The Buddhist Nuns of 4th - 6th century China,300,516,1555,East Asia
+1401,"The ""On the Divine Names"" of Pseudo Denys the Areopagite",485,528,1556,Southwest Asia
+1402,Nahal Mishmar cave,-4350,-3100,1558,Southwest Asia
+1403,En Gedi sanctuary,-4000,-3800,1559,Southwest Asia
+1404,Religion in Nabataea,-300,450,1560,Southwest Asia
+1405,Asketikon,358,364,1561,Southwest Asia
+1406,Barlaam and Ioasaph,750,1700,1571,Europe
+1409,Formative Olmec,-1500,-400,1565,North America
+1412,Tenrikyo,1838,2022,1568,Central Eurasia
+1413,The Early Christian basilicas of Amathous,300,800,1569,Europe
+1415,Anomeans,350,398,1573,Europe
+1416,Mount Athos,960,2022,1574,Europe
+1417,Taiyi sheng shui 太一生水,-400,-300,1413,East Asia
+1418,Book of Jonah,-800,-200,1576,Southwest Asia
+1419,Ancient Egyptian Religion in the Early 18th Dynasty,-1550,-1425,1577,Africa
+1420,Creek,1785,1810,1578,North America
+1421,Tian wen 天問,-340,140,1272,East Asia
+1422,Defense of Icon Veneration by John of Damascus,726,730,1579,Southwest Asia
+1424,Santian neijie jing 三天內解經,420,430,1581,East Asia
+1425,Religion at Erlitou,-1800,-1500,1582,East Asia
+1426,Early Missionary Christianity in China,1580,1740,1583,East Asia
+1427,The Chaldaean Oracles,100,199,1584,Southwest Asia
+1428,Votive Deposits,1007,1220,1585,East Asia
+1429,Enheduana's Exaltation of Inana,-2300,1700,1586,Southwest Asia
+1430,Erlitou (Ritual/Ceremonial/Palatial Districts),-1800,1500,1582,East Asia
+1431,Elements of Theology,412,485,1633,Europe
+1432,Preparation for the Gospel-Demonstration of the Gospel,312,324,1591,Southwest Asia
+1433,Novatians,250,258,1588,Europe
+1434,Kuna,1912,1937,1589,South America
+1435,Cathedral of Hagia Sophia,360,1453,1590,Central Eurasia
+1436,The Monastic School of Gaza,320,536,1593,Southwest Asia
+1437,Temple of Ḫaldi (Ayanis),-680,-650,1594,Southwest Asia
+1438,"The church of Transfiguration of Savior, at Nomitsi, southern Messinia (Outer Mani), Peloponnese, Greece",1200,2022,1595,Europe
+1440,Basilica of Saint Demetrios,300,1917,1597,Europe
+1441,Mexica (Aztec) Religion,1325,1521,585,North America
+1442,On the Body and Blood of the Lord (De corpore et sanguine Domini) - Paschasius Radbertus,830,835,1598,Europe
+1443,On the Body and Blood of the Lord (De corpore et sanguine Domini) - Lanfranc of Canterbury,1062,1063,1599,Europe
+1444,Amarna South Tombs Cemetery,-1352,-1336,1602,Africa
+1447,Private chapels at the Amarna Workmen's Village,-1352,-1327,1604,Africa
+1448,Hagia Sophia (Thessaloniki),650,1913,1605,Europe
+1449,Aztec-Mexica Temple R of Tlatelolco,1337,1521,1606,North America
+1450,Tehuelche,1855,1880,1607,South America
+1451,Religion in the Early Bronze Age / Canaan,-3600,-2400,1609,Southwest Asia
+1452,Soushen ji 搜神記,100,350,103,East Asia
+1453,Monastery of saint Neophytos the Recluse,1159,1503,1610,Europe
+1454,Hesychastic Controversy,1337,1351,1612,Europe
+1455,Basseri,1943,1958,1613,Southwest Asia
+1456,Religion in the Middle Bronze Age / Canaan,-2000,-1550,1644,Southwest Asia
+1458,Mbuti,1935,1960,1615,Africa
+1459,Famen Monastery 法門寺,67,960,1617,East Asia
+1460,"Acheiropoietos basilica, Thessaloniki",450,1430,1618,Europe
+1461,Saami,1935,1960,1619,Europe
+1463,"Church of Panagia (Our Lady) Angeloktisti, Kition",400,1500,1621,Europe
+1465,Temple of Ninurta at Nimrud (ancient Kalhu),-865,-612,1623,Southwest Asia
+1466,Islamic modernists,1800,1980,1624,Africa
+1468,Eastern Christianity From Nicaea to Chalcedon,325,451,1626,Europe
+1469,Huamachuco Religion,300,1532,1627,South America
+1471,Book of Ezekiel,-593,-100,1629,Southwest Asia
+1472,Petra Great Temple,-100,200,1638,Southwest Asia
+1473,Ishtar's Descent to the Underworld,-1000,-600,1631,Southwest Asia
+1474,Amahuaca,1945,1970,1632,South America
+1483,Khazneh (Petra),-100,200,1642,Southwest Asia
+1484,Mesopotamian Exorcistic Texts,-2500,50,1631,Southwest Asia
+1486,Xunzi 荀子,-310,-215,467,East Asia
+1488,Botocudo,1869,1894,1646,South America
+1489,Laojun Shan (Mountain of Lord Lao),142,2022,1647,East Asia
+1492,Nambicuara,1925,1950,1650,South America
+1494,Temple at Tell Afis,-1100,-600,1769,Southwest Asia
+1495,Secular Buddhists,1997,2022,1652,Europe
+1498,"Sunan Ampel Great Mosque, Surabaya",1421,2021,1655,Southeast Asia
+1499,Great Temple of Tenayuca,800,1521,1756,North America
+1504,"Tomb of Sunan Giri, Gresik (East Java)",1506,2020,1668,Southeast Asia
+1508,Zaytuna Magazine/ المجلة الزيتونية,1936,1955,1679,Africa
+1509,The Temple Scroll,-450,-125,1440,Southwest Asia
+1510,"Tomb of Sunan Drajat, Lamongan (East Java)",1522,2021,1672,Southeast Asia
+1511,Sokoto,1804,1903,1673,Africa
+1513,Imrā’atu-nā fī l-šarīʻa wa-l-muŷtamaʻ / امرأتنا في الشريعة والمجتمع,1927,1930,341,Africa
+1514,"Tomb of Sunan Bonang, Tuban, East Java/Bonang Village Lasem Subdistrict, Central Java (disputed)",1525,2022,1676,Southeast Asia
+1515,Dura Europos Mithraeum,168,256,1677,Southwest Asia
+1517,Tunisian Women's Associations,1936,1962,341,Africa
+1518,"The Tomb of Sunan Kalijaga: Kadilangu Village, Demak Regency (Central Java)",1513,2022,1680,Southeast Asia
+1519,"The Mausoleum of Sunan Muria, Colo (Central Java)",1551,2022,1681,Southeast Asia
+1520,Kitāb al-Khilāf fῑ al-Aḥkām by Al-Shaykh al-Ṭūsī,995,1066,1682,Southwest Asia
+1521,Order of the Hermits of St Augustine (Augustinian friars),1256,1400,1683,Europe
+1522,Tijaniyya Tariqa الطريقة التجانية,1781,2022,1748,Africa
+1523,Tafsīr al-taḥrīr wa al-tanwīr,1936,2022,1752,Africa
+1524,The Church of the Holy Sepulchre,335,2022,1687,Southwest Asia
+1525,Changsha Zidanku Chu bo shu 長沙子彈庫楚帛書 1 (Chu Silk Manuscript),-400,-300,1688,East Asia
+1526,Pashupati-Kshetra (The Area of Pashupati),533,2022,1689,South Asia
+1527,"Masjid Al-Aqsha Menara Kudus, Kudus (Central Java)",1549,2022,1690,Southeast Asia
+1528,Najran,500,575,1691,Southwest Asia
+1529,Byzantine Iconoclasts (726-787 CE),720,743,13,Europe
+1532,"The Mausoleum of Sunan Gunung Jati, Cirebon (West Java)",1570,2022,1694,Southeast Asia
+1533,Maqam of Sidi Ibrahim Arriyahi مقام سيدي إبراهيم الرياحي,1878,2022,1721,Africa
+1534,Shorter Sukhāvatīvyūha Sūtra,100,2022,1722,Central Eurasia
+1535,الجمعية الخيرية الإسلامية بمدينة سوق الأربعاء The Islamic Benevolent Society in Souk-el-Arba,1921,1956,1724,Africa
+1537,Maqam Sidi Sahbi,1400,2022,1725,Africa
+1538,Maqam Sidi Mahrez ibn Khalaf مقام سيدي محرز بن خلف,1400,2022,1747,Africa
+1539,Maqāṣid al-šarī῾a al-islāmiyya,1947,2022,1752,Africa
+1540,The Sanskrit Yasna,1100,1400,677,South Asia
+1542,Umbanda,1913,2022,1750,South America
+1543,St. George's Cathedral,1700,2000,1802,Europe
+1544,Ukrainian Greek Catholic Church,1596,2022,331,Europe
+1545,Synagogue at Gamla,-20,67,1751,Southwest Asia
+1546,4QPseudo Ezekiel,-150,-25,1753,Southwest Asia
+1549,Slaying of Husayn Texts,1150,1250,1757,Southwest Asia
+1550,Tzintzuntzan,1350,1522,1758,North America
+1551,Donation Texts from Ur during the Isin-Larsa Period,-1970,-1850,1586,Southwest Asia
+1552,The Key of Ilme Kṣnum to Understand the Zoroastrian Religion,1911,2022,1760,Southwest Asia
+1553,"Pirámide de las Serpientes Emplumadas, Xochicalco",650,1100,1761,North America
+1554,"Mustafa Sabri, Mawqif al-ʿAql",1942,1950,1793,Southwest Asia
+1555,Al-Ahbash الأحباش,1970,2022,1764,Southwest Asia
+1556,Sundexioi (Mithras-worshippers),75,450,132,Europe
+1558,Acts of Paul and Thecla,150,200,1495,Southwest Asia
+1559,Al-manhaj al-farîd fî ma'rifat 'ilm al-tawhîd.,1650,1850,1772,Africa
+1560,‘Ara’is al-Majalis fi Qasas al-Anbiya' عَرَائِسُ الْمَجَالِسِ فِي قَصَصِ الْأَنْبِيَاءِ,1036,2022,1770,Southwest Asia
+1561,Zaouia Sayyida Mannoubia زاوية السّيّدة المنّوبيّة,1267,2022,1771,Africa
+1562,The Great Temple of Tenochtitlan,1325,1521,1773,North America
+1563,Wumen Guan 無門關,1228,2022,1774,East Asia
+1564,Heng xian 恆先,-400,-300,1775,East Asia
+1570,Tamil Muslims,1900,2024,1117,South Asia
+1571,Kalighat Temple,19,21,1788,South Asia
+1572,Asklepieion of Kos,-366,400,1782,Europe
+1573,Al-Risala (The Message) الرسالة,767,820,1783,Southwest Asia
+1574,Household religion at Ur,-2000,-1800,1328,Southwest Asia
+1575,L’esprit libéral du Coran,1905,1956,341,Africa
+1576,Book of Amos,-760,-100,1795,Southwest Asia
+1577,Pilgrimage sites associated with the Noyon Khutagt Danzanravjaa,2015,2015,1786,Central Eurasia
+1578,People's Salvation Cathedral (Catedrala Mântuirii Neamului),1881,2025,1787,Europe
+1579,Kālikā Purāṇa,10,12,1797,South Asia
+1581,Book of Jeremiah,-620,200,1791,Southwest Asia
+1582,Cult of Bona Dea,-300,500,132,Europe
+1584,Tafattuq al-aḥkām,1890,1956,341,Africa
+1585,Jingde chuandeng lu 景德傳燈錄,1004,1004,1248,East Asia
+1587,The Early Christian Basilicas of Ancient Aksūm (modern Ethiopia and Eritrea),300,800,1798,Africa
+1588,In the Shade of the Qur'an في ظلال القرآن,1951,2023,1799,Africa
+1589,Peshitta,2,21,1800,Southwest Asia
+1591,Alchi temple complex,950,1500,1801,South Asia
+1594,al-Jami' al-A'dham Jami' az-Zaytouna al-Ma'mour الجامع الأعظم جامع الزيتونة المعمور,698,2022,1804,Africa
+1595,The Five Yi Yin Texts,-335,-275,1813,East Asia
+1600,Serabit el-Khadem: An Egyptian and Semitic Mining Community,-1900,-1200,1816,Africa
+1601,Göbekli Tepe,-9500,-8000,1817,Southwest Asia
+1602,A Record of Buddhist Monasteries in Luoyang,493,547,1818,East Asia
+1603,The Orthodox Monasteries of Meteora,1000,2022,1819,Europe
+1604,Tombs at Ketef Hinnom,-800,-200,1820,Southwest Asia
+1605,Seven Readings of the Qur'an (Kitab al-Sab'ah fi al-Qira'at) by Ibn Mujahid,900,936,1824,Southwest Asia
+1606,Kitab Sara'ir wa Asrar an-Nutaqa' كتاب سرائر وأسرار النّطقاء,990,2022,1821,Africa
+1607,Zaydism and the state in Yemen,897,1700,1822,Southwest Asia
+1609,جامع عقبة بن نافع La Mosquée de 'oqba ibn Nafi',670,2022,1826,Africa
+1610,La Mosquée de Yousif Sahib at-Tabi' جامع يوسف صاحب الطابع,1808,2022,1827,Africa
+1611,Maqam Sidi bil Hasan ash-Shadhili,1815,2023,1828,Africa
+1612,Zaouia Sidi Abi Sa'id al-Baji زاوية أبي سعيد الباجي,1156,2022,1829,Southwest Asia
+1613,The Pagoda-Shaped Diamond Sutra Shroud,1599,1599,1832,East Asia
+1614,Tabaqat as-Sufiyya de as-Sulami طبقات الصوفيّة للسّلمي,1021,2022,1831,Southwest Asia
+1615,Teuchitlan Tradition,-300,400,1833,North America
+1617,maqame sidi Ahmed Tliliزاوية سيدي أحمد التليلي,1733,2023,1835,Africa
+1618,Diya'u al-Ta'aweel fee Ma'ani al-Tanzeel (The Bright interpretation of the meanings of the Qur'an),1766,1828,1836,Africa
+1619,"Saint Nicholas ""Maroulenas"", Kastania, southern Greece, byzantine church",1200,2023,1837,Europe
+1620,Temple of Ištar (Emašmaš) at Nineveh,-1800,-612,1838,Southwest Asia
+1621,"Saint Spyridon,Kardamyli, southern Greece, postbyzantine church",1700,2023,1839,Europe
+1624,Neo-Assyrian Healers (āšipu/mašmaššu-exorcists),-900,-612,582,Southwest Asia
+1625,Zhu Xi's Four Books 朱熹四書,1177,1912,1840,East Asia
+1626,The Cult of Maritime Hera,-800,-400,1852,Europe
+1627,Mount Putuo 普陀山,1978,2023,1842,North America
+1628,Bad' al-Khalq wa Qasas al-Anbiya' of Kisa'i كتاب بدء الخلق وقصص الأنبياء للكسائي,1100,2023,1843,Southwest Asia
+1629,مقام أبو لبابة الأنصاري maqam Abou Loubaba Al-Ansari,661,2023,1844,Africa
+1630,جامع القرويين Mosquée Al-Qarawiyyin,859,2022,1846,Africa
+1631,Le livre de 'Ihya' 'ulum ad-Din de Ghazali كتاب إحياء علوم الدين للغزالي,1058,1111,1847,Southwest Asia
+1632,Temple-Church of Aphrodisias,450,1199,1849,Southwest Asia
+1633,الكعبة : المسجد الحرام al-Ka'ba   : al-Masjed al-Haram,-2000,2023,1850,Southwest Asia
+1635,The 'Parastaseis Syntomoi Chronikai',700,900,1400,Southwest Asia
+1636,The second phase of the Iconoclastic Controversy,814,823,1626,Europe
+1639,Hujjat Allāh al-Bāligha,1703,1762,496,South Asia
+1640,Great Temple of Hattusa,-1600,-1180,1854,Southwest Asia
+1642,جامع المسندالصحيح المختصر من أمور رسول الله وسننه وأيامه= Al-Jami' al-Musnad al-Sahih al-Mukthasar Min Umur Rasul Allah...,870,2023,1856,Central Eurasia
+1643,Kongzhai Shrine of the Robe and Cap of Confucius in Shanghai,1600,1949,1857,East Asia
+1644,صحيح مسلم Sahih Muslim,875,2023,1858,Southwest Asia
+1645,A Sogdian Zoroastrian Epitaph,494,579,1859,Central Eurasia
+1647,Gregory of Nyssa’s oration 40,372,395,1495,Southwest Asia
+1648,Hosios Loukas,953,1204,1860,Europe
+1649,St Bartholomew's Priory,1123,2023,1861,Europe
+1650,"كتاب"" المقدّمة ""لابن  خلدون livre  Mou qaddîma d'Abd Al Rahman Ibn Khaldoun",1332,1406,1862,Africa
+1652,Le Livre de al-'Ibana 'an 'Usul al-Diyana de al-Ash'ari كتاب الإبانة عن أصول الديانة للأشعري,874,936,1864,Southwest Asia
+1653,Visigothic Homoian Christianity,341,589,1869,Europe
+1654,Le Parti du Mouvement de La Nahda حزب حركة النهضة,1981,2023,1866,Africa
+1656,Temple of the Rock/Temple HH1 (Tell Mardikh/ancient Ebla),-2400,-2300,1868,Southwest Asia
+1657,The Institutes of John Cassian,420,430,1870,South Asia
+1658,The Thesmophorion of Pella,-400,100,1871,Europe
+1659,The Conferences of John Cassian,420,430,1872,South Asia
+1661,Ludlul Bel Nemeqi,-1300,-300,1631,Southwest Asia
+1662,The miracles of Eric IV Ploughpenny,1258,1309,1873,Europe
+1664,The Didache,50,110,1874,Southwest Asia
+1666,Edict of Faith,1478,1834,1876,Africa
+1667,Medérsiens,1850,1951,1877,Africa
+1668,Daphni (Μονή Δαφνίου),1080,1458,1878,Europe
+1669,The Inner Training (Neiye 內業),-400,9,1546,East Asia
+1674,New Hampshire Declaration of Faith,1833,2023,1882,North America
+1675,On the Divine Liturgy,700,730,1883,Southwest Asia
+1676,Saint Catherine's Monastery,565,2023,1550,Africa
+1677,Royal Hittite Religion,-1650,-1180,1884,Southwest Asia
+1678,Translation of the holy Margrethe,1176,1201,1885,Europe
+1680,Cult of Trophonius,-800,200,1887,Europe
+1682,"The Church of St. Paraskevi, Kitiros, Crete",1372,2023,1888,Europe
+1683,Book of Leviticus,-800,-400,1889,Southwest Asia
+1684,The Lives of the Philosophers and Sophists,347,414,1177,Europe
+1685,De Dea Syria,150,250,1927,Southwest Asia
+1686,L'islam et les origines de la gouvernance Ali Abdel Razek الإسلام وأصول الحكم علي عبد الرازق,1924,2023,1890,Africa
+1688,Arianism,325,671,2006,Europe
+1689,The Isma'ilis in the Ottoman Empire,1516,1919,1892,Southwest Asia
+1690,Christianity in Byzantium: between the end of Iconoclasm and the Schism,843,1054,1893,Europe
+1692,The holy Niels of Århus (younger text),1325,1345,1895,Europe
+1693,Maqam Abou Ali al-Nafti مقام أبو علي النفطي,1101,2023,1896,Africa
+1694,Christianity in Byzantium: Between the Schism and the Fourth Crusade,1054,1204,1897,Europe
+1695,"Xiaojing ""Classic of Filial Piety""",-230,1911,1898,East Asia
+1696,Sanctuary of Zeus at Nemea,-600,550,1899,Europe
+1697,Stylite Monks,450,1450,1626,Europe
+1698,Biographies of Eminent Monks,67,519,1900,East Asia
+1700,The Book of Hosea,-800,-500,1901,Southwest Asia
+1701,The Premonstratensian Order in the Middle Ages,1120,2023,1902,Europe
+1703,Arsenites,1265,1310,1904,Europe
+1704,Temple of Athena Alea,-800,200,1905,Europe
+1705,The Historia Compostellana,1088,1148,1906,Europe
+1706,Virú State Religion,-200,700,1907,South America
+1707,Zaouia Sidi Bou Makhlouf  زاوية سيدي بومخلوف,-1827,2023,1908,Africa
+1708,الإباضية  Al-Ibadia,708,2023,1909,Southwest Asia
+1709,Almohads (al-Muwaḥḥidūn),1115,1269,1910,Africa
+1710,زاوية سيدي عبيد بمنطقة بوسالم  The Sidi Abid Zawiyya in the Bou Salem Region,1861,2006,1911,Africa
+1711,International Dai Bosatsu Zendo Kongo-ji,1976,2023,1912,North America
+1713,The Sanctuary of Demeter at Dion,-500,300,1914,Europe
+1714,Syncretic Polytheism in Curious Pastimes LARP,2019,2022,1915,Europe
+1717,Temple R,-570,-300,1922,Europe
+1719,Zaouia Sidi Ali al-Hattab زاوية سيدي علي الحطّاب   بتونس,1271,2023,1924,Africa
+1720,Samten Hills Dalat,2023,2023,1925,Southeast Asia
+1721,Tell Fekheriyeh Inscription,-890,750,1926,Southwest Asia
+1723,The holy Niels of Århus (older text),1254,1255,1929,Europe
+1724,"Church of St. George, Embaros",1436,2023,1930,Europe
+1725,The holy Anders of Slagelse,1205,1536,1931,Europe
+1729,Chùa Lâm Huê,1942,2023,1934,Southeast Asia
+1730,Cult of Atargatis in Dura Europos,1,256,1935,Southwest Asia
+1732,Sanctuary of Artemis at Brauron,-2000,-200,1938,Europe
+1733,Công viên Hỏa táng Tháp Long Thọ (Long Thọ Cremation Park),2014,2023,1939,Southeast Asia
+1734,Cupisnique Culture Religion,-1600,-400,1941,South America
+1735,كتاب الملل والنحل لعبد الكريم ابو الفتح الشهرستاني,1127,2023,1942,Southwest Asia
+1736,Ihya'u Sunnah wa Ikhmadul Bid'ah,1754,1817,1673,Africa
+1737,الإمامية Al-Imamia,661,2023,1943,Southwest Asia
+1738,Taipei National Revolutionary Martyrs' Shrine,1946,2023,1944,East Asia
+1740,The Canterbury School of Theodore of Tarsus and Hadrian the North African,669,690,1945,Europe
+1741,Methodism in Zimbabwe or Methodist Church in Zimbabwe,1891,2023,1946,Africa
+1742,Yellow Flower Hill (Huanghuagang) 72 Martyrs' Cemetery,1911,2023,1948,East Asia
+1743,Eight Treasures Mountain (Babaoshan) Revolutionary Cemetery,1950,2024,1949,East Asia
+1746,"Church of St. Constantine and Helena, Avdou",1445,2023,1952,Europe
+1747,Al-'Ataba Al-Housainia العتــــبـــة الحُسيْـنّـيـة,680,2023,1953,Southwest Asia
+1750,The London-Leiden Magical Papyrus,180,225,1955,Africa
+1751,The holy Kjeld of Viborg (older text),1188,1536,1956,Europe
+1753,"Church of St. George, Sklavopoula",1290,2023,1958,Europe
+1754,Đại Bảo Tháp Mandala Tây Thiên (Great Mandala Stupa),2011,2023,1959,Southeast Asia
+1758,Jiuge 九歌,-340,140,1272,East Asia
+1759,الطريقة الشاذلية = Attarika Achadoulia,1195,2023,1962,Africa
+1760,Sanctuary of Hera in the Argolid,-800,400,1963,Europe
+1761,Paganism in the 4th Century Nicomedia,300,400,1177,Europe
+1762,Quan Âm Tu Viện,1960,2023,1964,Southeast Asia
+1763,Uḍḍīśatantra,1400,2009,496,South Asia
+1767,Bhairavapadmāvatīkalpa,900,1100,654,South Asia
+1770,Bhūtaḍāmaratantra (Buddhist),700,900,1107,South Asia
+1771,إنفاق الميسور في تاريخ بلاد التكرار,1781,1837,1673,Africa
+1773,"Church of St. George and St. Nicholas, Anydri",1323,2023,1966,Europe
+1774,إباضية جزيرة جربة Ibadis of Jerba,1557,1864,1967,Africa
+1775,Luật Mật Viện Thắng Nghiêm,1010,2023,1968,Southeast Asia
+1776,الطريقة القادرية في البلاد التونسية The Qadiriyya Order in Tunisia,1881,1939,1969,Africa
+1777,الطريقة التّيجانية بالبلاد التونسية The Tijaniyya Order in Tunisia,1881,1939,1970,Africa
+1778,Le Conflit d'Adam et Eve contre Satan ou The first and the Second hidden book of Adam and Eve صراع آدم وحوّاء ضدّ الشيطان,300,990,1973,Southwest Asia
+1779,المذهب المالكي بالبلاد التونسية The Maliki school in Tunisia,1956,2023,1970,Africa
+1780,الطريقة الشاذلية في تونس The Shadhiliyya Order in Tunisia,1881,1939,1980,Africa
+1781,المذهب الشيعي في تونس The Shiʿi madhhab in Tunisia,1969,2023,1970,Africa
+1782,"Church of the Panagia, Prodromi",1347,2023,1981,Europe
+1783,The holy Kjeld of Viborg (younger text),1346,1524,1982,Europe
+1784,The Cannibal Nun,1100,1200,1897,Europe
+1785,Carmen de Incendio,1197,1197,1897,Europe
+1786,Temple 2048 of Tell el-Mutesellum/Megiddo,-1650,-1200,2004,Southwest Asia
+1787,Ekphrasis of the Church of the Holy Apostles,1190,1200,1897,Europe
+1788,First Temple (Jerusalem),-960,-587,1983,Southwest Asia
+1789,The Church of the Theotokos of the Pharos,760,1204,1400,Southwest Asia
+1791,"الطريقة القادرية في بغداد: فترة التأسيس ق12 Attarika Al Qadiria à Bagdad: la période fondatrice, le XIIe siècle",1100,1200,1985,Southwest Asia
+1792,The Monastery of Mangana,1050,1460,1400,Southwest Asia
+1793,Monothelitism,456,681,13,Europe
+1794,A Mathematician,1206,1207,1124,Southwest Asia
+1795,‘Adhwā‘ Al-Bayān fi ‘Idhāḥ Al-Qur‘ān bi Al-Qur‘ān: أضواء البيان في إيضاح القرآن بالقرآن,1965,2023,1986,Africa
+1796,Annals of Quedlinburg,1008,1030,1987,Europe
+1799,Teotihuacán,-400,650,1989,North America
+1801,Red Temple/Temple D2 (Tell Mardikh/ancient Ebla),-2400,-2300,1991,Southwest Asia
+1802,Ishtar’s Temple/Temple D on the Acropolis (Tell Mardikh/ancient Ebla),-2000,-1600,2001,Southwest Asia
+1803,مفتاح التفسير,1766,1828,1673,Africa
+1805,Wahhabisme الوهّابيّة,1744,1819,1993,Southwest Asia
+1806,Sango Religious group in Oyo,1800,1900,1995,Africa
+1807,Maqam Sidi Ali Azzouz مقام سيدي علي عزّوز,1680,2023,1994,Africa
+1808,'yan Taru (Women Cadre of the Nana Asma'u),1793,1864,1673,Africa
+1809,(The Character Traits of the Chosen One) كتاب أخلاق المصطفى,1766,1828,1673,Africa
+1810,Shang Oracle Bone Inscriptions,-1200,-1046,7,East Asia
+1811,كتاب قصيدة المرثية (Kitab Qasidat al-Marsiyyah).,1793,1864,1673,Africa
+1812,The Prison Chronicle,1297,1302,1996,Europe
+1816,The Zhen'gao,365,2023,1999,East Asia
+1817,The holy spring of St. Regisse,1400,1885,2000,Europe
+1818,(Urjuzat al-Wildan) أرجوزة الولدان,1403,1445,1673,Africa
+1820,"Cherubim and Seraphim Church Unification, Campus Fellowship",1980,2019,1082,Africa
+1821,Pre-Pottery Neolithic Gre Fılla,-9300,-7500,2002,Southwest Asia
+1822,Amarna Central City,-1350,1330,2003,Africa
+1826,Deir el-Medina,-1550,1100,1207,Africa
+1829,Cherubim and Seraphim Unification Church of Nigeria (C&SUCN),1986,2019,1082,Africa
+1835,"The Cherubim and Seraphim Church of Zion, Ugbonla",1948,2023,2005,Africa
+1844,"Monastery of Saint John the Theologian, Patmos",1088,2023,2009,Africa
+1845,Benedictine Order in Denmark,1018,1536,2010,Europe
+1846,Yogasūtra of Patañjali,-100,300,690,South Asia
+1847,Arthaśāstra,-300,200,2011,South Asia
+1848,"Jagannath Temple of Puri, Odisha (Orissa), India",1200,2018,673,South Asia
+1850,"TT8, tomb and chapel of Kha and Merit",-1425,-1353,1207,Africa
+1852,The Communion Letters by Whitley and Anne Strieber,1987,1997,2012,North America
+1855,Atra-Hasīs,-1700,-600,1631,Southwest Asia
+1858,Christianity in Alexandria: From Origen to Athanasius,185,373,2015,Africa
+1867,Kuumbi Cave,1900,2023,2016,Africa
+1868,Yuan Dao bian,1178,1179,1840,East Asia
+1869,IFA RELIGIOUS GROUP IN ILE- IFE,1930,2015,2017,Africa
+1871,Inana's descent to the nether world,-1900,-1600,476,Southwest Asia
+1872,"The Holy Apostles Community, Ayetoro",1947,2023,2063,Africa
+1873,زاوية سيدي المازري  - Zaouia Sidi Al-Maziri,1176,2023,2019,Southwest Asia
+1874,"Church of St. John, Trachiniakos",1329,2023,2020,Europe
+1875,"Jalal al-Din al-Suyuti, Perfect Guide to Qur'anic Studies (al-Itqan fi 'Ulum al-Qur'an)",1440,1505,1038,Southwest Asia
+1880,The Tophet of Carthage,-800,-146,2021,Africa
+1882,The Life of Severus,512,518,2048,Southwest Asia
+1883,"""Ammonius, On the Creation of the World"" by Zacharias Scholasticus",490,520,2150,Africa
+1884,"Nea Moni, Chios",1042,2023,2023,Europe
+1888,Communion By Whitley Strieber,1987,1987,1131,North America
+1896,Passport to Magonia by Jacques Vallee,1969,1969,2036,Europe
+1897,"The Episcopal Church of Cherubim and Seraphim, Zion Pepe",1951,2023,2040,Africa
+1898,Shurpu Incantation Series,-1300,-610,2025,Southwest Asia
+1902,Dodona,-1200,392,2031,Europe
+1903,The 'Abbāsids,750,1258,2032,Southwest Asia
+1904,الطريقة القادرية في تونس القرن  19 و20   =  L'ordre Qadiri en Tunisie aux XIXe et XXe siècles,1800,2000,2033,Africa
+1905,(A brief introduction to the Islamic jurisprudence on the Maliki school of law)مختصر الأخضري في مذهب الإمام مالك,1514,1575,1673,Africa
+1906,"(Acceptable means of praising the Prophet, may God bless him and grant him peace)الوسائل المتقبلة في مدح النبي صلى الله عليه و سلم",1872,1895,1673,Africa
+1907,A treatise on the rulings of the people of Dhimma (رسالة في أحكام اهل الذمة),1425,1505,1673,Africa
+1908,"Buddhist Traders in the Chinese Quarter in Hakata, Japan",1100,1300,2035,East Asia
+1918,Contemporary Neo-Confucianism 當代新儒家,1950,2023,2052,East Asia
+1919,Acropolis of Monte Polizzo,-800,-500,2038,Europe
+1921,Zhouxun 周訓,-340,-240,2041,East Asia
+1924,The Deuteronomistic History,-700,-300,1404,Southwest Asia
+1928,(The gathering of the Messenger of God does not falter)وجمع رسول الله لا يتشعث,1793,1864,1673,Africa
+1938,Bahai religion,1850,2023,2045,Southwest Asia
+1939,"Panagia Parigoritissa, Arta",1290,2023,2043,Europe
+1940,"The Holy Apostles Community, Ori-Oke Iwamimo",1950,2023,2044,Africa
+1941,Tang Junyi 唐君毅,1930,2023,2052,East Asia
+1942,Gre Virike: Early Bronze Age Cultic Installations,-3000,-2000,2046,Southwest Asia
+1943,Cult of Gauchito Gil,1990,2020,2047,South America
+1944,Cakawi [sic] Cam 1969,1968,1970,2049,Southeast Asia
+1945,Theyyam Worshippers,-500,2023,2050,South Asia
+1946,Palenque's Temple of the Inscriptions,650,800,2051,North America
+1947,Temple of the Storm-God in Aleppo,-2500,-500,2053,Southwest Asia
+1948,The Serapeum of Alexandria,-246,391,2054,Africa
+1952,Daodejing 道德經,-300,2023,1272,East Asia
+1957,Wadi Sarga Monastery,500,800,983,Africa
+1958,The Apostolic Faith Mission in Zimbabwe,1915,2018,2058,Africa
+1959,Papyrus London 121 (PGM VII),250,350,2059,Africa
+1960,The laura in Kom el-Ahmar/ Deir al Qarabin,375,700,2060,Africa
+1961,"Grace Covenant Centre, Ado-Ekiti",1990,2023,2064,Africa
+1962,Huayan School 華嚴宗,670,845,809,East Asia
+1963,"The Church of St. Anne, Anisaraki, Selino, Crete",1457,2023,2062,Europe
+1965,"Church of St. Pelagia, Ano Viannos, Heraklion, Crete",1360,2023,2066,Europe
+1966,Cherubim & Seraphim Movement Church (Worldwide) Ayo Ni O,1972,2023,2075,Africa
+1967,The Hermitage of Sheikh Abd el-Qurna,480,750,2068,Africa
+1968,"Church of St. Mamas, Palaiochora, Selino, Crete",1355,2023,2069,Europe
+1969,"Christ Apostolic Church, Ori-Oke Aanun [sic] (Mountain of Mercy), Ojoo, Ibadan, Oyo State",1900,2023,2070,Africa
+1970,The Monastery of Saint Phoibammon in the Rock/ Phoibammon I,350,600,2071,Africa
+1971,The Homeric Hymn to Demeter,-600,-550,588,Europe
+1972,Shepherding Movement,1970,2000,1131,North America
+1973,The Homeric Hymn to Apollo,-655,-522,588,Europe
+1974,"Chapel of Grace, Ile-Ife",1989,2023,2072,Africa
+1975,Monastery of Panagia (Virgin) Soumela,375,2023,2073,Southwest Asia
+1976,Who is not assisted by the religious scholar(The Jurist) (Man La Yahdhuruhu al-Faqih) من لا يحضره الفقيه,916,991,2074,Southwest Asia
+1977,Overseas Shinto Shrines,1868,2023,2076,Africa
+1978,"The Dharmalakshana Buddhist Institute 佛教法相學會, Hong Kong",1965,2023,2077,East Asia
+1979,The Homeric Hymn to Hermes,-550,-500,588,Europe
+1980,Cultic Practice at Khirbet Qeiyafa,-1020,-980,2091,Southwest Asia
+1981,(Guiding the traveler to the most honorable path in the jurisprudence of Imam Malik.)إرشاد السالك إلى أشرف المسالك في فقه الإمام مالك,1246,1332,1673,Africa
+1982,Guodian Laozi 郭店老子,-350,-300,1175,East Asia
+1983,Early Byzantine Asceticism,400,600,2092,Southwest Asia
+1984,Monastery of Panagia (Virgin) Chozoviotissa,850,2023,2093,Europe
+1985,Christianity in Antioch. From the Apostolic Era to the Islamic conquest,34,638,2094,Southwest Asia
+1987,Grand Papyrus Magique (PGM IV),4,4,1955,Africa
+1989,Iron Age Celtic Spain and Portugal (Celtiberia),-600,300,2096,Europe
+1990,The Ayuwang Monastery 阿育王寺,400,2023,2097,East Asia
+1991,(Laws of Sharia rulings and issues of the branches of jurisprudence.) قوانين الأحكام الشرعية ومسائل الفروع الفقهية,1804,1903,1673,Africa
+1992,Kitab tesviyetü't-teveccüh ila'l hak: The Guide for One's Turning toward Truth,1556,1557,2098,Europe
+1993,Ancient Boeotians,-600,400,2099,Europe
+1994,Nigeria Fellowship of Evangelical Students (NIFES),1968,2023,1082,Africa
+1995,The Norwegian Seamen's Church in Cardiff,1866,1959,2100,Europe
+1996,Delphic Hymns 1 and 2,-138,-128,1515,Europe
+1997,Hundred and eighty precepts of Lord Lao,300,500,1481,East Asia
+1998,The Chinese Christian Scroll Pelliot chinois 3847,635,1000,2103,East Asia
+1999,Veli Pasha Mosque in Rethymno,1646,1924,2102,Europe
+2000,"The Community Church of Apostles Nigeria and Oversea (COCANO), Ajegunle",1933,2023,2104,Africa
+2001,The Book of Deuteronomy,-700,-500,1404,Southwest Asia
+2002,Mawangdui Laozi 馬王堆老子,-221,-194,598,East Asia
+2003,Nigerian Baptist Convention,1914,2023,1082,Africa
+2004,Recep Pasha Mosque in Rhodes,1588,2023,2105,Africa
+2006,New Life for All Nations Ministries,1972,2023,2118,Africa
+2007,Iron Age Cultic Place at Lachish,-950,-701,2107,Southwest Asia
+2008,(The beginning of the diligent and the end of the frugal) بداية المجتهد ونهاية المقتصد,1804,1903,1673,Africa
+2009,Ancient Arcadians,-800,300,2108,Europe
+2010,Bektashi Tarika,1240,2023,2109,Europe
+2011,Scripture Union Nigeria,1885,2023,1082,Africa
+2012,The Five Theological Orations of Gregory of Nazianzus (The Theologian),379,381,2110,Southwest Asia
+2013,Kara Musa Pasha Mosque in Rethymno,1683,1923,2111,Europe
+2014,Gazi Deli Huseyn Pasha Mosque in Rethymno,1550,1924,2112,Europe
+2015,الدولة الأغلبية 184-296 هجري,800,909,2127,Africa
+2016,الدولة الفاطمية Fatimid Dynasty,909,1171,2130,Southwest Asia
+2017,Convent of Panagia Eleousa (Lykousada Monastery),1280,1620,2115,Europe
+2018,Panagia Akatamachetos (Porta Panagia),1283,2023,2116,Europe
+2019,"Shaanxi Great Mosque, Urumqi",1735,2023,960,Central Eurasia
+2020,Panagia Vellas (Red Church),1293,2023,2117,Europe
+2021,The United Missionary Church of Africa,1905,2023,2119,Africa
+2022,Murad Reis Mosque in Rhodes,1557,2018,2120,Africa
+2023,الدولة الزيرية Zirid Dynasty,971,1152,2131,Africa
+2024,Emirzade Mosque in Chalcis,1470,2023,2121,Europe
+2025,"The Satisfaction of Souls and Words of the Wise concerning the scholars and righteous ones buried in Fez, by Muhammad ibn Ja'far al-Kattani",1000,1898,459,Africa
+2026,Heshang Gong 河上公 commentary on the Daodejing 道德经,200,2023,1272,East Asia
+2027,Hizb-ut-Tahrir,1953,2023,2124,Europe
+2028,Bulugh Al- Maram min Adillat Al- Ahkam,1372,1449,2125,Southwest Asia
+2029,كتاب تهافت الفلاسفة للغزالي,1058,1111,2126,Southwest Asia
+2030,Monastery of Our Lady of Saydnaya,547,2023,2132,Southwest Asia
+2031,الدولة الأغلبية The Aghlabid Dynasty,800,909,2133,Africa
+2032,(The light of the rulers regarding what is best for them and on them) ضياء الحكام فيما لهم وعليهم من الأحكم,1767,1828,1673,Africa
+2033,Valide Sultan Mosque in Rethymno,1650,1923,2134,Europe
+2034,"The ""Mithras-Liturgy""",300,399,1955,Africa
+2036,Sultan Ibrahim Mosque in Rethymno,1646,1923,2136,Africa
+2037,"Saint Achillios Basilica, Larissa",550,2023,2137,Europe
+2038,"Cathars, Catharism, Albigenses, Albigensians, Cathari, Catharistae, ""Pure Christians""",1000,1300,2138,Europe
+2039,Psalm 109,-1000,50,2240,Southwest Asia
+2040,(Condolences to the Al-Azhar community) المقدمة العزية للجماعة الأزهرية,1752,1804,1673,Africa
+2041,PGM XXXVI (Greek ritual manual),300,399,2140,Africa
+2042,The Eighth Book Of Moses,-300,399,1287,Africa
+2043,"Saint Achillios Basilica, Prespes",900,2023,2141,Europe
+2044,P.Mich.inv. 593 (Coptic ritual manual),300,699,1287,Africa
+2045,PGM I (Greek ritual manual),251,499,1287,Africa
+2046,L'Interprétation du Coran Intitulé Tafsir al-Manar تفسير المنار,1905,1935,2142,Africa
+2047,The Norwegian Seamen's Church in Swansea,1907,1998,2143,Europe
+2048,الدولة الرستمية Rustamid Dynasty,777,909,2144,Africa
+2050,The Norwegian Church on South Georgia,1913,1932,2146,South America
+2051,Tibeto-Vietnamese Đạo Mẫu,2022,2024,2175,Southeast Asia
+2052,Christ Way Ministries International,1992,2023,2147,Africa
+2053,(Alert the unwary)تنبيه الغافلين,1804,1903,1673,Africa
+2054,Christ Apostolic Church,1918,2023,1082,Africa
+2055,An Akkadian Tamitu-Query,-1800,-600,476,Southwest Asia
+2056,Great Mosque at Kilwa,950,1800,2151,Southeast Asia
+2057,Paskuwatti’s Ritual to Cure Sexual Dysfunction,-1400,-1200,2249,Southwest Asia
+2058,Djinguereber Mosque,1327,2023,2152,Africa
+2059,(The Garden of Knowers)بستان العارفين,1804,1903,1673,Africa
+2061,OYA RELIGIOUS GROUP IN OYO,1800,1900,1995,Africa
+2063,The Mosque Cluster at Gedi,1000,1650,2154,Africa
+2064,Sha'rawi interpretation of the Coran تفسير محمّد متولّي الشعراوي,1911,1998,2155,Africa
+2065,Oke Isegun (Mountain of Victory),1931,2023,2443,Africa
+2067,Pool of Siloam,-80,70,2162,Southwest Asia
+2068,Mwanagori Cave,0,2023,2163,Africa
+2069,L'ordre Soufi Qasimite Hadfite الطريقة الصوفية القاسميّة الهادفية,1969,2022,2164,Africa
+2070,Overcomers Evangelical Mission International (Ori-Oke Asegun),2003,2018,2017,Africa
+2071,"Songs of the Sage (4Q510, 4Q511)",-30,30,2248,Southwest Asia
+2072,Unguja Ukuu Amulet Seal,700,900,2165,Africa
+2074,"Revolutionary Mahdism and Resistance to Colonial Rule in the Sokoto Caliphate, 1905-1906",1905,1906,1836,Africa
+2075,Tafsir  Al-Jami' li Ahkam Al Coran par Al-Qurtubi تفسير الجامع لأحكام القرآن للقرطبي,1214,1273,2168,Africa
+2076,Kizimkazi Dimbani Mosque Inscription,1107,2023,2169,Africa
+2077,ضياء السياسات والفتاوى والنوازل مما هو في فروع الدين من المسائل,1812,1828,1673,Africa
+2078,"L'Interprétation du Coran ""Clés de l'Invisible"" تفسير ""مفاتيح الغيب""",1149,1208,2171,Southwest Asia
+2079,(Jewels of meanings and fulfillment of wishes)جواهر المعاني و بلوغ الأماني,1804,1903,1673,Africa
+2080,Daily Communal Petitions (Tefillah/Amidah),50,1000,2282,Southwest Asia
+2081,Ben Sira 36:1–22,-200,100,2267,Southwest Asia
+2082,(The spears of the Merciful Party on the Throat of the Servants of the Merciful.) رماح حزب الرحيم على نحور حزب الرحيم,1804,1903,1673,Africa
+2083,(The spirit of Morality)روح الأدب,1900,1975,1673,Africa
+2084,MAITATSINE: NIGERIA'S BLOODY RELIGIOUS TERRORIST MOVEMENT,1980,1985,2194,Africa
+2085,الحصن الرصين في علم التصريف,1766,1828,1836,Africa
+2086,Mathnawi ma'nawi,1462,2023,2172,Europe
+2087,"Al-Tabari’s interpretation of the Qur’an تفسير الطبري""جامع البيان في تأويل آي القرآن """,839,923,2173,Southwest Asia
+2088,مصباح الراوي في علم الحديث,1766,1828,1836,Africa
+2089,L'ordre Soufit karkariya en Tunisie الطريقة الكركرية في تونس,1974,2023,2174,Africa
+2090,أسهل المدارك شرح إرشاد السالك في فقه إمام الأئمة مالك,1892,1976,2179,Africa
+2091,"Kizimkazi Dimbani Mosque, Zanzibar",1107,2023,2177,Africa
+2092,Interpretation of Imam Ibn Arafaتفسير الامام ابن عرفة الورغمّي,1316,1401,2178,Africa
+2093,Papyrus PGM XII / pdm xii (Bilingual Greek-Demotic Ritual Manual),300,350,1955,Africa
+2094,Feathered Serpent's cult,100,1521,2182,North America
+2095,Kaole Mosques,1200,1500,2180,Africa
+2097,منظو مة مصباح الراوي في علم الحديث-عبد الله بن فودي,1766,1829,1673,Africa
+2099,Nation Protecting Shrines,1939,2023,2181,Southeast Asia
+2100,الدولة الزيانية Zayyanid Dynasty,1235,1554,2183,Africa
+2101,"Le livre Fasl al-Maqal d'Ibn Rushd concernant le lien entre la sagesse et la charia""فصل المقال فيما بين الحكمة والشريعة من اتّصال",1126,1198,2184,Africa
+2102,"The Stele of Ieou (PGM V, 96-172)",300,399,1955,Africa
+2103,"(Revising the strong statement, an explanation of the chapter on hadith) تنقيح القول الحثيث شرح لباب الحديث",1804,1903,1673,Africa
+2104,الطريقة التجانية في تونس ق18-ق19 ATARIKA TJENIA FI TOUNES  XVIII-XIXème siècle,1700,1900,2185,Africa
+2110,Thiền viện Trúc Lâm Bình Phước,2017,2024,2337,Southeast Asia
+2111,Tsinburbura Traditional Religion,700,1463,1673,Africa
+2112,Mengzi,-323,-314,467,East Asia
+2113,Sun Yat-sen Mausoleum,1926,2024,2189,East Asia
+2114,Tijaniyyah Sufi Movement in North-Western Nigeria,1837,1990,1673,Africa
+2116,Qadiriyyah Movement in the Sokoto Caliphate.,1804,1923,1673,Africa
+2117,Tây Tạng Tự,1937,2024,2191,Southeast Asia
+2118,Samaritan Hymn by Amram Dare,200,1800,2262,Southwest Asia
+2119,"Funerary Caves of the Early Population in Tulum, Mexico",-13000,-8000,2437,North America
+2120,تفسير رد الأذهان إلى معاني القرآن للشيخ أبوبكر غومي,1924,1992,1673,Africa
+2121,Believers in the Sanctity of Canute III Magnussøn,1157,1200,2193,Europe
+2122,Jama'at Izalat al-Bid'ah wa Iqamat al-Sunnah (JIBWIS),1978,2008,1673,Africa
+2123,The Cacaxtla Gran Basamento,650,950,2196,North America
+2124,إراءة عرائس شموس فلك الحقائق العرفانية بأصابع حق ماهية التربية بالطريقة التجانية,1934,2024,2197,Africa
+2125,الإسلام في نيجيريا والشيخ عثمان بن فوديو الفلاتي-أدم عبد الله الالوري,1917,1992,1082,Africa
+2126,Nasrul-lahi-li Fathi Society of Nigeria (NASFAT),1984,2023,1082,Africa
+2127,Church of the Holy Apostles,330,1462,2222,Southwest Asia
+2128,Paulicians,650,1700,1893,Europe
+2129,Saint Thecla (acts of Paul and Thecla) and baptism,1,2,1495,Southwest Asia
+2130,The Danish Dominican Chronicle,1220,1261,2198,Central Eurasia
+2131,Chimú Empire Religion,900,1470,2199,South America
+2133,ANSAR-UD-DEEN SOCIETY OF NIGERIA,1923,2000,1082,Africa
+2134,"The Paredros of Pnouthis, the Sacred Scribe (PGM I, 42-195)",250,425,1287,Africa
+2136,Panagia tou Araka,1100,1200,2203,Europe
+2137,Great Temple Of Santa Cecilia,150,1521,2204,North America
+2138,الجماعة الأحمدية الإسلامية في نيجيريا,1916,2024,1082,Africa
+2139,Shi'a Group in Nigeria,1980,2020,1082,Africa
+2140,"St. John Chrysostom, Homilies On the Incomprehensible Nature of God",347,407,2205,Southwest Asia
+2142,Noravank (Նորավանք),1105,2024,2206,Southwest Asia
+2143,City of God,410,426,2299,Africa
+2144,Surb Astvatsatsin of Areni (Սուրբ Աստուածածին եկեղեցի),1321,2024,2208,Southwest Asia
+2147,الدولة الحفصية Hafsid Dynasty,1229,1574,2210,Africa
+2148,الدولة الحسينية The Husaynid Dynasty,1705,1957,2218,Africa
+2149,Judaism in Byzantium,330,1453,1893,Europe
+2150,Amboni Caves,-40000,2024,2286,Africa
+2152,Wang Bi's 王弼 commentary to the Daodejing 道德經: the Laozi Daodejing zhu 老子道德經注,200,2023,809,East Asia
+2153,Guishen zhi ming 鬼神之明,-400,-300,1775,East Asia
+2154,Chichen Itza,650,1150,2220,North America
+2155,Lingbao Canon: Perfect Script in Five Tablets 五篇真文 and Jade Instruction Written in Red 赤書玉訣,500,1000,2281,East Asia
+2156,Oxkintok y el período del clásico medio en el norte de la Península de Yucatán.,-500,1000,2224,North America
+2157,Blue Light Evangelicals in the Late Eighteenth-Century Royal Navy,1775,1815,2225,North America
+2158,The Mausoleum of Galla Placidia,425,450,2226,Europe
+2160,Manichaeans,250,843,2228,Southwest Asia
+2161,Church of Hagios Vasileios tes Gephyras (of the bridge),1250,2024,2229,Europe
+2163,The Basilica of Sant'Apollinare in Classe,532,549,2231,Europe
+2164,Basilica of San Vitale,527,2024,2232,Europe
+2166,Judaism in Byzantium,395,1453,1893,Europe
+2167,Church of the Holy Saviour in Chora,300,2024,2234,Southwest Asia
+2168,"Dzibilchaltún, arquitectura, poder y cambio religioso en el norte de Yucatán",-600,1100,2235,North America
+2169,Church of the Holy Savior in Chora,330,2024,2236,Southwest Asia
+2170,Liber Pontificalis,450,1500,146,Europe
+2171,Mausoleum of Galla Placidia (or the Chapel of Galla Placidia),425,2024,2226,Europe
+2172,The Basilica of Sant' Apollinare Nuovo,504,561,2237,Europe
+2173,"Irenaeus of Lyons, ""Against Heresies""",130,202,2238,Southwest Asia
+2174,Church of St. Demetrios Katsouris,800,2024,2239,Europe
+2177,The Covenant Ceremony in the Community Rule (1QS),-100,0,2260,Southwest Asia
+2178,Aladura Christianity in Nigeria,1918,2023,1082,Africa
+2180,Cao Đài,1921,2024,2244,North America
+2181,Communal Petitions for Days of the Week: Prayer for Friday (4Q504),-150,70,1438,Southwest Asia
+2182,Tatev (Տաթևի),800,2024,2245,Southwest Asia
+2183,"Gregory of Nyssa ""On the Soul and the Resurrection""",335,394,2246,Southwest Asia
+2184,Zvartnots (Զուարթնոց),643,2024,2247,Southwest Asia
+2187,1 Samuel 2:1-10,-900,-500,1795,Southwest Asia
+2189,"Epiphanius of Salamis (Cyprus), ""Panarion""",374,377,2250,Europe
+2190,Ezra 9,-400,350,44,Southwest Asia
+2191,Two Aramaic Mortuary Stelae from Nerab,-700,-700,2253,Southwest Asia
+2192,Uxmal. La gran urbe y centro político religioso del Puuc,-600,1100,2254,North America
+2193,Mayapán. La última gran urbe maya.,300,1450,2255,North America
+2194,The Redeemed Christian Church of God,1952,2023,2256,Africa
+2195,Church of the Holy Apostles,1310,2024,2257,Europe
+2196,Balaam Inscription from Tell Deir ‘Allā,-850,-750,1368,Southwest Asia
+2197,Bab edh-Dhra,-3300,-2000,2258,Southwest Asia
+2198,Katumuwa Stele from Sam'al,-900,-700,1333,Southwest Asia
+2199,"Prayer for Vengeance against Mariam, Kallinikos, and Others",401,500,136,Africa
+2200,The Roman Catholic Mission in Nigeria,1480,2024,1082,Africa
+2201,Panagia tou Bryoni,1238,2024,2259,Europe
+2202,Faik Pasha Cami,1449,1460,2263,Europe
+2203,Huang-Lao Daoism,-476,220,501,East Asia
+2204,Alahan,400,2024,2264,Southwest Asia
+2205,Al Oda,726,2024,2264,Southwest Asia
+2206,Cennet ve Cehennem,400,2024,2265,Southwest Asia
+2207,Synagogue at Magdala,1,80,2266,Southwest Asia
+2208,The Book of Judith,-160,80,44,Southwest Asia
+2209,The Church of Nigeria Anglican Communion,1842,2024,1082,Africa
+2210,Living Faith Church Worldwide,1981,2024,2119,Africa
+2211,Mahras Dağı,400,2024,2264,Southwest Asia
+2212,Dağ Pazarı,400,2024,2264,Southwest Asia
+2213,Geghard Monastery,1100,2024,2268,Southwest Asia
+2214,Tiwanaku Religion,600,1000,2433,South America
+2216,Monastery of Mega Spilaion,362,2024,2270,Europe
+2217,Horasani-zade dervish lodge (tekke) in Heraklion,1650,1924,2271,Europe
+2218,Church of Saint Nicholas Orphanos,1310,2024,2272,Europe
+2219,Heart Sūtra,350,2024,2273,Central Eurasia
+2220,Ansar-ud-deen Society of Nigeria,1923,2023,1082,Africa
+2221,A Votive Inscription to Hathor/Baʿalat,-1850,-1500,2276,Africa
+2222,Kohunlich. Un enlaze político - religioso entre el Petén y el norte de la Península de Yucatán,-200,900,2277,North America
+2223,Cusco,1400,1533,2278,South America
+2224,Graffiti and Inscriptions from Roman Palestine,160,500,485,Southwest Asia
+2225,"Culdees, Céli Dé, Céili Dé, Céle Dé,  ""Clients of God"", ""Servants of God"", ""Spouses of God"", ""Companions of God"", Kelidei, Kaledei; Céile Dé",700,1100,2283,Europe
+2226,Leimonos Monastery,1526,2024,2284,Europe
+2228,Church of God Mission,1972,2024,1082,Africa
+2229,Church of Saint Demetrios,1260,2024,2285,Europe
+2230,Boca de Potrerillos,-7880,1750,2287,North America
+2231,جواهر المعاني وبلوغ الأماني,1798,2024,2288,Africa
+2232,"Lollards, Lollard, the Lollard movement, Lollardism,  Lollardy, Wycliffites",1350,1500,2289,Europe
+2233,The Way of Former Heaven (Xiantiandao 先天道),1734,2024,2291,East Asia
+2234,Monastery of Saint Mena,300,650,2292,Africa
+2235,Cholula (Tollan Cholollan Tlachihualtépetl),-900,1519,2293,North America
+2236,الرّسالة المفصّلة لأحوال المتعلّمين وأحكام المعلّمين والمتعلّمين لأبي الحسن  علي القابسي,935,1012,2294,Southwest Asia
+2237,"Order of Preachers, Dominicans, Friars Preachers, Black Friars, Jacobins",1217,2024,2332,Europe
+2238,XX ــــــــ    ـق  XVIII   الطريقة التجانية في الجزائر :ق,1700,2000,2296,Africa
+2239,Chaco Culture,800,1200,2297,North America
+2240,"Inka and non-Inka groups in Cusco, Peru",900,1532,2298,South America
+2242,Kato Panagia,1250,2024,2300,Europe
+2243,Hui People,700,2024,2301,Central Eurasia
+2244,"Catholicism in the Latin Empire, Catholicism in the Eastern Roman Empire (Byzantium), the Latin Patriarchate of Constantinople",1204,1261,2302,Europe
+2245,صقلية الإسلامية Islamic Sicily,652,1240,2303,Europe
+2246,المذهب الحنفي بالبلاد التونسية The Hanafi school in Tunisia,819,1957,2329,Africa
+2247,الفتح العربي الإسلامي لشمال إفريقيا The Arab-Islamic Conquest of North Africa,647,712,2330,Africa
+2248,الدولة المرادية في تونس The Muradid Dynasty in Tunisia,1631,1702,2331,Africa
+2249,Basilica of Saint Epiphanios,370,2024,2333,Europe
+2250,"The Monastery of Vatopaidi, Mount Athos",950,2024,2334,Europe
+2252,Monastery of Saint Herakleidios,400,2024,2336,Europe
+2253,الزاوية التجانية بالتماسين,1803,2024,2338,Africa
+2254,The Megali Panagia (Dormition of the Virgin),1250,2024,2339,Europe
+2255,Dongxiang,1340,2024,2340,Central Eurasia
+2256,الطريقة الرحمانية في الجزائر  ق18-ق20,1700,2000,2342,Africa
+2257,Acropolis of Polizzello,-750,-480,2343,Europe
+2258,"Livre  des Règle  de conduite des maîtres كتاب "" آداب المعلّمين  "" محمد ابن سحنون""",817,870,2344,Southwest Asia
+2261,Tiwanaku,180,1010,2434,South America
+2262,Le Commencement et la Fin البداية والنهاية de Ibn Kathir لابن كثير,1301,1373,2348,Southwest Asia
+2263,"lettre au disciple Ayyuha-l-walad par Al Ghazâlî رسالة ""ايّها الولد لأبي حامد الغزالي",1058,1111,2349,Southwest Asia
+2264,Puritans,1560,1720,2350,Europe
+2265,القرآن الكريم Le Noble Coran,610,2024,2351,Southwest Asia
+2266,Yangsheng Daoism from Laozi to Ge Hong,-571,343,1183,East Asia
+2267,Tingambato,0,900,2352,North America
+2268,St. Nicholas of Melissourgoi,1778,1967,2353,Europe
+2269,The Norwegian Seamen's Church in Leith,1865,1974,2354,Europe
+2271,The Gideons International in Ngeria,1964,2024,2256,Africa
+2272,Abou Hamid Al-Ghazali:   Le livre d'Al-Jam Al-Awam sur la science de la théologie الجام العوام عن علم الكلام,1058,1111,2355,Southwest Asia
+2273,Yuan divination schools,1291,1368,2356,East Asia
+2274,Ìjọ Àdìmúlà (An Institutionalised Indigenous Religious Movement in Yorubaland,1920,2023,2357,Africa
+2275,Luofu Shan,-200,2024,2358,East Asia
+2276,Western Zhou (1045 BCE - 771 BCE),-1045,-771,79,East Asia
+2277,Western Zhou Bronze Inscriptions (Xi Zhou jinwen 西周金文),-1046,-771,82,East Asia
+2278,الطريقة القادرية البودشيشية في المغرب الأقصى,1700,2024,2359,Africa
+2279,The Ndau people of Chimanimani area in Zimbabwe,1890,2024,2360,Africa
+2280,Enki and Ninmaḫ,-1900,-1600,476,Southwest Asia
+2281,Suleymaniye Mosque in Rhodes,1522,2005,2361,Africa
+2282,Heart Sutra 波若波羅蜜多心經,649,2024,497,East Asia
+2283,Ge Hong 葛洪 and Outer Alchemy 外丹,283,364,103,East Asia
+2284,Tarascan Religion,1300,1522,2362,North America
+2285,Enki and Ninḫursaĝa,-1900,-1600,476,Southwest Asia
+2286,Religious Practices of the Valdivians during Ecuador's Early Formative Period,-3500,-1300,2369,South America
+2287,Cara,950,1532,2371,South America
+2288,A subterranean ceremonial complex in the  southeast of Teotihuacan's Pyramid of the Sun,0,1150,1989,North America
+2289,Glastonbury Goddess Temple,2000,2024,2396,Europe
+2290,الطريقة القادرية في مصر ق13م-ق21م,1200,2024,2372,Africa
+2293,Church of Saint John of the Collachium/Sencovan Mosque in Rhodes,1310,1863,2374,Africa
+2294,Baopuzi neipian 抱朴子內篇,220,330,138,East Asia
+2295,Nergal and Ereškigal,-1600,-500,476,Southwest Asia
+2296,Taiyi jiangxing tu 太一將行圖,-221,-194,598,East Asia
+2297,Waldensians (Waldenses),1173,1699,2375,Europe
+2298,The Baal Cycle,-1400,-1350,1084,Southwest Asia
+2299,الحشاشين  ق11-ق13   =   Assassins   XI-XIII,1100,1300,2377,Southwest Asia
+2301,Kaloutsiani Mosque,1600,2024,2460,Europe
+2302,Casma-Sechín Culture Religion,-3400,-1800,2379,South America
+2303,"Church of St. George, Smari (Pediada), Crete",1320,2024,2380,Europe
+2304,"Church of St. George, Lyttos (Pediada), Crete",1321,2024,2381,Europe
+2305,"The Church of Christ, Agia Irini (Selino), Crete",1357,2024,2382,Europe
+2306,"Church of St. Demetrios, Platanes (Selino), Crete",1372,2024,2383,Europe
+2307,"Church of the Panagia and Christ the Savior, Roustika (Rethymnon), Crete",1390,2024,2384,Europe
+2308,الفتح العربي الإسلامي للأندلس The Arab-Islamic Conquest of the Iberian Peninsula,711,726,2385,Europe
+2309,الدولة الأموية بالأندلس The Umayyad Dynasty in the Iberian Peninsula,756,1031,2386,Europe
+2312,The philosophical system of 'Ubuntu' in Southern Africa,-1800,2024,2389,Africa
+2313,Dungan people,600,2024,2390,Central Eurasia
+2314,"Church of the Panagia, Kapetaniana (Monofatsi), Crete",1401,2024,2391,Europe
+2315,"The Church of St. Isidore, Kakodiki (Selino), Crete",1420,2024,2392,Europe
+2316,"The Church of St. George, Kalamiou (Selino), Crete",1441,2024,2393,Europe
+2317,"Church of St. George, Kato Floria (Selino), Crete",1497,2024,2394,Europe
+2318,"Church of St. George, Agia Irini (Selino), Crete",1460,2024,2395,Europe
+2320,Sanjiejiao (三階教),500,800,2398,East Asia
+2321,Falungong 法輪功 (Falun Gong) / Falun Dafa 法輪大法,1992,2024,2399,East Asia
+2322,الدّولة الأمويّة في المشرق  بين662 م و750م (The Umayyad State in the Mashriq from 662 to 750),661,750,2400,Southwest Asia
+2323,Machu Picchu,1420,1532,2448,South America
+2324,"Justice and Development Party (PJD), Morocco",1970,2024,459,Africa
+2325,"Outer alchemy (外丹, waidan)",-200,900,501,East Asia
+2327,ỌBÀTÁLA RELIGIOUS GROUP AMONG THE YORUBA OF ILÉ-IFẸ̀,1900,2024,2406,Africa
+2328,Church of Almighty God (Quannengshen jiaohui 全能神教會) / Eastern Lightning (Dongfang shandian 東方閃電),1991,2024,2407,East Asia
+2329,Hòa Hảo,1937,2024,2408,Southeast Asia
+2330,Evangelical Church Winning All,1893,2024,2256,Africa
+2331,الدولة العباسيبّة في المشرق  من 750 م الى 1517 م (The Abbasid State in the Mashriq from 750 to 1517),750,1517,2409,Southwest Asia
+2332,Religion in the Minaean kingdom,-800,50,2410,Southwest Asia
+2333,Sōka Gakkai (創価学会),1930,2024,2417,Africa
+2334,'Solar Shrine' at Lachish,-450,-150,2411,Southwest Asia
+2335,The Seventh-day Adventist Church in Nigeria,1914,2024,1082,Africa
+2336,الزاوية التيجانية الكبرى بفاس AZZAWI TIJANIA Fes,1800,2024,2412,Africa
+2337,Inca,1350,1533,2413,South America
+2338,Enūma eliš,-1200,550,476,Southwest Asia
+2339,Yorùbá Traditional Religion,1100,2024,2414,Africa
+2340,Líneas de Nasca,-200,650,2415,South America
+2341,The Totonacapan Culture-Religion,600,1521,2418,North America
+2342,Ugaritic Ba'lu Cycle,-1350,-1200,1084,Southwest Asia
+2344,Sican Culture religion,900,1200,2422,South America
+2345,Contemporary Shingon,1950,2024,86,East Asia
+2346,Igbo Traditional Religion,1800,2024,2428,Africa
+2347,Nichiren Buddhism,1222,2023,2425,Africa
+2348,Ancient Israelite Religion (Iron Age),-1200,-500,2424,Southwest Asia
+2349,Methodism (Wesleyanism),1738,2024,2426,Africa
+2350,L'ordre de L'Islam de Taqi al-Din al-Nabhani نظام الإسلام لتقي الدين النبهاني,1958,2024,2427,Southwest Asia
+2353,Sannō Ichijitsu Shintō,1617,1868,1419,East Asia
+2354,Funerary Cenotes of the Mayas,0,300,2430,North America
+2356,"Popol Vuh, El libro de la estera, El libro del consejo",1500,1600,2439,North America
+2357,Fatih Sultan Mehmed Han Mosque in Heraklion,1242,1856,2441,Europe
+2358,Köprülüzade Fazıl Ahmed Paşa Mosque in Heraklion,1446,1834,2440,Europe
+2359,Turhan Valide Mosque in Heraklion,1250,1923,2442,Europe
+2360,Toltecas,600,1200,2450,North America
+2361,Mississippian Religion,1000,1700,2446,North America
+2362,الدّولة السلجوقيّة(1037 م - 1194م),1037,1194,2447,Southwest Asia
+2363,"L'ordre Soufi Tunisien ""al-Hasaniyya"" الطريقة الحسنية التونسية",1940,2024,2449,Africa
+2364,Dewa Sanzan,592,2024,2451,East Asia
+2365,Moriscos,1502,1614,2452,Africa
+2366,Islam in Hausaland,1500,2024,2453,Africa
+2367,Missions San Xavier del Bac,1692,2024,2454,North America
+2368,'Uyun akhbar al-Ridha de Shaykh as-Saduq عيون أخبار الرضا للشيخ الصدوق,992,2024,2074,Southwest Asia
+2369,Le Mouvement Sanussiyya الحركة السنوسيّة,1787,1977,2456,Africa
+2371,Tewa Pueblo Religion,1950,2020,2458,North America
+2372,Codex Borbonicus,1500,1550,585,North America
+2374,"Zona Arqueológica de Tula, Hidalgo",600,1200,2461,North America
+2378,Aztec-Mexica Temple R of Tlatelolco,1337,1521,1606,North America
+2379,Acropolis of Polizzello,-750,-480,2343,Europe
+2380,Acropolis of Monte Polizzo,-800,-500,2038,Europe
+2381,Temple R,-570,-300,1922,Europe
+2382,Great Temple Of Santa Cecilia,150,1521,2204,North America
+2383,Great Temple of Tenayuca,800,1521,1756,North America
+2384,Cult of Atargatis in Dura Europos,1,256,1935,Southwest Asia
+2385,Sanctuary of Malophoros,-699,-250,1282,Europe
+2386,Paganism in the 4th Century Nicomedia,300,400,1177,Europe
+2387,Boca de Potrerillos,-7880,1750,2287,North America
+2393,'Solar Shrine' at Lachish,-450,-150,2411,Southwest Asia
+2394,Iron Age Cultic Place at Lachish,-950,-701,2107,Southwest Asia
+2395,Cultic Practice at Khirbet Qeiyafa,-1020,-980,2091,Southwest Asia
+2396,Basilica of Saint Epiphanios,370,2024,2333,Europe
+2397,The Church of the Holy Sepulchre,335,2022,1687,Southwest Asia
+2398,Temple at Tell Afis,-1100,-600,1769,Southwest Asia
+2400,Asklepieion of Kos,-366,400,1782,Europe
+2401,The Double-Basilica at Thasos (Aliki),350,500,601,Europe
+2402,Temple of the Storm-God in Aleppo,-2500,-500,2053,Southwest Asia
+2403,The Cacaxtla Gran Basamento,650,950,2196,North America
+2406,The Sanctuary of Artemis Orthia (Sparta),-800,400,1547,Europe
+2409,Shrine at En Hazeva,-700,-550,1513,Southwest Asia
+2410,Temple at Busayra,-750,-300,1319,Southwest Asia
+2412,Shrine at Horvat Qitmit,-800,-586,1342,Southwest Asia
+2415,St. Nicholas of Melissourgoi,1778,1967,2353,Europe
+2416,Faik Pasha Cami,1449,1460,2263,Europe

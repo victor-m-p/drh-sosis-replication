@@ -20,7 +20,7 @@ convert_labels = {
     "hair": "Hair",
     "ornaments": "Ornaments",
     "permanent_scarring": "Permanent Scarring",
-    "tattoos_scarification": "Tattoos/Scarification",
+    "tattoos_scarification": "Tattoos or Scarification",
 }
 
 # Get the Tab10 colormap
@@ -82,7 +82,7 @@ draws_melted = df_draws.melt(
 
 conversion_dict = {
     "Permanent Scarring": "Permanent\nScarring",
-    "Tattoos/Scarification": "Tattoos/\nScarification",
+    "Tattoos or Scarification": "Tattoos or\nScarification",
     "Circumcision": "Circumcision",
     "Hair": "Hair",
     "Ornaments": "Ornaments",
@@ -168,93 +168,3 @@ plt.savefig(
     "../figures/png/res_distribution_plot_complete.png", bbox_inches="tight", dpi=300
 )
 plt.close()
-
-# Plot 3 (Distributions - Not Difference) #
-## NB: THIS PLOT IS NOT FINISHED ##
-draws_groups = draws_melted[
-    draws_melted["Parameter"]
-    != "p(Outcome|E. V. Conflict) - p(Outcome|No E. V. Conflict)"
-]
-
-# sorting draws by mean value ;
-mean_values = (
-    draws_groups[draws_groups["Parameter"] == "p(Outcome|No External Violent Conflict)"]
-    .groupby("Outcome")["Value"]
-    .mean()
-)
-
-# Sort the outcomes based on the calculated means
-sorted_outcomes = mean_values.sort_values().index
-
-# Update the order in the DataFrame
-draws_groups["Outcome"] = pd.Categorical(
-    draws_groups["Outcome"], categories=sorted_outcomes, ordered=True
-)
-
-fig, ax = plt.subplots(figsize=(4, 6), dpi=300)
-pt.half_violinplot(
-    data=draws_groups,
-    y="Outcome",
-    x="Value",
-    hue="Parameter",
-    orient="h",
-    split=True,
-    alpha=0.65,
-    inner=None,
-    offset=0,
-    scale="area",
-    width=1.5,
-)
-plt.ylabel("")
-plt.xlabel("")
-
-# Adjust plot to add more space to the top
-plt.subplots_adjust(top=0.9)
-
-# Adjust y-axis limits to add more space at the top
-ax.set_ylim(ax.get_ylim()[0], ax.get_ylim()[1] - 0.5)  # Adjust the value as needed
-
-new_labels = [conversion_dict.get(label, label) for label in sorted_outcomes]
-ax.set_yticklabels(new_labels)
-
-# Move the legend to the bottom and remove the title
-handles, labels = ax.get_legend_handles_labels()
-ax.legend(
-    handles,
-    labels,
-    loc="upper center",
-    bbox_to_anchor=(0.35, -0.05),
-    ncol=1,
-    frameon=False,
-    title="",
-)
-
-# Show the plot
-plt.savefig("../figures/res_distribution_plot_groups.pdf", bbox_inches="tight")
-plt.savefig(
-    "../figures/png/res_distribution_plot_groups.png", bbox_inches="tight", dpi=300
-)
-
-# Plot 4 (Distributions - Difference)
-draws_diff = draws_melted[
-    draws_melted["Parameter"]
-    == "p(Outcome|E. V. Conflict) - p(Outcome|No E. V. Conflict)"
-]
-fig, ax = plt.subplots(figsize=(4, 6), dpi=300)
-
-pt.half_violinplot(
-    data=draws_diff,
-    y="Outcome",
-    x="Value",
-    hue="Parameter",
-    orient="h",
-    split=True,
-    alpha=0.65,
-    inner=None,
-    offset=0,
-    scale="area",
-    width=1.5,
-)
-plt.ylabel("")
-plt.xlabel("")
-plt.axvline(x=0, color="black", linestyle="--", linewidth=0.5)

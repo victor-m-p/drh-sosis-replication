@@ -10,7 +10,7 @@ convert_labels = {
     "hair": "Hair",
     "ornaments": "Ornaments",
     "permanent_scarring": "Permanent Scarring",
-    "tattoos_scarification": "Tattoos/Scarification",
+    "tattoos_scarification": "Tattoos or Scarification",
 }
 
 
@@ -55,7 +55,6 @@ for filename, label in convert_labels.items():
     )
     summary_list.append(summary_row)
 summary_df = pd.concat(summary_list)
-summary_df
 
 # rename columns and save as latex
 summary_df.to_latex("../tables/brms_table.tex", index=False)

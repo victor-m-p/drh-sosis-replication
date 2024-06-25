@@ -5,9 +5,12 @@ Type of violent conflict vs. Extra-ritual in-group markers
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import matplotlib.ticker as ticker
+
+pd.options.mode.chained_assignment = None  # default='warn'
 
 # load
-answers = pd.read_csv("../data/preprocessed/answers_conflict.csv")
+answers = pd.read_csv("../data/preprocessed/answers_clean.csv")
 
 # make a first plot with permanent scarring and extra-ritual in-group markers against warfare.
 answers_wide = answers.pivot(
@@ -15,19 +18,19 @@ answers_wide = answers.pivot(
 )
 
 # variable list
-variable_list = [
+variable_dict = {
     # super questions
-    "permanent scarring",
-    "extra-ritual in-group markers",
+    "permanent_scarring": "Permanent Scarring",
+    "extra_ritual_group_markers": "Extra Ritual In-Group Markers",
     # permanent markers
-    "circumcision",
-    "tattoos/scarification",
+    "circumcision": "Circumcision",
+    "tattoos_scarification": "Tattoos or Scarification",
     # transitory markers
-    "dress",
-    "food taboos",
-    "hair",
-    "ornaments",
-]
+    "dress": "Dress",
+    "food_taboos": "Food Taboos",
+    "hair": "Hair",
+    "ornaments": "Ornaments",
+}
 
 from helper_functions import code_internal_conflict
 from helper_functions import run_chi2_test
@@ -37,12 +40,12 @@ conflict_order = ["No Internal Conflict", "Internal Conflict only"]
 palette = sns.color_palette("tab10", n_colors=4)
 fig, axes = plt.subplots(2, 4, figsize=(16, 8))
 sns.set_style("white")
-for i, variable in enumerate(variable_list):
+for i, variable in enumerate(variable_dict.keys()):
     row = i // 4
     col = i % 4
     ax = axes[row, col]
     # subset and code conflict
-    wide_subset = answers_wide[[variable, "violent external", "violent internal"]]
+    wide_subset = answers_wide[[variable, "violent_external", "violent_internal"]]
     wide_subset = wide_subset.dropna()
     # collapse groups into has external vs. does not have external
     wide_subset["conflict_type"] = wide_subset.apply(code_internal_conflict, axis=1)
@@ -76,7 +79,6 @@ for i, variable in enumerate(variable_list):
         order=conflict_order,
         palette=palette,
         label=conflict_order,
-        errorbar=("ci", 95),
     )
     # only show y label for first column
     if col == 0:
@@ -88,7 +90,12 @@ for i, variable in enumerate(variable_list):
         [f"n={group_counts[label]}" for label in conflict_order],
         fontsize=14,
     )
-    ax.set_title(f"{variable}\n({labels[0]})", fontsize=16)
+    ax.set_title(f"{variable_dict.get(variable)}\n({labels[0]})", fontsize=16)
+
+# maximally 2 decimal places for y-axis
+formatter = ticker.FormatStrFormatter("%.2f")
+for ax in axes.flat:
+    ax.yaxis.set_major_formatter(formatter)
 
 # create single legend
 handles, labels = ax.get_legend_handles_labels()

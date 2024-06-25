@@ -1,5 +1,5 @@
 """
-vmp 2023-04-04
+vmp 2023-06-25
 """
 
 import pandas as pd
@@ -56,10 +56,6 @@ answers_subset["question_short"] = answers_subset["question_name"].map(question_
 # Make sure that we are only working with groups
 answers_subset = answers_subset[answers_subset["poll_name"].str.contains("Group")]
 
-# find problems
-pd.set_option("display.max_colwidth", None)
-answers[answers["question_name"].str.contains("police force provided by")]
-
 # Merge with questionrelation to get related names
 questionrelations = pd.read_csv("../data/raw/questionrelation.csv")
 
@@ -81,10 +77,9 @@ answers_subset["parent_question_id"] = answers_subset["parent_question_id"].repl
     parent_question_mapping
 )
 
-### only keep answers that are 0 (no) or 1 (yes) ###
-answers_subset = answers_subset[answers_subset["answer_value"].isin([0, 1])]
+# only keep answers that are 0 (no) or 1 (yes)
+answers_subset = answers_subset[answers_subset["answer_value"].isin([0, 1])]  # n=4567
 
-### remove inconsistent answers ###
 # Identify inconsistent answers by checking if more than one exists for each (entry_id, question_id) group
 answers_inconsistent = answers_subset.groupby(["entry_id", "question_id"]).size()
 answers_inconsistent = answers_inconsistent[answers_inconsistent > 1].reset_index()[
@@ -122,7 +117,7 @@ answers_subset_filtered = answers_subset[
     )
 ]
 
-### unique combinations ###
+# unique combinations (needed for inferring no below)
 from helper_functions import unique_combinations
 
 unique_columns = ["question_id", "question_short", "parent_question_id"]
@@ -142,11 +137,8 @@ question_names = answers_subset_filtered[
 ].drop_duplicates()
 answers_complete = answers_complete.merge(question_names, on="question_id", how="inner")
 
-### infer no if parent is no ###
+# infer no if parent is no + save
 from helper_functions import fill_answers
 
 answers_inferred = fill_answers(answers_complete)
-answers_inferred[answers_inferred["answer_inferred"] == "Yes"]
-
-# save the data
-answers_inferred.to_csv("../data/preprocessed/answers_conflict.csv", index=False)
+answers_inferred.to_csv("../data/preprocessed/answers_clean.csv", index=False)

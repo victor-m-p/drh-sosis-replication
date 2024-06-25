@@ -184,6 +184,19 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 247,9,African Religions,2,Religious Group[8]->African Religions[9],8.0
 249,8,Religious Group,1,Religious Group[8],
 249,904,Shamanism,2,Religious Group[8]->Shamanism[904],8.0
+249,1747,Language,1,Language[1747],
+249,1876,Turkic,2,Language[1747]->Turkic[1876],1747.0
+249,1904,Indo-European,2,Language[1747]->Indo-European[1904],1747.0
+249,2411,Common Turkic,3,Language[1747]->Turkic[1876]->Common Turkic[2411],1876.0
+249,2479,Classical Indo-European,3,Language[1747]->Indo-European[1904]->Classical Indo-European[2479],1904.0
+249,3827,Central Siberian Turkic,4,Language[1747]->Turkic[1876]->Common Turkic[2411]->Central Siberian Turkic[3827],2411.0
+249,4026,Balto-Slavic,4,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Balto-Slavic[4026],2479.0
+249,5204,South Siberian Turkic,5,Language[1747]->Turkic[1876]->Common Turkic[2411]->Central Siberian Turkic[3827]->South Siberian Turkic[5204],3827.0
+249,5339,Slavic,5,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Balto-Slavic[4026]->Slavic[5339],4026.0
+249,6587,Sayan,6,Language[1747]->Turkic[1876]->Common Turkic[2411]->Central Siberian Turkic[3827]->South Siberian Turkic[5204]->Sayan[6587],5204.0
+249,6720,East Slavic,6,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Balto-Slavic[4026]->Slavic[5339]->East Slavic[6720],5339.0
+249,8169,Tuvinian,7,Language[1747]->Turkic[1876]->Common Turkic[2411]->Central Siberian Turkic[3827]->South Siberian Turkic[5204]->Sayan[6587]->Tuvinian[8169],6587.0
+249,8263,Russian,7,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Balto-Slavic[4026]->Slavic[5339]->East Slavic[6720]->Russian[8263],6720.0
 250,8,Religious Group,1,Religious Group[8],
 250,14,Buddhist Traditions,2,Religious Group[8]->Buddhist Traditions[14],8.0
 250,65,Chinese Buddhist Traditions,3,Religious Group[8]->Buddhist Traditions[14]->Chinese Buddhist Traditions[65],14.0
@@ -390,6 +403,19 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 442,742,Early Christianity,3,Religious Group[8]->Christian Traditions[18]->Early Christianity[742],18.0
 443,8,Religious Group,1,Religious Group[8],
 443,14,Buddhist Traditions,2,Religious Group[8]->Buddhist Traditions[14],8.0
+443,1747,Language,1,Language[1747],
+443,1876,Turkic,2,Language[1747]->Turkic[1876],1747.0
+443,1904,Indo-European,2,Language[1747]->Indo-European[1904],1747.0
+443,2411,Common Turkic,3,Language[1747]->Turkic[1876]->Common Turkic[2411],1876.0
+443,2479,Classical Indo-European,3,Language[1747]->Indo-European[1904]->Classical Indo-European[2479],1904.0
+443,3827,Central Siberian Turkic,4,Language[1747]->Turkic[1876]->Common Turkic[2411]->Central Siberian Turkic[3827],2411.0
+443,4026,Balto-Slavic,4,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Balto-Slavic[4026],2479.0
+443,5204,South Siberian Turkic,5,Language[1747]->Turkic[1876]->Common Turkic[2411]->Central Siberian Turkic[3827]->South Siberian Turkic[5204],3827.0
+443,5339,Slavic,5,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Balto-Slavic[4026]->Slavic[5339],4026.0
+443,6587,Sayan,6,Language[1747]->Turkic[1876]->Common Turkic[2411]->Central Siberian Turkic[3827]->South Siberian Turkic[5204]->Sayan[6587],5204.0
+443,6720,East Slavic,6,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Balto-Slavic[4026]->Slavic[5339]->East Slavic[6720],5339.0
+443,8169,Tuvinian,7,Language[1747]->Turkic[1876]->Common Turkic[2411]->Central Siberian Turkic[3827]->South Siberian Turkic[5204]->Sayan[6587]->Tuvinian[8169],6587.0
+443,8263,Russian,7,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Balto-Slavic[4026]->Slavic[5339]->East Slavic[6720]->Russian[8263],6720.0
 444,8,Religious Group,1,Religious Group[8],
 444,18,Christian Traditions,2,Religious Group[8]->Christian Traditions[18],8.0
 444,166,Methodist,3,Religious Group[8]->Christian Traditions[18]->Methodist[166],18.0
@@ -457,8 +483,20 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 476,8,Religious Group,1,Religious Group[8],
 476,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
 476,806,Syncretic Religions,2,Religious Group[8]->Syncretic Religions[806],8.0
-476,807,Vietnamese Religions,2,Religious Group[8]->Vietnamese Religions[807],8.0
 476,808,Southeast Asian Religions,2,Religious Group[8]->Southeast Asian Religions[808],8.0
+476,1747,Language,1,Language[1747],
+476,1807,Austronesian,2,Language[1747]->Austronesian[1807],1747.0
+476,2158,Malayo-Polynesian,3,Language[1747]->Austronesian[1807]->Malayo-Polynesian[2158],1807.0
+476,3523,Malayo-Sumbawan,4,Language[1747]->Austronesian[1807]->Malayo-Polynesian[2158]->Malayo-Sumbawan[3523],2158.0
+476,4858,North and East Malayo-Sumbawan,5,Language[1747]->Austronesian[1807]->Malayo-Polynesian[2158]->Malayo-Sumbawan[3523]->North and East Malayo-Sumbawan[4858],3523.0
+476,6154,Aceh-Chamic,6,Language[1747]->Austronesian[1807]->Malayo-Polynesian[2158]->Malayo-Sumbawan[3523]->North and East Malayo-Sumbawan[4858]->Aceh-Chamic[6154],4858.0
+476,7578,Chamic,7,Language[1747]->Austronesian[1807]->Malayo-Polynesian[2158]->Malayo-Sumbawan[3523]->North and East Malayo-Sumbawan[4858]->Aceh-Chamic[6154]->Chamic[7578],6154.0
+476,9076,Coastal Chamic,8,Language[1747]->Austronesian[1807]->Malayo-Polynesian[2158]->Malayo-Sumbawan[3523]->North and East Malayo-Sumbawan[4858]->Aceh-Chamic[6154]->Chamic[7578]->Coastal Chamic[9076],7578.0
+476,10309,Cham,9,Language[1747]->Austronesian[1807]->Malayo-Polynesian[2158]->Malayo-Sumbawan[3523]->North and East Malayo-Sumbawan[4858]->Aceh-Chamic[6154]->Chamic[7578]->Coastal Chamic[9076]->Cham[10309],9076.0
+476,11311,Eastern Cham,10,Language[1747]->Austronesian[1807]->Malayo-Polynesian[2158]->Malayo-Sumbawan[3523]->North and East Malayo-Sumbawan[4858]->Aceh-Chamic[6154]->Chamic[7578]->Coastal Chamic[9076]->Cham[10309]->Eastern Cham[11311],10309.0
+476,14836,Chamic,4,Language[1747]->Austronesian[1807]->Malayo-Polynesian[2158]->Chamic[14836],2158.0
+476,14837,Cham,5,Language[1747]->Austronesian[1807]->Malayo-Polynesian[2158]->Chamic[14836]->Cham[14837],14836.0
+476,43716,Cham Religions,3,,808.0
 477,8,Religious Group,1,Religious Group[8],
 477,18,Christian Traditions,2,Religious Group[8]->Christian Traditions[18],8.0
 478,8,Religious Group,1,Religious Group[8],
@@ -1089,6 +1127,11 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 683,868,Altar,2,Religious Place[856]->Altar[868],856.0
 683,927,Religious Complex,2,Religious Place[856]->Religious Complex[927],856.0
 683,1243,Southeast Asian Hinduism,2,Religious Group[8]->Southeast Asian Hinduism[1243],8.0
+683,1747,Language,1,Language[1747],
+683,1807,Austronesian,2,Language[1747]->Austronesian[1807],1747.0
+683,2158,Malayo-Polynesian,3,Language[1747]->Austronesian[1807]->Malayo-Polynesian[2158],1807.0
+683,14836,Chamic,4,Language[1747]->Austronesian[1807]->Malayo-Polynesian[2158]->Chamic[14836],2158.0
+683,14837,Cham,5,Language[1747]->Austronesian[1807]->Malayo-Polynesian[2158]->Chamic[14836]->Cham[14837],14836.0
 684,8,Religious Group,1,Religious Group[8],
 684,38,Native American (North American) Religions,2,Religious Group[8]->Native American (North American) Religions[38],8.0
 685,8,Religious Group,1,Religious Group[8],
@@ -1587,6 +1630,13 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 850,953,Gaulish Polytheism,3,Religious Group[8]->Celtic Religions[16]->Gaulish Polytheism[953],16.0
 850,954,Celtic Paganism,3,Religious Group[8]->Celtic Religions[16]->Celtic Paganism[954],16.0
 850,955,Gaulish Pagan Religion,3,Religious Group[8]->Celtic Religions[16]->Gaulish Pagan Religion[955],16.0
+850,1747,Language,1,Language[1747],
+850,1904,Indo-European,2,Language[1747]->Indo-European[1904],1747.0
+850,2479,Classical Indo-European,3,Language[1747]->Indo-European[1904]->Classical Indo-European[2479],1904.0
+850,4029,Celtic,4,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Celtic[4029],2479.0
+850,5345,Nuclear Celtic,5,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Celtic[4029]->Nuclear Celtic[5345],4029.0
+850,6730,Cisalpine Celtic,6,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Celtic[4029]->Nuclear Celtic[5345]->Cisalpine Celtic[6730],5345.0
+850,8281,Cisalpine Gaulish,7,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Celtic[4029]->Nuclear Celtic[5345]->Cisalpine Celtic[6730]->Cisalpine Gaulish[8281],6730.0
 851,8,Religious Group,1,Religious Group[8],
 851,44,Sikhism,2,Religious Group[8]->Sikhism[44],8.0
 851,950,Asian American Religions,2,Religious Group[8]->Asian American Religions[950],8.0
@@ -1597,6 +1647,18 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 852,959,Celtic Polytheism,2,Religious Group[8]->Celtic Polytheism[959],8.0
 852,960,Irish Paganism,2,Religious Group[8]->Irish Paganism[960],8.0
 852,961,Irish Polytheism,2,Religious Group[8]->Irish Polytheism[961],8.0
+852,1747,Language,1,Language[1747],
+852,1904,Indo-European,2,Language[1747]->Indo-European[1904],1747.0
+852,2479,Classical Indo-European,3,Language[1747]->Indo-European[1904]->Classical Indo-European[2479],1904.0
+852,4029,Celtic,4,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Celtic[4029],2479.0
+852,5345,Nuclear Celtic,5,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Celtic[4029]->Nuclear Celtic[5345],4029.0
+852,6727,TGB Celtic,6,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Celtic[4029]->Nuclear Celtic[5345]->TGB Celtic[6727],5345.0
+852,8279,Insular Celtic,7,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Celtic[4029]->Nuclear Celtic[5345]->TGB Celtic[6727]->Insular Celtic[8279],6727.0
+852,9688,Goidelic,8,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Celtic[4029]->Nuclear Celtic[5345]->TGB Celtic[6727]->Insular Celtic[8279]->Goidelic[9688],8279.0
+852,10905,Early Irish,9,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Celtic[4029]->Nuclear Celtic[5345]->TGB Celtic[6727]->Insular Celtic[8279]->Goidelic[9688]->Early Irish[10905],9688.0
+852,35857,Primitive Irish (4-6th century),10,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Celtic[4029]->Nuclear Celtic[5345]->TGB Celtic[6727]->Insular Celtic[8279]->Goidelic[9688]->Early Irish[10905]->Primitive Irish (4-6th century)[35857],10905.0
+852,35859,Archaic Irish (7th century),10,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Celtic[4029]->Nuclear Celtic[5345]->TGB Celtic[6727]->Insular Celtic[8279]->Goidelic[9688]->Early Irish[10905]->Archaic Irish (7th century)[35859],10905.0
+852,35862,Old Irish (8-9th century),10,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Celtic[4029]->Nuclear Celtic[5345]->TGB Celtic[6727]->Insular Celtic[8279]->Goidelic[9688]->Early Irish[10905]->Old Irish (8-9th century)[35862],10905.0
 853,8,Religious Group,1,Religious Group[8],
 853,16,Celtic Religions,2,Religious Group[8]->Celtic Religions[16],8.0
 853,956,Indo-European Religion,2,Religious Group[8]->Indo-European Religion[956],8.0
@@ -1605,6 +1667,16 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 853,962,North British Paganism,2,Religious Group[8]->North British Paganism[962],8.0
 853,963,North British Polytheism,2,Religious Group[8]->North British Polytheism[963],8.0
 853,964,Pictish Pagan Religion,2,Religious Group[8]->Pictish Pagan Religion[964],8.0
+853,1747,Language,1,Language[1747],
+853,1904,Indo-European,2,Language[1747]->Indo-European[1904],1747.0
+853,1973,Unclassifiable,2,Language[1747]->Unclassifiable[1973],1747.0
+853,2479,Classical Indo-European,3,Language[1747]->Indo-European[1904]->Classical Indo-European[2479],1904.0
+853,3166,Pictish,3,Language[1747]->Unclassifiable[1973]->Pictish[3166],1973.0
+853,4029,Celtic,4,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Celtic[4029],2479.0
+853,5345,Nuclear Celtic,5,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Celtic[4029]->Nuclear Celtic[5345],4029.0
+853,6727,TGB Celtic,6,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Celtic[4029]->Nuclear Celtic[5345]->TGB Celtic[6727],5345.0
+853,8279,Insular Celtic,7,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Celtic[4029]->Nuclear Celtic[5345]->TGB Celtic[6727]->Insular Celtic[8279],6727.0
+853,9689,Brythonic,8,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Celtic[4029]->Nuclear Celtic[5345]->TGB Celtic[6727]->Insular Celtic[8279]->Brythonic[9689],8279.0
 854,8,Religious Group,1,Religious Group[8],
 854,16,Celtic Religions,2,Religious Group[8]->Celtic Religions[16],8.0
 854,762,Celtic Polytheism,3,Religious Group[8]->Celtic Religions[16]->Celtic Polytheism[762],16.0
@@ -1655,6 +1727,12 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 866,134,Daoist Traditions,3,Religious Group[8]->Chinese Religion[123]->Daoist Traditions[134],123.0
 866,383,Chinese Buddhist Traditions,3,Religious Group[8]->Chinese Religion[123]->Chinese Buddhist Traditions[383],123.0
 866,1251,Yellow and Yangzi Rivers Region,2,Religious Group[8]->Yellow and Yangzi Rivers Region[1251],8.0
+866,1747,Language,1,Language[1747],
+866,1946,Sino-Tibetan,2,Language[1747]->Sino-Tibetan[1946],1747.0
+866,3038,Sinitic,3,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038],1946.0
+866,4342,Classical-Middle-Modern Sinitic,4,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342],3038.0
+866,5612,Literary Chinese,5,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342]->Literary Chinese[5612],4342.0
+866,5613,Middle-Modern Sinitic,5,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342]->Middle-Modern Sinitic[5613],4342.0
 867,8,Religious Group,1,Religious Group[8],
 867,14,Buddhist Traditions,2,Religious Group[8]->Buddhist Traditions[14],8.0
 867,116,Tibetan Buddhist Traditions,3,Religious Group[8]->Buddhist Traditions[14]->Tibetan Buddhist Traditions[116],14.0
@@ -2196,11 +2274,18 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1024,1108,Daoism,2,Religious Group[8]->Daoism[1108],8.0
 1025,8,Religious Group,1,Religious Group[8],
 1025,510,Indic Religious Traditions,2,Religious Group[8]->Indic Religious Traditions[510],8.0
+1025,806,Syncretic Religions,2,Religious Group[8]->Syncretic Religions[806],8.0
 1025,808,Southeast Asian Religions,2,Religious Group[8]->Southeast Asian Religions[808],8.0
 1025,901,Vietnam,2,Religious Group[8]->Vietnam[901],8.0
 1025,1059,Shaivism,2,Religious Group[8]->Shaivism[1059],8.0
 1025,1069,Text,1,Text[1069],
 1025,1075,Scripture,2,Text[1069]->Scripture[1075],1069.0
+1025,1747,Language,1,Language[1747],
+1025,1807,Austronesian,2,Language[1747]->Austronesian[1807],1747.0
+1025,2158,Malayo-Polynesian,3,Language[1747]->Austronesian[1807]->Malayo-Polynesian[2158],1807.0
+1025,14836,Chamic,4,Language[1747]->Austronesian[1807]->Malayo-Polynesian[2158]->Chamic[14836],2158.0
+1025,14837,Cham,5,Language[1747]->Austronesian[1807]->Malayo-Polynesian[2158]->Chamic[14836]->Cham[14837],14836.0
+1025,43716,Cham Religions,3,,808.0
 1026,8,Religious Group,1,Religious Group[8],
 1026,123,Chinese Religion,2,Religious Group[8]->Chinese Religion[123],8.0
 1026,128,Chinese State Religion,3,Religious Group[8]->Chinese Religion[123]->Chinese State Religion[128],123.0
@@ -2227,12 +2312,22 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1029,1083,Early Chinese text,2,Text[1069]->Early Chinese text[1083],1069.0
 1029,1084,Excavated text,2,Text[1069]->Excavated text[1084],1069.0
 1029,1085,Confucianism,2,Religious Group[8]->Confucianism[1085],8.0
+1029,1747,Language,1,Language[1747],
+1029,1946,Sino-Tibetan,2,Language[1747]->Sino-Tibetan[1946],1747.0
+1029,3038,Sinitic,3,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038],1946.0
+1029,4342,Classical-Middle-Modern Sinitic,4,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342],3038.0
+1029,5612,Literary Chinese,5,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342]->Literary Chinese[5612],4342.0
 1030,8,Religious Group,1,Religious Group[8],
 1030,123,Chinese Religion,2,Religious Group[8]->Chinese Religion[123],8.0
 1030,1069,Text,1,Text[1069],
 1030,1083,Early Chinese text,2,Text[1069]->Early Chinese text[1083],1069.0
 1030,1084,Excavated text,2,Text[1069]->Excavated text[1084],1069.0
 1030,1175,Abdication text,2,Text[1069]->Abdication text[1175],1069.0
+1030,1747,Language,1,Language[1747],
+1030,1946,Sino-Tibetan,2,Language[1747]->Sino-Tibetan[1946],1747.0
+1030,3038,Sinitic,3,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038],1946.0
+1030,4342,Classical-Middle-Modern Sinitic,4,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342],3038.0
+1030,5612,Literary Chinese,5,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342]->Literary Chinese[5612],4342.0
 1031,8,Religious Group,1,Religious Group[8],
 1031,30,Manichaeism,2,Religious Group[8]->Manichaeism[30],8.0
 1031,41,Persian Religions,2,Religious Group[8]->Persian Religions[41],8.0
@@ -2245,6 +2340,11 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1034,1069,Text,1,Text[1069],
 1034,1083,Early Chinese text,2,Text[1069]->Early Chinese text[1083],1069.0
 1034,1084,Excavated text,2,Text[1069]->Excavated text[1084],1069.0
+1034,1747,Language,1,Language[1747],
+1034,1946,Sino-Tibetan,2,Language[1747]->Sino-Tibetan[1946],1747.0
+1034,3038,Sinitic,3,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038],1946.0
+1034,4342,Classical-Middle-Modern Sinitic,4,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342],3038.0
+1034,5612,Literary Chinese,5,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342]->Literary Chinese[5612],4342.0
 1037,8,Religious Group,1,Religious Group[8],
 1037,9,African Religions,2,Religious Group[8]->African Religions[9],8.0
 1037,20,Egyptian Religions,2,Religious Group[8]->Egyptian Religions[20],8.0
@@ -2311,6 +2411,19 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1051,15,Canaanite Religions,2,Religious Group[8]->Canaanite Religions[15],8.0
 1051,20,Egyptian Religions,2,Religious Group[8]->Egyptian Religions[20],8.0
 1051,929,Levantine Religion,2,Religious Group[8]->Levantine Religion[929],8.0
+1052,8,Religious Group,1,Religious Group[8],
+1052,123,Chinese Religion,2,Religious Group[8]->Chinese Religion[123],8.0
+1052,383,Chinese Buddhist Traditions,3,Religious Group[8]->Chinese Religion[123]->Chinese Buddhist Traditions[383],123.0
+1052,384,Chan Buddhism (chan zong 禪宗),4,Religious Group[8]->Chinese Religion[123]->Chinese Buddhist Traditions[383]->Chan Buddhism (chan zong 禪宗)[384],383.0
+1052,1069,Text,1,Text[1069],
+1052,1102,Chinese Buddhist text,2,Text[1069]->Chinese Buddhist text[1102],1069.0
+1052,1103,Chan Buddhist text,2,Text[1069]->Chan Buddhist text[1103],1069.0
+1052,1104,Early Chan text,2,Text[1069]->Early Chan text[1104],1069.0
+1052,1747,Language,1,Language[1747],
+1052,1946,Sino-Tibetan,2,Language[1747]->Sino-Tibetan[1946],1747.0
+1052,3038,Sinitic,3,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038],1946.0
+1052,4342,Classical-Middle-Modern Sinitic,4,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342],3038.0
+1052,5612,Literary Chinese,5,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342]->Literary Chinese[5612],4342.0
 1054,8,Religious Group,1,Religious Group[8],
 1054,123,Chinese Religion,2,Religious Group[8]->Chinese Religion[123],8.0
 1054,1069,Text,1,Text[1069],
@@ -2340,6 +2453,11 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1057,1113,Wei-Jin text,2,Text[1069]->Wei-Jin text[1113],1069.0
 1057,1114,Fu Xuan,3,Religious Group[8]->Confucianism[1085]->Fu Xuan[1114],1085.0
 1057,1251,Yellow and Yangzi Rivers Region,2,Religious Group[8]->Yellow and Yangzi Rivers Region[1251],8.0
+1057,1747,Language,1,Language[1747],
+1057,1946,Sino-Tibetan,2,Language[1747]->Sino-Tibetan[1946],1747.0
+1057,3038,Sinitic,3,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038],1946.0
+1057,4342,Classical-Middle-Modern Sinitic,4,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342],3038.0
+1057,5612,Literary Chinese,5,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342]->Literary Chinese[5612],4342.0
 1058,8,Religious Group,1,Religious Group[8],
 1058,28,Korean Religions,2,Religious Group[8]->Korean Religions[28],8.0
 1058,1069,Text,1,Text[1069],
@@ -2415,6 +2533,40 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1071,903,Technology,2,Religious Group[8]->Technology[903],8.0
 1071,950,Asian American Religions,2,Religious Group[8]->Asian American Religions[950],8.0
 1071,995,Kami worship,2,Religious Group[8]->Kami worship[995],8.0
+1071,1747,Language,1,Language[1747],
+1071,1889,Japonic,2,Language[1747]->Japonic[1889],1747.0
+1071,1904,Indo-European,2,Language[1747]->Indo-European[1904],1747.0
+1071,1946,Sino-Tibetan,2,Language[1747]->Sino-Tibetan[1946],1747.0
+1071,2444,Japanesic,3,Language[1747]->Japonic[1889]->Japanesic[2444],1889.0
+1071,2479,Classical Indo-European,3,Language[1747]->Indo-European[1904]->Classical Indo-European[2479],1904.0
+1071,3038,Sinitic,3,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038],1946.0
+1071,4031,Italic,4,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031],2479.0
+1071,4033,Germanic,4,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Germanic[4033],2479.0
+1071,4342,Classical-Middle-Modern Sinitic,4,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342],3038.0
+1071,5349,Latino-Faliscan,5,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349],4031.0
+1071,5354,Northwest Germanic,5,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Germanic[4033]->Northwest Germanic[5354],4033.0
+1071,5613,Middle-Modern Sinitic,5,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342]->Middle-Modern Sinitic[5613],4342.0
+1071,6736,Latinic,6,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736],5349.0
+1071,6740,West Germanic,6,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Germanic[4033]->Northwest Germanic[5354]->West Germanic[6740],5354.0
+1071,7030,Northern Chinese,6,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342]->Middle-Modern Sinitic[5613]->Northern Chinese[7030],5613.0
+1071,8284,Imperial Latin,7,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284],6736.0
+1071,8290,North Sea Germanic,7,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Germanic[4033]->Northwest Germanic[5354]->West Germanic[6740]->North Sea Germanic[8290],6740.0
+1071,8557,Mandarinic,7,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342]->Middle-Modern Sinitic[5613]->Northern Chinese[7030]->Mandarinic[8557],7030.0
+1071,9690,Romance,8,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Romance[9690],8284.0
+1071,9705,Anglo-Frisian,8,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Germanic[4033]->Northwest Germanic[5354]->West Germanic[6740]->North Sea Germanic[8290]->Anglo-Frisian[9705],8290.0
+1071,9940,Mandarin Chinese,8,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342]->Middle-Modern Sinitic[5613]->Northern Chinese[7030]->Mandarinic[8557]->Mandarin Chinese[9940],8557.0
+1071,10909,Italo-Western Romance,9,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Romance[9690]->Italo-Western Romance[10909],9690.0
+1071,10924,Anglic,9,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Germanic[4033]->Northwest Germanic[5354]->West Germanic[6740]->North Sea Germanic[8290]->Anglo-Frisian[9705]->Anglic[10924],9705.0
+1071,11855,Western Romance,10,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Romance[9690]->Italo-Western Romance[10909]->Western Romance[11855],10909.0
+1071,11872,Later Anglic,10,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Germanic[4033]->Northwest Germanic[5354]->West Germanic[6740]->North Sea Germanic[8290]->Anglo-Frisian[9705]->Anglic[10924]->Later Anglic[11872],10924.0
+1071,12721,Shifted Western Romance,11,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Romance[9690]->Italo-Western Romance[10909]->Western Romance[11855]->Shifted Western Romance[12721],11855.0
+1071,12745,Middle-Modern English,11,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Germanic[4033]->Northwest Germanic[5354]->West Germanic[6740]->North Sea Germanic[8290]->Anglo-Frisian[9705]->Anglic[10924]->Later Anglic[11872]->Middle-Modern English[12745],11872.0
+1071,13415,Southwestern Shifted Romance,12,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Romance[9690]->Italo-Western Romance[10909]->Western Romance[11855]->Shifted Western Romance[12721]->Southwestern Shifted Romance[13415],12721.0
+1071,13935,West Ibero-Romance,13,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Romance[9690]->Italo-Western Romance[10909]->Western Romance[11855]->Shifted Western Romance[12721]->Southwestern Shifted Romance[13415]->West Ibero-Romance[13935],13415.0
+1071,14287,Galician Romance,14,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Romance[9690]->Italo-Western Romance[10909]->Western Romance[11855]->Shifted Western Romance[12721]->Southwestern Shifted Romance[13415]->West Ibero-Romance[13935]->Galician Romance[14287],13935.0
+1071,14461,Macro-Portuguese,15,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Romance[9690]->Italo-Western Romance[10909]->Western Romance[11855]->Shifted Western Romance[12721]->Southwestern Shifted Romance[13415]->West Ibero-Romance[13935]->Galician Romance[14287]->Macro-Portuguese[14461],14287.0
+1071,14577,Brazil-Portugal Portuguese,16,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Romance[9690]->Italo-Western Romance[10909]->Western Romance[11855]->Shifted Western Romance[12721]->Southwestern Shifted Romance[13415]->West Ibero-Romance[13935]->Galician Romance[14287]->Macro-Portuguese[14461]->Brazil-Portugal Portuguese[14577],14461.0
+1071,14834,Japanese,4,Language[1747]->Japonic[1889]->Japanesic[2444]->Japanese[14834],2444.0
 1072,8,Religious Group,1,Religious Group[8],
 1072,20,Egyptian Religions,2,Religious Group[8]->Egyptian Religions[20],8.0
 1072,856,Religious Place,1,Religious Place[856],
@@ -2457,6 +2609,11 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1077,1069,Text,1,Text[1069],
 1077,1083,Early Chinese text,2,Text[1069]->Early Chinese text[1083],1069.0
 1077,1084,Excavated text,2,Text[1069]->Excavated text[1084],1069.0
+1077,1747,Language,1,Language[1747],
+1077,1946,Sino-Tibetan,2,Language[1747]->Sino-Tibetan[1946],1747.0
+1077,3038,Sinitic,3,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038],1946.0
+1077,4342,Classical-Middle-Modern Sinitic,4,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342],3038.0
+1077,5612,Literary Chinese,5,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342]->Literary Chinese[5612],4342.0
 1078,8,Religious Group,1,Religious Group[8],
 1078,9,African Religions,2,Religious Group[8]->African Religions[9],8.0
 1078,20,Egyptian Religions,2,Religious Group[8]->Egyptian Religions[20],8.0
@@ -3138,6 +3295,23 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1203,1254,Jewish Court Tales,2,Text[1069]->Jewish Court Tales[1254],1069.0
 1203,1255,Biblical Prophets,2,Text[1069]->Biblical Prophets[1255],1069.0
 1203,1256,Early Jewish Literature,2,Text[1069]->Early Jewish Literature[1256],1069.0
+1203,1747,Language,1,Language[1747],
+1203,1904,Indo-European,2,Language[1747]->Indo-European[1904],1747.0
+1203,1977,Afro-Asiatic,2,Language[1747]->Afro-Asiatic[1977],1747.0
+1203,2479,Classical Indo-European,3,Language[1747]->Indo-European[1904]->Classical Indo-European[2479],1904.0
+1203,3237,Semitic,3,Language[1747]->Afro-Asiatic[1977]->Semitic[3237],1977.0
+1203,4027,Graeco-Phrygian,4,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Graeco-Phrygian[4027],2479.0
+1203,4434,West Semitic,4,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434],3237.0
+1203,5341,Greek,5,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Graeco-Phrygian[4027]->Greek[5341],4027.0
+1203,5695,Central Semitic,5,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695],4434.0
+1203,7096,Northwest Semitic,6,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096],5695.0
+1203,8597,Canaanite,7,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597],7096.0
+1203,8598,Aramaic,7,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Aramaic[8598],7096.0
+1203,9968,Hebrewic,8,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Hebrewic[9968],8597.0
+1203,9970,Imperial-Middle-Modern Aramaic,8,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Aramaic[8598]->Imperial-Middle-Modern Aramaic[9970],8598.0
+1203,11121,Ancient Hebrew,9,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Hebrewic[9968]->Ancient Hebrew[11121],9968.0
+1203,11125,Imperial Aramaic (700-300 BCE),9,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Aramaic[8598]->Imperial-Middle-Modern Aramaic[9970]->Imperial Aramaic (700-300 BCE)[11125],9970.0
+1203,36477,Biblical Hebrew,10,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Hebrewic[9968]->Ancient Hebrew[11121]->Biblical Hebrew[36477],11121.0
 1207,8,Religious Group,1,Religious Group[8],
 1207,1069,Text,1,Text[1069],
 1207,1107,Daoist text,2,Text[1069]->Daoist text[1107],1069.0
@@ -3153,6 +3327,12 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1211,1068,City,2,Religious Place[856]->City[1068],856.0
 1211,1257,Hurrian Religions,3,Religious Group[8]->Mesopotamian Religions[34]->Hurrian Religions[1257],34.0
 1211,1263,Hattic/Hattian Religions,3,Religious Group[8]->Anatolian Religions[10]->Hattic/Hattian Religions[1263],10.0
+1211,1747,Language,1,Language[1747],
+1211,1764,Hurro-Urartian,2,Language[1747]->Hurro-Urartian[1764],1747.0
+1211,1904,Indo-European,2,Language[1747]->Indo-European[1904],1747.0
+1211,2036,Hurrian,3,Language[1747]->Hurro-Urartian[1764]->Hurrian[2036],1764.0
+1211,2481,Anatolian,3,Language[1747]->Indo-European[1904]->Anatolian[2481],1904.0
+1211,4039,Hittite,4,Language[1747]->Indo-European[1904]->Anatolian[2481]->Hittite[4039],2481.0
 1212,8,Religious Group,1,Religious Group[8],
 1212,22,Greek Religions,2,Religious Group[8]->Greek Religions[22],8.0
 1212,856,Religious Place,1,Religious Place[856],
@@ -3864,6 +4044,11 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1345,49,Zoroastrianism,2,Religious Group[8]->Zoroastrianism[49],8.0
 1345,1069,Text,1,Text[1069],
 1345,1370,Zoroastrian prayer,2,Text[1069]->Zoroastrian prayer[1370],1069.0
+1345,1747,Language,1,Language[1747],
+1345,1904,Indo-European,2,Language[1747]->Indo-European[1904],1747.0
+1345,2479,Classical Indo-European,3,Language[1747]->Indo-European[1904]->Classical Indo-European[2479],1904.0
+1345,4034,Indo-Iranian,4,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Indo-Iranian[4034],2479.0
+1345,5358,Iranian,5,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Indo-Iranian[4034]->Iranian[5358],4034.0
 1346,8,Religious Group,1,Religious Group[8],
 1346,22,Greek Religions,2,Religious Group[8]->Greek Religions[22],8.0
 1346,741,Hellenistic Religions,2,Religious Group[8]->Hellenistic Religions[741],8.0
@@ -3909,6 +4094,16 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1350,1258,China,2,Religious Place[856]->China[1258],856.0
 1350,1291,Chinese Buddhism,2,Religious Group[8]->Chinese Buddhism[1291],8.0
 1350,1374,Sichuan,3,Religious Place[856]->China[1258]->Sichuan[1374],1258.0
+1351,8,Religious Group,1,Religious Group[8],
+1351,9,African Religions,2,Religious Group[8]->African Religions[9],8.0
+1351,20,Egyptian Religions,2,Religious Group[8]->Egyptian Religions[20],8.0
+1351,856,Religious Place,1,Religious Place[856],
+1351,1067,Tomb,2,Religious Place[856]->Tomb[1067],856.0
+1351,1144,Archaeological monument,2,Religious Place[856]->Archaeological monument[1144],856.0
+1351,1157,Ancient Egyptian Religion,3,Religious Group[8]->African Religions[9]->Ancient Egyptian Religion[1157],9.0
+1351,1195,Egypt,2,Religious Place[856]->Egypt[1195],856.0
+1351,1208,Archaeology,3,Religious Group[8]->Egyptian Religions[20]->Archaeology[1208],20.0
+1351,1217,Funerary Beliefs and Rituals,3,Religious Group[8]->Egyptian Religions[20]->Funerary Beliefs and Rituals[1217],20.0
 1352,8,Religious Group,1,Religious Group[8],
 1352,806,Syncretic Religions,2,Religious Group[8]->Syncretic Religions[806],8.0
 1352,1244,Hinduism,2,Religious Group[8]->Hinduism[1244],8.0
@@ -3955,6 +4150,9 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1361,1144,Archaeological monument,2,Religious Place[856]->Archaeological monument[1144],856.0
 1361,1199,Graeco-Roman,2,Religious Place[856]->Graeco-Roman[1199],856.0
 1361,1300,Polytheistic,2,Religious Group[8]->Polytheistic[1300],8.0
+1363,8,Religious Group,1,Religious Group[8],
+1363,508,South American Religions,2,Religious Group[8]->South American Religions[508],8.0
+1363,1317,Pre-Inka Religions,2,Religious Group[8]->Pre-Inka Religions[1317],8.0
 1367,8,Religious Group,1,Religious Group[8],
 1367,27,Jewish Traditions,2,Religious Group[8]->Jewish Traditions[27],8.0
 1367,1069,Text,1,Text[1069],
@@ -3978,6 +4176,11 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1369,34,Mesopotamian Religions,2,Religious Group[8]->Mesopotamian Religions[34],8.0
 1369,1361,Near East,2,Religious Group[8]->Near East[1361],8.0
 1369,1389,Babylonian Religions,2,Religious Group[8]->Babylonian Religions[1389],8.0
+1369,1747,Language,1,Language[1747],
+1369,1977,Afro-Asiatic,2,Language[1747]->Afro-Asiatic[1977],1747.0
+1369,3237,Semitic,3,Language[1747]->Afro-Asiatic[1977]->Semitic[3237],1977.0
+1369,4432,East Semitic,4,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->East Semitic[4432],3237.0
+1369,5692,Akkadian,5,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->East Semitic[4432]->Akkadian[5692],4432.0
 1370,8,Religious Group,1,Religious Group[8],
 1370,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
 1371,8,Religious Group,1,Religious Group[8],
@@ -4100,6 +4303,16 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1399,1300,Polytheistic,2,Religious Group[8]->Polytheistic[1300],8.0
 1399,1380,Indo-Iranian Religions,2,Religious Group[8]->Indo-Iranian Religions[1380],8.0
 1399,1397,Mesopotamian Religion,2,Religious Group[8]->Mesopotamian Religion[1397],8.0
+1399,1747,Language,1,Language[1747],
+1399,1764,Hurro-Urartian,2,Language[1747]->Hurro-Urartian[1764],1747.0
+1399,1904,Indo-European,2,Language[1747]->Indo-European[1904],1747.0
+1399,1977,Afro-Asiatic,2,Language[1747]->Afro-Asiatic[1977],1747.0
+1399,2036,Hurrian,3,Language[1747]->Hurro-Urartian[1764]->Hurrian[2036],1764.0
+1399,2481,Anatolian,3,Language[1747]->Indo-European[1904]->Anatolian[2481],1904.0
+1399,3237,Semitic,3,Language[1747]->Afro-Asiatic[1977]->Semitic[3237],1977.0
+1399,4039,Hittite,4,Language[1747]->Indo-European[1904]->Anatolian[2481]->Hittite[4039],2481.0
+1399,4432,East Semitic,4,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->East Semitic[4432],3237.0
+1399,5692,Akkadian,5,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->East Semitic[4432]->Akkadian[5692],4432.0
 1400,8,Religious Group,1,Religious Group[8],
 1400,123,Chinese Religion,2,Religious Group[8]->Chinese Religion[123],8.0
 1400,1038,Subaltern Religion,2,Religious Group[8]->Subaltern Religion[1038],8.0
@@ -4109,6 +4322,11 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1400,1238,Religious Practice,2,Religious Group[8]->Religious Practice[1238],8.0
 1400,1251,Yellow and Yangzi Rivers Region,2,Religious Group[8]->Yellow and Yangzi Rivers Region[1251],8.0
 1400,1291,Chinese Buddhism,2,Religious Group[8]->Chinese Buddhism[1291],8.0
+1400,1747,Language,1,Language[1747],
+1400,1946,Sino-Tibetan,2,Language[1747]->Sino-Tibetan[1946],1747.0
+1400,3038,Sinitic,3,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038],1946.0
+1400,4342,Classical-Middle-Modern Sinitic,4,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342],3038.0
+1400,5612,Literary Chinese,5,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342]->Literary Chinese[5612],4342.0
 1401,8,Religious Group,1,Religious Group[8],
 1401,18,Christian Traditions,2,Religious Group[8]->Christian Traditions[18],8.0
 1401,22,Greek Religions,2,Religious Group[8]->Greek Religions[22],8.0
@@ -4167,6 +4385,8 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1409,8,Religious Group,1,Religious Group[8],
 1409,33,Mesoamerican Religions,2,Religious Group[8]->Mesoamerican Religions[33],8.0
 1409,497,Olmec religion,3,Religious Group[8]->Mesoamerican Religions[33]->Olmec religion[497],33.0
+1409,1747,Language,1,Language[1747],
+1409,1961,Mixe-Zoque,2,Language[1747]->Mixe-Zoque[1961],1747.0
 1412,8,Religious Group,1,Religious Group[8],
 1412,26,Japanese Religions,2,Religious Group[8]->Japanese Religions[26],8.0
 1412,297,Shintō,2,Religious Group[8]->Shintō[297],8.0
@@ -4416,6 +4636,13 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1449,856,Religious Place,1,Religious Place[856],
 1449,865,Temple,2,Religious Place[856]->Temple[865],856.0
 1449,1426,Mexica,2,Religious Group[8]->Mexica[1426],8.0
+1449,1747,Language,1,Language[1747],
+1449,1803,Uto-Aztecan,2,Language[1747]->Uto-Aztecan[1803],1747.0
+1449,2140,Southern Uto-Aztecan,3,Language[1747]->Uto-Aztecan[1803]->Southern Uto-Aztecan[2140],1803.0
+1449,3471,Corachol-Aztecan,4,Language[1747]->Uto-Aztecan[1803]->Southern Uto-Aztecan[2140]->Corachol-Aztecan[3471],2140.0
+1449,4741,Aztec,5,Language[1747]->Uto-Aztecan[1803]->Southern Uto-Aztecan[2140]->Corachol-Aztecan[3471]->Aztec[4741],3471.0
+1449,5989,Western Nahuatl,6,Language[1747]->Uto-Aztecan[1803]->Southern Uto-Aztecan[2140]->Corachol-Aztecan[3471]->Aztec[4741]->Western Nahuatl[5989],4741.0
+1449,7402,Central Nahuatl,7,Language[1747]->Uto-Aztecan[1803]->Southern Uto-Aztecan[2140]->Corachol-Aztecan[3471]->Aztec[4741]->Western Nahuatl[5989]->Central Nahuatl[7402],5989.0
 1450,8,Religious Group,1,Religious Group[8],
 1450,508,South American Religions,2,Religious Group[8]->South American Religions[508],8.0
 1451,8,Religious Group,1,Religious Group[8],
@@ -4425,6 +4652,13 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1451,1429,Early Bronze Age,2,Religious Group[8]->Early Bronze Age[1429],8.0
 1451,1435,Southern Levant,2,Religious Group[8]->Southern Levant[1435],8.0
 1451,1438,Temple Buildings and Temple Cult,2,Religious Group[8]->Temple Buildings and Temple Cult[1438],8.0
+1451,1747,Language,1,Language[1747],
+1451,1977,Afro-Asiatic,2,Language[1747]->Afro-Asiatic[1977],1747.0
+1451,3237,Semitic,3,Language[1747]->Afro-Asiatic[1977]->Semitic[3237],1977.0
+1451,4434,West Semitic,4,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434],3237.0
+1451,5695,Central Semitic,5,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695],4434.0
+1451,7096,Northwest Semitic,6,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096],5695.0
+1451,8597,Canaanite,7,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597],7096.0
 1452,8,Religious Group,1,Religious Group[8],
 1452,123,Chinese Religion,2,Religious Group[8]->Chinese Religion[123],8.0
 1452,1069,Text,1,Text[1069],
@@ -4461,6 +4695,15 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1456,1432,Middle Bronze Age,2,Religious Group[8]->Middle Bronze Age[1432],8.0
 1456,1433,Southern Levant,2,Religious Group[8]->Southern Levant[1433],8.0
 1456,1439,Temple Buildings and Temple Cult,2,Religious Group[8]->Temple Buildings and Temple Cult[1439],8.0
+1456,1747,Language,1,Language[1747],
+1456,1977,Afro-Asiatic,2,Language[1747]->Afro-Asiatic[1977],1747.0
+1456,3237,Semitic,3,Language[1747]->Afro-Asiatic[1977]->Semitic[3237],1977.0
+1456,4433,Unclassified Semitic,4,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->Unclassified Semitic[4433],3237.0
+1456,4434,West Semitic,4,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434],3237.0
+1456,5694,Amorite,5,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->Unclassified Semitic[4433]->Amorite[5694],4433.0
+1456,5695,Central Semitic,5,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695],4434.0
+1456,7096,Northwest Semitic,6,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096],5695.0
+1456,8597,Canaanite,7,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597],7096.0
 1458,8,Religious Group,1,Religious Group[8],
 1458,9,African Religions,2,Religious Group[8]->African Religions[9],8.0
 1459,8,Religious Group,1,Religious Group[8],
@@ -4522,6 +4765,9 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1469,508,South American Religions,2,Religious Group[8]->South American Religions[508],8.0
 1469,1445,Andes,2,Religious Group[8]->Andes[1445],8.0
 1469,1446,Peru,2,Religious Group[8]->Peru[1446],8.0
+1469,1747,Language,1,Language[1747],
+1469,43177,Language Isolates,2,Language[1747]->Language Isolates[43177],1747.0
+1469,43324,Culli,3,Language[1747]->Language Isolates[43177]->Culli[43324],43177.0
 1471,8,Religious Group,1,Religious Group[8],
 1471,27,Jewish Traditions,2,Religious Group[8]->Jewish Traditions[27],8.0
 1471,905,Abrahamic,2,Religious Group[8]->Abrahamic[905],8.0
@@ -4632,18 +4878,6 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1504,934,Shrines,2,Religious Place[856]->Shrines[934],856.0
 1504,997,Sufi,2,Religious Group[8]->Sufi[997],8.0
 1504,1067,Tomb,2,Religious Place[856]->Tomb[1067],856.0
-1505,8,Religious Group,1,Religious Group[8],
-1505,123,Chinese Religion,2,Religious Group[8]->Chinese Religion[123],8.0
-1505,237,Chinese Christian Traditions,3,Religious Group[8]->Chinese Religion[123]->Chinese Christian Traditions[237],123.0
-1505,1276,Chinese Protestantism,4,Religious Group[8]->Chinese Religion[123]->Chinese Christian Traditions[237]->Chinese Protestantism[1276],237.0
-1505,1747,Language,1,Language[1747],
-1505,1946,Sino-Tibetan,2,Language[1747]->Sino-Tibetan[1946],1747.0
-1505,3038,Sinitic,3,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038],1946.0
-1505,4342,Classical-Middle-Modern Sinitic,4,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342],3038.0
-1505,5613,Middle-Modern Sinitic,5,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342]->Middle-Modern Sinitic[5613],4342.0
-1505,7030,Northern Chinese,6,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342]->Middle-Modern Sinitic[5613]->Northern Chinese[7030],5613.0
-1505,8557,Mandarinic,7,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342]->Middle-Modern Sinitic[5613]->Northern Chinese[7030]->Mandarinic[8557],7030.0
-1505,9940,Mandarin Chinese,8,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342]->Middle-Modern Sinitic[5613]->Northern Chinese[7030]->Mandarinic[8557]->Mandarin Chinese[9940],8557.0
 1508,8,Religious Group,1,Religious Group[8],
 1508,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
 1508,1012,African Religion,2,Religious Group[8]->African Religion[1012],8.0
@@ -4677,6 +4911,18 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1511,1018,militant group,2,Religious Group[8]->militant group[1018],8.0
 1511,1053,Mysticism,2,Religious Group[8]->Mysticism[1053],8.0
 1511,1409,Millenarianism,2,Religious Group[8]->Millenarianism[1409],8.0
+1511,1747,Language,1,Language[1747],
+1511,1822,Atlantic-Congo,2,Language[1747]->Atlantic-Congo[1822],1747.0
+1511,1977,Afro-Asiatic,2,Language[1747]->Afro-Asiatic[1977],1747.0
+1511,2240,North-Central Atlantic,3,Language[1747]->Atlantic-Congo[1822]->North-Central Atlantic[2240],1822.0
+1511,3241,Chadic,3,Language[1747]->Afro-Asiatic[1977]->Chadic[3241],1977.0
+1511,3622,Fula-Sereer,4,Language[1747]->Atlantic-Congo[1822]->North-Central Atlantic[2240]->Fula-Sereer[3622],2240.0
+1511,4451,West Chadic,4,Language[1747]->Afro-Asiatic[1977]->Chadic[3241]->West Chadic[4451],3241.0
+1511,5025,Fula,5,Language[1747]->Atlantic-Congo[1822]->North-Central Atlantic[2240]->Fula-Sereer[3622]->Fula[5025],3622.0
+1511,5722,West Chadic A,5,Language[1747]->Afro-Asiatic[1977]->Chadic[3241]->West Chadic[4451]->West Chadic A[5722],4451.0
+1511,7147,West Chadic A.1,6,Language[1747]->Afro-Asiatic[1977]->Chadic[3241]->West Chadic[4451]->West Chadic A[5722]->West Chadic A.1[7147],5722.0
+1511,8667,Hausa,7,Language[1747]->Afro-Asiatic[1977]->Chadic[3241]->West Chadic[4451]->West Chadic A[5722]->West Chadic A.1[7147]->Hausa[8667],7147.0
+1511,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
 1513,8,Religious Group,1,Religious Group[8],
 1513,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
 1513,29,Maghreb Religions,2,Religious Group[8]->Maghreb Religions[29],8.0
@@ -4740,6 +4986,8 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1522,997,Sufi,2,Religious Group[8]->Sufi[997],8.0
 1522,1053,Mysticism,2,Religious Group[8]->Mysticism[1053],8.0
 1522,1470,Sufi Order,2,Religious Group[8]->Sufi Order[1470],8.0
+1522,1747,Language,1,Language[1747],
+1522,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
 1523,8,Religious Group,1,Religious Group[8],
 1523,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
 1523,284,Sunni,3,Religious Group[8]->Islamic Traditions[24]->Sunni[284],24.0
@@ -4815,6 +5063,8 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1533,875,Religious Place (fr),1,Religious Place (fr)[875],
 1533,997,Sufi,2,Religious Group[8]->Sufi[997],8.0
 1533,1448,Tunisia,2,Religious Place[856]->Tunisia[1448],856.0
+1533,1747,Language,1,Language[1747],
+1533,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
 1534,8,Religious Group,1,Religious Group[8],
 1534,14,Buddhist Traditions,2,Religious Group[8]->Buddhist Traditions[14],8.0
 1534,26,Japanese Religions,2,Religious Group[8]->Japanese Religions[26],8.0
@@ -4838,6 +5088,8 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1538,856,Religious Place,1,Religious Place[856],
 1538,997,Sufi,2,Religious Group[8]->Sufi[997],8.0
 1538,1448,Tunisia,2,Religious Place[856]->Tunisia[1448],856.0
+1538,1747,Language,1,Language[1747],
+1538,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
 1539,8,Religious Group,1,Religious Group[8],
 1539,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
 1539,284,Sunni,3,Religious Group[8]->Islamic Traditions[24]->Sunni[284],24.0
@@ -4877,6 +5129,24 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1545,1391,Hill,2,Religious Place[856]->Hill[1391],856.0
 1545,1413,Archaeological Site,2,Religious Place[856]->Archaeological Site[1413],856.0
 1545,1433,Southern Levant,2,Religious Group[8]->Southern Levant[1433],8.0
+1545,1747,Language,1,Language[1747],
+1545,1904,Indo-European,2,Language[1747]->Indo-European[1904],1747.0
+1545,1977,Afro-Asiatic,2,Language[1747]->Afro-Asiatic[1977],1747.0
+1545,2479,Classical Indo-European,3,Language[1747]->Indo-European[1904]->Classical Indo-European[2479],1904.0
+1545,3237,Semitic,3,Language[1747]->Afro-Asiatic[1977]->Semitic[3237],1977.0
+1545,4027,Graeco-Phrygian,4,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Graeco-Phrygian[4027],2479.0
+1545,4434,West Semitic,4,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434],3237.0
+1545,5341,Greek,5,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Graeco-Phrygian[4027]->Greek[5341],4027.0
+1545,5695,Central Semitic,5,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695],4434.0
+1545,7096,Northwest Semitic,6,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096],5695.0
+1545,8597,Canaanite,7,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597],7096.0
+1545,8598,Aramaic,7,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Aramaic[8598],7096.0
+1545,9968,Hebrewic,8,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Hebrewic[9968],8597.0
+1545,9970,Imperial-Middle-Modern Aramaic,8,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Aramaic[8598]->Imperial-Middle-Modern Aramaic[9970],8598.0
+1545,11121,Ancient Hebrew,9,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Hebrewic[9968]->Ancient Hebrew[11121],9968.0
+1545,29393,East Greek,6,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Graeco-Phrygian[4027]->Greek[5341]->East Greek[29393],5341.0
+1545,30702,Koineic Greek,7,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Graeco-Phrygian[4027]->Greek[5341]->East Greek[29393]->Koineic Greek[30702],29393.0
+1545,36477,Biblical Hebrew,10,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Hebrewic[9968]->Ancient Hebrew[11121]->Biblical Hebrew[36477],11121.0
 1546,8,Religious Group,1,Religious Group[8],
 1546,27,Jewish Traditions,2,Religious Group[8]->Jewish Traditions[27],8.0
 1546,743,Late Second Temple Judaism,3,Religious Group[8]->Jewish Traditions[27]->Late Second Temple Judaism[743],27.0
@@ -4922,6 +5192,8 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1552,1106,Cosmology,2,Text[1069]->Cosmology[1106],1069.0
 1552,1118,Cosmogony,2,Text[1069]->Cosmogony[1118],1069.0
 1552,1518,Ilm-e-Khshnoom,3,Religious Group[8]->Zoroastrianism[49]->Ilm-e-Khshnoom[1518],49.0
+1552,1747,Language,1,Language[1747],
+1552,14808,English,2,Language[1747]->English[14808],1747.0
 1553,8,Religious Group,1,Religious Group[8],
 1553,33,Mesoamerican Religions,2,Religious Group[8]->Mesoamerican Religions[33],8.0
 1553,856,Religious Place,1,Religious Place[856],
@@ -4939,12 +5211,23 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1554,1369,Islamic Revival,3,Religious Group[8]->Islamic Traditions[24]->Islamic Revival[1369],24.0
 1554,1462,Shari'a,2,Text[1069]->Shari'a[1462],1069.0
 1554,1523,Islamic theology,3,Text[1069]->Shari'a[1462]->Islamic theology[1523],1462.0
+1554,1747,Language,1,Language[1747],
+1554,1876,Turkic,2,Language[1747]->Turkic[1876],1747.0
+1554,2411,Common Turkic,3,Language[1747]->Turkic[1876]->Common Turkic[2411],1876.0
+1554,3825,Oghuz,4,Language[1747]->Turkic[1876]->Common Turkic[2411]->Oghuz[3825],2411.0
+1554,5200,Nuclear Oghuz,5,Language[1747]->Turkic[1876]->Common Turkic[2411]->Oghuz[3825]->Nuclear Oghuz[5200],3825.0
+1554,6583,West Oghuz,6,Language[1747]->Turkic[1876]->Common Turkic[2411]->Oghuz[3825]->Nuclear Oghuz[5200]->West Oghuz[6583],5200.0
+1554,8164,Turkish,7,Language[1747]->Turkic[1876]->Common Turkic[2411]->Oghuz[3825]->Nuclear Oghuz[5200]->West Oghuz[6583]->Turkish[8164],6583.0
+1554,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
+1554,32267,Ottoman Turkish,8,Language[1747]->Turkic[1876]->Common Turkic[2411]->Oghuz[3825]->Nuclear Oghuz[5200]->West Oghuz[6583]->Turkish[8164]->Ottoman Turkish[32267],8164.0
 1555,8,Religious Group,1,Religious Group[8],
 1555,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
 1555,273,Sufism,3,Religious Group[8]->Islamic Traditions[24]->Sufism[273],24.0
 1555,284,Sunni,3,Religious Group[8]->Islamic Traditions[24]->Sunni[284],24.0
 1555,1321,Islamic Modernization,3,Religious Group[8]->Islamic Traditions[24]->Islamic Modernization[1321],24.0
 1555,1369,Islamic Revival,3,Religious Group[8]->Islamic Traditions[24]->Islamic Revival[1369],24.0
+1555,1747,Language,1,Language[1747],
+1555,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
 1556,8,Religious Group,1,Religious Group[8],
 1556,41,Persian Religions,2,Religious Group[8]->Persian Religions[41],8.0
 1556,42,Roman Religious Traditions,2,Religious Group[8]->Roman Religious Traditions[42],8.0
@@ -4968,6 +5251,8 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1560,1302,Hadith,2,Text[1069]->Hadith[1302],1069.0
 1560,1304,Universal Chronicle,2,Text[1069]->Universal Chronicle[1304],1069.0
 1560,1469,Fiqh,2,Text[1069]->Fiqh[1469],1069.0
+1560,1747,Language,1,Language[1747],
+1560,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
 1561,8,Religious Group,1,Religious Group[8],
 1561,856,Religious Place,1,Religious Place[856],
 1561,997,Sufi,2,Religious Group[8]->Sufi[997],8.0
@@ -5020,6 +5305,8 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1570,968,Transnational Islam,3,Religious Group[8]->Islamic Traditions[24]->Transnational Islam[968],24.0
 1570,1037,South Asian Religion,2,Religious Group[8]->South Asian Religion[1037],8.0
 1570,1390,Shi'a Islam,2,Religious Group[8]->Shi'a Islam[1390],8.0
+1570,1747,Language,1,Language[1747],
+1570,14808,English,2,Language[1747]->English[14808],1747.0
 1571,8,Religious Group,1,Religious Group[8],
 1571,856,Religious Place,1,Religious Place[856],
 1571,923,Shrine,2,Religious Place[856]->Shrine[923],856.0
@@ -5166,6 +5453,8 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1588,1469,Fiqh,2,Text[1069]->Fiqh[1469],1069.0
 1588,1473,Qur'anic commentary (Tafsir),2,Text[1069]->Qur'anic commentary (Tafsir)[1473],1069.0
 1588,1513,Islamic Theology,2,Text[1069]->Islamic Theology[1513],1069.0
+1588,1747,Language,1,Language[1747],
+1588,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
 1589,8,Religious Group,1,Religious Group[8],
 1589,18,Christian Traditions,2,Religious Group[8]->Christian Traditions[18],8.0
 1589,905,Abrahamic,2,Religious Group[8]->Abrahamic[905],8.0
@@ -5238,6 +5527,8 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1606,1390,Shi'a Islam,2,Religious Group[8]->Shi'a Islam[1390],8.0
 1606,1513,Islamic Theology,2,Text[1069]->Islamic Theology[1513],1069.0
 1606,1555,Esoterics,2,Religious Group[8]->Esoterics[1555],8.0
+1606,1747,Language,1,Language[1747],
+1606,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
 1607,8,Religious Group,1,Religious Group[8],
 1607,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
 1607,256,Shiite/Shi'a,3,Religious Group[8]->Islamic Traditions[24]->Shiite/Shi'a[256],24.0
@@ -5254,6 +5545,8 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1610,1388,North Africa,2,Religious Place[856]->North Africa[1388],856.0
 1610,1448,Tunisia,2,Religious Place[856]->Tunisia[1448],856.0
 1610,1488,Mosque,2,Religious Place[856]->Mosque[1488],856.0
+1610,1747,Language,1,Language[1747],
+1610,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
 1611,8,Religious Group,1,Religious Group[8],
 1611,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
 1611,273,Sufism,3,Religious Group[8]->Islamic Traditions[24]->Sufism[273],24.0
@@ -5361,6 +5654,8 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1628,1302,Hadith,2,Text[1069]->Hadith[1302],1069.0
 1628,1390,Shi'a Islam,2,Religious Group[8]->Shi'a Islam[1390],8.0
 1628,1513,Islamic Theology,2,Text[1069]->Islamic Theology[1513],1069.0
+1628,1747,Language,1,Language[1747],
+1628,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
 1629,8,Religious Group,1,Religious Group[8],
 1629,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
 1629,856,Religious Place,1,Religious Place[856],
@@ -5506,6 +5801,8 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1652,1069,Text,1,Text[1069],
 1652,1302,Hadith,2,Text[1069]->Hadith[1302],1069.0
 1652,1513,Islamic Theology,2,Text[1069]->Islamic Theology[1513],1069.0
+1652,1747,Language,1,Language[1747],
+1652,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
 1653,8,Religious Group,1,Religious Group[8],
 1653,774,Early Christianity,2,Religious Group[8]->Early Christianity[774],8.0
 1653,905,Abrahamic,2,Religious Group[8]->Abrahamic[905],8.0
@@ -5520,6 +5817,8 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1654,1321,Islamic Modernization,3,Religious Group[8]->Islamic Traditions[24]->Islamic Modernization[1321],24.0
 1654,1369,Islamic Revival,3,Religious Group[8]->Islamic Traditions[24]->Islamic Revival[1369],24.0
 1654,1527,Islam in Africa,3,Religious Group[8]->Islamic Traditions[24]->Islam in Africa[1527],24.0
+1654,1747,Language,1,Language[1747],
+1654,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
 1656,8,Religious Group,1,Religious Group[8],
 1656,856,Religious Place,1,Religious Place[856],
 1656,865,Temple,2,Religious Place[856]->Temple[865],856.0
@@ -5532,6 +5831,11 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1656,1581,Early Bronze Age,2,Religious Group[8]->Early Bronze Age[1581],8.0
 1656,1582,Early Bronze IVA (mature Early Syrian Period),2,Religious Place[856]->Early Bronze IVA (mature Early Syrian Period)[1582],856.0
 1656,1669,northern Levant,2,Religious Group[8]->northern Levant[1669],8.0
+1656,1747,Language,1,Language[1747],
+1656,1977,Afro-Asiatic,2,Language[1747]->Afro-Asiatic[1977],1747.0
+1656,3237,Semitic,3,Language[1747]->Afro-Asiatic[1977]->Semitic[3237],1977.0
+1656,4432,East Semitic,4,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->East Semitic[4432],3237.0
+1656,5693,Eblaite,5,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->East Semitic[4432]->Eblaite[5693],4432.0
 1657,8,Religious Group,1,Religious Group[8],
 1657,1069,Text,1,Text[1069],
 1657,1168,Monasticism,2,Religious Group[8]->Monasticism[1168],8.0
@@ -5702,6 +6006,8 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1686,1462,Shari'a,2,Text[1069]->Shari'a[1462],1069.0
 1686,1469,Fiqh,2,Text[1069]->Fiqh[1469],1069.0
 1686,1513,Islamic Theology,2,Text[1069]->Islamic Theology[1513],1069.0
+1686,1747,Language,1,Language[1747],
+1686,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
 1688,8,Religious Group,1,Religious Group[8],
 1688,776,Ancient Mediterranean,2,Religious Group[8]->Ancient Mediterranean[776],8.0
 1688,854,Heresy,2,Religious Group[8]->Heresy[854],8.0
@@ -5834,6 +6140,8 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1706,1316,Prehistoric South American Religions,2,Religious Group[8]->Prehistoric South American Religions[1316],8.0
 1706,1317,Pre-Inka Religions,2,Religious Group[8]->Pre-Inka Religions[1317],8.0
 1706,1445,Andes,2,Religious Group[8]->Andes[1445],8.0
+1706,1747,Language,1,Language[1747],
+1706,14806,Unknown,2,Language[1747]->Unknown[14806],1747.0
 1707,8,Religious Group,1,Religious Group[8],
 1707,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
 1707,856,Religious Place,1,Religious Place[856],
@@ -6011,6 +6319,8 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1734,1317,Pre-Inka Religions,2,Religious Group[8]->Pre-Inka Religions[1317],8.0
 1734,1445,Andes,2,Religious Group[8]->Andes[1445],8.0
 1734,1446,Peru,2,Religious Group[8]->Peru[1446],8.0
+1734,1747,Language,1,Language[1747],
+1734,14806,Unknown,2,Language[1747]->Unknown[14806],1747.0
 1735,8,Religious Group,1,Religious Group[8],
 1735,883,Iranian Religion,2,Religious Group[8]->Iranian Religion[883],8.0
 1735,905,Abrahamic,2,Religious Group[8]->Abrahamic[905],8.0
@@ -6268,6 +6578,8 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1778,1427,Early Christian Text,3,Text[1069]->Christian Theology[1424]->Early Christian Text[1427],1424.0
 1778,1573,Christian,2,Religious Group[8]->Christian[1573],8.0
 1778,1605,Coptic,2,Religious Group[8]->Coptic[1605],8.0
+1778,1747,Language,1,Language[1747],
+1778,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
 1779,8,Religious Group,1,Religious Group[8],
 1779,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
 1779,1640,State Religion,2,Religious Group[8]->State Religion[1640],8.0
@@ -6385,6 +6697,8 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1795,1506,فقه,2,Text[1069]->فقه[1506],1069.0
 1795,1513,Islamic Theology,2,Text[1069]->Islamic Theology[1513],1069.0
 1795,1527,Islam in Africa,3,Religious Group[8]->Islamic Traditions[24]->Islam in Africa[1527],24.0
+1795,1747,Language,1,Language[1747],
+1795,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
 1796,8,Religious Group,1,Religious Group[8],
 1796,984,Medieval Christianity,2,Religious Group[8]->Medieval Christianity[984],8.0
 1796,999,Catholic,2,Religious Group[8]->Catholic[999],8.0
@@ -6412,6 +6726,11 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1801,1579,north-western inner Syria,2,Religious Place[856]->north-western inner Syria[1579],856.0
 1801,1582,Early Bronze IVA (mature Early Syrian Period),2,Religious Place[856]->Early Bronze IVA (mature Early Syrian Period)[1582],856.0
 1801,1670,northern Levant,2,Religious Group[8]->northern Levant[1670],8.0
+1801,1747,Language,1,Language[1747],
+1801,1977,Afro-Asiatic,2,Language[1747]->Afro-Asiatic[1977],1747.0
+1801,3237,Semitic,3,Language[1747]->Afro-Asiatic[1977]->Semitic[3237],1977.0
+1801,4432,East Semitic,4,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->East Semitic[4432],3237.0
+1801,5693,Eblaite,5,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->East Semitic[4432]->Eblaite[5693],4432.0
 1802,8,Religious Group,1,Religious Group[8],
 1802,856,Religious Place,1,Religious Place[856],
 1802,865,Temple,2,Religious Place[856]->Temple[865],856.0
@@ -6423,6 +6742,11 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1802,1671,northern Levant,2,Religious Group[8]->northern Levant[1671],8.0
 1802,1672,Middle Bronze I-II (Old Syrian Period),2,Religious Place[856]->Middle Bronze I-II (Old Syrian Period)[1672],856.0
 1802,1673,north-western inner Syria,2,Religious Place[856]->north-western inner Syria[1673],856.0
+1802,1747,Language,1,Language[1747],
+1802,1977,Afro-Asiatic,2,Language[1747]->Afro-Asiatic[1977],1747.0
+1802,3237,Semitic,3,Language[1747]->Afro-Asiatic[1977]->Semitic[3237],1977.0
+1802,4433,Unclassified Semitic,4,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->Unclassified Semitic[4433],3237.0
+1802,5694,Amorite,5,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->Unclassified Semitic[4433]->Amorite[5694],4433.0
 1803,8,Religious Group,1,Religious Group[8],
 1803,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
 1803,1069,Text,1,Text[1069],
@@ -6436,6 +6760,8 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1805,968,Transnational Islam,3,Religious Group[8]->Islamic Traditions[24]->Transnational Islam[968],24.0
 1805,1321,Islamic Modernization,3,Religious Group[8]->Islamic Traditions[24]->Islamic Modernization[1321],24.0
 1805,1369,Islamic Revival,3,Religious Group[8]->Islamic Traditions[24]->Islamic Revival[1369],24.0
+1805,1747,Language,1,Language[1747],
+1805,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
 1806,8,Religious Group,1,Religious Group[8],
 1806,1747,Language,1,Language[1747],
 1806,14857,Oyo religion,2,Religious Group[8]->Oyo religion[14857],8.0
@@ -6610,6 +6936,11 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1855,1393,Ancient Mesopotamian Text,2,Text[1069]->Ancient Mesopotamian Text[1393],1069.0
 1855,1397,Mesopotamian Religion,2,Religious Group[8]->Mesopotamian Religion[1397],8.0
 1855,1596,Ancient Babylonian Text,3,Text[1069]->Ancient Mesopotamian Text[1393]->Ancient Babylonian Text[1596],1393.0
+1855,1747,Language,1,Language[1747],
+1855,1977,Afro-Asiatic,2,Language[1747]->Afro-Asiatic[1977],1747.0
+1855,3237,Semitic,3,Language[1747]->Afro-Asiatic[1977]->Semitic[3237],1977.0
+1855,4432,East Semitic,4,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->East Semitic[4432],3237.0
+1855,5692,Akkadian,5,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->East Semitic[4432]->Akkadian[5692],4432.0
 1858,8,Religious Group,1,Religious Group[8],
 1858,18,Christian Traditions,2,Religious Group[8]->Christian Traditions[18],8.0
 1858,172,Orthodox/Eastern Christian,3,Religious Group[8]->Christian Traditions[18]->Orthodox/Eastern Christian[172],18.0
@@ -6983,12 +7314,12 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 1965,1561,Orthodoxy,2,Religious Group[8]->Orthodoxy[1561],8.0
 1965,1609,Byzantine,2,Religious Group[8]->Byzantine[1609],8.0
 1966,8,Religious Group,1,Religious Group[8],
+1966,9,African Religions,2,Religious Group[8]->African Religions[9],8.0
 1966,1017,Aladura,2,Religious Group[8]->Aladura[1017],8.0
-1966,1742,Selected Aladura Churches in Ibadan Metropolis,3,Religious Group[8]->Aladura[1017]->Selected Aladura Churches in Ibadan Metropolis[1742],1017.0
-1966,1743,Christ Apostolic Church,3,Religious Group[8]->Aladura[1017]->Christ Apostolic Church[1743],1017.0
-1966,1744,Celestial Church of Christ,3,Religious Group[8]->Aladura[1017]->Celestial Church of Christ[1744],1017.0
-1966,1745,Cherubim & Seraphim Church,3,Religious Group[8]->Aladura[1017]->Cherubim & Seraphim Church[1745],1017.0
-1966,1746,Church of the Lord,3,Religious Group[8]->Aladura[1017]->Church of the Lord[1746],1017.0
+1966,1570,Christianity,2,Religious Group[8]->Christianity[1570],8.0
+1966,1747,Language,1,Language[1747],
+1966,14808,English,2,Language[1747]->English[14808],1747.0
+1966,14858,Yoruba  Language,2,Language[1747]->Yoruba  Language[14858],1747.0
 1967,8,Religious Group,1,Religious Group[8],
 1967,856,Religious Place,1,Religious Place[856],
 1967,1168,Monasticism,2,Religious Group[8]->Monasticism[1168],8.0
@@ -7452,6 +7783,11 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2010,1747,Language,1,Language[1747],
 2010,1876,Turkic,2,Language[1747]->Turkic[1876],1747.0
 2010,14827,Greek,2,Language[1747]->Greek[14827],1747.0
+2011,8,Religious Group,1,Religious Group[8],
+2011,915,Evangelicalism,2,Religious Group[8]->Evangelicalism[915],8.0
+2011,1570,Christianity,2,Religious Group[8]->Christianity[1570],8.0
+2011,1747,Language,1,Language[1747],
+2011,14808,English,2,Language[1747]->English[14808],1747.0
 2012,8,Religious Group,1,Religious Group[8],
 2012,18,Christian Traditions,2,Religious Group[8]->Christian Traditions[18],8.0
 2012,774,Early Christianity,2,Religious Group[8]->Early Christianity[774],8.0
@@ -7843,6 +8179,19 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2050,14808,English,2,Language[1747]->English[14808],1747.0
 2050,27666,Lutheran Church,2,Religious Place[856]->Lutheran Church[27666],856.0
 2050,27667,Lutheranism,3,Religious Group[8]->Protestantism[917]->Lutheranism[27667],917.0
+2051,8,Religious Group,1,Religious Group[8],
+2051,14,Buddhist Traditions,2,Religious Group[8]->Buddhist Traditions[14],8.0
+2051,116,Tibetan Buddhist Traditions,3,Religious Group[8]->Buddhist Traditions[14]->Tibetan Buddhist Traditions[116],14.0
+2051,807,Vietnamese Religions,2,Religious Group[8]->Vietnamese Religions[807],8.0
+2051,808,Southeast Asian Religions,2,Religious Group[8]->Southeast Asian Religions[808],8.0
+2051,901,Vietnam,2,Religious Group[8]->Vietnam[901],8.0
+2051,904,Shamanism,2,Religious Group[8]->Shamanism[904],8.0
+2051,1238,Religious Practice,2,Religious Group[8]->Religious Practice[1238],8.0
+2051,1551,Ancestral Worship,2,Religious Group[8]->Ancestral Worship[1551],8.0
+2051,1642,Communism,2,Religious Group[8]->Communism[1642],8.0
+2051,1747,Language,1,Language[1747],
+2051,1937,Austroasiatic,2,Language[1747]->Austroasiatic[1937],1747.0
+2051,2623,Vietic,3,Language[1747]->Austroasiatic[1937]->Vietic[2623],1937.0
 2052,8,Religious Group,1,Religious Group[8],
 2052,1031,Pentecostal,2,Religious Group[8]->Pentecostal[1031],8.0
 2052,1747,Language,1,Language[1747],
@@ -7971,6 +8320,17 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2064,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
 2064,27689,Islamic Law,2,Text[1069]->Islamic Law[27689],1069.0
 2064,27692,Theology text,2,Text[1069]->Theology text[27692],1069.0
+2065,8,Religious Group,1,Religious Group[8],
+2065,856,Religious Place,1,Religious Place[856],
+2065,1017,Aladura,2,Religious Group[8]->Aladura[1017],8.0
+2065,1536,Sacred mountain,2,Religious Place[856]->Sacred mountain[1536],856.0
+2065,1575,Christianity,2,Religious Group[8]->Christianity[1575],8.0
+2065,1743,Christ Apostolic Church,3,Religious Group[8]->Aladura[1017]->Christ Apostolic Church[1743],1017.0
+2065,1747,Language,1,Language[1747],
+2065,14808,English,2,Language[1747]->English[14808],1747.0
+2065,14809,Prayer Mountains in Nigeria,3,Religious Place[856]->Sacred mountain[1536]->Prayer Mountains in Nigeria[14809],1536.0
+2065,14816,Pentecostal Christianity,3,Religious Group[8]->Christianity[1575]->Pentecostal Christianity[14816],1575.0
+2065,14854,yoruba,2,Language[1747]->yoruba[14854],1747.0
 2067,8,Religious Group,1,Religious Group[8],
 2067,27,Jewish Traditions,2,Religious Group[8]->Jewish Traditions[27],8.0
 2067,774,Early Christianity,2,Religious Group[8]->Early Christianity[774],8.0
@@ -8498,6 +8858,17 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2112,3038,Sinitic,3,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038],1946.0
 2112,4342,Classical-Middle-Modern Sinitic,4,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342],3038.0
 2112,5612,Literary Chinese,5,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342]->Literary Chinese[5612],4342.0
+2113,8,Religious Group,1,Religious Group[8],
+2113,856,Religious Place,1,Religious Place[856],
+2113,927,Religious Complex,2,Religious Place[856]->Religious Complex[927],856.0
+2113,1067,Tomb,2,Religious Place[856]->Tomb[1067],856.0
+2113,1207,Tomb,2,Religious Group[8]->Tomb[1207],8.0
+2113,1271,Mausoleum,2,Religious Place[856]->Mausoleum[1271],856.0
+2113,1551,Ancestral Worship,2,Religious Group[8]->Ancestral Worship[1551],8.0
+2113,1747,Language,1,Language[1747],
+2113,3038,Sinitic,3,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038],1946.0
+2113,14835,Cantonese,2,Language[1747]->Cantonese[14835],1747.0
+2113,43540,Nationalism,2,Religious Group[8]->Nationalism[43540],8.0
 2114,8,Religious Group,1,Religious Group[8],
 2114,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
 2114,273,Sufism,3,Religious Group[8]->Islamic Traditions[24]->Sufism[273],24.0
@@ -8554,6 +8925,14 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2120,1747,Language,1,Language[1747],
 2120,1815,Artificial Language,2,Language[1747]->Artificial Language[1815],1747.0
 2120,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
+2121,8,Religious Group,1,Religious Group[8],
+2121,984,Medieval Christianity,2,Religious Group[8]->Medieval Christianity[984],8.0
+2121,999,Catholic,2,Religious Group[8]->Catholic[999],8.0
+2121,1570,Christianity,2,Religious Group[8]->Christianity[1570],8.0
+2121,1573,Christian,2,Religious Group[8]->Christian[1573],8.0
+2121,1644,Martyrs,2,Religious Group[8]->Martyrs[1644],8.0
+2121,1747,Language,1,Language[1747],
+2121,1973,Unclassifiable,2,Language[1747]->Unclassifiable[1973],1747.0
 2122,8,Religious Group,1,Religious Group[8],
 2122,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
 2122,284,Sunni,3,Religious Group[8]->Islamic Traditions[24]->Sunni[284],24.0
@@ -8636,6 +9015,25 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2129,1570,Christianity,2,Religious Group[8]->Christianity[1570],8.0
 2129,1747,Language,1,Language[1747],
 2129,14827,Greek,2,Language[1747]->Greek[14827],1747.0
+2130,8,Religious Group,1,Religious Group[8],
+2130,18,Christian Traditions,2,Religious Group[8]->Christian Traditions[18],8.0
+2130,842,Early Christianity in Scandinavia,3,Religious Group[8]->Christian Traditions[18]->Early Christianity in Scandinavia[842],18.0
+2130,984,Medieval Christianity,2,Religious Group[8]->Medieval Christianity[984],8.0
+2130,999,Catholic,2,Religious Group[8]->Catholic[999],8.0
+2130,1069,Text,1,Text[1069],
+2130,1115,Catholic text,2,Text[1069]->Catholic text[1115],1069.0
+2130,1168,Monasticism,2,Religious Group[8]->Monasticism[1168],8.0
+2130,1301,Religious History,2,Text[1069]->Religious History[1301],1069.0
+2130,1303,Chronicle,2,Text[1069]->Chronicle[1303],1069.0
+2130,1377,Christian monasticism,2,Text[1069]->Christian monasticism[1377],1069.0
+2130,1471,Mendicant Orders,2,Religious Group[8]->Mendicant Orders[1471],8.0
+2130,1543,Latin Text,2,Text[1069]->Latin Text[1543],1069.0
+2130,1570,Christianity,2,Religious Group[8]->Christianity[1570],8.0
+2130,1573,Christian,2,Religious Group[8]->Christian[1573],8.0
+2130,1747,Language,1,Language[1747],
+2130,1973,Unclassifiable,2,Language[1747]->Unclassifiable[1973],1747.0
+2130,43549,Danish,2,Religious Group[8]->Danish[43549],8.0
+2130,43571,Danish,4,Religious Group[8]->Christian Traditions[18]->Early Christianity in Scandinavia[842]->Danish[43571],842.0
 2131,8,Religious Group,1,Religious Group[8],
 2131,508,South American Religions,2,Religious Group[8]->South American Religions[508],8.0
 2131,1316,Prehistoric South American Religions,2,Religious Group[8]->Prehistoric South American Religions[1316],8.0
@@ -8708,11 +9106,6 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2140,1609,Byzantine,2,Religious Group[8]->Byzantine[1609],8.0
 2140,1747,Language,1,Language[1747],
 2140,14827,Greek,2,Language[1747]->Greek[14827],1747.0
-2141,8,Religious Group,1,Religious Group[8],
-2141,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
-2141,1369,Islamic Revival,3,Religious Group[8]->Islamic Traditions[24]->Islamic Revival[1369],24.0
-2141,1747,Language,1,Language[1747],
-2141,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
 2142,8,Religious Group,1,Religious Group[8],
 2142,10,Anatolian Religions,2,Religious Group[8]->Anatolian Religions[10],8.0
 2142,53,Armenian Religion,3,Religious Group[8]->Anatolian Religions[10]->Armenian Religion[53],10.0
@@ -8779,6 +9172,31 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2149,11121,Ancient Hebrew,9,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Hebrewic[9968]->Ancient Hebrew[11121],9968.0
 2149,14827,Greek,2,Language[1747]->Greek[14827],1747.0
 2149,43519,Judaism,3,Religious Group[8]->Abrahamic[905]->Judaism[43519],905.0
+2150,8,Religious Group,1,Religious Group[8],
+2150,9,African Religions,2,Religious Group[8]->African Religions[9],8.0
+2150,856,Religious Place,1,Religious Place[856],
+2150,905,Abrahamic,2,Religious Group[8]->Abrahamic[905],8.0
+2150,1012,African Religion,2,Religious Group[8]->African Religion[1012],8.0
+2150,1534,Islam,3,Religious Group[8]->African Religion[1012]->Islam[1534],1012.0
+2150,1618,Christian,3,Religious Group[8]->Abrahamic[905]->Christian[1618],905.0
+2150,1678,Islam,3,Religious Group[8]->Abrahamic[905]->Islam[1678],905.0
+2150,1693,Cave or Cavern,2,Religious Place[856]->Cave or Cavern[1693],856.0
+2150,1747,Language,1,Language[1747],
+2150,1822,Atlantic-Congo,2,Language[1747]->Atlantic-Congo[1822],1747.0
+2150,2237,Volta-Congo,3,Language[1747]->Atlantic-Congo[1822]->Volta-Congo[2237],1822.0
+2150,3616,Benue-Congo,4,Language[1747]->Atlantic-Congo[1822]->Volta-Congo[2237]->Benue-Congo[3616],2237.0
+2150,5004,Bantoid,5,Language[1747]->Atlantic-Congo[1822]->Volta-Congo[2237]->Benue-Congo[3616]->Bantoid[5004],3616.0
+2150,6347,Southern Bantoid,6,Language[1747]->Atlantic-Congo[1822]->Volta-Congo[2237]->Benue-Congo[3616]->Bantoid[5004]->Southern Bantoid[6347],5004.0
+2150,7890,Narrow Bantu,7,Language[1747]->Atlantic-Congo[1822]->Volta-Congo[2237]->Benue-Congo[3616]->Bantoid[5004]->Southern Bantoid[6347]->Narrow Bantu[7890],6347.0
+2150,9419,East Bantu,8,Language[1747]->Atlantic-Congo[1822]->Volta-Congo[2237]->Benue-Congo[3616]->Bantoid[5004]->Southern Bantoid[6347]->Narrow Bantu[7890]->East Bantu[9419],7890.0
+2150,10697,Northeast Savanna Bantu,9,Language[1747]->Atlantic-Congo[1822]->Volta-Congo[2237]->Benue-Congo[3616]->Bantoid[5004]->Southern Bantoid[6347]->Narrow Bantu[7890]->East Bantu[9419]->Northeast Savanna Bantu[10697],9419.0
+2150,11683,Northeast Coastal Bantu,10,Language[1747]->Atlantic-Congo[1822]->Volta-Congo[2237]->Benue-Congo[3616]->Bantoid[5004]->Southern Bantoid[6347]->Narrow Bantu[7890]->East Bantu[9419]->Northeast Savanna Bantu[10697]->Northeast Coastal Bantu[11683],10697.0
+2150,12549,Coastal NEC Bantu,11,Language[1747]->Atlantic-Congo[1822]->Volta-Congo[2237]->Benue-Congo[3616]->Bantoid[5004]->Southern Bantoid[6347]->Narrow Bantu[7890]->East Bantu[9419]->Northeast Savanna Bantu[10697]->Northeast Coastal Bantu[11683]->Coastal NEC Bantu[12549],11683.0
+2150,13214,Sabaki-Swahili,12,Language[1747]->Atlantic-Congo[1822]->Volta-Congo[2237]->Benue-Congo[3616]->Bantoid[5004]->Southern Bantoid[6347]->Narrow Bantu[7890]->East Bantu[9419]->Northeast Savanna Bantu[10697]->Northeast Coastal Bantu[11683]->Coastal NEC Bantu[12549]->Sabaki-Swahili[13214],12549.0
+2150,13783,Swahili (G.40),13,Language[1747]->Atlantic-Congo[1822]->Volta-Congo[2237]->Benue-Congo[3616]->Bantoid[5004]->Southern Bantoid[6347]->Narrow Bantu[7890]->East Bantu[9419]->Northeast Savanna Bantu[10697]->Northeast Coastal Bantu[11683]->Coastal NEC Bantu[12549]->Sabaki-Swahili[13214]->Swahili (G.40)[13783],13214.0
+2150,14147,Mombasa-Lamu-Inland Swahili,14,Language[1747]->Atlantic-Congo[1822]->Volta-Congo[2237]->Benue-Congo[3616]->Bantoid[5004]->Southern Bantoid[6347]->Narrow Bantu[7890]->East Bantu[9419]->Northeast Savanna Bantu[10697]->Northeast Coastal Bantu[11683]->Coastal NEC Bantu[12549]->Sabaki-Swahili[13214]->Swahili (G.40)[13783]->Mombasa-Lamu-Inland Swahili[14147],13783.0
+2150,14378,Swahili,15,Language[1747]->Atlantic-Congo[1822]->Volta-Congo[2237]->Benue-Congo[3616]->Bantoid[5004]->Southern Bantoid[6347]->Narrow Bantu[7890]->East Bantu[9419]->Northeast Savanna Bantu[10697]->Northeast Coastal Bantu[11683]->Coastal NEC Bantu[12549]->Sabaki-Swahili[13214]->Swahili (G.40)[13783]->Mombasa-Lamu-Inland Swahili[14147]->Swahili[14378],14147.0
+2150,43521,Limestone karst,3,Religious Place[856]->Cave or Cavern[1693]->Limestone karst[43521],1693.0
 2152,8,Religious Group,1,Religious Group[8],
 2152,123,Chinese Religion,2,Religious Group[8]->Chinese Religion[123],8.0
 2152,1069,Text,1,Text[1069],
@@ -8819,6 +9237,17 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2154,43565,Chichen Itza Religion,4,Religious Group[8]->Mesoamerican Religions[33]->Mayan Religions[340]->Chichen Itza Religion[43565],340.0
 2154,43566,Chichen Itza,3,Religious Place[856]->Archaeological Site[1413]->Chichen Itza[43566],1413.0
 2154,43568,Yucatan Peninsula,3,Religious Place[856]->Mesoamerica[1519]->Yucatan Peninsula[43568],1519.0
+2155,8,Religious Group,1,Religious Group[8],
+2155,1069,Text,1,Text[1069],
+2155,1107,Daoist text,2,Text[1069]->Daoist text[1107],1069.0
+2155,1108,Daoism,2,Religious Group[8]->Daoism[1108],8.0
+2155,1747,Language,1,Language[1747],
+2155,1946,Sino-Tibetan,2,Language[1747]->Sino-Tibetan[1946],1747.0
+2155,3038,Sinitic,3,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038],1946.0
+2155,4342,Classical-Middle-Modern Sinitic,4,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342],3038.0
+2155,5612,Literary Chinese,5,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342]->Literary Chinese[5612],4342.0
+2155,43569,Lingbao (Numinous Treasure),3,Religious Group[8]->Daoism[1108]->Lingbao (Numinous Treasure)[43569],1108.0
+2155,43585,Lingbao (Numinous Treasure or Sacred Jewel) text,3,Text[1069]->Daoist text[1107]->Lingbao (Numinous Treasure or Sacred Jewel) text[43585],1107.0
 2156,8,Religious Group,1,Religious Group[8],
 2156,33,Mesoamerican Religions,2,Religious Group[8]->Mesoamerican Religions[33],8.0
 2156,856,Religious Place,1,Religious Place[856],
@@ -8948,6 +9377,14 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2170,6736,Latinic,6,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736],5349.0
 2170,8284,Imperial Latin,7,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284],6736.0
 2170,9691,Latin,8,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Latin[9691],8284.0
+2171,8,Religious Group,1,Religious Group[8],
+2171,856,Religious Place,1,Religious Place[856],
+2171,1271,Mausoleum,2,Religious Place[856]->Mausoleum[1271],856.0
+2171,1570,Christianity,2,Religious Group[8]->Christianity[1570],8.0
+2171,1747,Language,1,Language[1747],
+2171,14808,English,2,Language[1747]->English[14808],1747.0
+2171,43579,Ravenna,2,Religious Place[856]->Ravenna[43579],856.0
+2171,43581,Ravenna,2,Religious Place[856]->Ravenna[43581],856.0
 2172,8,Religious Group,1,Religious Group[8],
 2172,18,Christian Traditions,2,Religious Group[8]->Christian Traditions[18],8.0
 2172,774,Early Christianity,2,Religious Group[8]->Early Christianity[774],8.0
@@ -9006,6 +9443,12 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2177,9968,Hebrewic,8,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Hebrewic[9968],8597.0
 2177,11121,Ancient Hebrew,9,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Hebrewic[9968]->Ancient Hebrew[11121],9968.0
 2177,43519,Judaism,3,Religious Group[8]->Abrahamic[905]->Judaism[43519],905.0
+2178,8,Religious Group,1,Religious Group[8],
+2178,1017,Aladura,2,Religious Group[8]->Aladura[1017],8.0
+2178,1570,Christianity,2,Religious Group[8]->Christianity[1570],8.0
+2178,1747,Language,1,Language[1747],
+2178,14808,English,2,Language[1747]->English[14808],1747.0
+2178,14811,Yoruba Language,2,Language[1747]->Yoruba Language[14811],1747.0
 2180,8,Religious Group,1,Religious Group[8],
 2180,807,Vietnamese Religions,2,Religious Group[8]->Vietnamese Religions[807],8.0
 2180,808,Southeast Asian Religions,2,Religious Group[8]->Southeast Asian Religions[808],8.0
@@ -9285,6 +9728,16 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2201,1747,Language,1,Language[1747],
 2201,14827,Greek,2,Language[1747]->Greek[14827],1747.0
 2201,43562,Church,2,Religious Place[856]->Church[43562],856.0
+2202,8,Religious Group,1,Religious Group[8],
+2202,856,Religious Place,1,Religious Place[856],
+2202,905,Abrahamic,2,Religious Group[8]->Abrahamic[905],8.0
+2202,1021,Orthodoxy,2,Religious Group[8]->Orthodoxy[1021],8.0
+2202,1126,Greece,2,Religious Place[856]->Greece[1126],856.0
+2202,1747,Language,1,Language[1747],
+2202,1876,Turkic,2,Language[1747]->Turkic[1876],1747.0
+2202,14827,Greek,2,Language[1747]->Greek[14827],1747.0
+2202,43562,Church,2,Religious Place[856]->Church[43562],856.0
+2202,43600,Sunni Islam,2,Religious Group[8]->Sunni Islam[43600],8.0
 2203,8,Religious Group,1,Religious Group[8],
 2203,123,Chinese Religion,2,Religious Group[8]->Chinese Religion[123],8.0
 2203,1108,Daoism,2,Religious Group[8]->Daoism[1108],8.0
@@ -9337,7 +9790,18 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2207,1433,Southern Levant,2,Religious Group[8]->Southern Levant[1433],8.0
 2207,1747,Language,1,Language[1747],
 2207,1867,Unattested,2,Language[1747]->Unattested[1867],1747.0
+2207,1977,Afro-Asiatic,2,Language[1747]->Afro-Asiatic[1977],1747.0
+2207,3237,Semitic,3,Language[1747]->Afro-Asiatic[1977]->Semitic[3237],1977.0
+2207,4434,West Semitic,4,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434],3237.0
+2207,5695,Central Semitic,5,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695],4434.0
+2207,7096,Northwest Semitic,6,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096],5695.0
+2207,8597,Canaanite,7,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597],7096.0
+2207,8598,Aramaic,7,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Aramaic[8598],7096.0
+2207,9968,Hebrewic,8,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Hebrewic[9968],8597.0
+2207,9970,Imperial-Middle-Modern Aramaic,8,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Aramaic[8598]->Imperial-Middle-Modern Aramaic[9970],8598.0
+2207,11121,Ancient Hebrew,9,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Hebrewic[9968]->Ancient Hebrew[11121],9968.0
 2207,14827,Greek,2,Language[1747]->Greek[14827],1747.0
+2207,36477,Biblical Hebrew,10,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Hebrewic[9968]->Ancient Hebrew[11121]->Biblical Hebrew[36477],11121.0
 2207,43518,Judaism,2,Religious Group[8]->Judaism[43518],8.0
 2207,43519,Judaism,3,Religious Group[8]->Abrahamic[905]->Judaism[43519],905.0
 2208,8,Religious Group,1,Religious Group[8],
@@ -9359,11 +9823,28 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2208,1544,Koine Greek Text,2,Text[1069]->Koine Greek Text[1544],1069.0
 2208,1573,Christian,2,Religious Group[8]->Christian[1573],8.0
 2208,1747,Language,1,Language[1747],
+2208,1977,Afro-Asiatic,2,Language[1747]->Afro-Asiatic[1977],1747.0
+2208,3237,Semitic,3,Language[1747]->Afro-Asiatic[1977]->Semitic[3237],1977.0
+2208,4434,West Semitic,4,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434],3237.0
+2208,5695,Central Semitic,5,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695],4434.0
+2208,7096,Northwest Semitic,6,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096],5695.0
+2208,8597,Canaanite,7,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597],7096.0
+2208,8598,Aramaic,7,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Aramaic[8598],7096.0
+2208,9968,Hebrewic,8,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Hebrewic[9968],8597.0
+2208,9970,Imperial-Middle-Modern Aramaic,8,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Aramaic[8598]->Imperial-Middle-Modern Aramaic[9970],8598.0
+2208,11121,Ancient Hebrew,9,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Hebrewic[9968]->Ancient Hebrew[11121],9968.0
 2208,14827,Greek,2,Language[1747]->Greek[14827],1747.0
+2208,36477,Biblical Hebrew,10,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Hebrewic[9968]->Ancient Hebrew[11121]->Biblical Hebrew[36477],11121.0
 2208,43518,Judaism,2,Religious Group[8]->Judaism[43518],8.0
 2208,43519,Judaism,3,Religious Group[8]->Abrahamic[905]->Judaism[43519],905.0
 2208,43601,Apocrypha,2,Text[1069]->Apocrypha[43601],1069.0
 2208,43602,Septuagint,2,Text[1069]->Septuagint[43602],1069.0
+2209,8,Religious Group,1,Religious Group[8],
+2209,917,Protestantism,2,Religious Group[8]->Protestantism[917],8.0
+2209,1570,Christianity,2,Religious Group[8]->Christianity[1570],8.0
+2209,1747,Language,1,Language[1747],
+2209,14808,English,2,Language[1747]->English[14808],1747.0
+2209,14812,Yoruba,2,Language[1747]->Yoruba[14812],1747.0
 2210,8,Religious Group,1,Religious Group[8],
 2210,1014,Christianity of the Global South,2,Religious Group[8]->Christianity of the Global South[1014],8.0
 2210,1031,Pentecostal,2,Religious Group[8]->Pentecostal[1031],8.0
@@ -9405,6 +9886,17 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2213,5347,Classical-Middle Armenian,5,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Armenic[4030]->Classical-Middle Armenian[5347],4030.0
 2213,29402,Middle Armenian,6,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Armenic[4030]->Classical-Middle Armenian[5347]->Middle Armenian[29402],5347.0
 2213,43563,Armenian Apostolic,4,Religious Group[8]->Anatolian Religions[10]->Armenian Religion[53]->Armenian Apostolic[43563],53.0
+2214,8,Religious Group,1,Religious Group[8],
+2214,836,Animist,2,Religious Group[8]->Animist[836],8.0
+2214,933,Ancestor Veneration,3,Religious Group[8]->Animist[836]->Ancestor Veneration[933],836.0
+2214,985,Natural Religion,2,Religious Group[8]->Natural Religion[985],8.0
+2214,1047,Nature worship,3,Religious Group[8]->Natural Religion[985]->Nature worship[1047],985.0
+2214,1316,Prehistoric South American Religions,2,Religious Group[8]->Prehistoric South American Religions[1316],8.0
+2214,1335,Landscape,3,Religious Group[8]->Animist[836]->Landscape[1335],836.0
+2214,1445,Andes,2,Religious Group[8]->Andes[1445],8.0
+2214,1747,Language,1,Language[1747],
+2214,1981,Aymaran,2,Language[1747]->Aymaran[1981],1747.0
+2214,14806,Unknown,2,Language[1747]->Unknown[14806],1747.0
 2216,8,Religious Group,1,Religious Group[8],
 2216,856,Religious Place,1,Religious Place[856],
 2216,1021,Orthodoxy,2,Religious Group[8]->Orthodoxy[1021],8.0
@@ -9417,6 +9909,24 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2216,4027,Graeco-Phrygian,4,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Graeco-Phrygian[4027],2479.0
 2216,5341,Greek,5,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Graeco-Phrygian[4027]->Greek[5341],4027.0
 2216,43603,Achaia,4,Religious Place[856]->Greece[1126]->Peloponnese[1421]->Achaia[43603],1421.0
+2217,8,Religious Group,1,Religious Group[8],
+2217,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
+2217,273,Sufism,3,Religious Group[8]->Islamic Traditions[24]->Sufism[273],24.0
+2217,274,Bektashi,4,Religious Group[8]->Islamic Traditions[24]->Sufism[273]->Bektashi[274],273.0
+2217,856,Religious Place,1,Religious Place[856],
+2217,1126,Greece,2,Religious Place[856]->Greece[1126],856.0
+2217,1220,Crete,2,Religious Place[856]->Crete[1220],856.0
+2217,1326,Crete,3,Religious Place[856]->Greece[1126]->Crete[1326],1126.0
+2217,1747,Language,1,Language[1747],
+2217,1876,Turkic,2,Language[1747]->Turkic[1876],1747.0
+2217,2411,Common Turkic,3,Language[1747]->Turkic[1876]->Common Turkic[2411],1876.0
+2217,3825,Oghuz,4,Language[1747]->Turkic[1876]->Common Turkic[2411]->Oghuz[3825],2411.0
+2217,5200,Nuclear Oghuz,5,Language[1747]->Turkic[1876]->Common Turkic[2411]->Oghuz[3825]->Nuclear Oghuz[5200],3825.0
+2217,6583,West Oghuz,6,Language[1747]->Turkic[1876]->Common Turkic[2411]->Oghuz[3825]->Nuclear Oghuz[5200]->West Oghuz[6583],5200.0
+2217,8164,Turkish,7,Language[1747]->Turkic[1876]->Common Turkic[2411]->Oghuz[3825]->Nuclear Oghuz[5200]->West Oghuz[6583]->Turkish[8164],6583.0
+2217,14827,Greek,2,Language[1747]->Greek[14827],1747.0
+2217,32267,Ottoman Turkish,8,Language[1747]->Turkic[1876]->Common Turkic[2411]->Oghuz[3825]->Nuclear Oghuz[5200]->West Oghuz[6583]->Turkish[8164]->Ottoman Turkish[32267],8164.0
+2217,43604,Heraklion,3,Religious Place[856]->Crete[1220]->Heraklion[43604],1220.0
 2218,8,Religious Group,1,Religious Group[8],
 2218,18,Christian Traditions,2,Religious Group[8]->Christian Traditions[18],8.0
 2218,172,Orthodox/Eastern Christian,3,Religious Group[8]->Christian Traditions[18]->Orthodox/Eastern Christian[172],18.0
@@ -9450,6 +9960,23 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2219,5612,Literary Chinese,5,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342]->Literary Chinese[5612],4342.0
 2219,43522,Amulet,2,Text[1069]->Amulet[43522],1069.0
 2219,43601,Apocrypha,2,Text[1069]->Apocrypha[43601],1069.0
+2220,8,Religious Group,1,Religious Group[8],
+2220,866,Reform Movement,2,Religious Group[8]->Reform Movement[866],8.0
+2220,905,Abrahamic,2,Religious Group[8]->Abrahamic[905],8.0
+2220,914,Communal Society,2,Religious Group[8]->Communal Society[914],8.0
+2220,985,Natural Religion,2,Religious Group[8]->Natural Religion[985],8.0
+2220,997,Sufi,2,Religious Group[8]->Sufi[997],8.0
+2220,1021,Orthodoxy,2,Religious Group[8]->Orthodoxy[1021],8.0
+2220,1378,Asceticism,2,Religious Group[8]->Asceticism[1378],8.0
+2220,1470,Sufi Order,2,Religious Group[8]->Sufi Order[1470],8.0
+2220,1678,Islam,3,Religious Group[8]->Abrahamic[905]->Islam[1678],905.0
+2220,1747,Language,1,Language[1747],
+2220,14808,English,2,Language[1747]->English[14808],1747.0
+2220,14812,Yoruba,2,Language[1747]->Yoruba[14812],1747.0
+2220,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
+2220,43597,Sunnism,4,Religious Group[8]->Abrahamic[905]->Islam[1678]->Sunnism[43597],1678.0
+2220,43598,Monotheism,3,Religious Group[8]->Natural Religion[985]->Monotheism[43598],985.0
+2220,43599,Hausa Language,2,Religious Group[8]->Hausa Language[43599],8.0
 2221,8,Religious Group,1,Religious Group[8],
 2221,20,Egyptian Religions,2,Religious Group[8]->Egyptian Religions[20],8.0
 2221,930,Syro-Palestinian Religion,2,Religious Group[8]->Syro-Palestinian Religion[930],8.0
@@ -9473,6 +10000,21 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2222,1870,Mayan,2,Language[1747]->Mayan[1870],1747.0
 2222,43568,Yucatan Peninsula,3,Religious Place[856]->Mesoamerica[1519]->Yucatan Peninsula[43568],1519.0
 2222,43582,Preclassic Maya,2,Religious Group[8]->Preclassic Maya[43582],8.0
+2223,8,Religious Group,1,Religious Group[8],
+2223,508,South American Religions,2,Religious Group[8]->South American Religions[508],8.0
+2223,509,Inca Religion,3,Religious Group[8]->South American Religions[508]->Inca Religion[509],508.0
+2223,836,Animist,2,Religious Group[8]->Animist[836],8.0
+2223,856,Religious Place,1,Religious Place[856],
+2223,927,Religious Complex,2,Religious Place[856]->Religious Complex[927],856.0
+2223,933,Ancestor Veneration,3,Religious Group[8]->Animist[836]->Ancestor Veneration[933],836.0
+2223,934,Shrines,2,Religious Place[856]->Shrines[934],856.0
+2223,999,Catholic,2,Religious Group[8]->Catholic[999],8.0
+2223,1335,Landscape,3,Religious Group[8]->Animist[836]->Landscape[1335],836.0
+2223,1446,Peru,2,Religious Group[8]->Peru[1446],8.0
+2223,1536,Sacred mountain,2,Religious Place[856]->Sacred mountain[1536],856.0
+2223,1554,Ritual centre,2,Religious Place[856]->Ritual centre[1554],856.0
+2223,1747,Language,1,Language[1747],
+2223,1831,Quechuan,2,Language[1747]->Quechuan[1831],1747.0
 2224,8,Religious Group,1,Religious Group[8],
 2224,27,Jewish Traditions,2,Religious Group[8]->Jewish Traditions[27],8.0
 2224,1069,Text,1,Text[1069],
@@ -9525,6 +10067,17 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2229,4027,Graeco-Phrygian,4,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Graeco-Phrygian[4027],2479.0
 2229,5341,Greek,5,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Graeco-Phrygian[4027]->Greek[5341],4027.0
 2229,43612,Mystras,4,Religious Place[856]->Greece[1126]->Peloponnese[1421]->Mystras[43612],1421.0
+2230,8,Religious Group,1,Religious Group[8],
+2230,38,Native American (North American) Religions,2,Religious Group[8]->Native American (North American) Religions[38],8.0
+2230,856,Religious Place,1,Religious Place[856],
+2230,1413,Archaeological Site,2,Religious Place[856]->Archaeological Site[1413],856.0
+2230,1475,Sacred Territory,2,Religious Place[856]->Sacred Territory[1475],856.0
+2230,1747,Language,1,Language[1747],
+2230,1803,Uto-Aztecan,2,Language[1747]->Uto-Aztecan[1803],1747.0
+2230,2141,Northern Uto-Aztecan,3,Language[1747]->Uto-Aztecan[1803]->Northern Uto-Aztecan[2141],1803.0
+2230,14806,Unknown,2,Language[1747]->Unknown[14806],1747.0
+2230,43613,Boca de Potrerillos,3,Religious Place[856]->Archaeological Site[1413]->Boca de Potrerillos[43613],1413.0
+2230,43614,Hokano-Coahuiltecan Religions,3,Religious Group[8]->Native American (North American) Religions[38]->Hokano-Coahuiltecan Religions[43614],38.0
 2231,8,Religious Group,1,Religious Group[8],
 2231,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
 2231,905,Abrahamic,2,Religious Group[8]->Abrahamic[905],8.0
@@ -9565,6 +10118,26 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2233,3038,Sinitic,3,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038],1946.0
 2233,4342,Classical-Middle-Modern Sinitic,4,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342],3038.0
 2233,4345,Min,4,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Min[4345],3038.0
+2234,8,Religious Group,1,Religious Group[8],
+2234,856,Religious Place,1,Religious Place[856],
+2234,1003,Monastery,2,Religious Place[856]->Monastery[1003],856.0
+2234,1195,Egypt,2,Religious Place[856]->Egypt[1195],856.0
+2234,1198,Alexandria,2,Religious Place[856]->Alexandria[1198],856.0
+2234,1570,Christianity,2,Religious Group[8]->Christianity[1570],8.0
+2234,1747,Language,1,Language[1747],
+2234,14827,Greek,2,Language[1747]->Greek[14827],1747.0
+2235,8,Religious Group,1,Religious Group[8],
+2235,33,Mesoamerican Religions,2,Religious Group[8]->Mesoamerican Religions[33],8.0
+2235,856,Religious Place,1,Religious Place[856],
+2235,865,Temple,2,Religious Place[856]->Temple[865],856.0
+2235,927,Religious Complex,2,Religious Place[856]->Religious Complex[927],856.0
+2235,1413,Archaeological Site,2,Religious Place[856]->Archaeological Site[1413],856.0
+2235,1514,Mesoamerica,2,Religious Place[856]->Mesoamerica[1514],856.0
+2235,1536,Sacred mountain,2,Religious Place[856]->Sacred mountain[1536],856.0
+2235,1747,Language,1,Language[1747],
+2235,1801,Otomanguean,2,Language[1747]->Otomanguean[1801],1747.0
+2235,1803,Uto-Aztecan,2,Language[1747]->Uto-Aztecan[1803],1747.0
+2235,43547,Early populations of Mexico,2,Religious Group[8]->Early populations of Mexico[43547],8.0
 2236,8,Religious Group,1,Religious Group[8],
 2236,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
 2236,284,Sunni,3,Religious Group[8]->Islamic Traditions[24]->Sunni[284],24.0
@@ -9599,6 +10172,22 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2238,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
 2238,27700,مجموعة سنية,2,Religious Group (fr)[879]->مجموعة سنية[27700],879.0
 2238,43600,Sunni Islam,2,Religious Group[8]->Sunni Islam[43600],8.0
+2239,8,Religious Group,1,Religious Group[8],
+2239,38,Native American (North American) Religions,2,Religious Group[8]->Native American (North American) Religions[38],8.0
+2239,1747,Language,1,Language[1747],
+2239,1827,Keresan,2,Language[1747]->Keresan[1827],1747.0
+2239,14806,Unknown,2,Language[1747]->Unknown[14806],1747.0
+2240,8,Religious Group,1,Religious Group[8],
+2240,1207,Tomb,2,Religious Group[8]->Tomb[1207],8.0
+2240,1353,Latin America Religions,2,Religious Group[8]->Latin America Religions[1353],8.0
+2240,1445,Andes,2,Religious Group[8]->Andes[1445],8.0
+2240,1446,Peru,2,Religious Group[8]->Peru[1446],8.0
+2240,1747,Language,1,Language[1747],
+2240,1831,Quechuan,2,Language[1747]->Quechuan[1831],1747.0
+2240,2262,Quechua II,3,Language[1747]->Quechuan[1831]->Quechua II[2262],1831.0
+2240,42239,Quechua IIC,4,Language[1747]->Quechuan[1831]->Quechua II[2262]->Quechua IIC[42239],2262.0
+2240,43102,Cuscan Quechua,5,Language[1747]->Quechuan[1831]->Quechua II[2262]->Quechua IIC[42239]->Cuscan Quechua[43102],42239.0
+2240,43616,Inkas,2,Religious Group[8]->Inkas[43616],8.0
 2242,8,Religious Group,1,Religious Group[8],
 2242,856,Religious Place,1,Religious Place[856],
 2242,1126,Greece,2,Religious Place[856]->Greece[1126],856.0
@@ -9734,6 +10323,18 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2256,1747,Language,1,Language[1747],
 2256,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
 2256,43600,Sunni Islam,2,Religious Group[8]->Sunni Islam[43600],8.0
+2257,8,Religious Group,1,Religious Group[8],
+2257,856,Religious Place,1,Religious Place[856],
+2257,927,Religious Complex,2,Religious Place[856]->Religious Complex[927],856.0
+2257,1413,Archaeological Site,2,Religious Place[856]->Archaeological Site[1413],856.0
+2257,1536,Sacred mountain,2,Religious Place[856]->Sacred mountain[1536],856.0
+2257,1554,Ritual centre,2,Religious Place[856]->Ritual centre[1554],856.0
+2257,1716,Sicily,2,Religious Place[856]->Sicily[1716],856.0
+2257,1747,Language,1,Language[1747],
+2257,1973,Unclassifiable,2,Language[1747]->Unclassifiable[1973],1747.0
+2257,14806,Unknown,2,Language[1747]->Unknown[14806],1747.0
+2257,43578,Italy,2,Religious Place[856]->Italy[43578],856.0
+2257,43638,Sicanian,2,Religious Group[8]->Sicanian[43638],8.0
 2258,8,Religious Group,1,Religious Group[8],
 2258,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
 2258,29,Maghreb Religions,2,Religious Group[8]->Maghreb Religions[29],8.0
@@ -9744,13 +10345,15 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2258,1747,Language,1,Language[1747],
 2258,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
 2258,43600,Sunni Islam,2,Religious Group[8]->Sunni Islam[43600],8.0
-2260,8,Religious Group,1,Religious Group[8],
-2260,856,Religious Place,1,Religious Place[856],
-2260,1126,Greece,2,Religious Place[856]->Greece[1126],856.0
-2260,1573,Christian,2,Religious Group[8]->Christian[1573],8.0
-2260,1747,Language,1,Language[1747],
-2260,14827,Greek,2,Language[1747]->Greek[14827],1747.0
-2260,43564,Church,2,Religious Place[856]->Church[43564],856.0
+2261,8,Religious Group,1,Religious Group[8],
+2261,856,Religious Place,1,Religious Place[856],
+2261,927,Religious Complex,2,Religious Place[856]->Religious Complex[927],856.0
+2261,1056,Prehistoric Religion,2,Religious Group[8]->Prehistoric Religion[1056],8.0
+2261,1316,Prehistoric South American Religions,2,Religious Group[8]->Prehistoric South American Religions[1316],8.0
+2261,1413,Archaeological Site,2,Religious Place[856]->Archaeological Site[1413],856.0
+2261,1445,Andes,2,Religious Group[8]->Andes[1445],8.0
+2261,1747,Language,1,Language[1747],
+2261,1981,Aymaran,2,Language[1747]->Aymaran[1981],1747.0
 2262,8,Religious Group,1,Religious Group[8],
 2262,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
 2262,284,Sunni,3,Religious Group[8]->Islamic Traditions[24]->Sunni[284],24.0
@@ -9826,6 +10429,21 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2267,1747,Language,1,Language[1747],
 2267,14806,Unknown,2,Language[1747]->Unknown[14806],1747.0
 2267,43641,Tingambato,3,,1413.0
+2268,8,Religious Group,1,Religious Group[8],
+2268,856,Religious Place,1,Religious Place[856],
+2268,870,Basilica,2,Religious Place[856]->Basilica[870],856.0
+2268,905,Abrahamic,2,Religious Group[8]->Abrahamic[905],8.0
+2268,1021,Orthodoxy,2,Religious Group[8]->Orthodoxy[1021],8.0
+2268,1126,Greece,2,Religious Place[856]->Greece[1126],856.0
+2268,1148,Balkans,2,Religious Group[8]->Balkans[1148],8.0
+2268,1413,Archaeological Site,2,Religious Place[856]->Archaeological Site[1413],856.0
+2268,1537,Cathedral,2,Religious Place[856]->Cathedral[1537],856.0
+2268,1570,Christianity,2,Religious Group[8]->Christianity[1570],8.0
+2268,1747,Language,1,Language[1747],
+2268,14827,Greek,2,Language[1747]->Greek[14827],1747.0
+2268,43562,Church,2,Religious Place[856]->Church[43562],856.0
+2268,43642,Epirus,2,,856.0
+2268,43643,Orthodox Christianity,2,,8.0
 2269,8,Religious Group,1,Religious Group[8],
 2269,18,Christian Traditions,2,Religious Group[8]->Christian Traditions[18],8.0
 2269,826,Protestantism,3,Religious Group[8]->Christian Traditions[18]->Protestantism[826],18.0
@@ -9842,6 +10460,14 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2269,14808,English,2,Language[1747]->English[14808],1747.0
 2269,27667,Lutheranism,3,Religious Group[8]->Protestantism[917]->Lutheranism[27667],917.0
 2269,43562,Church,2,Religious Place[856]->Church[43562],856.0
+2271,8,Religious Group,1,Religious Group[8],
+2271,915,Evangelicalism,2,Religious Group[8]->Evangelicalism[915],8.0
+2271,917,Protestantism,2,Religious Group[8]->Protestantism[917],8.0
+2271,1015,Born Again Christianity,2,Religious Group[8]->Born Again Christianity[1015],8.0
+2271,1570,Christianity,2,Religious Group[8]->Christianity[1570],8.0
+2271,1747,Language,1,Language[1747],
+2271,14808,English,2,Language[1747]->English[14808],1747.0
+2271,14811,Yoruba Language,2,Language[1747]->Yoruba Language[14811],1747.0
 2272,8,Religious Group,1,Religious Group[8],
 2272,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
 2272,905,Abrahamic,2,Religious Group[8]->Abrahamic[905],8.0
@@ -9912,6 +10538,55 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2275,43569,Lingbao (Numinous Treasure),3,Religious Group[8]->Daoism[1108]->Lingbao (Numinous Treasure)[43569],1108.0
 2275,43651,Dongtian fudi,3,,1693.0
 2275,43652,Guangdong,3,,1258.0
+2276,8,Religious Group,1,Religious Group[8],
+2276,11,Assyrian Religions,2,Religious Group[8]->Assyrian Religions[11],8.0
+2276,13,Bön (Tibetan: bon),2,Religious Group[8]->Bön (Tibetan: bon)[13],8.0
+2276,26,Japanese Religions,2,Religious Group[8]->Japanese Religions[26],8.0
+2276,28,Korean Religions,2,Religious Group[8]->Korean Religions[28],8.0
+2276,33,Mesoamerican Religions,2,Religious Group[8]->Mesoamerican Religions[33],8.0
+2276,37,Mongolian Religions,2,Religious Group[8]->Mongolian Religions[37],8.0
+2276,123,Chinese Religion,2,Religious Group[8]->Chinese Religion[123],8.0
+2276,126,Chinese Common Religions,3,Religious Group[8]->Chinese Religion[123]->Chinese Common Religions[126],123.0
+2276,127,Chinese Folk Religions,3,Religious Group[8]->Chinese Religion[123]->Chinese Folk Religions[127],123.0
+2276,128,Chinese State Religion,3,Religious Group[8]->Chinese Religion[123]->Chinese State Religion[128],123.0
+2276,131,Confucian (rujia 儒家) Traditions,3,Religious Group[8]->Chinese Religion[123]->Confucian (rujia 儒家) Traditions[131],123.0
+2276,134,Daoist Traditions,3,Religious Group[8]->Chinese Religion[123]->Daoist Traditions[134],123.0
+2276,806,Syncretic Religions,2,Religious Group[8]->Syncretic Religions[806],8.0
+2276,808,Southeast Asian Religions,2,Religious Group[8]->Southeast Asian Religions[808],8.0
+2276,836,Animist,2,Religious Group[8]->Animist[836],8.0
+2276,903,Technology,2,Religious Group[8]->Technology[903],8.0
+2276,904,Shamanism,2,Religious Group[8]->Shamanism[904],8.0
+2276,916,Secularism,2,Religious Group[8]->Secularism[916],8.0
+2276,929,Levantine Religion,2,Religious Group[8]->Levantine Religion[929],8.0
+2276,938,Military Cults,2,Religious Group[8]->Military Cults[938],8.0
+2276,956,Indo-European Religion,2,Religious Group[8]->Indo-European Religion[956],8.0
+2276,981,Asia Minor,2,Religious Group[8]->Asia Minor[981],8.0
+2276,1048,Indigenous tribal,2,Religious Group[8]->Indigenous tribal[1048],8.0
+2276,1085,Confucianism,2,Religious Group[8]->Confucianism[1085],8.0
+2276,1117,Early Chinese cosmology,3,Religious Group[8]->Chinese Religion[123]->Early Chinese cosmology[1117],123.0
+2276,1119,Early Chinese cosmogony,3,Religious Group[8]->Chinese Religion[123]->Early Chinese cosmogony[1119],123.0
+2276,1123,Early Chinese Traditions,2,Religious Group[8]->Early Chinese Traditions[1123],8.0
+2276,1238,Religious Practice,2,Religious Group[8]->Religious Practice[1238],8.0
+2276,1265,Inner Asian Native Religions,2,Religious Group[8]->Inner Asian Native Religions[1265],8.0
+2276,1310,Divination,2,Religious Group[8]->Divination[1310],8.0
+2276,1312,Sichuan Basin and Hanzhong Valley Region,2,Religious Group[8]->Sichuan Basin and Hanzhong Valley Region[1312],8.0
+2276,1389,Babylonian Religions,2,Religious Group[8]->Babylonian Religions[1389],8.0
+2276,1429,Early Bronze Age,2,Religious Group[8]->Early Bronze Age[1429],8.0
+2276,1452,Sichuan,2,Religious Group[8]->Sichuan[1452],8.0
+2276,1510,Regional Religious System,2,Religious Group[8]->Regional Religious System[1510],8.0
+2276,1640,State Religion,2,Religious Group[8]->State Religion[1640],8.0
+2276,1747,Language,1,Language[1747],
+2276,1876,Turkic,2,Language[1747]->Turkic[1876],1747.0
+2276,1904,Indo-European,2,Language[1747]->Indo-European[1904],1747.0
+2276,1946,Sino-Tibetan,2,Language[1747]->Sino-Tibetan[1946],1747.0
+2276,2479,Classical Indo-European,3,Language[1747]->Indo-European[1904]->Classical Indo-European[2479],1904.0
+2276,3038,Sinitic,3,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038],1946.0
+2276,4342,Classical-Middle-Modern Sinitic,4,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342],3038.0
+2276,43540,Nationalism,2,Religious Group[8]->Nationalism[43540],8.0
+2276,43645,geomancy,2,,8.0
+2276,43654,Divination,4,,1117.0
+2276,43655,Eurasian religious practices,3,,1238.0
+2276,43656,Sanxingdui,3,,1452.0
 2277,8,Religious Group,1,Religious Group[8],
 2277,123,Chinese Religion,2,Religious Group[8]->Chinese Religion[123],8.0
 2277,1069,Text,1,Text[1069],
@@ -9934,6 +10609,11 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2278,43600,Sunni Islam,2,Religious Group[8]->Sunni Islam[43600],8.0
 2278,43635,الإسلام,2,Religious Group[8]->الإسلام[43635],8.0
 2278,43636,الديانة الإسلامية,2,Religious Group[8]->الديانة الإسلامية[43636],8.0
+2279,8,Religious Group,1,Religious Group[8],
+2279,9,African Religions,2,Religious Group[8]->African Religions[9],8.0
+2279,1747,Language,1,Language[1747],
+2279,1977,Afro-Asiatic,2,Language[1747]->Afro-Asiatic[1977],1747.0
+2279,43659,Zimbabwean tribal religion,3,,9.0
 2280,8,Religious Group,1,Religious Group[8],
 2280,34,Mesopotamian Religions,2,Religious Group[8]->Mesopotamian Religions[34],8.0
 2280,1069,Text,1,Text[1069],
@@ -9989,6 +10669,20 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2282,5357,Indo-Aryan,5,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Indo-Iranian[4034]->Indo-Aryan[5357],4034.0
 2282,6749,Sanskrit,6,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Indo-Iranian[4034]->Indo-Aryan[5357]->Sanskrit[6749],5357.0
 2282,43661,Buddhist Sutra,2,,1069.0
+2283,8,Religious Group,1,Religious Group[8],
+2283,123,Chinese Religion,2,Religious Group[8]->Chinese Religion[123],8.0
+2283,134,Daoist Traditions,3,Religious Group[8]->Chinese Religion[123]->Daoist Traditions[134],123.0
+2283,1108,Daoism,2,Religious Group[8]->Daoism[1108],8.0
+2283,1747,Language,1,Language[1747],
+2283,1946,Sino-Tibetan,2,Language[1747]->Sino-Tibetan[1946],1747.0
+2283,3038,Sinitic,3,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038],1946.0
+2283,4342,Classical-Middle-Modern Sinitic,4,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342],3038.0
+2283,43662,Outer Alchemy (外丹),4,,134.0
+2284,8,Religious Group,1,Religious Group[8],
+2284,1516,Tarascan,2,Religious Group[8]->Tarascan[1516],8.0
+2284,1747,Language,1,Language[1747],
+2284,1772,Tarascan,2,Language[1747]->Tarascan[1772],1747.0
+2284,2058,Purepecha,3,Language[1747]->Tarascan[1772]->Purepecha[2058],1772.0
 2285,8,Religious Group,1,Religious Group[8],
 2285,34,Mesopotamian Religions,2,Religious Group[8]->Mesopotamian Religions[34],8.0
 2285,1069,Text,1,Text[1069],
@@ -10003,6 +10697,23 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2285,1747,Language,1,Language[1747],
 2285,43177,Language Isolates,2,Language[1747]->Language Isolates[43177],1747.0
 2285,43282,Sumerian,3,Language[1747]->Language Isolates[43177]->Sumerian[43282],43177.0
+2286,8,Religious Group,1,Religious Group[8],
+2286,1445,Andes,2,Religious Group[8]->Andes[1445],8.0
+2286,1747,Language,1,Language[1747],
+2286,14806,Unknown,2,Language[1747]->Unknown[14806],1747.0
+2286,43664,SUdamerican Tropics,3,,1445.0
+2287,8,Religious Group,1,Religious Group[8],
+2287,1048,Indigenous tribal,2,Religious Group[8]->Indigenous tribal[1048],8.0
+2287,1334,Indigenous Theology,2,Religious Group[8]->Indigenous Theology[1334],8.0
+2287,1747,Language,1,Language[1747],
+2287,1934,Barbacoan,2,Language[1747]->Barbacoan[1934],1747.0
+2287,2605,Unclassified Barbacoan,3,Language[1747]->Barbacoan[1934]->Unclassified Barbacoan[2605],1934.0
+2288,8,Religious Group,1,Religious Group[8],
+2288,33,Mesoamerican Religions,2,Religious Group[8]->Mesoamerican Religions[33],8.0
+2288,341,Teotihuacan Religions,3,Religious Group[8]->Mesoamerican Religions[33]->Teotihuacan Religions[341],33.0
+2288,496,Toltec Religion,3,Religious Group[8]->Mesoamerican Religions[33]->Toltec Religion[496],33.0
+2288,1747,Language,1,Language[1747],
+2288,1801,Otomanguean,2,Language[1747]->Otomanguean[1801],1747.0
 2289,8,Religious Group,1,Religious Group[8],
 2289,786,New Religious Movement,2,Religious Group[8]->New Religious Movement[786],8.0
 2289,788,New Age Religion,2,Religious Group[8]->New Age Religion[788],8.0
@@ -10028,6 +10739,16 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2290,43600,Sunni Islam,2,Religious Group[8]->Sunni Islam[43600],8.0
 2290,43635,الإسلام,2,Religious Group[8]->الإسلام[43635],8.0
 2290,43636,الديانة الإسلامية,2,Religious Group[8]->الديانة الإسلامية[43636],8.0
+2293,8,Religious Group,1,Religious Group[8],
+2293,856,Religious Place,1,Religious Place[856],
+2293,905,Abrahamic,2,Religious Group[8]->Abrahamic[905],8.0
+2293,1100,Aegean,2,Religious Place[856]->Aegean[1100],856.0
+2293,1618,Christian,3,Religious Group[8]->Abrahamic[905]->Christian[1618],905.0
+2293,1678,Islam,3,Religious Group[8]->Abrahamic[905]->Islam[1678],905.0
+2293,1747,Language,1,Language[1747],
+2293,1876,Turkic,2,Language[1747]->Turkic[1876],1747.0
+2293,14827,Greek,2,Language[1747]->Greek[14827],1747.0
+2293,43597,Sunnism,4,Religious Group[8]->Abrahamic[905]->Islam[1678]->Sunnism[43597],1678.0
 2294,8,Religious Group,1,Religious Group[8],
 2294,123,Chinese Religion,2,Religious Group[8]->Chinese Religion[123],8.0
 2294,134,Daoist Traditions,3,Religious Group[8]->Chinese Religion[123]->Daoist Traditions[134],123.0
@@ -10058,6 +10779,75 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2295,3237,Semitic,3,Language[1747]->Afro-Asiatic[1977]->Semitic[3237],1977.0
 2295,4432,East Semitic,4,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->East Semitic[4432],3237.0
 2295,5692,Akkadian,5,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->East Semitic[4432]->Akkadian[5692],4432.0
+2296,8,Religious Group,1,Religious Group[8],
+2296,123,Chinese Religion,2,Religious Group[8]->Chinese Religion[123],8.0
+2296,1069,Text,1,Text[1069],
+2296,1084,Excavated text,2,Text[1069]->Excavated text[1084],1069.0
+2296,1107,Daoist text,2,Text[1069]->Daoist text[1107],1069.0
+2296,1108,Daoism,2,Religious Group[8]->Daoism[1108],8.0
+2296,1123,Early Chinese Traditions,2,Religious Group[8]->Early Chinese Traditions[1123],8.0
+2296,1176,Ritual text,2,Text[1069]->Ritual text[1176],1069.0
+2296,1251,Yellow and Yangzi Rivers Region,2,Religious Group[8]->Yellow and Yangzi Rivers Region[1251],8.0
+2296,1310,Divination,2,Religious Group[8]->Divination[1310],8.0
+2296,1312,Sichuan Basin and Hanzhong Valley Region,2,Religious Group[8]->Sichuan Basin and Hanzhong Valley Region[1312],8.0
+2296,1680,Chinese Daoist Text,2,Text[1069]->Chinese Daoist Text[1680],1069.0
+2296,1701,Death conceptions,2,Text[1069]->Death conceptions[1701],1069.0
+2296,1747,Language,1,Language[1747],
+2296,1946,Sino-Tibetan,2,Language[1747]->Sino-Tibetan[1946],1747.0
+2296,27691,Divination,2,Text[1069]->Divination[27691],1069.0
+2297,8,Religious Group,1,Religious Group[8],
+2297,18,Christian Traditions,2,Religious Group[8]->Christian Traditions[18],8.0
+2297,996,Roman Catholic,2,Religious Group[8]->Roman Catholic[996],8.0
+2297,1378,Asceticism,2,Religious Group[8]->Asceticism[1378],8.0
+2297,1747,Language,1,Language[1747],
+2297,14808,English,2,Language[1747]->English[14808],1747.0
+2297,43609,Early Medieval Religious Order,2,Religious Group[8]->Early Medieval Religious Order[43609],8.0
+2298,8,Religious Group,1,Religious Group[8],
+2298,15,Canaanite Religions,2,Religious Group[8]->Canaanite Religions[15],8.0
+2298,776,Ancient Mediterranean,2,Religious Group[8]->Ancient Mediterranean[776],8.0
+2298,918,Ancient Syrian Religion,2,Religious Group[8]->Ancient Syrian Religion[918],8.0
+2298,929,Levantine Religion,2,Religious Group[8]->Levantine Religion[929],8.0
+2298,930,Syro-Palestinian Religion,2,Religious Group[8]->Syro-Palestinian Religion[930],8.0
+2298,1069,Text,1,Text[1069],
+2298,1074,Epic,2,Text[1069]->Epic[1074],1069.0
+2298,1084,Excavated text,2,Text[1069]->Excavated text[1084],1069.0
+2298,1190,Phoenician Cult,2,Religious Group[8]->Phoenician Cult[1190],8.0
+2298,1361,Near East,2,Religious Group[8]->Near East[1361],8.0
+2298,1669,northern Levant,2,Religious Group[8]->northern Levant[1669],8.0
+2298,1696,Ancient Western Asia,2,Text[1069]->Ancient Western Asia[1696],1069.0
+2298,1701,Death conceptions,2,Text[1069]->Death conceptions[1701],1069.0
+2298,1702,Ancient Western Asia,2,Religious Group[8]->Ancient Western Asia[1702],8.0
+2298,1708,Cosmic domains,2,Text[1069]->Cosmic domains[1708],1069.0
+2298,1724,Calendar,2,Text[1069]->Calendar[1724],1069.0
+2298,1747,Language,1,Language[1747],
+2298,1977,Afro-Asiatic,2,Language[1747]->Afro-Asiatic[1977],1747.0
+2298,3237,Semitic,3,Language[1747]->Afro-Asiatic[1977]->Semitic[3237],1977.0
+2298,4434,West Semitic,4,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434],3237.0
+2298,5695,Central Semitic,5,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695],4434.0
+2298,7096,Northwest Semitic,6,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096],5695.0
+2298,8597,Canaanite,7,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597],7096.0
+2298,9969,Ugarito-Phoenician,8,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Ugarito-Phoenician[9969],8597.0
+2298,11123,Ugaritic,9,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Ugarito-Phoenician[9969]->Ugaritic[11123],9969.0
+2298,43542,Poetry,2,Text[1069]->Poetry[43542],1069.0
+2298,43606,Ancient Semitic Text,2,Text[1069]->Ancient Semitic Text[43606],1069.0
+2299,8,Religious Group,1,Religious Group[8],
+2299,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
+2299,905,Abrahamic,2,Religious Group[8]->Abrahamic[905],8.0
+2299,1390,Shi'a Islam,2,Religious Group[8]->Shi'a Islam[1390],8.0
+2299,1507,شيعة,2,Religious Group[8]->شيعة[1507],8.0
+2299,1508,ٱثْنَا عَشَرِيَّة,2,Religious Group[8]->ٱثْنَا عَشَرِيَّة[1508],8.0
+2299,1509,إِمَامِيَّة,2,Religious Group[8]->إِمَامِيَّة[1509],8.0
+2299,1747,Language,1,Language[1747],
+2299,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
+2299,43635,الإسلام,2,Religious Group[8]->الإسلام[43635],8.0
+2299,43636,الديانة الإسلامية,2,Religious Group[8]->الديانة الإسلامية[43636],8.0
+2301,8,Religious Group,1,Religious Group[8],
+2301,905,Abrahamic,2,Religious Group[8]->Abrahamic[905],8.0
+2301,1148,Balkans,2,Religious Group[8]->Balkans[1148],8.0
+2301,1747,Language,1,Language[1747],
+2301,14827,Greek,2,Language[1747]->Greek[14827],1747.0
+2301,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
+2301,43600,Sunni Islam,2,Religious Group[8]->Sunni Islam[43600],8.0
 2302,8,Religious Group,1,Religious Group[8],
 2302,508,South American Religions,2,Religious Group[8]->South American Religions[508],8.0
 2302,836,Animist,2,Religious Group[8]->Animist[836],8.0
@@ -10131,6 +10921,30 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2308,14835,Cantonese,2,Language[1747]->Cantonese[14835],1747.0
 2308,43635,الإسلام,2,Religious Group[8]->الإسلام[43635],8.0
 2308,43636,الديانة الإسلامية,2,Religious Group[8]->الديانة الإسلامية[43636],8.0
+2309,8,Religious Group,1,Religious Group[8],
+2309,1747,Language,1,Language[1747],
+2309,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
+2309,43635,الإسلام,2,Religious Group[8]->الإسلام[43635],8.0
+2309,43636,الديانة الإسلامية,2,Religious Group[8]->الديانة الإسلامية[43636],8.0
+2312,8,Religious Group,1,Religious Group[8],
+2312,9,African Religions,2,Religious Group[8]->African Religions[9],8.0
+2312,1012,African Religion,2,Religious Group[8]->African Religion[1012],8.0
+2312,1709,southern African Indigenous Religions,2,Religious Group[8]->southern African Indigenous Religions[1709],8.0
+2312,1747,Language,1,Language[1747],
+2312,1973,Unclassifiable,2,Language[1747]->Unclassifiable[1973],1747.0
+2312,14808,English,2,Language[1747]->English[14808],1747.0
+2312,43659,Zimbabwean tribal religion,3,,9.0
+2312,43668,Shona and Ndebele,4,,43659.0
+2313,8,Religious Group,1,Religious Group[8],
+2313,905,Abrahamic,2,Religious Group[8]->Abrahamic[905],8.0
+2313,1678,Islam,3,Religious Group[8]->Abrahamic[905]->Islam[1678],905.0
+2313,1747,Language,1,Language[1747],
+2313,1946,Sino-Tibetan,2,Language[1747]->Sino-Tibetan[1946],1747.0
+2313,3038,Sinitic,3,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038],1946.0
+2313,4342,Classical-Middle-Modern Sinitic,4,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342],3038.0
+2313,5613,Middle-Modern Sinitic,5,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342]->Middle-Modern Sinitic[5613],4342.0
+2313,7037,Middle Chinese,6,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342]->Middle-Modern Sinitic[5613]->Middle Chinese[7037],5613.0
+2313,31130,Common Chinese,7,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342]->Middle-Modern Sinitic[5613]->Middle Chinese[7037]->Common Chinese[31130],7037.0
 2314,8,Religious Group,1,Religious Group[8],
 2314,856,Religious Place,1,Religious Place[856],
 2314,857,Monument,2,Religious Place[856]->Monument[857],856.0
@@ -10190,3 +11004,824 @@ entry_id,entrytag_id,entrytag_name,entrytag_level,entrytag_path,parent_entrytag_
 2318,1747,Language,1,Language[1747],
 2318,14827,Greek,2,Language[1747]->Greek[14827],1747.0
 2318,43562,Church,2,Religious Place[856]->Church[43562],856.0
+2320,8,Religious Group,1,Religious Group[8],
+2320,14,Buddhist Traditions,2,Religious Group[8]->Buddhist Traditions[14],8.0
+2320,1747,Language,1,Language[1747],
+2320,1946,Sino-Tibetan,2,Language[1747]->Sino-Tibetan[1946],1747.0
+2320,3038,Sinitic,3,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038],1946.0
+2321,8,Religious Group,1,Religious Group[8],
+2321,14,Buddhist Traditions,2,Religious Group[8]->Buddhist Traditions[14],8.0
+2321,65,Chinese Buddhist Traditions,3,Religious Group[8]->Buddhist Traditions[14]->Chinese Buddhist Traditions[65],14.0
+2321,123,Chinese Religion,2,Religious Group[8]->Chinese Religion[123],8.0
+2321,134,Daoist Traditions,3,Religious Group[8]->Chinese Religion[123]->Daoist Traditions[134],123.0
+2321,786,New Religious Movement,2,Religious Group[8]->New Religious Movement[786],8.0
+2321,787,UFO Religion,2,Religious Group[8]->UFO Religion[787],8.0
+2321,788,New Age Religion,2,Religious Group[8]->New Age Religion[788],8.0
+2321,806,Syncretic Religions,2,Religious Group[8]->Syncretic Religions[806],8.0
+2321,830,Cybersect Buddhism,3,Religious Group[8]->Buddhist Traditions[14]->Cybersect Buddhism[830],14.0
+2321,834,New Religious Movement (NRM),2,Religious Group[8]->New Religious Movement (NRM)[834],8.0
+2321,1108,Daoism,2,Religious Group[8]->Daoism[1108],8.0
+2321,1189,Redemptive Societies,2,Religious Group[8]->Redemptive Societies[1189],8.0
+2321,1595,Self-Cultivation,3,Religious Group[8]->Chinese Religion[123]->Self-Cultivation[1595],123.0
+2321,1747,Language,1,Language[1747],
+2321,1946,Sino-Tibetan,2,Language[1747]->Sino-Tibetan[1946],1747.0
+2321,3038,Sinitic,3,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038],1946.0
+2321,4342,Classical-Middle-Modern Sinitic,4,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342],3038.0
+2321,43673,Qigong,3,,123.0
+2322,8,Religious Group,1,Religious Group[8],
+2322,879,Religious Group (fr),1,Religious Group (fr)[879],
+2322,1747,Language,1,Language[1747],
+2322,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
+2322,43634,مجموعة حاكمة,2,Religious Group (fr)[879]->مجموعة حاكمة[43634],879.0
+2323,8,Religious Group,1,Religious Group[8],
+2323,856,Religious Place,1,Religious Place[856],
+2323,1248,Peak Sanctuaries,2,Religious Place[856]->Peak Sanctuaries[1248],856.0
+2323,1475,Sacred Territory,2,Religious Place[856]->Sacred Territory[1475],856.0
+2323,1536,Sacred mountain,2,Religious Place[856]->Sacred mountain[1536],856.0
+2323,1554,Ritual centre,2,Religious Place[856]->Ritual centre[1554],856.0
+2323,1747,Language,1,Language[1747],
+2323,1831,Quechuan,2,Language[1747]->Quechuan[1831],1747.0
+2323,43616,Inkas,2,Religious Group[8]->Inkas[43616],8.0
+2324,8,Religious Group,1,Religious Group[8],
+2324,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
+2324,29,Maghreb Religions,2,Religious Group[8]->Maghreb Religions[29],8.0
+2324,866,Reform Movement,2,Religious Group[8]->Reform Movement[866],8.0
+2324,1620,North African Religion,2,Religious Group[8]->North African Religion[1620],8.0
+2324,1747,Language,1,Language[1747],
+2324,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
+2324,43540,Nationalism,2,Religious Group[8]->Nationalism[43540],8.0
+2325,8,Religious Group,1,Religious Group[8],
+2325,123,Chinese Religion,2,Religious Group[8]->Chinese Religion[123],8.0
+2325,134,Daoist Traditions,3,Religious Group[8]->Chinese Religion[123]->Daoist Traditions[134],123.0
+2325,1747,Language,1,Language[1747],
+2325,1946,Sino-Tibetan,2,Language[1747]->Sino-Tibetan[1946],1747.0
+2325,3038,Sinitic,3,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038],1946.0
+2325,43662,Outer Alchemy (外丹),4,,134.0
+2327,8,Religious Group,1,Religious Group[8],
+2327,9,African Religions,2,Religious Group[8]->African Religions[9],8.0
+2327,1012,African Religion,2,Religious Group[8]->African Religion[1012],8.0
+2327,1747,Language,1,Language[1747],
+2327,14811,Yoruba Language,2,Language[1747]->Yoruba Language[14811],1747.0
+2327,14854,yoruba,2,Language[1747]->yoruba[14854],1747.0
+2327,14859,Ife Religion,2,Religious Group[8]->Ife Religion[14859],8.0
+2327,43674,Yoruba Religion,2,,8.0
+2328,8,Religious Group,1,Religious Group[8],
+2328,18,Christian Traditions,2,Religious Group[8]->Christian Traditions[18],8.0
+2328,123,Chinese Religion,2,Religious Group[8]->Chinese Religion[123],8.0
+2328,127,Chinese Folk Religions,3,Religious Group[8]->Chinese Religion[123]->Chinese Folk Religions[127],123.0
+2328,237,Chinese Christian Traditions,3,Religious Group[8]->Chinese Religion[123]->Chinese Christian Traditions[237],123.0
+2328,238,Chinese Christian Traditions,3,Religious Group[8]->Christian Traditions[18]->Chinese Christian Traditions[238],18.0
+2328,786,New Religious Movement,2,Religious Group[8]->New Religious Movement[786],8.0
+2328,826,Protestantism,3,Religious Group[8]->Christian Traditions[18]->Protestantism[826],18.0
+2328,833,Transnational Cybersect,2,Religious Group[8]->Transnational Cybersect[833],8.0
+2328,834,New Religious Movement (NRM),2,Religious Group[8]->New Religious Movement (NRM)[834],8.0
+2328,917,Protestantism,2,Religious Group[8]->Protestantism[917],8.0
+2328,973,New Prophecy,2,Religious Group[8]->New Prophecy[973],8.0
+2328,1156,Messianism,2,Religious Group[8]->Messianism[1156],8.0
+2328,1409,Millenarianism,2,Religious Group[8]->Millenarianism[1409],8.0
+2328,1573,Christian,2,Religious Group[8]->Christian[1573],8.0
+2328,1575,Christianity,2,Religious Group[8]->Christianity[1575],8.0
+2328,1747,Language,1,Language[1747],
+2328,1946,Sino-Tibetan,2,Language[1747]->Sino-Tibetan[1946],1747.0
+2328,3038,Sinitic,3,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038],1946.0
+2328,4342,Classical-Middle-Modern Sinitic,4,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342],3038.0
+2329,8,Religious Group,1,Religious Group[8],
+2329,807,Vietnamese Religions,2,Religious Group[8]->Vietnamese Religions[807],8.0
+2329,1747,Language,1,Language[1747],
+2329,1937,Austroasiatic,2,Language[1747]->Austroasiatic[1937],1747.0
+2329,2623,Vietic,3,Language[1747]->Austroasiatic[1937]->Vietic[2623],1937.0
+2329,4266,Viet-Muong,4,Language[1747]->Austroasiatic[1937]->Vietic[2623]->Viet-Muong[4266],2623.0
+2329,5526,Vietnamese,5,Language[1747]->Austroasiatic[1937]->Vietic[2623]->Viet-Muong[4266]->Vietnamese[5526],4266.0
+2329,43675,Phật Giáo Hòa Hảo,3,,807.0
+2329,43676,PGHH,3,,807.0
+2329,43677,Bửu Sơn Kỳ Hương,3,,807.0
+2330,8,Religious Group,1,Religious Group[8],
+2330,1570,Christianity,2,Religious Group[8]->Christianity[1570],8.0
+2330,1747,Language,1,Language[1747],
+2330,14808,English,2,Language[1747]->English[14808],1747.0
+2330,14812,Yoruba,2,Language[1747]->Yoruba[14812],1747.0
+2330,43680,Evangelical Church Winning All,2,,8.0
+2331,8,Religious Group,1,Religious Group[8],
+2331,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
+2331,879,Religious Group (fr),1,Religious Group (fr)[879],
+2331,1747,Language,1,Language[1747],
+2331,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
+2331,43600,Sunni Islam,2,Religious Group[8]->Sunni Islam[43600],8.0
+2331,43634,مجموعة حاكمة,2,Religious Group (fr)[879]->مجموعة حاكمة[43634],879.0
+2331,43636,الديانة الإسلامية,2,Religious Group[8]->الديانة الإسلامية[43636],8.0
+2332,8,Religious Group,1,Religious Group[8],
+2332,1229,Arabian Religions,2,Religious Group[8]->Arabian Religions[1229],8.0
+2332,1702,Ancient Western Asia,2,Religious Group[8]->Ancient Western Asia[1702],8.0
+2332,1747,Language,1,Language[1747],
+2332,1977,Afro-Asiatic,2,Language[1747]->Afro-Asiatic[1977],1747.0
+2332,3237,Semitic,3,Language[1747]->Afro-Asiatic[1977]->Semitic[3237],1977.0
+2332,4434,West Semitic,4,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434],3237.0
+2332,5695,Central Semitic,5,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695],4434.0
+2332,7094,Sayhadic,6,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Sayhadic[7094],5695.0
+2332,8590,Minaean,7,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Sayhadic[7094]->Minaean[8590],7094.0
+2333,8,Religious Group,1,Religious Group[8],
+2333,14,Buddhist Traditions,2,Religious Group[8]->Buddhist Traditions[14],8.0
+2333,94,Japanese Buddhist Traditions,3,Religious Group[8]->Buddhist Traditions[14]->Japanese Buddhist Traditions[94],14.0
+2333,786,New Religious Movement,2,Religious Group[8]->New Religious Movement[786],8.0
+2333,986,Engaged Buddhism,3,Religious Group[8]->Buddhist Traditions[14]->Engaged Buddhism[986],14.0
+2333,987,Buddhist Modernism,3,Religious Group[8]->Buddhist Traditions[14]->Buddhist Modernism[987],14.0
+2333,1747,Language,1,Language[1747],
+2333,1889,Japonic,2,Language[1747]->Japonic[1889],1747.0
+2333,14808,English,2,Language[1747]->English[14808],1747.0
+2334,8,Religious Group,1,Religious Group[8],
+2334,27,Jewish Traditions,2,Religious Group[8]->Jewish Traditions[27],8.0
+2334,776,Ancient Mediterranean,2,Religious Group[8]->Ancient Mediterranean[776],8.0
+2334,856,Religious Place,1,Religious Place[856],
+2334,865,Temple,2,Religious Place[856]->Temple[865],856.0
+2334,905,Abrahamic,2,Religious Group[8]->Abrahamic[905],8.0
+2334,923,Shrine,2,Religious Place[856]->Shrine[923],856.0
+2334,1361,Near East,2,Religious Group[8]->Near East[1361],8.0
+2334,1747,Language,1,Language[1747],
+2334,1867,Unattested,2,Language[1747]->Unattested[1867],1747.0
+2335,8,Religious Group,1,Religious Group[8],
+2335,917,Protestantism,2,Religious Group[8]->Protestantism[917],8.0
+2335,1747,Language,1,Language[1747],
+2335,14808,English,2,Language[1747]->English[14808],1747.0
+2335,43596,Protestant,3,Religious Group[8]->Protestantism[917]->Protestant[43596],917.0
+2336,8,Religious Group,1,Religious Group[8],
+2336,856,Religious Place,1,Religious Place[856],
+2336,879,Religious Group (fr),1,Religious Group (fr)[879],
+2336,997,Sufi,2,Religious Group[8]->Sufi[997],8.0
+2336,1388,North Africa,2,Religious Place[856]->North Africa[1388],856.0
+2336,1470,Sufi Order,2,Religious Group[8]->Sufi Order[1470],8.0
+2336,1477,Arabia,2,Religious Place[856]->Arabia[1477],856.0
+2336,1556,Morocco,2,Religious Place[856]->Morocco[1556],856.0
+2336,1747,Language,1,Language[1747],
+2336,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
+2336,27700,مجموعة سنية,2,Religious Group (fr)[879]->مجموعة سنية[27700],879.0
+2336,43600,Sunni Islam,2,Religious Group[8]->Sunni Islam[43600],8.0
+2336,43635,الإسلام,2,Religious Group[8]->الإسلام[43635],8.0
+2336,43636,الديانة الإسلامية,2,Religious Group[8]->الديانة الإسلامية[43636],8.0
+2337,8,Religious Group,1,Religious Group[8],
+2337,836,Animist,2,Religious Group[8]->Animist[836],8.0
+2337,1445,Andes,2,Religious Group[8]->Andes[1445],8.0
+2337,1446,Peru,2,Religious Group[8]->Peru[1446],8.0
+2337,1551,Ancestral Worship,2,Religious Group[8]->Ancestral Worship[1551],8.0
+2337,1640,State Religion,2,Religious Group[8]->State Religion[1640],8.0
+2337,1747,Language,1,Language[1747],
+2337,1831,Quechuan,2,Language[1747]->Quechuan[1831],1747.0
+2337,1981,Aymaran,2,Language[1747]->Aymaran[1981],1747.0
+2337,43616,Inkas,2,Religious Group[8]->Inkas[43616],8.0
+2338,8,Religious Group,1,Religious Group[8],
+2338,34,Mesopotamian Religions,2,Religious Group[8]->Mesopotamian Religions[34],8.0
+2338,331,Assyrian Religions,3,Religious Group[8]->Mesopotamian Religions[34]->Assyrian Religions[331],34.0
+2338,332,Babylonian Religions,3,Religious Group[8]->Mesopotamian Religions[34]->Babylonian Religions[332],34.0
+2338,1069,Text,1,Text[1069],
+2338,1074,Epic,2,Text[1069]->Epic[1074],1069.0
+2338,1084,Excavated text,2,Text[1069]->Excavated text[1084],1069.0
+2338,1118,Cosmogony,2,Text[1069]->Cosmogony[1118],1069.0
+2338,1328,Babylonian Text,2,Text[1069]->Babylonian Text[1328],1069.0
+2338,1393,Ancient Mesopotamian Text,2,Text[1069]->Ancient Mesopotamian Text[1393],1069.0
+2338,1414,Hymn,2,Text[1069]->Hymn[1414],1069.0
+2338,1696,Ancient Western Asia,2,Text[1069]->Ancient Western Asia[1696],1069.0
+2338,1698,Divine powers,2,Text[1069]->Divine powers[1698],1069.0
+2338,1699,Divine functions,2,Text[1069]->Divine functions[1699],1069.0
+2338,1702,Ancient Western Asia,2,Religious Group[8]->Ancient Western Asia[1702],8.0
+2338,1708,Cosmic domains,2,Text[1069]->Cosmic domains[1708],1069.0
+2338,1747,Language,1,Language[1747],
+2338,1977,Afro-Asiatic,2,Language[1747]->Afro-Asiatic[1977],1747.0
+2338,3237,Semitic,3,Language[1747]->Afro-Asiatic[1977]->Semitic[3237],1977.0
+2338,4432,East Semitic,4,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->East Semitic[4432],3237.0
+2338,5692,Akkadian,5,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->East Semitic[4432]->Akkadian[5692],4432.0
+2338,43606,Ancient Semitic Text,2,Text[1069]->Ancient Semitic Text[43606],1069.0
+2338,43660,anthropogeny,2,,1069.0
+2338,43681,theogony,2,,1069.0
+2339,8,Religious Group,1,Religious Group[8],
+2339,811,(Afro-)Caribbean religions,2,Religious Group[8]->(Afro-)Caribbean religions[811],8.0
+2339,1012,African Religion,2,Religious Group[8]->African Religion[1012],8.0
+2339,1019,African American Religion,2,Religious Group[8]->African American Religion[1019],8.0
+2339,1300,Polytheistic,2,Religious Group[8]->Polytheistic[1300],8.0
+2339,1310,Divination,2,Religious Group[8]->Divination[1310],8.0
+2339,1551,Ancestral Worship,2,Religious Group[8]->Ancestral Worship[1551],8.0
+2339,1747,Language,1,Language[1747],
+2339,14811,Yoruba Language,2,Language[1747]->Yoruba Language[14811],1747.0
+2339,14817,Yoruba Religion,2,Language[1747]->Yoruba Religion[14817],1747.0
+2339,14857,Oyo religion,2,Religious Group[8]->Oyo religion[14857],8.0
+2339,14859,Ife Religion,2,Religious Group[8]->Ife Religion[14859],8.0
+2340,8,Religious Group,1,Religious Group[8],
+2340,856,Religious Place,1,Religious Place[856],
+2340,1317,Pre-Inka Religions,2,Religious Group[8]->Pre-Inka Religions[1317],8.0
+2340,1413,Archaeological Site,2,Religious Place[856]->Archaeological Site[1413],856.0
+2340,1446,Peru,2,Religious Group[8]->Peru[1446],8.0
+2340,1747,Language,1,Language[1747],
+2340,14806,Unknown,2,Language[1747]->Unknown[14806],1747.0
+2340,43683,Nasca Religion,3,,1317.0
+2340,43684,Earthworks,4,,1099.0
+2340,43685,Geoglyph field,4,,1099.0
+2341,8,Religious Group,1,Religious Group[8],
+2341,33,Mesoamerican Religions,2,Religious Group[8]->Mesoamerican Religions[33],8.0
+2341,1550,El Tajin,3,Religious Group[8]->Mesoamerican Religions[33]->El Tajin[1550],33.0
+2341,1747,Language,1,Language[1747],
+2341,1899,Totonacan,2,Language[1747]->Totonacan[1899],1747.0
+2341,2469,Totonac,3,Language[1747]->Totonacan[1899]->Totonac[2469],1899.0
+2341,43682,Totonaca Religions,3,,33.0
+2342,8,Religious Group,1,Religious Group[8],
+2342,15,Canaanite Religions,2,Religious Group[8]->Canaanite Religions[15],8.0
+2342,918,Ancient Syrian Religion,2,Religious Group[8]->Ancient Syrian Religion[918],8.0
+2342,930,Syro-Palestinian Religion,2,Religious Group[8]->Syro-Palestinian Religion[930],8.0
+2342,1069,Text,1,Text[1069],
+2342,1361,Near East,2,Religious Group[8]->Near East[1361],8.0
+2342,1669,northern Levant,2,Religious Group[8]->northern Levant[1669],8.0
+2342,1702,Ancient Western Asia,2,Religious Group[8]->Ancient Western Asia[1702],8.0
+2342,1747,Language,1,Language[1747],
+2342,1977,Afro-Asiatic,2,Language[1747]->Afro-Asiatic[1977],1747.0
+2342,3237,Semitic,3,Language[1747]->Afro-Asiatic[1977]->Semitic[3237],1977.0
+2342,4434,West Semitic,4,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434],3237.0
+2342,5695,Central Semitic,5,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695],4434.0
+2342,7096,Northwest Semitic,6,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096],5695.0
+2342,8597,Canaanite,7,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597],7096.0
+2342,9969,Ugarito-Phoenician,8,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Ugarito-Phoenician[9969],8597.0
+2342,11123,Ugaritic,9,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Ugarito-Phoenician[9969]->Ugaritic[11123],9969.0
+2342,43606,Ancient Semitic Text,2,Text[1069]->Ancient Semitic Text[43606],1069.0
+2342,43686,Mythological Text,2,,1069.0
+2344,8,Religious Group,1,Religious Group[8],
+2344,508,South American Religions,2,Religious Group[8]->South American Religions[508],8.0
+2344,836,Animist,2,Religious Group[8]->Animist[836],8.0
+2344,1316,Prehistoric South American Religions,2,Religious Group[8]->Prehistoric South American Religions[1316],8.0
+2344,1317,Pre-Inka Religions,2,Religious Group[8]->Pre-Inka Religions[1317],8.0
+2344,1446,Peru,2,Religious Group[8]->Peru[1446],8.0
+2344,1747,Language,1,Language[1747],
+2344,14806,Unknown,2,Language[1747]->Unknown[14806],1747.0
+2344,43687,Sican religion,3,,508.0
+2345,8,Religious Group,1,Religious Group[8],
+2345,14,Buddhist Traditions,2,Religious Group[8]->Buddhist Traditions[14],8.0
+2345,26,Japanese Religions,2,Religious Group[8]->Japanese Religions[26],8.0
+2345,297,Shintō,2,Religious Group[8]->Shintō[297],8.0
+2345,985,Natural Religion,2,Religious Group[8]->Natural Religion[985],8.0
+2345,993,Tantric Buddhism,2,Religious Group[8]->Tantric Buddhism[993],8.0
+2345,995,Kami worship,2,Religious Group[8]->Kami worship[995],8.0
+2345,1089,Mahayana Buddhism,2,Religious Group[8]->Mahayana Buddhism[1089],8.0
+2345,1458,Yoga,2,Religious Group[8]->Yoga[1458],8.0
+2345,1555,Esoterics,2,Religious Group[8]->Esoterics[1555],8.0
+2345,1578,Japanese Buddhism,2,Religious Group[8]->Japanese Buddhism[1578],8.0
+2345,1628,Mahayana-Vajrayana Hybrid,2,Religious Group[8]->Mahayana-Vajrayana Hybrid[1628],8.0
+2345,1631,Vajrayana,2,Religious Group[8]->Vajrayana[1631],8.0
+2345,1659,Tantra,2,Religious Group[8]->Tantra[1659],8.0
+2345,1747,Language,1,Language[1747],
+2345,1889,Japonic,2,Language[1747]->Japonic[1889],1747.0
+2345,43691,East Asian Buddhism,2,,8.0
+2346,8,Religious Group,1,Religious Group[8],
+2346,1012,African Religion,2,Religious Group[8]->African Religion[1012],8.0
+2346,1747,Language,1,Language[1747],
+2346,1916,Pidgin,2,Language[1747]->Pidgin[1916],1747.0
+2346,43690,Igbo Religion,3,,1012.0
+2346,43695,African Traditional Religion,2,,8.0
+2346,43698,Igbo Language,2,,8.0
+2347,8,Religious Group,1,Religious Group[8],
+2347,1578,Japanese Buddhism,2,Religious Group[8]->Japanese Buddhism[1578],8.0
+2347,1747,Language,1,Language[1747],
+2347,1889,Japonic,2,Language[1747]->Japonic[1889],1747.0
+2347,2444,Japanesic,3,Language[1747]->Japonic[1889]->Japanesic[2444],1889.0
+2347,3891,Old Japanese,4,Language[1747]->Japonic[1889]->Japanesic[2444]->Old Japanese[3891],2444.0
+2347,14834,Japanese,4,Language[1747]->Japonic[1889]->Japanesic[2444]->Japanese[14834],2444.0
+2348,8,Religious Group,1,Religious Group[8],
+2348,15,Canaanite Religions,2,Religious Group[8]->Canaanite Religions[15],8.0
+2348,905,Abrahamic,2,Religious Group[8]->Abrahamic[905],8.0
+2348,929,Levantine Religion,2,Religious Group[8]->Levantine Religion[929],8.0
+2348,1293,Israelite Religion,2,Religious Group[8]->Israelite Religion[1293],8.0
+2348,1747,Language,1,Language[1747],
+2348,1977,Afro-Asiatic,2,Language[1747]->Afro-Asiatic[1977],1747.0
+2348,7096,Northwest Semitic,6,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096],5695.0
+2348,8597,Canaanite,7,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597],7096.0
+2348,9968,Hebrewic,8,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Hebrewic[9968],8597.0
+2348,11121,Ancient Hebrew,9,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Hebrewic[9968]->Ancient Hebrew[11121],9968.0
+2348,43519,Judaism,3,Religious Group[8]->Abrahamic[905]->Judaism[43519],905.0
+2349,8,Religious Group,1,Religious Group[8],
+2349,866,Reform Movement,2,Religious Group[8]->Reform Movement[866],8.0
+2349,915,Evangelicalism,2,Religious Group[8]->Evangelicalism[915],8.0
+2349,917,Protestantism,2,Religious Group[8]->Protestantism[917],8.0
+2349,1747,Language,1,Language[1747],
+2349,14808,English,2,Language[1747]->English[14808],1747.0
+2350,8,Religious Group,1,Religious Group[8],
+2350,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
+2350,968,Transnational Islam,3,Religious Group[8]->Islamic Traditions[24]->Transnational Islam[968],24.0
+2350,1069,Text,1,Text[1069],
+2350,1302,Hadith,2,Text[1069]->Hadith[1302],1069.0
+2350,1321,Islamic Modernization,3,Religious Group[8]->Islamic Traditions[24]->Islamic Modernization[1321],24.0
+2350,1369,Islamic Revival,3,Religious Group[8]->Islamic Traditions[24]->Islamic Revival[1369],24.0
+2350,1462,Shari'a,2,Text[1069]->Shari'a[1462],1069.0
+2350,1469,Fiqh,2,Text[1069]->Fiqh[1469],1069.0
+2350,1506,فقه,2,Text[1069]->فقه[1506],1069.0
+2350,1513,Islamic Theology,2,Text[1069]->Islamic Theology[1513],1069.0
+2350,1636,الجدل الكلامي,2,Text[1069]->الجدل الكلامي[1636],1069.0
+2350,1711,Islamic Jurisprudence,3,Religious Group[8]->Islamic Traditions[24]->Islamic Jurisprudence[1711],24.0
+2350,1747,Language,1,Language[1747],
+2350,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
+2350,27689,Islamic Law,2,Text[1069]->Islamic Law[27689],1069.0
+2350,43600,Sunni Islam,2,Religious Group[8]->Sunni Islam[43600],8.0
+2353,8,Religious Group,1,Religious Group[8],
+2353,14,Buddhist Traditions,2,Religious Group[8]->Buddhist Traditions[14],8.0
+2353,26,Japanese Religions,2,Religious Group[8]->Japanese Religions[26],8.0
+2353,297,Shintō,2,Religious Group[8]->Shintō[297],8.0
+2353,995,Kami worship,2,Religious Group[8]->Kami worship[995],8.0
+2353,1551,Ancestral Worship,2,Religious Group[8]->Ancestral Worship[1551],8.0
+2353,1578,Japanese Buddhism,2,Religious Group[8]->Japanese Buddhism[1578],8.0
+2353,1747,Language,1,Language[1747],
+2353,1889,Japonic,2,Language[1747]->Japonic[1889],1747.0
+2353,14808,English,2,Language[1747]->English[14808],1747.0
+2353,43691,East Asian Buddhism,2,,8.0
+2354,8,Religious Group,1,Religious Group[8],
+2354,33,Mesoamerican Religions,2,Religious Group[8]->Mesoamerican Religions[33],8.0
+2354,340,Mayan Religions,3,Religious Group[8]->Mesoamerican Religions[33]->Mayan Religions[340],33.0
+2354,856,Religious Place,1,Religious Place[856],
+2354,1197,Cemetery,2,Religious Place[856]->Cemetery[1197],856.0
+2354,1519,Mesoamerica,2,Religious Place[856]->Mesoamerica[1519],856.0
+2354,1693,Cave or Cavern,2,Religious Place[856]->Cave or Cavern[1693],856.0
+2354,1747,Language,1,Language[1747],
+2354,1870,Mayan,2,Language[1747]->Mayan[1870],1747.0
+2354,43568,Yucatan Peninsula,3,Religious Place[856]->Mesoamerica[1519]->Yucatan Peninsula[43568],1519.0
+2356,8,Religious Group,1,Religious Group[8],
+2356,1069,Text,1,Text[1069],
+2356,1118,Cosmogony,2,Text[1069]->Cosmogony[1118],1069.0
+2356,1301,Religious History,2,Text[1069]->Religious History[1301],1069.0
+2356,1747,Language,1,Language[1747],
+2356,1870,Mayan,2,Language[1747]->Mayan[1870],1747.0
+2356,2397,Core Mayan,3,Language[1747]->Mayan[1870]->Core Mayan[2397],1870.0
+2356,3799,Quichean-Mamean,4,Language[1747]->Mayan[1870]->Core Mayan[2397]->Quichean-Mamean[3799],2397.0
+2356,43583,Postclassic Maya,2,Religious Group[8]->Postclassic Maya[43583],8.0
+2356,43686,Mythological Text,2,,1069.0
+2356,43700,Historia Maya,3,,1301.0
+2356,43702,mito de creación,3,,43686.0
+2356,43703,Maya,3,,43583.0
+2356,43705,Creación del mundo,3,,1118.0
+2357,8,Religious Group,1,Religious Group[8],
+2357,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
+2357,284,Sunni,3,Religious Group[8]->Islamic Traditions[24]->Sunni[284],24.0
+2357,856,Religious Place,1,Religious Place[856],
+2357,1126,Greece,2,Religious Place[856]->Greece[1126],856.0
+2357,1220,Crete,2,Religious Place[856]->Crete[1220],856.0
+2357,1570,Christianity,2,Religious Group[8]->Christianity[1570],8.0
+2357,1573,Christian,2,Religious Group[8]->Christian[1573],8.0
+2357,1732,Medieval Christians,3,Religious Group[8]->Christianity[1570]->Medieval Christians[1732],1570.0
+2357,1747,Language,1,Language[1747],
+2357,1876,Turkic,2,Language[1747]->Turkic[1876],1747.0
+2357,14827,Greek,2,Language[1747]->Greek[14827],1747.0
+2357,43604,Heraklion,3,Religious Place[856]->Crete[1220]->Heraklion[43604],1220.0
+2357,43615,Catholic Christianity,3,Religious Group[8]->Christian[1573]->Catholic Christianity[43615],1573.0
+2357,43630,Catholicism,3,Religious Group[8]->Christian[1573]->Catholicism[43630],1573.0
+2358,8,Religious Group,1,Religious Group[8],
+2358,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
+2358,856,Religious Place,1,Religious Place[856],
+2358,1003,Monastery,2,Religious Place[856]->Monastery[1003],856.0
+2358,1220,Crete,2,Religious Place[856]->Crete[1220],856.0
+2358,1488,Mosque,2,Religious Place[856]->Mosque[1488],856.0
+2358,1706,Christian Orthodox,3,Religious Group[8]->Christian[1573]->Christian Orthodox[1706],1573.0
+2358,1747,Language,1,Language[1747],
+2358,1876,Turkic,2,Language[1747]->Turkic[1876],1747.0
+2358,14827,Greek,2,Language[1747]->Greek[14827],1747.0
+2358,43604,Heraklion,3,Religious Place[856]->Crete[1220]->Heraklion[43604],1220.0
+2358,43615,Catholic Christianity,3,Religious Group[8]->Christian[1573]->Catholic Christianity[43615],1573.0
+2359,8,Religious Group,1,Religious Group[8],
+2359,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
+2359,856,Religious Place,1,Religious Place[856],
+2359,857,Monument,2,Religious Place[856]->Monument[857],856.0
+2359,1003,Monastery,2,Religious Place[856]->Monastery[1003],856.0
+2359,1220,Crete,2,Religious Place[856]->Crete[1220],856.0
+2359,1488,Mosque,2,Religious Place[856]->Mosque[1488],856.0
+2359,1573,Christian,2,Religious Group[8]->Christian[1573],8.0
+2359,1747,Language,1,Language[1747],
+2359,1876,Turkic,2,Language[1747]->Turkic[1876],1747.0
+2359,14827,Greek,2,Language[1747]->Greek[14827],1747.0
+2359,43562,Church,2,Religious Place[856]->Church[43562],856.0
+2359,43600,Sunni Islam,2,Religious Group[8]->Sunni Islam[43600],8.0
+2359,43615,Catholic Christianity,3,Religious Group[8]->Christian[1573]->Catholic Christianity[43615],1573.0
+2360,8,Religious Group,1,Religious Group[8],
+2360,33,Mesoamerican Religions,2,Religious Group[8]->Mesoamerican Religions[33],8.0
+2360,496,Toltec Religion,3,Religious Group[8]->Mesoamerican Religions[33]->Toltec Religion[496],33.0
+2360,1747,Language,1,Language[1747],
+2360,14808,English,2,Language[1747]->English[14808],1747.0
+2361,8,Religious Group,1,Religious Group[8],
+2361,38,Native American (North American) Religions,2,Religious Group[8]->Native American (North American) Religions[38],8.0
+2361,1747,Language,1,Language[1747],
+2361,1788,Siouan,2,Language[1747]->Siouan[1788],1747.0
+2361,1798,Iroquoian,2,Language[1747]->Iroquoian[1798],1747.0
+2361,1845,Muskogean,2,Language[1747]->Muskogean[1845],1747.0
+2361,2098,Catawban,3,Language[1747]->Siouan[1788]->Catawban[2098],1788.0
+2361,2099,Core Siouan,3,Language[1747]->Siouan[1788]->Core Siouan[2099],1788.0
+2361,2126,Cherokee,3,Language[1747]->Iroquoian[1798]->Cherokee[2126],1798.0
+2361,2299,Western Muskogean,3,Language[1747]->Muskogean[1845]->Western Muskogean[2299],1845.0
+2361,2300,Alabaman-Koasati,3,Language[1747]->Muskogean[1845]->Alabaman-Koasati[2300],1845.0
+2361,2301,Mikasuki,3,Language[1747]->Muskogean[1845]->Mikasuki[2301],1845.0
+2361,2302,Creek,3,Language[1747]->Muskogean[1845]->Creek[2302],1845.0
+2361,3405,Ohio Valley Siouan,4,Language[1747]->Siouan[1788]->Core Siouan[2099]->Ohio Valley Siouan[3405],2099.0
+2361,3407,Mississippi Valley,4,Language[1747]->Siouan[1788]->Core Siouan[2099]->Mississippi Valley[3407],2099.0
+2361,4671,Dhegiha,5,Language[1747]->Siouan[1788]->Core Siouan[2099]->Mississippi Valley[3407]->Dhegiha[4671],3407.0
+2361,43177,Language Isolates,2,Language[1747]->Language Isolates[43177],1747.0
+2361,43224,Natchez,3,Language[1747]->Language Isolates[43177]->Natchez[43224],43177.0
+2361,43270,Tunica,3,Language[1747]->Language Isolates[43177]->Tunica[43270],43177.0
+2362,8,Religious Group,1,Religious Group[8],
+2362,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
+2362,284,Sunni,3,Religious Group[8]->Islamic Traditions[24]->Sunni[284],24.0
+2362,879,Religious Group (fr),1,Religious Group (fr)[879],
+2362,1711,Islamic Jurisprudence,3,Religious Group[8]->Islamic Traditions[24]->Islamic Jurisprudence[1711],24.0
+2362,1747,Language,1,Language[1747],
+2362,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
+2362,27700,مجموعة سنية,2,Religious Group (fr)[879]->مجموعة سنية[27700],879.0
+2362,43634,مجموعة حاكمة,2,Religious Group (fr)[879]->مجموعة حاكمة[43634],879.0
+2362,43635,الإسلام,2,Religious Group[8]->الإسلام[43635],8.0
+2363,8,Religious Group,1,Religious Group[8],
+2363,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
+2363,273,Sufism,3,Religious Group[8]->Islamic Traditions[24]->Sufism[273],24.0
+2363,284,Sunni,3,Religious Group[8]->Islamic Traditions[24]->Sunni[284],24.0
+2363,997,Sufi,2,Religious Group[8]->Sufi[997],8.0
+2363,1321,Islamic Modernization,3,Religious Group[8]->Islamic Traditions[24]->Islamic Modernization[1321],24.0
+2363,1369,Islamic Revival,3,Religious Group[8]->Islamic Traditions[24]->Islamic Revival[1369],24.0
+2363,1470,Sufi Order,2,Religious Group[8]->Sufi Order[1470],8.0
+2363,1747,Language,1,Language[1747],
+2363,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
+2363,43600,Sunni Islam,2,Religious Group[8]->Sunni Islam[43600],8.0
+2364,8,Religious Group,1,Religious Group[8],
+2364,297,Shintō,2,Religious Group[8]->Shintō[297],8.0
+2364,406,Sect Shintō,3,Religious Group[8]->Shintō[297]->Sect Shintō[406],297.0
+2364,407,Shrine Shintō,3,Religious Group[8]->Shintō[297]->Shrine Shintō[407],297.0
+2364,856,Religious Place,1,Religious Place[856],
+2364,865,Temple,2,Religious Place[856]->Temple[865],856.0
+2364,923,Shrine,2,Religious Place[856]->Shrine[923],856.0
+2364,934,Shrines,2,Religious Place[856]->Shrines[934],856.0
+2364,1747,Language,1,Language[1747],
+2364,1889,Japonic,2,Language[1747]->Japonic[1889],1747.0
+2364,2444,Japanesic,3,Language[1747]->Japonic[1889]->Japanesic[2444],1889.0
+2364,14829,Japan,2,Religious Place[856]->Japan[14829],856.0
+2364,14834,Japanese,4,Language[1747]->Japonic[1889]->Japanesic[2444]->Japanese[14834],2444.0
+2364,43706,Yamagata Prefecture,3,,14829.0
+2365,8,Religious Group,1,Religious Group[8],
+2365,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
+2365,996,Roman Catholic,2,Religious Group[8]->Roman Catholic[996],8.0
+2365,1038,Subaltern Religion,2,Religious Group[8]->Subaltern Religion[1038],8.0
+2365,1590,Spanish Catholicism,2,Religious Group[8]->Spanish Catholicism[1590],8.0
+2365,1640,State Religion,2,Religious Group[8]->State Religion[1640],8.0
+2365,1747,Language,1,Language[1747],
+2365,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
+2366,8,Religious Group,1,Religious Group[8],
+2366,905,Abrahamic,2,Religious Group[8]->Abrahamic[905],8.0
+2366,997,Sufi,2,Religious Group[8]->Sufi[997],8.0
+2366,1390,Shi'a Islam,2,Religious Group[8]->Shi'a Islam[1390],8.0
+2366,1678,Islam,3,Religious Group[8]->Abrahamic[905]->Islam[1678],905.0
+2366,1747,Language,1,Language[1747],
+2366,14808,English,2,Language[1747]->English[14808],1747.0
+2366,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
+2366,43599,Hausa Language,2,Religious Group[8]->Hausa Language[43599],8.0
+2366,43600,Sunni Islam,2,Religious Group[8]->Sunni Islam[43600],8.0
+2367,8,Religious Group,1,Religious Group[8],
+2367,856,Religious Place,1,Religious Place[856],
+2367,998,North American Religions,2,Religious Group[8]->North American Religions[998],8.0
+2367,999,Catholic,2,Religious Group[8]->Catholic[999],8.0
+2367,1416,Jesuits; Society of Jesus,2,Religious Group[8]->Jesuits; Society of Jesus[1416],8.0
+2367,1590,Spanish Catholicism,2,Religious Group[8]->Spanish Catholicism[1590],8.0
+2367,1747,Language,1,Language[1747],
+2367,14808,English,2,Language[1747]->English[14808],1747.0
+2367,43562,Church,2,Religious Place[856]->Church[43562],856.0
+2367,43707,Pilgrimage site,2,,856.0
+2368,8,Religious Group,1,Religious Group[8],
+2368,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
+2368,256,Shiite/Shi'a,3,Religious Group[8]->Islamic Traditions[24]->Shiite/Shi'a[256],24.0
+2368,265,Jafri,4,Religious Group[8]->Islamic Traditions[24]->Shiite/Shi'a[256]->Jafri[265],256.0
+2368,268,Twelver,5,Religious Group[8]->Islamic Traditions[24]->Shiite/Shi'a[256]->Jafri[265]->Twelver[268],265.0
+2368,906,Twelver,2,Religious Group[8]->Twelver[906],8.0
+2368,1069,Text,1,Text[1069],
+2368,1302,Hadith,2,Text[1069]->Hadith[1302],1069.0
+2368,1390,Shi'a Islam,2,Religious Group[8]->Shi'a Islam[1390],8.0
+2368,1462,Shari'a,2,Text[1069]->Shari'a[1462],1069.0
+2368,1469,Fiqh,2,Text[1069]->Fiqh[1469],1069.0
+2368,1506,فقه,2,Text[1069]->فقه[1506],1069.0
+2368,1507,شيعة,2,Religious Group[8]->شيعة[1507],8.0
+2368,1508,ٱثْنَا عَشَرِيَّة,2,Religious Group[8]->ٱثْنَا عَشَرِيَّة[1508],8.0
+2368,1513,Islamic Theology,2,Text[1069]->Islamic Theology[1513],1069.0
+2368,1523,Islamic theology,3,Text[1069]->Shari'a[1462]->Islamic theology[1523],1462.0
+2368,1636,الجدل الكلامي,2,Text[1069]->الجدل الكلامي[1636],1069.0
+2368,1711,Islamic Jurisprudence,3,Religious Group[8]->Islamic Traditions[24]->Islamic Jurisprudence[1711],24.0
+2368,1747,Language,1,Language[1747],
+2368,14808,English,2,Language[1747]->English[14808],1747.0
+2368,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
+2368,27689,Islamic Law,2,Text[1069]->Islamic Law[27689],1069.0
+2368,27702,Islamic Ethics,2,Text[1069]->Islamic Ethics[27702],1069.0
+2369,8,Religious Group,1,Religious Group[8],
+2369,24,Islamic Traditions,2,Religious Group[8]->Islamic Traditions[24],8.0
+2369,273,Sufism,3,Religious Group[8]->Islamic Traditions[24]->Sufism[273],24.0
+2369,284,Sunni,3,Religious Group[8]->Islamic Traditions[24]->Sunni[284],24.0
+2369,1321,Islamic Modernization,3,Religious Group[8]->Islamic Traditions[24]->Islamic Modernization[1321],24.0
+2369,1369,Islamic Revival,3,Religious Group[8]->Islamic Traditions[24]->Islamic Revival[1369],24.0
+2369,1527,Islam in Africa,3,Religious Group[8]->Islamic Traditions[24]->Islam in Africa[1527],24.0
+2369,1747,Language,1,Language[1747],
+2369,14828,Arabic,2,Language[1747]->Arabic[14828],1747.0
+2371,8,Religious Group,1,Religious Group[8],
+2371,38,Native American (North American) Religions,2,Religious Group[8]->Native American (North American) Religions[38],8.0
+2371,1747,Language,1,Language[1747],
+2371,1825,Kiowa-Tanoan,2,Language[1747]->Kiowa-Tanoan[1825],1747.0
+2371,2249,Tewa,3,Language[1747]->Kiowa-Tanoan[1825]->Tewa[2249],1825.0
+2371,43708,Tewa Pueblo Religion,3,,38.0
+2372,8,Religious Group,1,Religious Group[8],
+2372,1069,Text,1,Text[1069],
+2372,1106,Cosmology,2,Text[1069]->Cosmology[1106],1069.0
+2372,1176,Ritual text,2,Text[1069]->Ritual text[1176],1069.0
+2372,1426,Mexica,2,Religious Group[8]->Mexica[1426],8.0
+2372,1724,Calendar,2,Text[1069]->Calendar[1724],1069.0
+2372,1747,Language,1,Language[1747],
+2372,1803,Uto-Aztecan,2,Language[1747]->Uto-Aztecan[1803],1747.0
+2372,1904,Indo-European,2,Language[1747]->Indo-European[1904],1747.0
+2372,4741,Aztec,5,Language[1747]->Uto-Aztecan[1803]->Southern Uto-Aztecan[2140]->Corachol-Aztecan[3471]->Aztec[4741],3471.0
+2372,7402,Central Nahuatl,7,Language[1747]->Uto-Aztecan[1803]->Southern Uto-Aztecan[2140]->Corachol-Aztecan[3471]->Aztec[4741]->Western Nahuatl[5989]->Central Nahuatl[7402],5989.0
+2372,8925,Classical Nahuatl,8,Language[1747]->Uto-Aztecan[1803]->Southern Uto-Aztecan[2140]->Corachol-Aztecan[3471]->Aztec[4741]->Western Nahuatl[5989]->Central Nahuatl[7402]->Classical Nahuatl[8925],7402.0
+2372,14455,Spanish,15,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Romance[9690]->Italo-Western Romance[10909]->Western Romance[11855]->Shifted Western Romance[12721]->Southwestern Shifted Romance[13415]->West Ibero-Romance[13935]->Castilic[14285]->Spanish[14455],14285.0
+2374,8,Religious Group,1,Religious Group[8],
+2374,33,Mesoamerican Religions,2,Religious Group[8]->Mesoamerican Religions[33],8.0
+2374,496,Toltec Religion,3,Religious Group[8]->Mesoamerican Religions[33]->Toltec Religion[496],33.0
+2374,856,Religious Place,1,Religious Place[856],
+2374,1144,Archaeological monument,2,Religious Place[856]->Archaeological monument[1144],856.0
+2374,1412,Ritual Deposit,2,Religious Place[856]->Ritual Deposit[1412],856.0
+2374,1453,Chichimeca,3,Religious Group[8]->Mesoamerican Religions[33]->Chichimeca[1453],33.0
+2374,1519,Mesoamerica,2,Religious Place[856]->Mesoamerica[1519],856.0
+2374,1747,Language,1,Language[1747],
+2374,14808,English,2,Language[1747]->English[14808],1747.0
+2374,43710,"Tula, Hidalgo",2,,856.0
+2378,8,Religious Group,1,Religious Group[8],
+2378,856,Religious Place,1,Religious Place[856],
+2378,865,Temple,2,Religious Place[856]->Temple[865],856.0
+2378,1426,Mexica,2,Religious Group[8]->Mexica[1426],8.0
+2378,1747,Language,1,Language[1747],
+2378,1803,Uto-Aztecan,2,Language[1747]->Uto-Aztecan[1803],1747.0
+2378,2140,Southern Uto-Aztecan,3,Language[1747]->Uto-Aztecan[1803]->Southern Uto-Aztecan[2140],1803.0
+2378,3471,Corachol-Aztecan,4,Language[1747]->Uto-Aztecan[1803]->Southern Uto-Aztecan[2140]->Corachol-Aztecan[3471],2140.0
+2378,4741,Aztec,5,Language[1747]->Uto-Aztecan[1803]->Southern Uto-Aztecan[2140]->Corachol-Aztecan[3471]->Aztec[4741],3471.0
+2378,5989,Western Nahuatl,6,Language[1747]->Uto-Aztecan[1803]->Southern Uto-Aztecan[2140]->Corachol-Aztecan[3471]->Aztec[4741]->Western Nahuatl[5989],4741.0
+2378,7402,Central Nahuatl,7,Language[1747]->Uto-Aztecan[1803]->Southern Uto-Aztecan[2140]->Corachol-Aztecan[3471]->Aztec[4741]->Western Nahuatl[5989]->Central Nahuatl[7402],5989.0
+2379,8,Religious Group,1,Religious Group[8],
+2379,856,Religious Place,1,Religious Place[856],
+2379,927,Religious Complex,2,Religious Place[856]->Religious Complex[927],856.0
+2379,1413,Archaeological Site,2,Religious Place[856]->Archaeological Site[1413],856.0
+2379,1536,Sacred mountain,2,Religious Place[856]->Sacred mountain[1536],856.0
+2379,1554,Ritual centre,2,Religious Place[856]->Ritual centre[1554],856.0
+2379,1716,Sicily,2,Religious Place[856]->Sicily[1716],856.0
+2379,1747,Language,1,Language[1747],
+2379,1973,Unclassifiable,2,Language[1747]->Unclassifiable[1973],1747.0
+2379,14806,Unknown,2,Language[1747]->Unknown[14806],1747.0
+2379,43578,Italy,2,Religious Place[856]->Italy[43578],856.0
+2379,43638,Sicanian,2,Religious Group[8]->Sicanian[43638],8.0
+2380,8,Religious Group,1,Religious Group[8],
+2380,776,Ancient Mediterranean,2,Religious Group[8]->Ancient Mediterranean[776],8.0
+2380,856,Religious Place,1,Religious Place[856],
+2380,865,Temple,2,Religious Place[856]->Temple[865],856.0
+2380,927,Religious Complex,2,Religious Place[856]->Religious Complex[927],856.0
+2380,932,Sacred Enclosure,2,Religious Place[856]->Sacred Enclosure[932],856.0
+2380,1536,Sacred mountain,2,Religious Place[856]->Sacred mountain[1536],856.0
+2380,1554,Ritual centre,2,Religious Place[856]->Ritual centre[1554],856.0
+2380,1715,Elymian Religion,2,Religious Group[8]->Elymian Religion[1715],8.0
+2380,1716,Sicily,2,Religious Place[856]->Sicily[1716],856.0
+2381,8,Religious Group,1,Religious Group[8],
+2381,22,Greek Religions,2,Religious Group[8]->Greek Religions[22],8.0
+2381,856,Religious Place,1,Religious Place[856],
+2381,865,Temple,2,Religious Place[856]->Temple[865],856.0
+2381,982,Greek Cult,2,Religious Group[8]->Greek Cult[982],8.0
+2382,8,Religious Group,1,Religious Group[8],
+2382,856,Religious Place,1,Religious Place[856],
+2382,1352,Mexican Religion,2,Religious Group[8]->Mexican Religion[1352],8.0
+2382,1426,Mexica,2,Religious Group[8]->Mexica[1426],8.0
+2382,1519,Mesoamerica,2,Religious Place[856]->Mesoamerica[1519],856.0
+2382,1533,Basin of Mexico,3,Religious Place[856]->Mesoamerica[1519]->Basin of Mexico[1533],1519.0
+2382,1747,Language,1,Language[1747],
+2382,14806,Unknown,2,Language[1747]->Unknown[14806],1747.0
+2383,8,Religious Group,1,Religious Group[8],
+2383,33,Mesoamerican Religions,2,Religious Group[8]->Mesoamerican Religions[33],8.0
+2383,856,Religious Place,1,Religious Place[856],
+2383,1413,Archaeological Site,2,Religious Place[856]->Archaeological Site[1413],856.0
+2383,1453,Chichimeca,3,Religious Group[8]->Mesoamerican Religions[33]->Chichimeca[1453],33.0
+2384,8,Religious Group,1,Religious Group[8],
+2384,741,Hellenistic Religions,2,Religious Group[8]->Hellenistic Religions[741],8.0
+2384,776,Ancient Mediterranean,2,Religious Group[8]->Ancient Mediterranean[776],8.0
+2384,856,Religious Place,1,Religious Place[856],
+2384,865,Temple,2,Religious Place[856]->Temple[865],856.0
+2384,918,Ancient Syrian Religion,2,Religious Group[8]->Ancient Syrian Religion[918],8.0
+2384,927,Religious Complex,2,Religious Place[856]->Religious Complex[927],856.0
+2384,932,Sacred Enclosure,2,Religious Place[856]->Sacred Enclosure[932],856.0
+2384,1199,Graeco-Roman,2,Religious Place[856]->Graeco-Roman[1199],856.0
+2384,1230,Aramaic Religions,2,Religious Group[8]->Aramaic Religions[1230],8.0
+2384,1238,Religious Practice,2,Religious Group[8]->Religious Practice[1238],8.0
+2384,1300,Polytheistic,2,Religious Group[8]->Polytheistic[1300],8.0
+2384,1361,Near East,2,Religious Group[8]->Near East[1361],8.0
+2384,1413,Archaeological Site,2,Religious Place[856]->Archaeological Site[1413],856.0
+2384,1554,Ritual centre,2,Religious Place[856]->Ritual centre[1554],856.0
+2384,1630,Mesopotamia,2,Religious Place[856]->Mesopotamia[1630],856.0
+2385,8,Religious Group,1,Religious Group[8],
+2385,22,Greek Religions,2,Religious Group[8]->Greek Religions[22],8.0
+2385,856,Religious Place,1,Religious Place[856],
+2385,865,Temple,2,Religious Place[856]->Temple[865],856.0
+2385,868,Altar,2,Religious Place[856]->Altar[868],856.0
+2385,928,Temenos,2,Religious Place[856]->Temenos[928],856.0
+2385,932,Sacred Enclosure,2,Religious Place[856]->Sacred Enclosure[932],856.0
+2385,982,Greek Cult,2,Religious Group[8]->Greek Cult[982],8.0
+2385,1144,Archaeological monument,2,Religious Place[856]->Archaeological monument[1144],856.0
+2385,1190,Phoenician Cult,2,Religious Group[8]->Phoenician Cult[1190],8.0
+2386,8,Religious Group,1,Religious Group[8],
+2386,22,Greek Religions,2,Religious Group[8]->Greek Religions[22],8.0
+2386,42,Roman Religious Traditions,2,Religious Group[8]->Roman Religious Traditions[42],8.0
+2386,856,Religious Place,1,Religious Place[856],
+2386,900,Roman Religions,2,Religious Group[8]->Roman Religions[900],8.0
+2386,1021,Orthodoxy,2,Religious Group[8]->Orthodoxy[1021],8.0
+2386,1199,Graeco-Roman,2,Religious Place[856]->Graeco-Roman[1199],856.0
+2386,1561,Orthodoxy,2,Religious Group[8]->Orthodoxy[1561],8.0
+2386,1570,Christianity,2,Religious Group[8]->Christianity[1570],8.0
+2386,1571,Arianism,2,Religious Group[8]->Arianism[1571],8.0
+2386,1573,Christian,2,Religious Group[8]->Christian[1573],8.0
+2386,1575,Christianity,2,Religious Group[8]->Christianity[1575],8.0
+2387,8,Religious Group,1,Religious Group[8],
+2387,38,Native American (North American) Religions,2,Religious Group[8]->Native American (North American) Religions[38],8.0
+2387,856,Religious Place,1,Religious Place[856],
+2387,1413,Archaeological Site,2,Religious Place[856]->Archaeological Site[1413],856.0
+2387,1475,Sacred Territory,2,Religious Place[856]->Sacred Territory[1475],856.0
+2387,1747,Language,1,Language[1747],
+2387,1803,Uto-Aztecan,2,Language[1747]->Uto-Aztecan[1803],1747.0
+2387,2141,Northern Uto-Aztecan,3,Language[1747]->Uto-Aztecan[1803]->Northern Uto-Aztecan[2141],1803.0
+2387,14806,Unknown,2,Language[1747]->Unknown[14806],1747.0
+2387,43613,Boca de Potrerillos,3,Religious Place[856]->Archaeological Site[1413]->Boca de Potrerillos[43613],1413.0
+2387,43614,Hokano-Coahuiltecan Religions,3,Religious Group[8]->Native American (North American) Religions[38]->Hokano-Coahuiltecan Religions[43614],38.0
+2393,8,Religious Group,1,Religious Group[8],
+2393,27,Jewish Traditions,2,Religious Group[8]->Jewish Traditions[27],8.0
+2393,776,Ancient Mediterranean,2,Religious Group[8]->Ancient Mediterranean[776],8.0
+2393,856,Religious Place,1,Religious Place[856],
+2393,865,Temple,2,Religious Place[856]->Temple[865],856.0
+2393,905,Abrahamic,2,Religious Group[8]->Abrahamic[905],8.0
+2393,923,Shrine,2,Religious Place[856]->Shrine[923],856.0
+2393,1361,Near East,2,Religious Group[8]->Near East[1361],8.0
+2393,1747,Language,1,Language[1747],
+2393,1867,Unattested,2,Language[1747]->Unattested[1867],1747.0
+2394,8,Religious Group,1,Religious Group[8],
+2394,15,Canaanite Religions,2,Religious Group[8]->Canaanite Religions[15],8.0
+2394,856,Religious Place,1,Religious Place[856],
+2394,905,Abrahamic,2,Religious Group[8]->Abrahamic[905],8.0
+2394,927,Religious Complex,2,Religious Place[856]->Religious Complex[927],856.0
+2394,929,Levantine Religion,2,Religious Group[8]->Levantine Religion[929],8.0
+2394,934,Shrines,2,Religious Place[856]->Shrines[934],856.0
+2394,1293,Israelite Religion,2,Religious Group[8]->Israelite Religion[1293],8.0
+2394,1413,Archaeological Site,2,Religious Place[856]->Archaeological Site[1413],856.0
+2394,1558,Israel,3,Religious Group[8]->Levantine Religion[929]->Israel[1558],929.0
+2394,1702,Ancient Western Asia,2,Religious Group[8]->Ancient Western Asia[1702],8.0
+2394,1747,Language,1,Language[1747],
+2394,1977,Afro-Asiatic,2,Language[1747]->Afro-Asiatic[1977],1747.0
+2394,3237,Semitic,3,Language[1747]->Afro-Asiatic[1977]->Semitic[3237],1977.0
+2394,4434,West Semitic,4,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434],3237.0
+2395,8,Religious Group,1,Religious Group[8],
+2395,15,Canaanite Religions,2,Religious Group[8]->Canaanite Religions[15],8.0
+2395,27,Jewish Traditions,2,Religious Group[8]->Jewish Traditions[27],8.0
+2395,856,Religious Place,1,Religious Place[856],
+2395,868,Altar,2,Religious Place[856]->Altar[868],856.0
+2395,905,Abrahamic,2,Religious Group[8]->Abrahamic[905],8.0
+2395,927,Religious Complex,2,Religious Place[856]->Religious Complex[927],856.0
+2395,929,Levantine Religion,2,Religious Group[8]->Levantine Religion[929],8.0
+2395,930,Syro-Palestinian Religion,2,Religious Group[8]->Syro-Palestinian Religion[930],8.0
+2395,934,Shrines,2,Religious Place[856]->Shrines[934],856.0
+2395,1293,Israelite Religion,2,Religious Group[8]->Israelite Religion[1293],8.0
+2395,1413,Archaeological Site,2,Religious Place[856]->Archaeological Site[1413],856.0
+2395,1629,Private residence,2,Religious Place[856]->Private residence[1629],856.0
+2395,1702,Ancient Western Asia,2,Religious Group[8]->Ancient Western Asia[1702],8.0
+2395,1747,Language,1,Language[1747],
+2395,1977,Afro-Asiatic,2,Language[1747]->Afro-Asiatic[1977],1747.0
+2395,3237,Semitic,3,Language[1747]->Afro-Asiatic[1977]->Semitic[3237],1977.0
+2395,4434,West Semitic,4,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434],3237.0
+2396,8,Religious Group,1,Religious Group[8],
+2396,774,Early Christianity,2,Religious Group[8]->Early Christianity[774],8.0
+2396,856,Religious Place,1,Religious Place[856],
+2396,1323,Cyprus,2,Religious Place[856]->Cyprus[1323],856.0
+2396,1573,Christian,2,Religious Group[8]->Christian[1573],8.0
+2396,1706,Christian Orthodox,3,Religious Group[8]->Christian[1573]->Christian Orthodox[1706],1573.0
+2396,1747,Language,1,Language[1747],
+2396,1904,Indo-European,2,Language[1747]->Indo-European[1904],1747.0
+2396,2479,Classical Indo-European,3,Language[1747]->Indo-European[1904]->Classical Indo-European[2479],1904.0
+2396,4027,Graeco-Phrygian,4,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Graeco-Phrygian[4027],2479.0
+2396,5341,Greek,5,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Graeco-Phrygian[4027]->Greek[5341],4027.0
+2396,43637,Salamis,3,Religious Place[856]->Cyprus[1323]->Salamis[43637],1323.0
+2397,8,Religious Group,1,Religious Group[8],
+2397,774,Early Christianity,2,Religious Group[8]->Early Christianity[774],8.0
+2397,856,Religious Place,1,Religious Place[856],
+2397,864,Constantine,2,Religious Place[856]->Constantine[864],856.0
+2397,870,Basilica,2,Religious Place[856]->Basilica[870],856.0
+2397,905,Abrahamic,2,Religious Group[8]->Abrahamic[905],8.0
+2397,923,Shrine,2,Religious Place[856]->Shrine[923],856.0
+2397,984,Medieval Christianity,2,Religious Group[8]->Medieval Christianity[984],8.0
+2397,996,Roman Catholic,2,Religious Group[8]->Roman Catholic[996],8.0
+2397,1021,Orthodoxy,2,Religious Group[8]->Orthodoxy[1021],8.0
+2397,1067,Tomb,2,Religious Place[856]->Tomb[1067],856.0
+2397,1396,Jerusalem,2,Religious Place[856]->Jerusalem[1396],856.0
+2398,8,Religious Group,1,Religious Group[8],
+2398,856,Religious Place,1,Religious Place[856],
+2398,865,Temple,2,Religious Place[856]->Temple[865],856.0
+2398,930,Syro-Palestinian Religion,2,Religious Group[8]->Syro-Palestinian Religion[930],8.0
+2398,1144,Archaeological monument,2,Religious Place[856]->Archaeological monument[1144],856.0
+2398,1230,Aramaic Religions,2,Religious Group[8]->Aramaic Religions[1230],8.0
+2398,1438,Temple Buildings and Temple Cult,2,Religious Group[8]->Temple Buildings and Temple Cult[1438],8.0
+2400,8,Religious Group,1,Religious Group[8],
+2400,22,Greek Religions,2,Religious Group[8]->Greek Religions[22],8.0
+2400,741,Hellenistic Religions,2,Religious Group[8]->Hellenistic Religions[741],8.0
+2400,776,Ancient Mediterranean,2,Religious Group[8]->Ancient Mediterranean[776],8.0
+2400,856,Religious Place,1,Religious Place[856],
+2400,865,Temple,2,Religious Place[856]->Temple[865],856.0
+2400,900,Roman Religions,2,Religious Group[8]->Roman Religions[900],8.0
+2400,923,Shrine,2,Religious Place[856]->Shrine[923],856.0
+2400,928,Temenos,2,Religious Place[856]->Temenos[928],856.0
+2400,932,Sacred Enclosure,2,Religious Place[856]->Sacred Enclosure[932],856.0
+2400,982,Greek Cult,2,Religious Group[8]->Greek Cult[982],8.0
+2400,1100,Aegean,2,Religious Place[856]->Aegean[1100],856.0
+2400,1199,Graeco-Roman,2,Religious Place[856]->Graeco-Roman[1199],856.0
+2400,1413,Archaeological Site,2,Religious Place[856]->Archaeological Site[1413],856.0
+2400,1476,Sacred Land,2,Religious Place[856]->Sacred Land[1476],856.0
+2401,8,Religious Group,1,Religious Group[8],
+2401,18,Christian Traditions,2,Religious Group[8]->Christian Traditions[18],8.0
+2401,856,Religious Place,1,Religious Place[856],
+2401,870,Basilica,2,Religious Place[856]->Basilica[870],856.0
+2402,8,Religious Group,1,Religious Group[8],
+2402,856,Religious Place,1,Religious Place[856],
+2402,918,Ancient Syrian Religion,2,Religious Group[8]->Ancient Syrian Religion[918],8.0
+2402,1144,Archaeological monument,2,Religious Place[856]->Archaeological monument[1144],856.0
+2402,1521,Temple,3,Religious Place[856]->Archaeological monument[1144]->Temple[1521],1144.0
+2402,1702,Ancient Western Asia,2,Religious Group[8]->Ancient Western Asia[1702],8.0
+2402,1747,Language,1,Language[1747],
+2402,1764,Hurro-Urartian,2,Language[1747]->Hurro-Urartian[1764],1747.0
+2402,1904,Indo-European,2,Language[1747]->Indo-European[1904],1747.0
+2402,1977,Afro-Asiatic,2,Language[1747]->Afro-Asiatic[1977],1747.0
+2402,2036,Hurrian,3,Language[1747]->Hurro-Urartian[1764]->Hurrian[2036],1764.0
+2402,2481,Anatolian,3,Language[1747]->Indo-European[1904]->Anatolian[2481],1904.0
+2402,3237,Semitic,3,Language[1747]->Afro-Asiatic[1977]->Semitic[3237],1977.0
+2402,4038,Luvo-Lydian,4,Language[1747]->Indo-European[1904]->Anatolian[2481]->Luvo-Lydian[4038],2481.0
+2402,4039,Hittite,4,Language[1747]->Indo-European[1904]->Anatolian[2481]->Hittite[4039],2481.0
+2402,4432,East Semitic,4,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->East Semitic[4432],3237.0
+2402,4434,West Semitic,4,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434],3237.0
+2402,5360,Luvo-Palaic,5,Language[1747]->Indo-European[1904]->Anatolian[2481]->Luvo-Lydian[4038]->Luvo-Palaic[5360],4038.0
+2402,5692,Akkadian,5,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->East Semitic[4432]->Akkadian[5692],4432.0
+2402,5695,Central Semitic,5,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695],4434.0
+2402,6764,Luvic,6,Language[1747]->Indo-European[1904]->Anatolian[2481]->Luvo-Lydian[4038]->Luvo-Palaic[5360]->Luvic[6764],5360.0
+2402,7096,Northwest Semitic,6,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096],5695.0
+2402,8314,Luvian,7,Language[1747]->Indo-European[1904]->Anatolian[2481]->Luvo-Lydian[4038]->Luvo-Palaic[5360]->Luvic[6764]->Luvian[8314],6764.0
+2402,8598,Aramaic,7,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Aramaic[8598],7096.0
+2402,9740,Hieroglyphic Luwian,8,Language[1747]->Indo-European[1904]->Anatolian[2481]->Luvo-Lydian[4038]->Luvo-Palaic[5360]->Luvic[6764]->Luvian[8314]->Hieroglyphic Luwian[9740],8314.0
+2402,9971,Old Aramaic-Sam'alian,8,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Aramaic[8598]->Old Aramaic-Sam'alian[9971],8598.0
+2403,8,Religious Group,1,Religious Group[8],
+2403,33,Mesoamerican Religions,2,Religious Group[8]->Mesoamerican Religions[33],8.0
+2403,856,Religious Place,1,Religious Place[856],
+2403,1413,Archaeological Site,2,Religious Place[856]->Archaeological Site[1413],856.0
+2403,1519,Mesoamerica,2,Religious Place[856]->Mesoamerica[1519],856.0
+2403,1533,Basin of Mexico,3,Religious Place[856]->Mesoamerica[1519]->Basin of Mexico[1533],1519.0
+2403,1747,Language,1,Language[1747],
+2403,1870,Mayan,2,Language[1747]->Mayan[1870],1747.0
+2403,43530,Cacaxtla Religion,3,Religious Group[8]->Mesoamerican Religions[33]->Cacaxtla Religion[43530],33.0
+2403,43556,Puebla-Tlaxcala Valley,3,Religious Place[856]->Mesoamerica[1519]->Puebla-Tlaxcala Valley[43556],1519.0
+2403,43557,Xochitecatl-Cacaxtla,3,Religious Place[856]->Archaeological Site[1413]->Xochitecatl-Cacaxtla[43557],1413.0
+2406,8,Religious Group,1,Religious Group[8],
+2406,22,Greek Religions,2,Religious Group[8]->Greek Religions[22],8.0
+2406,856,Religious Place,1,Religious Place[856],
+2406,865,Temple,2,Religious Place[856]->Temple[865],856.0
+2406,868,Altar,2,Religious Place[856]->Altar[868],856.0
+2406,932,Sacred Enclosure,2,Religious Place[856]->Sacred Enclosure[932],856.0
+2406,982,Greek Cult,2,Religious Group[8]->Greek Cult[982],8.0
+2406,1126,Greece,2,Religious Place[856]->Greece[1126],856.0
+2406,1199,Graeco-Roman,2,Religious Place[856]->Graeco-Roman[1199],856.0
+2409,8,Religious Group,1,Religious Group[8],
+2409,15,Canaanite Religions,2,Religious Group[8]->Canaanite Religions[15],8.0
+2409,856,Religious Place,1,Religious Place[856],
+2409,923,Shrine,2,Religious Place[856]->Shrine[923],856.0
+2409,924,Open-Air Sanctuary,2,Religious Place[856]->Open-Air Sanctuary[924],856.0
+2409,929,Levantine Religion,2,Religious Group[8]->Levantine Religion[929],8.0
+2409,930,Syro-Palestinian Religion,2,Religious Group[8]->Syro-Palestinian Religion[930],8.0
+2410,8,Religious Group,1,Religious Group[8],
+2410,15,Canaanite Religions,2,Religious Group[8]->Canaanite Religions[15],8.0
+2410,856,Religious Place,1,Religious Place[856],
+2410,865,Temple,2,Religious Place[856]->Temple[865],856.0
+2410,927,Religious Complex,2,Religious Place[856]->Religious Complex[927],856.0
+2410,929,Levantine Religion,2,Religious Group[8]->Levantine Religion[929],8.0
+2410,930,Syro-Palestinian Religion,2,Religious Group[8]->Syro-Palestinian Religion[930],8.0
+2412,8,Religious Group,1,Religious Group[8],
+2412,15,Canaanite Religions,2,Religious Group[8]->Canaanite Religions[15],8.0
+2412,856,Religious Place,1,Religious Place[856],
+2412,923,Shrine,2,Religious Place[856]->Shrine[923],856.0
+2412,924,Open-Air Sanctuary,2,Religious Place[856]->Open-Air Sanctuary[924],856.0
+2412,927,Religious Complex,2,Religious Place[856]->Religious Complex[927],856.0
+2412,929,Levantine Religion,2,Religious Group[8]->Levantine Religion[929],8.0
+2412,930,Syro-Palestinian Religion,2,Religious Group[8]->Syro-Palestinian Religion[930],8.0
+2415,8,Religious Group,1,Religious Group[8],
+2415,856,Religious Place,1,Religious Place[856],
+2415,870,Basilica,2,Religious Place[856]->Basilica[870],856.0
+2415,905,Abrahamic,2,Religious Group[8]->Abrahamic[905],8.0
+2415,1021,Orthodoxy,2,Religious Group[8]->Orthodoxy[1021],8.0
+2415,1126,Greece,2,Religious Place[856]->Greece[1126],856.0
+2415,1148,Balkans,2,Religious Group[8]->Balkans[1148],8.0
+2415,1413,Archaeological Site,2,Religious Place[856]->Archaeological Site[1413],856.0
+2415,1537,Cathedral,2,Religious Place[856]->Cathedral[1537],856.0
+2415,1570,Christianity,2,Religious Group[8]->Christianity[1570],8.0
+2415,1747,Language,1,Language[1747],
+2415,14827,Greek,2,Language[1747]->Greek[14827],1747.0
+2415,43562,Church,2,Religious Place[856]->Church[43562],856.0
+2415,43642,Epirus,2,,856.0
+2415,43643,Orthodox Christianity,2,,8.0
+2416,8,Religious Group,1,Religious Group[8],
+2416,856,Religious Place,1,Religious Place[856],
+2416,905,Abrahamic,2,Religious Group[8]->Abrahamic[905],8.0
+2416,1021,Orthodoxy,2,Religious Group[8]->Orthodoxy[1021],8.0
+2416,1126,Greece,2,Religious Place[856]->Greece[1126],856.0
+2416,1747,Language,1,Language[1747],
+2416,1876,Turkic,2,Language[1747]->Turkic[1876],1747.0
+2416,14827,Greek,2,Language[1747]->Greek[14827],1747.0
+2416,43562,Church,2,Religious Place[856]->Church[43562],856.0
+2416,43600,Sunni Islam,2,Religious Group[8]->Sunni Islam[43600],8.0

@@ -8,7 +8,7 @@ answers = pd.read_csv("../data/preprocessed/answers_conflict.csv")
 entries = pd.read_csv("../data/preprocessed/entry_data.csv")
 
 # just take out one question
-question = "food_taboos"  # "extra_ritual_group_markers"
+question = "extra_ritual_group_markers"
 answers = answers[answers["question_short"].isin(["violent_external", question])]
 answers = answers[["entry_id", "question_short", "answer_value"]]
 answers = answers.pivot(
@@ -46,20 +46,36 @@ df_time_intervals = smooth_time_intervals(answers, 100, 20)
 
 # plot the data
 world_regions = ["Europe", "Africa", "South Asia", "Southwest Asia"]
-wr = world_regions[0]
-fig, ax = plt.subplots(figsize=(12, 6))
-sns.lineplot(
-    data=df_time_intervals[df_time_intervals["world_region"] == wr],
-    x="time_bin",
-    y="violent_external",
-    color="tab:blue",
+fig, axes = plt.subplots(2, 2, figsize=(14, 10), sharey=True)
+fig.suptitle(
+    "Violent External Conflict and Extra-Ritual Group Markers Across Regions",
+    fontsize=16,
 )
-sns.lineplot(
-    data=df_time_intervals[df_time_intervals["world_region"] == wr],
-    x="time_bin",
-    y=question,
-    color="tab:orange",
-)
+
+for ax, wr in zip(axes.flatten(), world_regions):
+    sns.lineplot(
+        data=df_time_intervals[df_time_intervals["world_region"] == wr],
+        x="time_bin",
+        y="violent_external",
+        color="tab:blue",
+        label="Violent External Conflict",
+        ax=ax,
+    )
+    sns.lineplot(
+        data=df_time_intervals[df_time_intervals["world_region"] == wr],
+        x="time_bin",
+        y=question,
+        color="tab:orange",
+        label="Extra-Ritual Group Markers",
+        ax=ax,
+    )
+    ax.set_title(wr)
+    ax.set_ylabel("Fraction of Cultures")
+    ax.set_xlabel("Time (100 year bins)")
+    ax.legend()
+
+plt.tight_layout(rect=[0, 0.03, 1, 0.95])  # Adjust the rect to fit the suptitle
+plt.show()
 
 # really looks like these are just different types of cultures
 # then there are sometimes fewer and sometimes more of these

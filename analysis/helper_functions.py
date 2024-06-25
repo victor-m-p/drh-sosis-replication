@@ -3,27 +3,27 @@ from scipy.stats import chi2_contingency
 
 
 def code_conflict(row):
-    if row["violent external"] == 1 and row["violent internal"] == 0:
+    if row["violent_external"] == 1 and row["violent_internal"] == 0:
         return "External Only"
-    elif row["violent external"] == 0 and row["violent internal"] == 1:
+    elif row["violent_external"] == 0 and row["violent_internal"] == 1:
         return "Internal Only"
-    elif row["violent external"] == 1 and row["violent internal"] == 1:
+    elif row["violent_external"] == 1 and row["violent_internal"] == 1:
         return "Internal and External"
     else:
         return "No Violent Conflict"
 
 
 def code_external_conflict(row):
-    if row["violent external"] == 1:
+    if row["violent_external"] == 1:
         return "External Violent Conflict"
     else:
         return "No External Violent Conflict"
 
 
 def code_internal_conflict(row):
-    if row["violent internal"] == 1 and row["violent external"] == 0:
+    if row["violent_internal"] == 1 and row["violent_external"] == 0:
         return "Internal Conflict only"
-    if row["violent internal"] == 0:
+    if row["violent_internal"] == 0:
         return "No Internal Conflict"
     else:
         return "Internal and External"

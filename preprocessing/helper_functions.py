@@ -53,3 +53,15 @@ def fill_answers(df):
                     df.loc[num, "answer_value"] = 0
                     df.loc[num, "answer_inferred"] = "Yes"
     return df
+
+
+def process_time_region(data, id, predictor, outcome, time, region):
+    data_subset = data[[id, predictor, outcome, time, region]]
+    data_subset = data_subset.dropna()
+    data_subset[predictor] = data_subset[predictor].astype(int)
+    data_subset[outcome] = data_subset[outcome].astype(int)
+    data_subset["year_scaled"] = (
+        data_subset[time] - data_subset[time].mean()
+    ) / data_subset[time].std()
+    data_subset[region] = pd.Categorical(data_subset[region])
+    return data_subset
