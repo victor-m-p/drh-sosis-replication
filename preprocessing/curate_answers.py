@@ -27,7 +27,7 @@ question_coding = {
     # dependent variables
     "Are extra-ritual in-group markers present:": "extra_ritual_group_markers",
     "Does membership in this religious group require permanent scarring or painful bodily alterations:": "permanent_scarring",
-    "Does membership in this religious group require painful physical positions or transitory painful wounds:": "transitory_pain",
+    # "Does membership in this religious group require painful physical positions or transitory painful wounds:": "transitory_pain",
     # sub-questions of extra-ritual in-group markers
     "Tattoos/scarification:": "tattoos_scarification",  # sub of extra-ritual in-group markers
     "Circumcision:": "circumcision",  # sub of extra-ritual in-group markers
@@ -110,6 +110,9 @@ answers_affected = pd.concat(
     [answers_inconsistent, affected_children]
 ).drop_duplicates()
 
+answers_affected.sort_values("entry_id")
+answers[answers["question_id"] == 2316]  # sample region
+
 # Remove all affected questions (both inconsistent questions and their children)
 answers_subset_filtered = answers_subset[
     ~answers_subset.set_index(["entry_id", "question_id"]).index.isin(
@@ -141,4 +144,5 @@ answers_complete = answers_complete.merge(question_names, on="question_id", how=
 from helper_functions import fill_answers
 
 answers_inferred = fill_answers(answers_complete)
+answers_inferred[answers_inferred["answer_value"].notna()]
 answers_inferred.to_csv("../data/preprocessed/answers_clean.csv", index=False)

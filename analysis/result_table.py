@@ -14,11 +14,11 @@ convert_labels = {
 }
 
 
-def extract_param(d, param):
+def extract_param(d, param, multiplier=1):
     # extract
-    estimate = d[d["parameter"] == param]["Estimate"].values[0]
-    lower = d[d["parameter"] == param]["l-95% CI"].values[0]
-    upper = d[d["parameter"] == param]["u-95% CI"].values[0]
+    estimate = d[d["parameter"] == param]["Estimate"].values[0] * multiplier
+    lower = d[d["parameter"] == param]["l-95% CI"].values[0] * multiplier
+    upper = d[d["parameter"] == param]["u-95% CI"].values[0] * multiplier
     # round
     estimate = np.round(estimate, 2)
     lower = np.round(lower, 2)
@@ -28,33 +28,65 @@ def extract_param(d, param):
     return param_string
 
 
+### create table of all results ###
 output_files = os.listdir("../data/mdl_output")
 logit_files = [i for i in output_files if "summary" in i]
-percent_files = [i for i in output_files if "results" in i]
 
 summary_list = []
 for filename, label in convert_labels.items():
     # load files
     data_logit = pd.read_csv("../data/mdl_output/" + filename + "_summary.csv")
-    data_percent = pd.read_csv("../data/mdl_output/" + filename + "_results.csv")
     # extract params
     estimate_logit = extract_param(data_logit, "violent_external")
     year_logit = extract_param(data_logit, "year_scaled")
     intercept_logit = extract_param(data_logit, "Intercept")
-    estimate_percent = extract_param(data_percent, "effect")
     # collect
     summary_row = pd.DataFrame(
         {
             "Outcome": label,
             "Intercept": intercept_logit,
-            "E. V. Conflict": estimate_logit,
-            "E. V. Conflict (%)": estimate_percent,
+            "External Violent Conflict": estimate_logit,
             "Start Year": year_logit,
         },
         index=[0],
     )
     summary_list.append(summary_row)
 summary_df = pd.concat(summary_list)
-
+summary_df.head(10)
 # rename columns and save as latex
 summary_df.to_latex("../tables/brms_table.tex", index=False)
+
+### create table of important results ###
+output_files = os.listdir("../data/mdl_output")
+percent_files = [i for i in output_files if "results" in i]
+hypothesis_files = [i for i in output_files if "hypothesis" in i]
+logit_files = [i for i in output_files if "summary" in i]
+summary_list = []
+for filename, label in convert_labels.items():
+    # load files
+    data_percent = pd.read_csv("../data/mdl_output/" + filename + "_results.csv")
+    data_hypothesis = pd.read_csv("../data/mdl_output/" + filename + "_hypotheses.csv")
+    data_logit = pd.read_csv("../data/mdl_output/" + filename + "_summary.csv")
+    data_hypothesis = data_hypothesis[
+        data_hypothesis["Hypothesis"] == "(violent_external) > 0"
+    ]
+    # extract params
+    estimate_percent = extract_param(data_percent, "effect", 100)
+    estimate_logit = extract_param(data_logit, "violent_external")
+    evidence_ratio = data_hypothesis["Evid.Ratio"].values[0]
+    posterior_probability = data_hypothesis["Post.Prob"].values[0]
+    # collect
+    summary_row = pd.DataFrame(
+        {
+            "Outcome": label,
+            "External Violent Conflict": estimate_logit,
+            "External Violent Conflict (%)": estimate_percent,
+            "Evid. Ratio": round(evidence_ratio, 2),
+            "Post. Prob": round(posterior_probability, 2),
+        },
+        index=[0],
+    )
+    summary_list.append(summary_row)
+summary_df = pd.concat(summary_list)
+summary_df = summary_df.sort_values("Evid. Ratio", ascending=False)
+summary_df

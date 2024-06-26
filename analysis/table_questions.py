@@ -3,7 +3,7 @@ import pandas as pd
 pd.set_option("display.max_colwidth", None)
 
 # load data
-answerset = pd.read_csv("../data/preprocessed/answers_conflict.csv")
+answerset = pd.read_csv("../data/preprocessed/answers_clean.csv")
 
 # create parent_question_name column
 question_names = answerset[["question_name", "question_id"]].drop_duplicates()
@@ -25,7 +25,6 @@ question_names = question_names.rename(
         "parent_question_name": "Parent Question Name",
     },
 )
-question_names.head(15)
 
 # write to latex table
 question_names.to_latex(

@@ -33,6 +33,14 @@ for (file_path in file_paths) {
         seed = 1342
     )
 
+    # Test hypothesis
+    beta <- hypothesis(fit, "violent_external > 0")
+    beta <- as.data.frame(beta$hypothesis)
+    year <- hypothesis(fit, "year_scaled > 0")
+    year <- as.data.frame(year$hypothesis)
+    hypotheses <- rbind(beta, year)
+    write_csv(hypotheses, file = paste0("../data/mdl_output/", predictor_name, "_hypotheses.csv"))
+
     # Extract the model summary
     model_summary <- summary(fit)
     coef_summary <- as.data.frame(model_summary$fixed)

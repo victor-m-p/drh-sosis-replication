@@ -1,0 +1,21 @@
+In a Bayesian regression modeling framework such as brms 
+that uses a logit link, the logit function is typically 
+used for modeling probabilities. The logit link transforms 
+the probability (which ranges between 0 and 1) to the entire 
+range of real numbers. This transformation facilitates the 
+linear modeling of effects.
+
+To transform the logit-scale estimates back to the natural 
+probability scale (i.e., a scale from 0 to 1), you would use 
+the logistic function, also known as the inverse logit function. 
+This transformation is given by:
+
+p=ex1+exp=1+exex​
+
+where pp is the probability on the natural scale and xx is the logit-scale value.
+
+To express pp in percentage terms, simply multiply the result by 100:
+
+Percentage=(ex1+ex)×100Percentage=(1+exex​)×100
+
+This transformation from the logit scale back to the probability scale is called the logistic transformation or sometimes simply the inverse logit.

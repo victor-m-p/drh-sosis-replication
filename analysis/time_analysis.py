@@ -4,11 +4,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # load data
-answers = pd.read_csv("../data/preprocessed/answers_conflict.csv")
-entries = pd.read_csv("../data/preprocessed/entry_data.csv")
+answers = pd.read_csv("../data/preprocessed/answers_clean.csv")
+entries = pd.read_csv("../data/preprocessed/entries_clean.csv")
 
 # just take out one question
-question = "extra_ritual_group_markers"
+question = "permanent_scarring"
 answers = answers[answers["question_short"].isin(["violent_external", question])]
 answers = answers[["entry_id", "question_short", "answer_value"]]
 answers = answers.pivot(
@@ -48,7 +48,7 @@ df_time_intervals = smooth_time_intervals(answers, 100, 20)
 world_regions = ["Europe", "Africa", "South Asia", "Southwest Asia"]
 fig, axes = plt.subplots(2, 2, figsize=(14, 10), sharey=True)
 fig.suptitle(
-    "Violent External Conflict and Extra-Ritual Group Markers Across Regions",
+    "Violent External Conflict and Permanent Scarring Across Regions",
     fontsize=16,
 )
 
@@ -66,7 +66,7 @@ for ax, wr in zip(axes.flatten(), world_regions):
         x="time_bin",
         y=question,
         color="tab:orange",
-        label="Extra-Ritual Group Markers",
+        label="Permanent Scarring",
         ax=ax,
     )
     ax.set_title(wr)
