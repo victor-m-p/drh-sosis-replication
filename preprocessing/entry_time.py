@@ -9,7 +9,9 @@ import geopandas as gpd
 
 # load data
 entrydata = pd.read_csv("../data/raw/entry_data.csv")
-entrydata = entrydata[["entry_id", "entry_name", "year_from", "year_to", "region_id"]]
+entrydata = entrydata[
+    ["entry_id", "entry_name", "year_from", "year_to", "region_id", "data_source"]
+]
 
 # also include regions
 region_data = pd.read_csv("../data/raw/region_data.csv")
