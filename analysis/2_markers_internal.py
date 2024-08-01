@@ -1,5 +1,8 @@
 """
-Type of violent conflict vs. Extra-ritual in-group markers
+VMP 2024-07-31
+Figure generated in this script is not included in the paper. 
+Claim that internal conflict does not drive markers (transitory or permanent) based on Chi-Square statistics here.
+Emphasis is on transitory markers, but we also do not observe an effect on permanent markers. 
 """
 
 import pandas as pd
@@ -32,14 +35,10 @@ variable_dict = {
     "ornaments": "Ornaments",
 }
 
-from helper_functions import code_conflict
+from helper_functions import code_internal_conflict
+from helper_functions import run_chi2_test
 
-conflict_order = [
-    "No Violent Conflict",
-    "Internal Only",
-    "Internal and External",
-    "External Only",
-]
+conflict_order = ["No Internal Conflict", "Internal Conflict only"]
 
 palette = sns.color_palette("tab10", n_colors=4)
 fig, axes = plt.subplots(2, 4, figsize=(16, 8))
@@ -51,9 +50,29 @@ for i, variable in enumerate(variable_dict.keys()):
     # subset and code conflict
     wide_subset = answers_wide[[variable, "violent_external", "violent_internal"]]
     wide_subset = wide_subset.dropna()
-    wide_subset["conflict_type"] = wide_subset.apply(code_conflict, axis=1)
+    # collapse groups into has external vs. does not have external
+    wide_subset["conflict_type"] = wide_subset.apply(code_internal_conflict, axis=1)
+    wide_subset["entry_id"] = wide_subset.index
+    df_long = pd.melt(
+        wide_subset,
+        id_vars=["entry_id", "conflict_type"],
+        var_name="marker",
+        value_name="value",
+    )
+    df_long = df_long[df_long["conflict_type"].isin(conflict_order)]
     # get counts for plot
     group_counts = wide_subset.groupby("conflict_type").size()
+    # now we can drop nan values
+    df_long = df_long.dropna()
+
+    # run statistical tests
+    from helper_functions import run_chi2_test
+
+    chi2, pval = run_chi2_test(df_long, variable)
+
+    # Prepare labels
+    labels = [(f"χ²={chi2:.2f}; p<0.05" if pval < 0.05 else f"χ²={chi2:.2f}; ns")]
+
     # plot
     sns.barplot(
         x="conflict_type",
@@ -74,7 +93,7 @@ for i, variable in enumerate(variable_dict.keys()):
         [f"n={group_counts[label]}" for label in conflict_order],
         fontsize=14,
     )
-    ax.set_title(f"{variable_dict.get(variable)}", fontsize=16)
+    ax.set_title(f"{variable_dict.get(variable)}\n({labels[0]})", fontsize=16)
 
 # maximally 2 decimal places for y-axis
 formatter = ticker.FormatStrFormatter("%.2f")
@@ -93,5 +112,5 @@ fig.legend(
     fontsize=16,
 )
 plt.tight_layout()
-plt.savefig("../figures/all_markers_overall.pdf", bbox_inches="tight")
-plt.savefig("../figures/png/all_markers_overall.png", bbox_inches="tight", dpi=300)
+plt.savefig("../figures/markers_internal.pdf", bbox_inches="tight")
+plt.savefig("../figures/png/markers_internal.png", bbox_inches="tight", dpi=300)

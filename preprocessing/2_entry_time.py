@@ -1,11 +1,10 @@
 """
-vmp 2024-06-25
+vmp 2024-08-01.
 Gather entry data (year and region)
 """
 
 # imports
 import pandas as pd
-import geopandas as gpd
 
 # load data
 entrydata = pd.read_csv("../data/raw/entry_data.csv")

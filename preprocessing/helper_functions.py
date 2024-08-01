@@ -3,21 +3,19 @@ import pandas as pd
 from itertools import product
 
 
-def check_data(df):
-    n_rows = len(df)
-    unique_entries = df["entry_id"].nunique()
-    answer_distribution = df.groupby("answer_value", dropna=False).size()
-    print(f"Number of rows: {n_rows}")
-    print(f"Unique entries: {unique_entries}")
-    print(f"Answer distribution: {answer_distribution}")
-
-
 def unique_combinations(
     df: pd.DataFrame, unique_columns: list, entry_column: str, question_column: str
 ) -> pd.DataFrame:
-    """
-    Unique combinations of entries and questions.
-    Fills in missing combinations with NaNs.
+    """Fill in all possible combinations of questions and entries.
+
+    Args:
+        df (pd.DataFrame): dataframe with relevant columns
+        unique_columns (list): question id columns
+        entry_column (str): name of the entry column ("entry_id")
+        question_column (str): name of the question column ("question_id")
+
+    Returns:
+        pd.DataFrame: _description_
     """
     combinations_questions = df[unique_columns].drop_duplicates()
     entry_ids = df[entry_column].unique()
@@ -36,7 +34,15 @@ def unique_combinations(
     return df
 
 
-def fill_answers(df):
+def fill_answers(df: pd.DataFrame) -> pd.DataFrame:
+    """Infer "No" answers for children based on "No" answers for parents.
+
+    Args:
+        df (pd.DataFrame): DataFrame with columns "entry_id", "question_id", "parent_question_id", "answer_value"
+
+    Returns:
+        pd.DataFrame: Returns the DataFrame with a new column "answer_inferred" that indicates if the answer was inferred.
+    """
     df["answer_inferred"] = "No"
     for num, row in df.iterrows():
         # for children
@@ -55,13 +61,36 @@ def fill_answers(df):
     return df
 
 
-def process_time_region(data, id, predictor, outcome, time, region):
-    data_subset = data[[id, predictor, outcome, time, region]]
-    data_subset = data_subset.dropna()
-    data_subset[predictor] = data_subset[predictor].astype(int)
-    data_subset[outcome] = data_subset[outcome].astype(int)
-    data_subset["year_scaled"] = (
-        data_subset[time] - data_subset[time].mean()
-    ) / data_subset[time].std()
-    data_subset[region] = pd.Categorical(data_subset[region])
-    return data_subset
+def process_time_region(
+    df: pd.DataFrame,
+    entry_col: str,
+    predictor_col: str,
+    outcome_col: str,
+    year_col: str,
+    region_col: str,
+) -> pd.DataFrame:
+    """
+    Convenience function to process data for modeling.
+    Some of this (e.g., pd.Categorical) might not be necessary,
+    because modeling was migrated from pyMC to brms.
+
+    Args:
+        df (pd.DataFrame): dataframe with relevant columns
+        entry_col (str): "entry_id"
+        predictor_col (str): "violent_external"
+        outcome_col (str): independent variable (markers)
+        year_col (str): "year_from
+        region_col (str): "world_region"
+
+    Returns:
+        pd.DataFrame: Dataframe with processed data
+    """
+    df_subset = df[[entry_col, predictor_col, outcome_col, year_col, region_col]]
+    df_subset = df_subset.dropna()
+    df_subset[predictor_col] = df_subset[predictor_col].astype(int)
+    df_subset[outcome_col] = df_subset[outcome_col].astype(int)
+    df_subset["year_scaled"] = (
+        df_subset[year_col] - df_subset[year_col].mean()
+    ) / df_subset[year_col].std()
+    df_subset[region_col] = pd.Categorical(df_subset[region_col])
+    return df_subset

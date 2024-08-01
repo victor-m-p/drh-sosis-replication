@@ -1,6 +1,8 @@
 """
-vmp 2023-06-25:
-Prepare answers for modeling
+vmp 2024-08-01.
+Prepare answers for modeling. 
+Combine entry data (year, region) and processed answers.
+Save csv to mdl_input folder for each markers (dependent variable). 
 """
 
 import pandas as pd

@@ -1,5 +1,8 @@
 """
-Type of violent conflict vs. Extra-ritual in-group markers
+VMP 2024-07-31.
+Generates Figure 1. 
+Showing that external violent conflict drives (significantly) all markers,
+both internal and external. 
 """
 
 import pandas as pd
@@ -19,17 +22,14 @@ answers_wide = answers.pivot(
 
 # variable list
 variable_dict = {
-    # super questions
-    "permanent_scarring": "Permanent Scarring",
-    "extra_ritual_group_markers": "Extra Ritual In-Group Markers",
-    # permanent markers
-    "circumcision": "Circumcision",
-    "tattoos_scarification": "Tattoos or Scarification",
-    # transitory markers
-    "dress": "Dress",
     "food_taboos": "Food Taboos",
+    "extra_ritual_group_markers": "Extra Ritual In-Group Markers",
+    "circumcision": "Circumcision",
+    "permanent_scarring": "Permanent Scarring",
     "hair": "Hair",
+    "dress": "Dress",
     "ornaments": "Ornaments",
+    "tattoos_scarification": "Tattoos or Scarification",
 }
 
 from helper_functions import code_external_conflict
@@ -38,7 +38,7 @@ from helper_functions import run_chi2_test
 conflict_order = ["No External Violent Conflict", "External Violent Conflict"]
 
 palette = sns.color_palette("tab10", n_colors=4)
-fig, axes = plt.subplots(2, 4, figsize=(16, 8))
+fig, axes = plt.subplots(2, 4, figsize=(16, 6))
 sns.set_style("white")
 for i, variable in enumerate(variable_dict.keys()):
     row = i // 4
@@ -79,17 +79,21 @@ for i, variable in enumerate(variable_dict.keys()):
         palette=palette,
         label=conflict_order,
     )
-    # only show y label for first column
-    if col == 0:
-        ax.set_ylabel("Fraction Yes", fontsize=18)
-    else:
-        ax.set_ylabel("")
     ax.set_xlabel("")
+    ax.set_ylabel("")
     ax.set_xticklabels(
         [f"n={group_counts[label]}" for label in conflict_order],
-        fontsize=14,
+        fontsize=18,
     )
-    ax.set_title(f"{variable_dict.get(variable)}\n({labels[0]})", fontsize=16)
+    fig.text(
+        -0.02,
+        0.5,
+        "Fraction of markers present",
+        va="center",
+        rotation="vertical",
+        fontdict={"fontsize": 20, "fontweight": "light"},
+    )
+    ax.set_title(f"{variable_dict.get(variable)}\n({labels[0]})", fontsize=18)
 
 # maximally 2 decimal places for y-axis
 formatter = ticker.FormatStrFormatter("%.2f")
@@ -102,11 +106,11 @@ fig.legend(
     handles,
     labels,
     loc="upper center",
-    bbox_to_anchor=(0.5, -0.02),
+    bbox_to_anchor=(0.5, 0.02),
     ncol=len(conflict_order),
     frameon=False,
-    fontsize=16,
+    fontsize=20,
 )
 plt.tight_layout()
-plt.savefig("../figures/all_markers_external.pdf", bbox_inches="tight")
-plt.savefig("../figures/png/all_markers_external.png", bbox_inches="tight", dpi=300)
+plt.savefig("../figures/markers_external.pdf", bbox_inches="tight")
+plt.savefig("../figures/png/markers_external.png", bbox_inches="tight", dpi=300)

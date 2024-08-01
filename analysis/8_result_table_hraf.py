@@ -1,3 +1,9 @@
+"""
+VMP 2024-07-31
+We do not report these tables, but we do report these results (supplementary information).
+We are using draws from the Bayesian analysis (brms_models_hraf.R) here.
+"""
+
 import numpy as np
 import pandas as pd
 import os
@@ -29,13 +35,13 @@ def extract_param(d, param, multiplier=1):
 
 
 ### create table of all results ###
-output_files = os.listdir("../data/mdl_output")
+output_files = os.listdir("../data/mdl_output_hraf")
 logit_files = [i for i in output_files if "summary" in i]
 
 summary_list = []
 for filename, label in convert_labels.items():
     # load files
-    data_logit = pd.read_csv("../data/mdl_output/" + filename + "_summary.csv")
+    data_logit = pd.read_csv("../data/mdl_output_hraf/" + filename + "_summary.csv")
     # extract params
     estimate_logit = extract_param(data_logit, "violent_external")
     year_logit = extract_param(data_logit, "year_scaled")
@@ -52,20 +58,23 @@ for filename, label in convert_labels.items():
     )
     summary_list.append(summary_row)
 summary_df = pd.concat(summary_list)
+
 # rename columns and save as latex
-summary_df.to_latex("../tables/brms_table.tex", index=False)
+summary_df.to_latex("../tables/brms_table_hraf.tex", index=False)
 
 ### create table of important results ###
-output_files = os.listdir("../data/mdl_output")
+output_files = os.listdir("../data/mdl_output_hraf")
 percent_files = [i for i in output_files if "results" in i]
 hypothesis_files = [i for i in output_files if "hypothesis" in i]
 logit_files = [i for i in output_files if "summary" in i]
 summary_list = []
 for filename, label in convert_labels.items():
     # load files
-    data_percent = pd.read_csv("../data/mdl_output/" + filename + "_results.csv")
-    data_hypothesis = pd.read_csv("../data/mdl_output/" + filename + "_hypotheses.csv")
-    data_logit = pd.read_csv("../data/mdl_output/" + filename + "_summary.csv")
+    data_percent = pd.read_csv("../data/mdl_output_hraf/" + filename + "_results.csv")
+    data_hypothesis = pd.read_csv(
+        "../data/mdl_output_hraf/" + filename + "_hypotheses.csv"
+    )
+    data_logit = pd.read_csv("../data/mdl_output_hraf/" + filename + "_summary.csv")
     data_hypothesis = data_hypothesis[
         data_hypothesis["Hypothesis"] == "(violent_external) > 0"
     ]
@@ -88,4 +97,4 @@ for filename, label in convert_labels.items():
     summary_list.append(summary_row)
 summary_df = pd.concat(summary_list)
 summary_df = summary_df.sort_values("Evid. Ratio", ascending=False)
-summary_df.to_latex("../tables/brms_table_main.tex", index=False)
+summary_df.to_latex("../tables/brms_table_main_hraf.tex", index=False)

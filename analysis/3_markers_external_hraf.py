@@ -1,5 +1,9 @@
 """
-Type of violent conflict vs. Extra-ritual in-group markers
+VMP 2024-07-31
+Same as markers_external.py, but without eHRAF entries.
+Not directly reported. We focus on the Bayesian analysis without eHRAF entries in the SI.
+Similary analysis run for all_markers_internal.py without eHRAF entries.
+No effects significant (like in the main analysis). 
 """
 
 import pandas as pd
@@ -37,10 +41,10 @@ variable_dict = {
     "ornaments": "Ornaments",
 }
 
-from helper_functions import code_internal_conflict
+from helper_functions import code_external_conflict
 from helper_functions import run_chi2_test
 
-conflict_order = ["No Internal Conflict", "Internal Conflict only"]
+conflict_order = ["No External Violent Conflict", "External Violent Conflict"]
 
 palette = sns.color_palette("tab10", n_colors=4)
 fig, axes = plt.subplots(2, 4, figsize=(16, 8))
@@ -50,10 +54,10 @@ for i, variable in enumerate(variable_dict.keys()):
     col = i % 4
     ax = axes[row, col]
     # subset and code conflict
-    wide_subset = answers_wide[[variable, "violent_external", "violent_internal"]]
+    wide_subset = answers_wide[[variable, "violent_external"]]
     wide_subset = wide_subset.dropna()
     # collapse groups into has external vs. does not have external
-    wide_subset["conflict_type"] = wide_subset.apply(code_internal_conflict, axis=1)
+    wide_subset["conflict_type"] = wide_subset.apply(code_external_conflict, axis=1)
     wide_subset["entry_id"] = wide_subset.index
     df_long = pd.melt(
         wide_subset,
@@ -61,7 +65,6 @@ for i, variable in enumerate(variable_dict.keys()):
         var_name="marker",
         value_name="value",
     )
-    df_long = df_long[df_long["conflict_type"].isin(conflict_order)]
     # get counts for plot
     group_counts = wide_subset.groupby("conflict_type").size()
     # now we can drop nan values
@@ -114,7 +117,7 @@ fig.legend(
     fontsize=16,
 )
 plt.tight_layout()
-plt.savefig("../figures/all_markers_internal_not_hraf.pdf", bbox_inches="tight")
+plt.savefig("../figures/markers_external_not_hraf.pdf", bbox_inches="tight")
 plt.savefig(
-    "../figures/png/all_markers_internal_not_hraf.png", bbox_inches="tight", dpi=300
+    "../figures/png/markers_external_not_hraf.png", bbox_inches="tight", dpi=300
 )

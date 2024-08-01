@@ -1,19 +1,15 @@
 """
-vmp 2023-06-25
+vmp 2023-08-01
+Curation of answerset data. 
+1. Selection of Questions
+2. Select only groups. 
+3. Map related questions (across the two group polls)
+4. Infer "No" answers from parent questions
 """
 
 import pandas as pd
 
 pd.options.mode.chained_assignment = None  # default='warn'
-
-""" 
-Take out relevant columns.
-
-answer_value coded as: 
-1: Ye
-0: No
--1: Field doesn't know / I don't know (we recode this to np.nan)
-"""
 
 # Load data
 data = pd.read_csv("../data/raw/answerset.csv")
@@ -27,7 +23,6 @@ question_coding = {
     # dependent variables
     "Are extra-ritual in-group markers present:": "extra_ritual_group_markers",
     "Does membership in this religious group require permanent scarring or painful bodily alterations:": "permanent_scarring",
-    # "Does membership in this religious group require painful physical positions or transitory painful wounds:": "transitory_pain",
     # sub-questions of extra-ritual in-group markers
     "Tattoos/scarification:": "tattoos_scarification",  # sub of extra-ritual in-group markers
     "Circumcision:": "circumcision",  # sub of extra-ritual in-group markers
@@ -110,9 +105,6 @@ answers_affected = pd.concat(
     [answers_inconsistent, affected_children]
 ).drop_duplicates()
 
-answers_affected.sort_values("entry_id")
-answers[answers["question_id"] == 2316]  # sample region
-
 # Remove all affected questions (both inconsistent questions and their children)
 answers_subset_filtered = answers_subset[
     ~answers_subset.set_index(["entry_id", "question_id"]).index.isin(
@@ -120,7 +112,7 @@ answers_subset_filtered = answers_subset[
     )
 ]
 
-# unique combinations (needed for inferring no below)
+# unique combinations (needed for inferring no answers below)
 from helper_functions import unique_combinations
 
 unique_columns = ["question_id", "question_short", "parent_question_id"]
