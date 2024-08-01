@@ -1,13 +1,14 @@
 # Replication of Sosis et al 2007
-Replication of Sosis et al (2007) using the SCCSR.v1 from the Database of Religious History (DRH). 
+Conceptual replication of "Scars for war: Evaluating alternative signaling explanations to cross-cultural variance in ritual costs" (Sosis et al. 2007) using the SCCSR.v1 from the Database of Religious History (https://religiondatabase.org)
 
 # Reproduce
 To reproduce the results, follow these steps: 
-1. Unzip drh_tables.zip in the data/raw folder. Alternatively, this file can be optained from the official SCCSR.v1 (https://zenodo.org/records/12572187) where it is located in data/clean within this archive. 
-2. Follow /preprocessing steps 
-3. Follow /analysis steps 
+1. Unzip drh_tables.zip in the data/raw folder. Alternatively, this file can be optained from the official SCCSR.v1 (https://zenodo.org/records/12572187) where it is located in `data/clean` within this archive. 
+2. Follow `/preprocessing` steps 
+3. Follow `/analysis steps` 
 
-# Contact
-Victor Møller Poulsen: 
-* victormoeller@gmail.com
-* or create an issue 
+# Funding 
+The DRH has enjoyed generous support from the John Templeton Foundation (JTF), Templeton Religion Trust (TRT), and Canada’s SSHRC. Thanks are owed to the hundreds of experts who have contributed entries and our editorial team. 
+
+# Contact 
+Victor Møller Poulsen (victormoeller@gmail.com). Feel free to open an issue. 
