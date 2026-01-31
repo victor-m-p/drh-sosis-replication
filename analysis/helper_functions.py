@@ -14,7 +14,6 @@ def code_external_conflict(row):
     else:
         return "No External Violent Conflict"
 
-
 def code_internal_conflict(row):
     """Helper function to code internal conflict"""
     if row["violent_internal"] == 1 and row["violent_external"] == 0:
@@ -30,5 +29,5 @@ def run_chi2_test(df, marker):
     marker_df = df[df["marker"] == marker]
     marker_df["value"] = marker_df["value"].astype(int)
     contingency_table = pd.crosstab(marker_df["value"], marker_df["conflict_type"])
-    chi2, p, dof, expected = chi2_contingency(contingency_table)
+    chi2, p, dof, expected = chi2_contingency(contingency_table, correction=False)
     return chi2, p

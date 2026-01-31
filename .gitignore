@@ -1,1 +1,10 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+
+# data
 data/raw/answerset.csv
+data/language_tags

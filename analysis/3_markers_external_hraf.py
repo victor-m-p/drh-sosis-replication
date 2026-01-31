@@ -1,5 +1,5 @@
 """
-VMP 2024-07-31
+VMP 2026-01-31 (updated.)
 Same as markers_external.py, but without eHRAF entries.
 Not directly reported. We focus on the Bayesian analysis without eHRAF entries in the SI.
 Similary analysis run for all_markers_internal.py without eHRAF entries.
@@ -10,6 +10,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import matplotlib.ticker as ticker
+from matplotlib.patches import Patch
+
+from helper_functions import code_external_conflict, run_chi2_test
 
 pd.options.mode.chained_assignment = None  # default='warn'
 
@@ -28,51 +31,56 @@ answers_wide = answers.pivot(
 
 # variable list
 variable_dict = {
-    # super questions
-    "permanent_scarring": "Permanent Scarring",
-    "extra_ritual_group_markers": "Extra Ritual In-Group Markers",
-    # permanent markers
-    "circumcision": "Circumcision",
-    "tattoos_scarification": "Tattoos or Scarification",
-    # transitory markers
-    "dress": "Dress",
     "food_taboos": "Food Taboos",
+    "extra_ritual_group_markers": "Extra Ritual In-Group Markers",
+    "circumcision": "Circumcision",
+    "permanent_scarring": "Permanent Scarring",
     "hair": "Hair",
+    "dress": "Dress",
     "ornaments": "Ornaments",
+    "tattoos_scarification": "Tattoos or Scarification",
 }
 
-from helper_functions import code_external_conflict
-from helper_functions import run_chi2_test
-
+# set-up for plot
 conflict_order = ["No External Violent Conflict", "External Violent Conflict"]
+palette = sns.color_palette("tab10", n_colors=2)
 
-palette = sns.color_palette("tab10", n_colors=4)
-fig, axes = plt.subplots(2, 4, figsize=(16, 8))
+# start plot 
+fig, axes = plt.subplots(2, 4, figsize=(16, 6))
 sns.set_style("white")
+
+# iterate over sub-plots
 for i, variable in enumerate(variable_dict.keys()):
+    # for the plot
     row = i // 4
     col = i % 4
     ax = axes[row, col]
+    
     # subset and code conflict
     wide_subset = answers_wide[[variable, "violent_external"]]
     wide_subset = wide_subset.dropna()
+    
     # collapse groups into has external vs. does not have external
     wide_subset["conflict_type"] = wide_subset.apply(code_external_conflict, axis=1)
     wide_subset["entry_id"] = wide_subset.index
+
+    # this could maybe be avoided but is logical
     df_long = pd.melt(
         wide_subset,
         id_vars=["entry_id", "conflict_type"],
         var_name="marker",
         value_name="value",
     )
+    
     # get counts for plot
     group_counts = wide_subset.groupby("conflict_type").size()
+    
     # now we can drop nan values
     df_long = df_long.dropna()
 
     # run statistical tests
-    from helper_functions import run_chi2_test
-
+    # not corrected (Yates)
+    # uncorrected Pearson chi2
     chi2, pval = run_chi2_test(df_long, variable)
 
     # Prepare labels
@@ -86,19 +94,34 @@ for i, variable in enumerate(variable_dict.keys()):
         ax=ax,
         order=conflict_order,
         palette=palette,
-        label=conflict_order,
+        hue="conflict_type",
+        hue_order=conflict_order,
+        legend=False,
     )
-    # only show y label for first column
-    if col == 0:
-        ax.set_ylabel("Fraction Yes", fontsize=18)
-    else:
-        ax.set_ylabel("")
+    
+    # remove labels
     ax.set_xlabel("")
+    ax.set_ylabel("")
+
+    # set xticks to sample size
+    ax.set_xticks([0, 1])
     ax.set_xticklabels(
         [f"n={group_counts[label]}" for label in conflict_order],
-        fontsize=14,
+        fontsize=18,
     )
-    ax.set_title(f"{variable_dict.get(variable)}\n({labels[0]})", fontsize=16)
+
+    # title per plot (marker)
+    ax.set_title(f"{variable_dict.get(variable)}\n({labels[0]})", fontsize=18)
+
+# shared y label (figure text)
+fig.text(
+    -0.02,
+    0.5,
+    "Fraction of markers present",
+    va="center",
+    rotation="vertical",
+    fontdict={"fontsize": 20, "fontweight": "light"},
+)
 
 # maximally 2 decimal places for y-axis
 formatter = ticker.FormatStrFormatter("%.2f")
@@ -106,15 +129,17 @@ for ax in axes.flat:
     ax.yaxis.set_major_formatter(formatter)
 
 # create single legend
-handles, labels = ax.get_legend_handles_labels()
+legend_handles = [
+    Patch(facecolor=palette[0], label=conflict_order[0]),
+    Patch(facecolor=palette[1], label=conflict_order[1]),
+]
 fig.legend(
-    handles,
-    labels,
+    handles=legend_handles,
     loc="upper center",
-    bbox_to_anchor=(0.5, -0.02),
-    ncol=len(conflict_order),
+    bbox_to_anchor=(0.5, 0.02),
+    ncol=2,
     frameon=False,
-    fontsize=16,
+    fontsize=20,
 )
 plt.tight_layout()
 plt.savefig("../figures/markers_external_not_hraf.pdf", bbox_inches="tight")
