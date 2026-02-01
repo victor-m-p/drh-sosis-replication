@@ -1,5 +1,5 @@
 """ 
-VMP 2024-07-31
+VMP 2026-01-31 (updated.)
 This script generates the plot for the results of the Bayesian analysis (Figure 2).
 We are using draws from the Bayesian analysis (brms_models.R) here.
 """
@@ -86,41 +86,54 @@ draws_melted["Marker"] = pd.Categorical(
 # convert to %
 draws_melted["Value"] = draws_melted["Value"] * 100
 
+from matplotlib.patches import Patch
+
 fig, ax = plt.subplots(figsize=(4, 4), dpi=300)
 
-pt.half_violinplot(
-    data=draws_melted,
-    y="Marker",
-    x="Value",
-    hue="Parameter",
-    orient="h",
-    split=True,
-    alpha=0.65,
-    inner=None,
-    offset=-0.2,
-    scale="area",
-    width=1.5,
-)
+param_order = [
+    "p(Marker|No External Violent Conflict)",
+    "p(Marker|External Violent Conflict)",
+    "p(Marker|E. V. Conflict) - p(Marker|No E. V. Conflict)",
+]
+
+# pick colors (match seaborn defaults you had: blue/orange/green)
+colors = sns.color_palette("tab10", 3)
+param_color = {
+    param_order[0]: colors[0],
+    param_order[1]: colors[1],
+    param_order[2]: colors[2],
+}
+
+# draw each distribution as its own half-violin (no hue, no split)
+for p in param_order:
+    pt.half_violinplot(
+        data=draws_melted[draws_melted["Parameter"] == p],
+        y="Marker",
+        x="Value",
+        orient="h",
+        color=param_color[p],
+        alpha=0.7,
+        inner=None,
+        offset=-0.2,   
+        scale="width", #"area",
+        width=1.5,
+        ax=ax,
+    )
+
 plt.ylabel("")
 plt.xlabel("")
-
-# add dotted line
 plt.axvline(x=0, color="black", linestyle="--", linewidth=0.5)
 
-# Adjust plot to add more space to the top
 plt.subplots_adjust(top=0.9)
-
-# Adjust y-axis limits to add more space at the top
-ax.set_ylim(ax.get_ylim()[0], ax.get_ylim()[1] - 0.3)  # Adjust the value as needed
+ax.set_ylim(ax.get_ylim()[0], ax.get_ylim()[1] - 0.3)
 
 new_labels = [conversion_dict.get(label, label) for label in sorted_Markers]
 ax.set_yticklabels(new_labels)
 
-# Move the legend to the bottom and remove the title
-handles, labels = ax.get_legend_handles_labels()
+# manual legend (deterministic)
+legend_handles = [Patch(facecolor=param_color[p], label=p) for p in param_order]
 ax.legend(
-    handles,
-    labels,
+    handles=legend_handles,
     loc="upper center",
     bbox_to_anchor=(0.32, -0.05),
     ncol=1,
@@ -128,7 +141,6 @@ ax.legend(
     title="",
 )
 
-# Show the plot
 plt.savefig("../figures/bayesian_figure.pdf", bbox_inches="tight")
 plt.savefig("../figures/png/bayesian_figure.png", bbox_inches="tight", dpi=300)
 plt.close()

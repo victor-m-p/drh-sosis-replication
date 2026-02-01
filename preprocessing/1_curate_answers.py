@@ -1,5 +1,5 @@
 """
-vmp 2023-08-01
+vmp 2026-01-31 (update.)
 Curation of answerset data. 
 1. Selection of Questions
 2. Select only groups. 
@@ -13,15 +13,17 @@ pd.options.mode.chained_assignment = None  # default='warn'
 
 # Load data
 data = pd.read_csv("../data/raw/answerset.csv")
+data["entry_id"].nunique() # 1687
 
 # Define the questions to investigate and create mapping dataframe
+# These are all present (verified 2026.)
 question_coding = {
     # independent variables
-    "Are other religious groups in cultural contact with target religion:": "cultural_contact",
-    "Is there violent conflict (within sample region):": "violent_internal",
-    "Is there violent conflict (with groups outside the sample region):": "violent_external",
+    "Are other religious groups in cultural contact with target religion:": "cultural_contact", 
+    "Is there violent conflict (within sample region):": "violent_internal", 
+    "Is there violent conflict (with groups outside the sample region):": "violent_external", 
     # dependent variables
-    "Are extra-ritual in-group markers present:": "extra_ritual_group_markers",
+    "Are extra-ritual in-group markers present:": "extra_ritual_group_markers", 
     "Does membership in this religious group require permanent scarring or painful bodily alterations:": "permanent_scarring",
     # sub-questions of extra-ritual in-group markers
     "Tattoos/scarification:": "tattoos_scarification",  # sub of extra-ritual in-group markers
@@ -47,9 +49,11 @@ answers = data[
 # Subset the data to only include the questions of interest
 answers_subset = answers[answers["question_name"].isin(question_coding.keys())]
 answers_subset["question_short"] = answers_subset["question_name"].map(question_coding)
+answers_subset["entry_id"].nunique() # 842
 
 # Make sure that we are only working with groups
 answers_subset = answers_subset[answers_subset["poll_name"].str.contains("Group")]
+answers_subset["entry_id"].nunique() # 842
 
 # Merge with questionrelation to get related names
 questionrelations = pd.read_csv("../data/raw/questionrelation.csv")
@@ -60,6 +64,7 @@ answers_subset = answers_subset.merge(
 )
 answers_subset = answers_subset.drop(columns=["question_id"])
 answers_subset = answers_subset.rename(columns={"related_question_id": "question_id"})
+answers_subset["entry_id"].nunique() # 842
 
 # Handle this for Parent Question ID
 answers_subset["parent_question_id"] = (
@@ -74,6 +79,7 @@ answers_subset["parent_question_id"] = answers_subset["parent_question_id"].repl
 
 # only keep answers that are 0 (no) or 1 (yes)
 answers_subset = answers_subset[answers_subset["answer_value"].isin([0, 1])]  # n=4567
+answers_subset["entry_id"].nunique() # 830
 
 # Identify inconsistent answers by checking if more than one exists for each (entry_id, question_id) group
 answers_inconsistent = answers_subset.groupby(["entry_id", "question_id"]).size()
@@ -138,3 +144,8 @@ from helper_functions import fill_answers
 answers_inferred = fill_answers(answers_complete)
 answers_inferred[answers_inferred["answer_value"].notna()]
 answers_inferred.to_csv("../data/preprocessed/answers_clean.csv", index=False)
+
+'''
+old version (v1) had n=782 unique entries
+new version (v3) has n=828 unique entries
+'''

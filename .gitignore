@@ -5,6 +5,16 @@
 __pycache__/
 *.py[cod]
 
+# R 
+*.Rproj
+*.Rhistory
+*.RData
+
 # data
+data/raw_old
 data/raw/answerset.csv
 data/language_tags
+.Rproj.user
+
+# analysis
+analysis/reanalysis.Rmd

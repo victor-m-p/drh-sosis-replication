@@ -33,7 +33,6 @@ def unique_combinations(
     assert len(df) >= len(entry_ids) * len(question_ids)
     return df
 
-
 def fill_answers(df: pd.DataFrame) -> pd.DataFrame:
     """Infer "No" answers for children based on "No" answers for parents.
 
@@ -60,37 +59,18 @@ def fill_answers(df: pd.DataFrame) -> pd.DataFrame:
                     df.loc[num, "answer_inferred"] = "Yes"
     return df
 
-
 def process_time_region(
     df: pd.DataFrame,
     entry_col: str,
     predictor_col: str,
     outcome_col: str,
-    year_col: str,
+    year_scaled_col: str,   # <- renamed for clarity
     region_col: str,
 ) -> pd.DataFrame:
-    """
-    Convenience function to process data for modeling.
-    Some of this (e.g., pd.Categorical) might not be necessary,
-    because modeling was migrated from pyMC to brms.
-
-    Args:
-        df (pd.DataFrame): dataframe with relevant columns
-        entry_col (str): "entry_id"
-        predictor_col (str): "violent_external"
-        outcome_col (str): independent variable (markers)
-        year_col (str): "year_from
-        region_col (str): "world_region"
-
-    Returns:
-        pd.DataFrame: Dataframe with processed data
-    """
-    df_subset = df[[entry_col, predictor_col, outcome_col, year_col, region_col]]
+    df_subset = df[[entry_col, predictor_col, outcome_col, year_scaled_col, region_col]]
     df_subset = df_subset.dropna()
     df_subset[predictor_col] = df_subset[predictor_col].astype(int)
     df_subset[outcome_col] = df_subset[outcome_col].astype(int)
-    df_subset["year_scaled"] = (
-        df_subset[year_col] - df_subset[year_col].mean()
-    ) / df_subset[year_col].std()
+    df_subset = df_subset.rename(columns={year_scaled_col: "year_scaled"})
     df_subset[region_col] = pd.Categorical(df_subset[region_col])
     return df_subset

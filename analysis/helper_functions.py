@@ -23,7 +23,6 @@ def code_internal_conflict(row):
     else:
         return "Internal and External"
 
-
 def run_chi2_test(df, marker):
     """Helper function to run chi2 test"""
     marker_df = df[df["marker"] == marker]
