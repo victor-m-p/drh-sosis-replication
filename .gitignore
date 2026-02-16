@@ -15,6 +15,7 @@ data/raw_old
 data/raw/answerset.csv
 data/language_tags
 .Rproj.user
+asjp
 
 # analysis
 analysis/reanalysis.Rmd

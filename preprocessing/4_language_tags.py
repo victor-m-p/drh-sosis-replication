@@ -75,6 +75,9 @@ df = (
 df["ids"] = df["entrytag_path"].map(path_ids)
 df["depth"] = df["ids"].map(len)
 
+### save this for documentation for now ###
+df.to_csv("language_tags.csv", index=False)
+
 # sanity: every language path should have at least 1 id
 assert (df["depth"] > 0).all()
 
