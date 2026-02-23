@@ -4,11 +4,15 @@
 # Python
 __pycache__/
 *.py[cod]
+.vscode
 
 # R 
 *.Rproj
 *.Rhistory
 *.RData
+
+# claude
+.claude
 
 # data
 data/raw_old

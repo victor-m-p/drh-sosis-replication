@@ -10,7 +10,7 @@ dependencies:
   - statsmodels
   - jupyterlab
   - ipykernel
+  - biopython
   - pip
   - pip:
       - seaborn==0.13.2
-      - ptitprince==0.3.1

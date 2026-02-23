@@ -1,0 +1,186 @@
+---
+title: "Phylogenetic model: extra ritual group markers ~ violent external conflict"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+This script fits a Bayesian phylogenetic logistic regression using the ASJP world
+language tree as a covariance structure. Rather than aggregating DRH entries to one
+value per language tip, we keep all 240 entry-level observations and let the
+phylogenetic random effect handle the non-independence between entries that share a
+language.
+
+**Model:** `extra_ritual_group_markers ~ violent_external + (1 | gr(tip_name, cov = A))`
+
+The `gr(tip_name, cov = A)` term is a Gaussian process over the tree: languages that
+share more recent common ancestry have more correlated random intercepts. This plays
+the same role as world_region in the existing models, but uses linguistic genealogy
+rather than geography.
+
+```{r setup, message=FALSE, warning=FALSE}
+library(pacman)
+p_load(brms, ape, tidyverse, here, HDInterval)
+
+set.seed(1342)
+```
+
+## 1. Load data and tree
+
+```{r load}
+data <- read_csv(here("data", "phylo_input", "ritual_asjp_phylo.csv"))
+tree <- read.tree(here("asjp", "raw", "world.tre"))
+
+cat("Entries:", nrow(data), "\n")
+cat("Unique tips in data:", n_distinct(data$tip_name), "\n")
+cat("Tips in full tree:  ", length(tree$tip.label), "\n")
+```
+
+## 2. Prune tree to the tips we have data for
+
+BayesTraits and brms both require that the covariance matrix covers exactly the tips
+present in the data — no more, no less.
+
+```{r prune}
+tips_in_data <- unique(data$tip_name)
+tree_pruned  <- keep.tip(tree, tips_in_data)
+
+cat("Tips in pruned tree:", length(tree_pruned$tip.label), "\n")
+stopifnot(setequal(tree_pruned$tip.label, tips_in_data))
+```
+
+## 3. Phylogenetic covariance matrix
+
+`vcv.phylo(..., corr = TRUE)` gives a correlation matrix (diagonal = 1) where
+off-diagonal entries are the proportion of total depth shared between two tips — i.e.,
+how recently they diverged. brms uses this as the prior covariance for the
+language-level random intercepts.
+
+```{r cov_matrix}
+A <- vcv.phylo(tree_pruned, corr = TRUE)
+dim(A)  # should be 101 x 101
+```
+
+## 4. Baseline model (no phylogeny)
+
+Fitting the non-phylogenetic model first gives us a reference for what the raw
+association between violent conflict and ritual markers looks like, ignoring linguistic
+relatedness entirely.
+
+```{r fit_baseline, cache=TRUE}
+fit_base <- brm(
+    extra_ritual_group_markers ~ 1 + violent_external,
+    data   = data,
+    family = bernoulli(link = logit),
+    prior  = c(
+        prior(normal(0, 1.5), class = Intercept),
+        prior(normal(0, 1),   class = b)
+    ),
+    chains = 4, iter = 4000, warmup = 2000, cores = 4,
+    control = list(adapt_delta = .999, max_treedepth = 20),
+    seed   = 1342,
+    silent = 2
+)
+```
+
+## 5. Phylogenetic model
+
+The `gr(tip_name, cov = A)` term adds a language-level random intercept whose prior
+covariance is the phylogenetic correlation matrix `A`. The `sd` parameter for this term
+captures how much variance is attributable to shared linguistic ancestry — analogous to
+Pagel's λ.
+
+Note: entries that share the same `tip_name` (same language) get the same phylogenetic
+random intercept, but still have independent residual variation. This is what lets us
+use all 240 observations rather than collapsing to 101.
+
+NB: a few divergent transitions.
+
+```{r fit_phylo, cache=TRUE}
+fit_phylo <- brm(
+    extra_ritual_group_markers ~ 1 + violent_external + (1 | gr(tip_name, cov = A)),
+    data   = data,
+    data2  = list(A = A),
+    family = bernoulli(link = logit),
+    prior  = c(
+        prior(normal(0, 1.5), class = Intercept),
+        prior(normal(0, 1),   class = b),
+        prior(exponential(1), class = sd)
+    ),
+    chains = 4, iter = 4000, warmup = 2000, cores = 4,
+    control = list(adapt_delta = .999, max_treedepth = 20),
+    seed   = 1342,
+    silent = 2
+)
+```
+
+## 6. Results
+
+```{r results}
+summary(fit_base) # violent_external: 1.09 (0.56, 1.61)
+summary(fit_phylo) # violent_external: 1.03 (0.45, 1.61)
+```
+
+### Does the violent_external effect survive phylogenetic control?
+
+```{r hypothesis}
+# one-sided: does violent conflict positively predict ritual markers?
+hypothesis(fit_base,  "violent_external > 0")
+hypothesis(fit_phylo, "violent_external > 0")
+```
+
+### How strong is the phylogenetic signal?
+
+The `sd(tip_name)` parameter from the phylogenetic model tells you how much
+between-language variance is explained by the tree. If it's large relative to the
+overall variance, language ancestry is doing a lot of work.
+
+```{r phylo_signal}
+# Extract sd of the phylogenetic random effect
+post <- as_draws_df(fit_phylo)
+sd_phylo <- post$`sd_tip_name__Intercept`
+
+cat("Phylogenetic sd — median:", round(median(sd_phylo), 3),
+    "  95% HDI:", round(hdi(sd_phylo, credMass = 0.95), 3), "\n")
+```
+
+### Compare violent_external estimate: baseline vs. phylogenetic
+- Relatively minor effect of adding the phylogenetic control.
+- This seems surprising, need to verify that the covariances make sense and are included correctly. 
+
+```{r compare}
+b_base  <- as_draws_df(fit_base)$b_violent_external
+b_phylo <- as_draws_df(fit_phylo)$b_violent_external
+
+tibble(
+    model  = c("baseline", "phylogenetic"),
+    median = c(median(b_base), median(b_phylo)),
+    lo95   = c(hdi(b_base)[1], hdi(b_phylo)[1]),
+    hi95   = c(hdi(b_base)[2], hdi(b_phylo)[2])
+) |> mutate(across(where(is.numeric), \(x) round(x, 3)))
+```
+
+## 7. Control for year as a covariate:
+- This does almost nothing to our results. 
+- Year is a really small effect.
+
+```{r fit_phylo_year, eval=FALSE}
+fit_phylo_year <- brm(
+    extra_ritual_group_markers ~ 1 + violent_external + year_scaled +
+        (1 | gr(tip_name, cov = A)),
+    data   = data,
+    data2  = list(A = A),
+    family = bernoulli(link = logit),
+    prior  = c(
+        prior(normal(0, 1.5), class = Intercept),
+        prior(normal(0, 1),   class = b),
+        prior(exponential(1), class = sd)
+    ),
+    chains = 4, iter = 4000, warmup = 2000, cores = 4,
+    control = list(adapt_delta = .999, max_treedepth = 20),
+    seed   = 1342
+)
+summary(fit_phylo_year)
+hypothesis(fit_phylo_year, "violent_external > 0")
+```
