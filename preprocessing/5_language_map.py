@@ -3,9 +3,11 @@ Mapping to:
 
 https://www.nature.com/articles/sdata2018189
 
+OSF for the article: https://osf.io/cufv7/files/osfstorage
+Glottolog ASJP mapping: https://asjp.clld.org/languages 
+
 '''
 
-import re
 import pandas as pd
 
 # load
@@ -79,16 +81,20 @@ drh_asjp = (drh_asjp[drh_asjp['tip_name'].notna()]
              .drop_duplicates("entry_id")
              .sort_values('entry_id'))
 
+# save matched entries for comparison with v6
+drh_asjp[['entry_id', 'entrytag_name', 'entrytag_level', 'ID', 'Glottocode', 'tip_name']].to_csv(
+    "data/matched_v5.csv", index=False)
+
 # --- Where are we losing entries? ---
 
 # 1) Lost at the Glottolog_Name -> ASJP merge (747 -> 565)
 #    These entries had language tags but none of their tag names matched any
 #    Glottolog_Name in languages.csv. Show the deepest tag per entry (best attempt).
-# pd.set_option('display.max_colwidth', None)
+#pd.set_option('display.max_colwidth', None)
 lost_merge = (drh_langs[~drh_langs['entry_id'].isin(drh_asjp_all['entry_id'])]
               .sort_values(['entry_id', 'entrytag_level'], ascending=[True, False])
               .drop_duplicates('entry_id')
-              [['entry_id', 'entrytag_name', 'entrytag_level']])
+              [['entry_id', 'entrytag_name', 'entrytag_level', 'entrytag_path']])
 
 # 2) Lost at the ASJP ID -> tree tip step (565 -> 555)
 #    These entries matched ASJP but none of their ASJP IDs appear in the tree.
@@ -96,10 +102,69 @@ lost_merge = (drh_langs[~drh_langs['entry_id'].isin(drh_asjp_all['entry_id'])]
 lost_tip = (drh_asjp_all[~drh_asjp_all['entry_id'].isin(drh_asjp['entry_id'])]
             .sort_values(['entry_id', 'entrytag_level'], ascending=[True, False])
             .drop_duplicates('entry_id')
-            [['entry_id', 'entrytag_name', 'entrytag_level', 'ID', 'Glottocode']])
+            [['entry_id', 'entrytag_name', 'entrytag_level', 'entrytag_path', 'ID', 'Glottocode']])
 
 ### how many of these tips are unique? ###
 drh_asjp["tip_name"].nunique() # only 203/555 
+drh_asjp.groupby('tip_name').size().reset_index(name='count').sort_values('count', ascending=False).head(20)
+
+'''
+
+ASJP: 
+- based on https://en.wikipedia.org/wiki/Swadesh_list (only 40 words.)
+- did not put glottocode for Egyptian e.g. (middle).
+- potential task: can we save some of these?
+
+Seems like yes e.g. we have Greek and they have ancient Greek.
+Some of our entries do not go deep enough e.g.:
+- Greek vs. Ancient Greek.
+
+
+https://wals.info/
+https://asjp.clld.org/languages
+https://glottolog.org/resource/languoid/id/anci1242
+
+Can search on ASJP and put in code on glottolog.
+
+Provide: 
+- ask for a tip glottocode (what is tip?)
+- provide entry name + link. 
+
+# 1. how do we find tips 
+# 2. do we need tips
+'''
+
+#### save document for Willis ####
+# first merge lost_tip and lost_merge and add a column
+lost_tip['reason'] = 'tip'
+lost_merge['reason'] = 'merge'
+lost_records = pd.concat([lost_merge, lost_tip])
+
+# then we need to get the entry name
+entries = pd.read_csv("../data/preprocessed/entries_clean.csv")
+entries = entries[['entry_id', 'entry_name', 'data_source']].drop_duplicates()
+lost_records = lost_records.merge(entries, on = 'entry_id', how = 'inner')
+
+# now add the link 
+lost_records['drh_link'] = (
+    "https://religiondatabase.org/browse/" 
+    + lost_records['entry_id'].astype(str)
+)
+
+# select columns in reasonable order:
+lost_records = lost_records[[
+    "entry_id",
+    "entry_name",
+    "entrytag_name",
+    "entrytag_level",
+    "entrytag_path",
+    "drh_link",
+    "data_source",
+    "reason",
+    "ID",
+    "Glottocode"]]
+
+lost_records.to_csv("data/lost_records_v5.csv", index=False)
 
 ''' Questions:
 1. Why are so many entries lost on merge? 
@@ -135,9 +200,6 @@ ritual_asjp['tip_name'].isna().sum() # 152 NA / 392
 ritual_asjp = ritual_asjp.dropna()
 ritual_asjp # 240 rows 
 ritual_asjp['tip_name'].nunique() # 101 unique tips
-
-# save for R phylogenetic model (entry-level, not aggregated)
-ritual_asjp.to_csv("../data/phylo_input/ritual_asjp_phylo.csv", index=False)
 
 '''
 There is apparently a way to not do the aggreagation,
@@ -181,6 +243,7 @@ print(f"\nTips after aggregation: {len(agg)}")
 print(f"Missing violent_external:           {agg['violent_external'].isna().sum()}")
 print(f"Missing extra_ritual_group_markers: {agg['extra_ritual_group_markers'].isna().sum()}")
 
+'''
 # BayesTraits input: tab-separated, "?" for missing, tip_name first
 bt = agg[['tip_name', 'violent_external', 'extra_ritual_group_markers']].copy()
 bt['violent_external']             = bt['violent_external'].apply(lambda x: '?' if pd.isna(x) else str(int(x)))
@@ -188,3 +251,4 @@ bt['extra_ritual_group_markers']   = bt['extra_ritual_group_markers'].apply(lamb
 bt.to_csv("../data/mdl_input/bayestraits_extra_ritual.tsv", sep='\t', index=False, header=False)
 print("\nSample BayesTraits input:")
 print(bt.head(10).to_string(index=False))
+'''

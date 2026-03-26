@@ -1,0 +1,223 @@
+---
+title: "Phylogenetic model: extra ritual group markers ~ violent external conflict"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+```{r setup, message=FALSE, warning=FALSE}
+library(pacman)
+p_load(brms, ape, tidyverse, here, HDInterval)
+
+set.seed(1342)
+```
+
+## 1. Load data and tree
+
+```{r load}
+data <- read_csv(here("data", "phylo_input", "tattoos_scarification.csv"))
+tree <- read.tree(here("asjp", "raw", "world.tre"))
+
+cat("Entries:", nrow(data), "\n")
+cat("Unique tips in data:", n_distinct(data$tip_name), "\n")
+cat("Tips in full tree:  ", length(tree$tip.label), "\n")
+```
+## 2. Prune tree to the tips we have data for
+
+BayesTraits and brms both require that the covariance matrix covers exactly the tips
+present in the data — no more, no less.
+
+```{r prune}
+tips_in_data <- unique(data$tip_name)
+tree_pruned  <- keep.tip(tree, tips_in_data)
+
+cat("Tips in pruned tree:", length(tree_pruned$tip.label), "\n")
+stopifnot(setequal(tree_pruned$tip.label, tips_in_data))
+
+```
+
+## 3. Phylogenetic covariance matrix
+
+`vcv.phylo(..., corr = TRUE)` gives a correlation matrix (diagonal = 1) where
+off-diagonal entries are the proportion of total depth shared between two tips — i.e.,
+how recently they diverged. brms uses this as the prior covariance for the
+language-level random intercepts.
+
+```{r cov_matrix}
+A <- vcv.phylo(tree_pruned, corr = TRUE)
+dim(A)  # should be 147 x 147
+```
+
+## 4. Baseline model (no phylogeny)
+
+```{r fit_baseline, cache=TRUE, message=FALSE, warning=FALSE}
+fit_base <- brm(
+    tattoos_scarification ~ 1 + violent_external,
+    data   = data,
+    family = bernoulli(link = logit),
+    prior  = c(
+        prior(normal(0, 1.5), class = Intercept),
+        prior(normal(0, 1),   class = b)
+    ),
+    chains = 4, iter = 4000, warmup = 2000, cores = 4,
+    control = list(adapt_delta = .95, max_treedepth = 15),
+    seed   = 1342,
+    silent = 2
+)
+```
+
+## 5. Phylogenetic model
+
+```{r fit_phylo, cache=TRUE, message=FALSE, warning=FALSE}
+
+fit_phylo <- brm(
+    tattoos_scarification ~ 1 + violent_external + (1 | gr(tip_name, cov = A)),
+    data   = data,
+    data2  = list(A = A),
+    family = bernoulli(link = logit),
+    prior  = c(
+        prior(normal(0, 1.5), class = Intercept),
+        prior(normal(0, 1),   class = b),
+        prior(exponential(1), class = sd)
+    ),
+    chains = 4, iter = 4000, warmup = 2000, cores = 4,
+    control = list(adapt_delta = .999, max_treedepth = 20),
+    seed   = 1342,
+    silent = 2
+)
+
+```
+
+## 6. Results
+
+```{r results}
+#summary(fit_base) # violent_external: 0.85 (0.10, 1.59)
+summary(fit_phylo) # violent_external: 0.85 (0.10, 1.60) <- basically the same.
+```
+
+```{r}
+
+plot(fit_phylo, N = 2, ask = FALSE)
+
+```
+
+### Does the violent_external effect survive phylogenetic control?
+
+```{r hypothesis}
+# one-sided: does violent conflict positively predict ritual markers?
+hyp_base <- hypothesis(fit_base,  "violent_external > 0") # 0.85 (0.24, 1.46)
+hyp_phylo <- hypothesis(fit_phylo, "violent_external > 0") # 0.85 (0.22, 1.48)
+```
+
+```{r}
+
+plot(hyp_phylo)
+
+```
+
+# Phylogenetic variation (13%); although not an expert here.
+
+The so called phylogenetic signal (often symbolize by λ) can be computed with the hypothesis method and is ~.13 here.
+
+For Bernoulli models there is no sigma — but the latent logistic distribution underlying the Bernoulli does have an implicit residual variance. The standard approach is to use the latent variable formulation, where the logistic distribution has a fixed residual variance of π²/3 ≈ 3.29.
+
+This is analogous to Pagel's λ but on the latent logit scale — it tells you what proportion of the latent variance is attributable to phylogenetic structure. It's sometimes called the phylogenetic heritability in this context.
+
+
+```{r}
+hyp <- "sd_tip_name__Intercept^2 / (sd_tip_name__Intercept^2 + 3.289868) = 0"
+(hyp <- hypothesis(fit_phylo, hyp, class = NULL))
+plot(hyp)
+```
+
+### Compare violent_external estimate: baseline vs. phylogenetic
+- Relatively minor effect of adding the phylogenetic control.
+- This seems surprising, need to verify that the covariances make sense and are included correctly. 
+
+```{r compare}
+b_base  <- as_draws_df(fit_base)$b_violent_external
+b_phylo <- as_draws_df(fit_phylo)$b_violent_external
+
+tibble(
+    model  = c("baseline", "phylogenetic"),
+    median = c(median(b_base), median(b_phylo)),
+    lo95   = c(hdi(b_base)[1], hdi(b_phylo)[1]),
+    hi95   = c(hdi(b_base)[2], hdi(b_phylo)[2])
+) |> mutate(across(where(is.numeric), \(x) round(x, 3)))
+```
+
+# Adding repeated measurements
+
+We probably do not have enough observations per tip (most are unique) to properly estimate this model, but trying just as a robusness/sanity check.
+
+```{r}
+
+## 5b. Phylogenetic model with repeated measurements
+data <- data %>% mutate(tip_name_rep = tip_name)
+fit_phylo_repeat <- brm(
+    tattoos_scarification ~ 1 + violent_external + 
+        (1 | gr(tip_name, cov = A)) + 
+        (1 | tip_name_rep),
+    data   = data,
+    data2  = list(A = A),
+    family = bernoulli(link = logit),
+    prior  = c(
+        prior(normal(0, 1.5), class = Intercept),
+        prior(normal(0, 1),   class = b),
+        prior(exponential(1), class = sd)
+    ),
+    chains = 4, iter = 4000, warmup = 2000, cores = 4,
+    control = list(adapt_delta = 0.95, max_treedepth = 15),
+    seed   = 1342,
+    silent = 2
+)
+
+```
+
+```{r}
+hyp <- paste(
+    "sd_tip_name__Intercept^2 /",
+    "(sd_tip_name__Intercept^2 + sd_tip_name_rep__Intercept^2 + 3.289868) = 0"
+)
+hypothesis(fit_phylo_repeat, hyp, class = NULL)
+```
+```{r}
+
+summary(fit_phylo_repeat)
+
+```
+
+Basically does not change much, probably better to stick with the other model we have anyways then.
+
+## 7. Control for year + region as well as covariates. 
+- This does almost nothing to our results. 
+- Year is a really small effect.
+
+```{r fit_phylo_year, cache=TRUE}
+fit_phylo_year <- brm(
+    tattoos_scarification ~ 1 + violent_external + year_scaled + world_region + 
+        (1 | gr(tip_name, cov = A)),
+    data   = data,
+    data2  = list(A = A),
+    family = bernoulli(link = logit),
+    prior  = c(
+        prior(normal(0, 1.5), class = Intercept),
+        prior(normal(0, 1),   class = b),
+        prior(exponential(1), class = sd)
+    ),
+    chains = 4, iter = 4000, warmup = 2000, cores = 4,
+    control = list(adapt_delta = .999, max_treedepth = 20),
+    seed   = 1342
+)
+
+```
+
+```{r}
+summary(fit_phylo_year)
+```
+
+```{r}
+hypothesis(fit_phylo_year, "violent_external > 0")
+```
+

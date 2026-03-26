@@ -1,0 +1,134 @@
+entry_id,entry_name,entrytag_name,entrytag_level,ID,Glottocode,tip_name,present_in
+177,Jesus movement,East Greek,6,OMEO,,Aus.PAMA_NYUNGAN.OMEO,v6_only
+182,Pauline Christianity,Ancient Greek,7,ALLENTIAC,,Hur.HUARPE.ALLENTIAC,v6_only
+198,Religion in Attica (600-300BCE),Ancient Greek,7,TZOTZIL_ZINACANTAN_1600,,May.MAYAN.TZOTZIL_ZINACANTAN_1600,v6_only
+422,Demeter Cult,Ancient Greek,7,COERUNA,,Hui.UNCLASSIFIED_HUITOTOAN.COERUNA,v6_only
+470,Archaic Spartan Cults,Ancient Greek,7,COMMON_TOCHARIAN,,IE.TOCHARIAN.COMMON_TOCHARIAN,v6_only
+520,Cham Ahiér,Coastal Chamic,8,CARIB_1665,,Arw.NORTHERN_ARAWAKAN.CARIB_1665,v6_only
+752,Haroi,Coastal Chamic,8,COLAC,,Aus.PAMA_NYUNGAN.COLAC,v6_only
+764,Timbira (Canela),Pará-Maranhão Gavião,8,CARIB_1665,,Arw.NORTHERN_ARAWAKAN.CARIB_1665,v6_only
+809,British Isles III: Pre-Theodosian Roman Britain Continued,TGB Celtic,6,DJADJALA,,Aus.PAMA_NYUNGAN.DJADJALA,v6_only
+810,British Isles IV: Pre-Theodosian Roman Britain Continued,TGB Celtic,6,OLD_OR_MIDDLE_JAVANESE,,An.JAVANESE.OLD_OR_MIDDLE_JAVANESE,v6_only
+824,"Central Macedonia, Greece: Eastern Orthodoxy",East Greek,6,ZAPOTEC_1578,,OM.ZAPOTECAN.ZAPOTEC_1578,v6_only
+850,Pre-Christian Religion / Paganism in Gaul,TGB Celtic,6,ZAPOTEC_1578,,OM.ZAPOTECAN.ZAPOTEC_1578,v6_only
+853,Pre-Christian Religion / Paganism in Northern Britain (Pictland / Scotland),TGB Celtic,6,NAHUATL_CUATLAMAYAN_ANTONIO_SANTOS,,UA.AZTECAN.NAHUATL_CUATLAMAYAN_ANTONIO_SANTOS,v6_only
+904,Euboea/Central Macedonia: Nicaean-Chalcedonian Christianity,Ancient Greek,7,NAHUATL_XAALITLA_TEPECUAUILCO,,UA.AZTECAN.NAHUATL_XAALITLA_TEPECUAUILCO,v6_only
+905,Euboea/Central Macedonia: Constantinopolitan Chalcedonian Christianity,East Greek,6,ZAPOTEC_1578,,OM.ZAPOTECAN.ZAPOTEC_1578,v6_only
+941,Chan Buddhists in early Qing period,Language,1,KAWA,,TAP.GREATER_ALOR.KAWA,v6_only
+948,Christianity in Ephesus,Ancient Greek,7,NAHUATL_XOXOCOTLA_PUENTE_DE_IXTLA,,UA.AZTECAN.NAHUATL_XOXOCOTLA_PUENTE_DE_IXTLA,v6_only
+957,Spartan Religion,Ancient Greek,7,TOTONAC_OLINTLA,,Tot.TOTONACAN.TOTONAC_OLINTLA,v6_only
+974,"Greek Chalcedonian Christians, Nicaea",East Greek,6,CAMBERRA_LANGUAGE,,Aus.PAMA_NYUNGAN.CAMBERRA_LANGUAGE,v6_only
+1024,Universal Salvation Ritual,Language,1,ZAPOTEC_1578,,OM.ZAPOTECAN.ZAPOTEC_1578,v6_only
+1038,Sino-Muslims in Qing China,Language,1,GUARANI_ANTIGO,,Tup.TUPI_GUARANI.GUARANI_ANTIGO,v6_only
+1039,(Archaeology of) Religion in New Kingdom Nubia,Language Isolates,2,ALLENTIAC,,Hur.HUARPE.ALLENTIAC,v6_only
+1140,Early Medieval Confucianism,Language,1,MIRRIPU_TIMOTE,,TC.TIMOTE_CUICA.MIRRIPU_TIMOTE,v6_only
+1162,Lingbao dafa,Language,1,KITANEMUK,,UA.TAKIC.KITANEMUK,v6_only
+1396,Ptolemaic Egypt - Egyptian Religion,East Greek,6,ARAMAIC_ANCIENT,,AA.SEMITIC.ARAMAIC_ANCIENT,v6_only
+1400,The Buddhist Nuns of 4th - 6th century China,Literary Chinese,5,SARDINIAN,,IE.ROMANCE.SARDINIAN,v6_only
+1409,Formative Olmec,Language,1,GUARANI_ANTIGO,,Tup.TUPI_GUARANI.GUARANI_ANTIGO,v6_only
+1415,Anomeans,East Greek,6,NAHUATL_CHICHIQUILA,,UA.AZTECAN.NAHUATL_CHICHIQUILA,v6_only
+1451,Religion in the Early Bronze Age / Canaan,Language,1,TOTONAC_OZELONACAXTLA,,Tot.TOTONACAN.TOTONAC_OZELONACAXTLA,v6_only
+1456,Religion in the Middle Bronze Age / Canaan,Language,1,DORASQUE,,Chi.DORASKE.DORASQUE,v6_only
+1469,Huamachuco Religion,Language Isolates,2,NAHUATL_JICOCINGO_ZACATLAN,,UA.AZTECAN.NAHUATL_JICOCINGO_ZACATLAN,v6_only
+1522,Tijaniyya Tariqa الطريقة التجانية,Language,1,NAHUATL_SAN_FRANCISCO_TLALNEPANTLA,,UA.AZTECAN.NAHUATL_SAN_FRANCISCO_TLALNEPANTLA,v6_only
+1555,Al-Ahbash الأحباش,Language,1,ZAPOTEC_1578,,OM.ZAPOTECAN.ZAPOTEC_1578,v6_only
+1654,Le Parti du Mouvement de La Nahda حزب حركة النهضة,Language,1,PAYAGUA,,Pay.PAYAGUA.PAYAGUA,v6_only
+1706,Virú State Religion,Unknown,2,ZAPOTEC_1578,,OM.ZAPOTECAN.ZAPOTEC_1578,v6_only
+1734,Cupisnique Culture Religion,Unknown,2,CARIB_1665,,Arw.NORTHERN_ARAWAKAN.CARIB_1665,v6_only
+1805,Wahhabisme الوهّابيّة,Language,1,NESE,,An.OCEANIC.NESE,v6_only
+1918,Contemporary Neo-Confucianism 當代新儒家,Language,1,TOTONAC_OLINTLA,,Tot.TOTONACAN.TOTONAC_OLINTLA,v6_only
+1972,Shepherding Movement,Language,1,NAHUATL_CHIGNAUTLA,,UA.AZTECAN.NAHUATL_CHIGNAUTLA,v6_only
+1983,Early Byzantine Asceticism,Language,1,ALLENTIAC,,Hur.HUARPE.ALLENTIAC,v6_only
+1985,Christianity in Antioch. From the Apostolic Era to the Islamic conquest,Language,1,ZAPOTEC_1578,,OM.ZAPOTECAN.ZAPOTEC_1578,v6_only
+1989,Iron Age Celtic Spain and Portugal (Celtiberia),Language,1,OTOMACO,,Oto.OTOMACO.OTOMACO,v6_only
+1993,Ancient Boeotians,Language,1,NAHUATL_XALATZALA_TLAPA,,UA.AZTECAN.NAHUATL_XALATZALA_TLAPA,v6_only
+2009,Ancient Arcadians,Language,1,TOTONAC_OLINTLA,,Tot.TOTONACAN.TOTONAC_OLINTLA,v6_only
+2010,Bektashi Tarika,Language,1,NAHUATL_XALPATLAHUAC,,UA.AZTECAN.NAHUATL_XALPATLAHUAC,v6_only
+2016,الدولة الفاطمية Fatimid Dynasty,Language,1,DJADJALA,,Aus.PAMA_NYUNGAN.DJADJALA,v6_only
+2023,الدولة الزيرية Zirid Dynasty,Language,1,COLAC,,Aus.PAMA_NYUNGAN.COLAC,v6_only
+2031,الدولة الأغلبية The Aghlabid Dynasty,Language,1,OTOMACO,,Oto.OTOMACO.OTOMACO,v6_only
+2038,"Cathars, Catharism, Albigenses, Albigensians, Cathari, Catharistae, ""Pure Christians""",Unknown,2,DJADJALA,,Aus.PAMA_NYUNGAN.DJADJALA,v6_only
+2048,الدولة الرستمية Rustamid Dynasty,Language,1,NAHUATL_CHICHIQUILA,,UA.AZTECAN.NAHUATL_CHICHIQUILA,v6_only
+2051,Tibeto-Vietnamese Đạo Mẫu,Language,1,BARRANBIYA,,Aus.PAMA_NYUNGAN.BARRANBIYA,v6_only
+2069,L'ordre Soufi Qasimite Hadfite الطريقة الصوفية القاسميّة الهادفية,Language,1,ZAPOTEC_1578,,OM.ZAPOTECAN.ZAPOTEC_1578,v6_only
+2074,"Revolutionary Mahdism and Resistance to Colonial Rule in the Sokoto Caliphate, 1905-1906",Language,1,KAWA,,TAP.GREATER_ALOR.KAWA,v6_only
+2084,MAITATSINE: NIGERIA'S BLOODY RELIGIOUS TERRORIST MOVEMENT,Language,1,ZAPOTEC_1578,,OM.ZAPOTECAN.ZAPOTEC_1578,v6_only
+2089,L'ordre Soufit karkariya en Tunisie الطريقة الكركرية في تونس,Language,1,SAR_INDONESIA,,TAP.GREATER_ALOR.SAR_INDONESIA,v6_only
+2094,Feathered Serpent's cult,Language,1,NAHUATL_HUEYATI_YAHUALICA,,UA.AZTECAN.NAHUATL_HUEYATI_YAHUALICA,v6_only
+2100,الدولة الزيانية Zayyanid Dynasty,Language,1,MILLCAYAC,,Hur.HUARPE.MILLCAYAC,v6_only
+2104,الطريقة التجانية في تونس ق18-ق19 ATARIKA TJENIA FI TOUNES  XVIII-XIXème siècle,Language,1,ZAPOTEC_1578,,OM.ZAPOTECAN.ZAPOTEC_1578,v6_only
+2111,Tsinburbura Traditional Religion,Language,1,KERAMIN,,Aus.PAMA_NYUNGAN.KERAMIN,v6_only
+2114,Tijaniyyah Sufi Movement in North-Western Nigeria,Language,1,DHUDHUROA,,Aus.PAMA_NYUNGAN.DHUDHUROA,v6_only
+2116,Qadiriyyah Movement in the Sokoto Caliphate.,Language,1,YITHA_YITHA,,Aus.PAMA_NYUNGAN.YITHA_YITHA,v6_only
+2121,Believers in the Sanctity of Canute III Magnussøn,Language,1,NATI,,An.OCEANIC.NATI,v6_only
+2122,Jama'at Izalat al-Bid'ah wa Iqamat al-Sunnah (JIBWIS),Language,1,NAHUATL_XOXOCOTLA_PUENTE_DE_IXTLA,,UA.AZTECAN.NAHUATL_XOXOCOTLA_PUENTE_DE_IXTLA,v6_only
+2141,(Ahl al-Sunnah Group for Preaching and Jihad)جماعة أهل السنة للدعوة والجهاد,Language,1,ZAPOTEC_1578,,OM.ZAPOTECAN.ZAPOTEC_1578,v6_only
+2147,الدولة الحفصية Hafsid Dynasty,Language,1,OTOMACO,,Oto.OTOMACO.OTOMACO,v6_only
+2148,الدولة الحسينية The Husaynid Dynasty,Language,1,BARRANBIYA,,Aus.PAMA_NYUNGAN.BARRANBIYA,v6_only
+2160,Manichaeans,Persian-Indic,3,TOTONAC_OLINTLA,,Tot.TOTONACAN.TOTONAC_OLINTLA,v6_only
+2166,Judaism in Byzantium,Language,1,TZOTZIL_ZINACANTAN_1600,,May.MAYAN.TZOTZIL_ZINACANTAN_1600,v6_only
+2168,"Dzibilchaltún, arquitectura, poder y cambio religioso en el norte de Yucatán",Language,1,COERUNA,,Hui.UNCLASSIFIED_HUITOTOAN.COERUNA,v6_only
+2214,Tiwanaku Religion,Unknown,2,KERAMIN,,Aus.PAMA_NYUNGAN.KERAMIN,v6_only
+2225,"Culdees, Céli Dé, Céili Dé, Céle Dé,  ""Clients of God"", ""Servants of God"", ""Spouses of God"", ""Companions of God"", Kelidei, Kaledei; Céile Dé",Language,1,JIRINGAYN,,Aus.PAMA_NYUNGAN.JIRINGAYN,v6_only
+2233,The Way of Former Heaven (Xiantiandao 先天道),Language,1,NAHUATL_XOXOCOTLA_PUENTE_DE_IXTLA,,UA.AZTECAN.NAHUATL_XOXOCOTLA_PUENTE_DE_IXTLA,v6_only
+2238,XX ــــــــ    ـق  XVIII   الطريقة التجانية في الجزائر :ق,Language,1,NAHUATL_XAALITLA_TEPECUAUILCO,,UA.AZTECAN.NAHUATL_XAALITLA_TEPECUAUILCO,v6_only
+2239,Chaco Culture,Unknown,2,NAHUATL_XALPATLAHUAC,,UA.AZTECAN.NAHUATL_XALPATLAHUAC,v6_only
+2240,"Inka and non-Inka groups in Cusco, Peru",Quechua IIC,4,DYARIM,,AA.WEST_CHADIC.DYARIM,v6_only
+2244,"Catholicism in the Latin Empire, Catholicism in the Eastern Roman Empire (Byzantium), the Latin Patriarchate of Constantinople",Language,1,NAHUATL_HUEYATI_YAHUALICA,,UA.AZTECAN.NAHUATL_HUEYATI_YAHUALICA,v6_only
+2245,صقلية الإسلامية Islamic Sicily,Language,1,NATI,,An.OCEANIC.NATI,v6_only
+2246,المذهب الحنفي بالبلاد التونسية The Hanafi school in Tunisia,Language,1,CUNG,,NC.BANTOID.CUNG,v6_only
+2247,الفتح العربي الإسلامي لشمال إفريقيا The Arab-Islamic Conquest of North Africa,Language,1,BIGAMBAL,,Aus.PAMA_NYUNGAN.BIGAMBAL,v6_only
+2248,الدولة المرادية في تونس The Muradid Dynasty in Tunisia,Language,1,ZAPOTEC_1578,,OM.ZAPOTECAN.ZAPOTEC_1578,v6_only
+2256,الطريقة الرحمانية في الجزائر  ق18-ق20,Language,1,NAHUATL_SANTA_ANA_TLACOTENCO,,UA.AZTECAN.NAHUATL_SANTA_ANA_TLACOTENCO,v6_only
+2273,Yuan divination schools,Language,1,NAHUATL_CHILOCOYO_HUEHUETLA,,UA.AZTECAN.NAHUATL_CHILOCOYO_HUEHUETLA,v6_only
+2276,Western Zhou (1045 BCE - 771 BCE),Language,1,CAMBERRA_LANGUAGE,,Aus.PAMA_NYUNGAN.CAMBERRA_LANGUAGE,v6_only
+2278,الطريقة القادرية البودشيشية في المغرب الأقصى,Language,1,ALLENTIAC,,Hur.HUARPE.ALLENTIAC,v6_only
+2279,The Ndau people of Chimanimani area in Zimbabwe,Language,1,ULTERIOR_MIXE_C,,MZ.MIXE_ZOQUE.ULTERIOR_MIXE_C,v6_only
+2283,Ge Hong 葛洪 and Outer Alchemy 外丹,Language,1,NAHUATL_AXOCHIAPAN,,UA.AZTECAN.NAHUATL_AXOCHIAPAN,v6_only
+2286,Religious Practices of the Valdivians during Ecuador's Early Formative Period,Unknown,2,GUYAMBAL,,Aus.PAMA_NYUNGAN.GUYAMBAL,v6_only
+2287,Cara,Language,1,NAHUATL_XOCHIATIPAN,,UA.AZTECAN.NAHUATL_XOCHIATIPAN,v6_only
+2288,A subterranean ceremonial complex in the  southeast of Teotihuacan's Pyramid of the Sun,Language,1,POLCI,,AA.WEST_CHADIC.POLCI,v6_only
+2290,الطريقة القادرية في مصر ق13م-ق21م,Language,1,MIRRIPU_TIMOTE,,TC.TIMOTE_CUICA.MIRRIPU_TIMOTE,v6_only
+2299,الحشاشين  ق11-ق13   =   Assassins   XI-XIII,Language,1,ARAMAIC_ANCIENT,,AA.SEMITIC.ARAMAIC_ANCIENT,v6_only
+2301,Kaloutsiani Mosque,Language,1,COMMON_TOCHARIAN,,IE.TOCHARIAN.COMMON_TOCHARIAN,v6_only
+2308,الفتح العربي الإسلامي للأندلس The Arab-Islamic Conquest of the Iberian Peninsula,Language,1,THAWA,,Aus.PAMA_NYUNGAN.THAWA,v6_only
+2309,الدولة الأموية بالأندلس The Umayyad Dynasty in the Iberian Peninsula,Language,1,LATE_EGYPTIAN,,AA.EGYPTIAN_COPTIC.LATE_EGYPTIAN,v6_only
+2320,Sanjiejiao (三階教),Language,1,ALLENTIAC,,Hur.HUARPE.ALLENTIAC,v6_only
+2321,Falungong 法輪功 (Falun Gong) / Falun Dafa 法輪大法,Language,1,OMEO,,Aus.PAMA_NYUNGAN.OMEO,v6_only
+2322,الدّولة الأمويّة في المشرق  بين662 م و750م (The Umayyad State in the Mashriq from 662 to 750),Language,1,ALLENTIAC,,Hur.HUARPE.ALLENTIAC,v6_only
+2324,"Justice and Development Party (PJD), Morocco",Language,1,ULTERIOR_MIXE_C,,MZ.MIXE_ZOQUE.ULTERIOR_MIXE_C,v6_only
+2325,"Outer alchemy (外丹, waidan)",Language,1,BARRANBIYA,,Aus.PAMA_NYUNGAN.BARRANBIYA,v6_only
+2328,Church of Almighty God (Quannengshen jiaohui 全能神教會) / Eastern Lightning (Dongfang shandian 東方閃電),Language,1,GUACHI,,Gch.GUACHI.GUACHI,v6_only
+2331,الدولة العباسيبّة في المشرق  من 750 م الى 1517 م (The Abbasid State in the Mashriq from 750 to 1517),Language,1,NAHUATL_AMILCINGO_ZACUALPAN,,UA.AZTECAN.NAHUATL_AMILCINGO_ZACUALPAN,v6_only
+2332,Religion in the Minaean kingdom,Language,1,BARRANBIYA,,Aus.PAMA_NYUNGAN.BARRANBIYA,v6_only
+2337,Inca,Language,1,NAHUATL_JALATLACO,,UA.AZTECAN.NAHUATL_JALATLACO,v6_only
+2341,The Totonacapan Culture-Religion,Language,1,DYARIM,,AA.WEST_CHADIC.DYARIM,v6_only
+2344,Sican Culture religion,Unknown,2,NAHUATL_XAALITLA_TEPECUAUILCO,,UA.AZTECAN.NAHUATL_XAALITLA_TEPECUAUILCO,v6_only
+2345,Contemporary Shingon,Language,1,NAHUATL_MONTEGRANDE_PLATON_SANCHEZ,,UA.AZTECAN.NAHUATL_MONTEGRANDE_PLATON_SANCHEZ,v6_only
+2346,Igbo Traditional Religion,Language,1,BARRANBIYA,,Aus.PAMA_NYUNGAN.BARRANBIYA,v6_only
+2362,الدّولة السلجوقيّة(1037 م - 1194م),Language,1,DHUDHUROA,,Aus.PAMA_NYUNGAN.DHUDHUROA,v6_only
+2363,"L'ordre Soufi Tunisien ""al-Hasaniyya"" الطريقة الحسنية التونسية",Language,1,NAHUATL_XOCHIATIPAN,,UA.AZTECAN.NAHUATL_XOCHIATIPAN,v6_only
+2365,Moriscos,Language,1,AURAN_KULON_PAZEH,,An.NORTHWEST_FORMOSAN.AURAN_KULON_PAZEH,v6_only
+2369,Le Mouvement Sanussiyya الحركة السنوسيّة,Language,1,THAWA,,Aus.PAMA_NYUNGAN.THAWA,v6_only
+2371,Tewa Pueblo Religion,Language,1,DHUDHUROA,,Aus.PAMA_NYUNGAN.DHUDHUROA,v6_only
+2418,Nasca Culture Religion,Unknown,2,NAHUATL_XALPATLAHUAC,,UA.AZTECAN.NAHUATL_XALPATLAHUAC,v6_only
+2419,Ecumenical Patriarchate,Language,1,POLCI,,AA.WEST_CHADIC.POLCI,v6_only
+2420,Evangelistria of Kipseli Arta,Language,1,CARIB_1665,,Arw.NORTHERN_ARAWAKAN.CARIB_1665,v6_only
+2426,Chavin Culture Religion,Unknown,2,CAMBERRA_LANGUAGE,,Aus.PAMA_NYUNGAN.CAMBERRA_LANGUAGE,v6_only
+2429,Vyliza Monastery,Language,1,NAHUATL_LA_REFORMA_TEPEHUACAN_DE_GUERRERO,,UA.AZTECAN.NAHUATL_LA_REFORMA_TEPEHUACAN_DE_GUERRERO,v6_only
+2433,Hellenistic Religion in the Seleucid Empire,Language,1,NAHUATL_SANTA_MARIA_TEOPOXCO,,UA.AZTECAN.NAHUATL_SANTA_MARIA_TEOPOXCO,v6_only
+2445,Priesthoods in Ptolemaic Thebes (Luxor),Language,1,NAHUATL_XOCHIATIPAN,,UA.AZTECAN.NAHUATL_XOCHIATIPAN,v6_only
+2453,The Otomi,Language,1,NAHUATL_XOCHIATIPAN,,UA.AZTECAN.NAHUATL_XOCHIATIPAN,v6_only
+2483,Malanda Ma Croix Koma,Language,1,NAHUATL_CHINANCAHUATL_ZACUALTIPAN,,UA.AZTECAN.NAHUATL_CHINANCAHUATL_ZACUALTIPAN,v6_only
+2484,Simon Kimbangu,Language,1,NAHUATL_IXHUATLAN_DE_MADERO,,UA.AZTECAN.NAHUATL_IXHUATLAN_DE_MADERO,v6_only
+2485,Matswanism,Language,1,NAHUATL_SANTA_ANA_TLACOTENCO,,UA.AZTECAN.NAHUATL_SANTA_ANA_TLACOTENCO,v6_only
+2486,Ngunzanism,Language,1,GUINAU,,Arw.NORTHERN_ARAWAKAN.GUINAU,v6_only
+2490,Wu Zetian's State Buddhism,Literary Chinese,5,TAPE,,An.OCEANIC.TAPE,v6_only
+2492,Tendai Buddhism,Language,1,NAHUATL_JICOCINGO_ZACATLAN,,UA.AZTECAN.NAHUATL_JICOCINGO_ZACATLAN,v6_only
+2496,Vietnamese popular religion,Language,1,GUINAU,,Arw.NORTHERN_ARAWAKAN.GUINAU,v6_only
+2506,Ismailis in Canada,Language,1,GUACHI,,Gch.GUACHI.GUACHI,v6_only
+2508,Wari Religion,Language,1,TOTONAC_OZELONACAXTLA,,Tot.TOTONACAN.TOTONAC_OZELONACAXTLA,v6_only
+2509,The Rarámuri,Language,1,SAR_INDONESIA,,TAP.GREATER_ALOR.SAR_INDONESIA,v6_only
+2548,Turkana religious practices,Language,1,BIGAMBAL,,Aus.PAMA_NYUNGAN.BIGAMBAL,v6_only
+2567,Zahiriyyah [in the Iberian Peninsula],Language,1,ALLENTIAC,,Hur.HUARPE.ALLENTIAC,v6_only
+2590,Quirigua Ceremonial Center,Language,1,CARIB_1665,,Arw.NORTHERN_ARAWAKAN.CARIB_1665,v6_only

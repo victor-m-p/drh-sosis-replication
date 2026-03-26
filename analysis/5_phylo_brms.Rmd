@@ -29,7 +29,7 @@ set.seed(1342)
 ## 1. Load data and tree
 
 ```{r load}
-data <- read_csv(here("data", "phylo_input", "ritual_asjp_phylo.csv"))
+data <- read_csv(here("data", "phylo_input", "extra_ritual_group_markers.csv"))
 tree <- read.tree(here("asjp", "raw", "world.tre"))
 
 cat("Entries:", nrow(data), "\n")
@@ -59,7 +59,7 @@ language-level random intercepts.
 
 ```{r cov_matrix}
 A <- vcv.phylo(tree_pruned, corr = TRUE)
-dim(A)  # should be 101 x 101
+dim(A)  # should be 147 x 147
 ```
 
 ## 4. Baseline model (no phylogeny)
@@ -68,7 +68,7 @@ Fitting the non-phylogenetic model first gives us a reference for what the raw
 association between violent conflict and ritual markers looks like, ignoring linguistic
 relatedness entirely.
 
-```{r fit_baseline, cache=TRUE}
+```{r fit_baseline, cache=TRUE, message=FALSE, warning=FALSE}
 fit_base <- brm(
     extra_ritual_group_markers ~ 1 + violent_external,
     data   = data,
@@ -93,11 +93,9 @@ Pagel's λ.
 
 Note: entries that share the same `tip_name` (same language) get the same phylogenetic
 random intercept, but still have independent residual variation. This is what lets us
-use all 240 observations rather than collapsing to 101.
+use all 314 observations rather than collapsing to 147.
 
-NB: a few divergent transitions.
-
-```{r fit_phylo, cache=TRUE}
+```{r fit_phylo, cache=TRUE, message=FALSE, warning=FALSE}
 fit_phylo <- brm(
     extra_ritual_group_markers ~ 1 + violent_external + (1 | gr(tip_name, cov = A)),
     data   = data,
@@ -118,23 +116,23 @@ fit_phylo <- brm(
 ## 6. Results
 
 ```{r results}
-summary(fit_base) # violent_external: 1.09 (0.56, 1.61)
-summary(fit_phylo) # violent_external: 1.03 (0.45, 1.61)
+summary(fit_base) # violent_external: 1.05 (0.61, 1.53)
+summary(fit_phylo) # violent_external: 1.07 (0.59, 1.56) <- basically the same, slightly more uncertainty 
 ```
 
 ### Does the violent_external effect survive phylogenetic control?
 
 ```{r hypothesis}
 # one-sided: does violent conflict positively predict ritual markers?
-hypothesis(fit_base,  "violent_external > 0")
-hypothesis(fit_phylo, "violent_external > 0")
+hypothesis(fit_base,  "violent_external > 0") # 1.05 (0.67, 1.44)
+hypothesis(fit_phylo, "violent_external > 0") # 1.07 (0.67, 1.48)
 ```
 
 ### How strong is the phylogenetic signal?
 
 The `sd(tip_name)` parameter from the phylogenetic model tells you how much
 between-language variance is explained by the tree. If it's large relative to the
-overall variance, language ancestry is doing a lot of work.
+overall variance, language ancestry is doing a lot of work. Here it is not super large.
 
 ```{r phylo_signal}
 # Extract sd of the phylogenetic random effect
@@ -143,6 +141,7 @@ sd_phylo <- post$`sd_tip_name__Intercept`
 
 cat("Phylogenetic sd — median:", round(median(sd_phylo), 3),
     "  95% HDI:", round(hdi(sd_phylo, credMass = 0.95), 3), "\n")
+
 ```
 
 ### Compare violent_external estimate: baseline vs. phylogenetic
@@ -165,9 +164,9 @@ tibble(
 - This does almost nothing to our results. 
 - Year is a really small effect.
 
-```{r fit_phylo_year, eval=FALSE}
+```{r fit_phylo_year, cache=TRUE}
 fit_phylo_year <- brm(
-    extra_ritual_group_markers ~ 1 + violent_external + year_scaled +
+    extra_ritual_group_markers ~ 1 + violent_external + year_scaled + world_region + 
         (1 | gr(tip_name, cov = A)),
     data   = data,
     data2  = list(A = A),
