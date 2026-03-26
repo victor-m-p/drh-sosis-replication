@@ -103,10 +103,6 @@ print(f"Total lost:             {lost_records['entry_id'].nunique()}")
 
 # --- step 9: save ---
 drh_asjp[['entry_id', 'entrytag_name', 'entrytag_level', 'ID', 'Glottocode', 'tip_name']].to_csv(
-    "data/matched_v7.csv", index=False)
-lost_records.to_csv("data/lost_records_v7.csv", index=False)
-drh_asjp.to_csv("data/drh_asjp_v7.csv", index=False)
-
-### check a few (language)
-# yes, checks out.
-drh_tags[drh_tags["entry_id"]==1667]
+    "data/matched.csv", index=False)
+lost_records.to_csv("data/lost_records.csv", index=False)
+drh_asjp.to_csv("data/drh_asjp.csv", index=False)
