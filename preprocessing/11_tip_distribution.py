@@ -1,15 +1,18 @@
 """
-Exploratory plot: distribution of violent_external and extra_ritual_group_markers
-for the N most common tips. Run interactively; no output saved.
+Plots for understanding the distribution of tattoos_scarification data.
+Saved to preprocessing/figures/.
 """
 
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 import numpy as np
 
+os.makedirs("figures", exist_ok=True)
+
 # ── load ──────────────────────────────────────────────────────────────────────
-data = pd.read_csv("../data/phylo_input/extra_ritual_group_markers.csv")
+data = pd.read_csv("../data/phylo_input/tattoos_scarification.csv")
 
 N_TIPS = 10
 top_tips = data["tip_name"].value_counts().head(N_TIPS).index.tolist()
@@ -20,7 +23,7 @@ agg = (df.groupby("tip_name")
          .agg(
              n                          = ("entry_id",                    "count"),
              prop_violent               = ("violent_external",             "mean"),
-             prop_ritual                = ("extra_ritual_group_markers",   "mean"),
+             prop_ritual                = ("tattoos_scarification",         "mean"),
          )
          .loc[top_tips]   # keep the original frequency order
          .reset_index())
@@ -31,12 +34,12 @@ agg["label"] = agg["tip_name"].apply(lambda x: ".".join(x.split(".")[-2:]))
 # ── plot ──────────────────────────────────────────────────────────────────────
 fig, axes = plt.subplots(1, 2, figsize=(9, 5), sharey=True)
 fig.suptitle(
-    f"Top {N_TIPS} most common tips — violent conflict & ritual markers",
+    f"Top {N_TIPS} most common tips — violent conflict & tattoos/scarification",
     fontsize=12, fontweight="bold")
 
 VARS = [
-    ("prop_violent",  "violent_external",           "#DD8452", axes[0]),
-    ("prop_ritual",   "extra_ritual_group_markers",  "#4C72B0", axes[1]),
+    ("prop_violent",  "violent_external",      "#DD8452", axes[0]),
+    ("prop_ritual",   "tattoos_scarification", "#4C72B0", axes[1]),
 ]
 
 for prop_col, raw_col, colour, ax in VARS:
@@ -69,52 +72,86 @@ for prop_col, raw_col, colour, ax in VARS:
     ax.invert_yaxis()
 
 plt.tight_layout()
+plt.savefig("figures/top_tips_violent_ritual.png", dpi=150, bbox_inches="tight")
 plt.show()
 
-# ── plot 2: distribution of observations per tip (all tips) ───────────────────
+# ── plot 2: distribution of observations per tip ─────────────────────────────
 tip_counts = data["tip_name"].value_counts()
 
-fig2, axes2 = plt.subplots(1, 2, figsize=(8, 4))
-fig2.suptitle("Distribution of observations per tip (all tips, extra ritual)",
-              fontsize=12, fontweight="bold")
-
-# left: histogram of counts
-ax = axes2[0]
-ax.hist(tip_counts.values, bins=range(1, tip_counts.max() + 2),
-        color="#4C72B0", edgecolor="white", align="left")
-ax.set_xlabel("Observations per tip", fontsize=10)
-ax.set_ylabel("Number of tips", fontsize=10)
-ax.set_title("How many tips have n=1, n=2, …?", fontsize=10)
-ax.axvline(tip_counts.median(), color="red", lw=1.2, linestyle="--",
-           label=f"median = {tip_counts.median():.0f}")
-ax.legend(fontsize=9)
-
-# annotate key numbers
-for n_val, label in [(1, "n=1"), (2, "n=2")]:
-    count = (tip_counts == n_val).sum()
-    ax.text(n_val, count + 0.3, f"{count} tips", ha="center",
-            fontsize=8, color="#333333")
-
-# right: cumulative — what share of observations come from tips with n ≥ k?
-ax2 = axes2[1]
-sorted_counts = tip_counts.sort_values(ascending=False).to_numpy(dtype=float)
-cum_obs   = np.cumsum(sorted_counts)
-cum_share = cum_obs / cum_obs[-1]
-ax2.plot(np.arange(1, len(sorted_counts) + 1), cum_share,
-         color="#4C72B0", lw=2)
-ax2.set_xlabel("Number of tips (sorted by size)", fontsize=10)
-ax2.set_ylabel("Cumulative share of observations", fontsize=10)
-ax2.set_title("How concentrated are observations across tips?", fontsize=10)
-ax2.yaxis.set_major_formatter(ticker.PercentFormatter(xmax=1))
-ax2.axhline(0.5, color="red", lw=1, linestyle="--", label="50% of obs")
-ax2.legend(fontsize=9)
-
-print(f"Total tips:          {len(tip_counts)}")
-print(f"Tips with n=1:       {(tip_counts == 1).sum()}")
-print(f"Tips with n≥2:       {(tip_counts >= 2).sum()}")
-print(f"Tips with n≥5:       {(tip_counts >= 5).sum()}")
-print(f"Median obs per tip:  {tip_counts.median():.0f}")
-print(f"Max obs per tip:     {tip_counts.max()} ({tip_counts.idxmax()})")
-
+fig2, ax2 = plt.subplots(figsize=(6, 4))
+ax2.hist(tip_counts.values, bins=range(1, tip_counts.max() + 2),
+         color="#4C72B0", edgecolor="white", align="left")
+ax2.set_xlabel("Observations per tip", fontsize=10)
+ax2.set_ylabel("Number of tips", fontsize=10)
 plt.tight_layout()
+plt.savefig("figures/tip_count_distribution.png", dpi=150, bbox_inches="tight")
+plt.show()
+
+# ── plot 4: proportion violent external over time (100-year bins) ─────────────
+entries = pd.read_csv("../data/preprocessed/entries_clean.csv",
+                      usecols=["entry_id", "year_from", "year_to"])
+entries["year_mid"] = (entries["year_from"] + entries["year_to"]) / 2
+
+timed = data.merge(entries, on="entry_id", how="left").dropna(subset=["year_mid"])
+
+BIN = 500
+timed["bin"] = (np.floor(timed["year_mid"] / BIN) * BIN).astype(int)
+binned = (timed.groupby("bin")["violent_external"]
+               .agg(prop="mean", n="count")
+               .reset_index())
+
+fig4, ax4 = plt.subplots(figsize=(10, 4))
+ax4.bar(binned["bin"], binned["prop"], width=BIN * 0.85,
+        color="#DD8452", edgecolor="white", align="edge")
+ax4.set_xlabel("Year (CE/BCE)", fontsize=10)
+ax4.set_ylabel("Proportion violent external", fontsize=10)
+ax4.yaxis.set_major_formatter(ticker.PercentFormatter(xmax=1))
+plt.tight_layout()
+plt.savefig("figures/violent_over_time.png", dpi=150, bbox_inches="tight")
+plt.show()
+
+# ── plot 3a: entries per world region, stacked by violent_external ────────────
+regions = (data.groupby("world_region")["entry_id"]
+               .count()
+               .sort_values(ascending=False)
+               .index.tolist())
+
+C_VIOLENT     = "#DD8452"
+C_NON_VIOLENT = "#4C72B0"
+
+def stacked_region_bar(ax, groupby_col, label0, label1, title):
+    rc = (data.groupby(["world_region", groupby_col])
+              .size()
+              .reset_index(name="n"))
+    bottoms = np.zeros(len(regions))
+    for val, colour, lbl in [(0, C_NON_VIOLENT, label0), (1, C_VIOLENT, label1)]:
+        vals = []
+        for region in regions:
+            subset = rc[(rc["world_region"] == region) & (rc[groupby_col] == val)]
+            vals.append(subset["n"].values[0] if len(subset) else 0)
+        vals = np.array(vals)
+        ax.bar(regions, vals, bottom=bottoms, color=colour, label=lbl,
+               edgecolor="white", linewidth=0.5)
+        bottoms += vals
+    ax.set_xlabel("World region", fontsize=10)
+    ax.set_ylabel("Number of entries", fontsize=10)
+    ax.set_title(title, fontsize=11, fontweight="bold")
+    ax.tick_params(axis="x", rotation=35)
+    ax.legend(fontsize=9)
+
+fig3, ax3 = plt.subplots(figsize=(9, 5))
+stacked_region_bar(ax3, "violent_external",
+                   "violent external = 0", "violent external = 1",
+                   "Entries per world region (coloured by violent external)")
+plt.tight_layout()
+plt.savefig("figures/region_violent_distribution.png", dpi=150, bbox_inches="tight")
+plt.show()
+
+# ── plot 3b: entries per world region, stacked by tattoos_scarification ───────
+fig3b, ax3b = plt.subplots(figsize=(9, 5))
+stacked_region_bar(ax3b, "tattoos_scarification",
+                   "tattoos/scarification = 0", "tattoos/scarification = 1",
+                   "Entries per world region (coloured by tattoos/scarification)")
+plt.tight_layout()
+plt.savefig("figures/region_outcome_distribution.png", dpi=150, bbox_inches="tight")
 plt.show()
