@@ -1,10 +1,11 @@
 """
 vmp 2026-01-31 (update.)
-Curation of answerset data. 
-1. Selection of Questions
-2. Select only groups. 
-3. Map related questions (across the two group polls)
-4. Infer "No" answers from parent questions
+Full data curation pipeline. Output: data/preprocessed/answerset.csv
+1. Select questions of interest from Religious Group poll
+2. Map related questions across the two group poll versions
+3. Infer "No" answers for child questions when parent is "No"
+4. Filter to entries with a valid violent_external answer (n=551)
+5. Merge with entry metadata (year, region) and pivot wide
 """
 
 import pandas as pd
@@ -14,9 +15,16 @@ pd.options.mode.chained_assignment = None  # default='warn'
 # Load data
 data = pd.read_csv("../data/raw/answerset.csv")
 data["entry_id"].nunique() # 1687
+data[data['poll_name'].str.contains("Group")]['entry_id'].nunique() # 926
+
+region_data = pd.read_csv("../data/raw/region_data.csv")[
+    ["region_id", "world_region"]
+].drop_duplicates()
+entrydata = pd.read_csv("../data/raw/entry_data.csv")[
+    ["entry_id", "year_from", "region_id"]
+].merge(region_data, on="region_id", how="left")
 
 # Define the questions to investigate and create mapping dataframe
-# These are all present (verified 2026.)
 question_coding = {
     # independent variables
     "Are other religious groups in cultural contact with target religion:": "cultural_contact", 
@@ -143,9 +151,36 @@ from helper_functions import fill_answers
 
 answers_inferred = fill_answers(answers_complete)
 answers_inferred[answers_inferred["answer_value"].notna()]
-answers_inferred.to_csv("../data/preprocessed/answers_clean.csv", index=False)
 
-'''
-old version (v1) had n=782 unique entries
-new version (v3) has n=828 unique entries
-'''
+# keep only entries with a valid (0/1) answer to violent_external
+entries_with_ve = answers_inferred[
+    (answers_inferred["question_short"] == "violent_external") &
+    (answers_inferred["answer_value"].notna())
+]["entry_id"].unique()
+
+answers_inferred = answers_inferred[answers_inferred["entry_id"].isin(entries_with_ve)]
+answers_inferred["entry_id"].nunique()  # 551
+
+### combine with entry metadata (year + region) and pivot wide ###
+question_names_short = [
+    "violent_external", "circumcision", "tattoos_scarification", "permanent_scarring",
+    "extra_ritual_group_markers", "food_taboos", "hair", "dress", "ornaments",
+]
+answers_subset = answers_inferred[answers_inferred["question_short"].isin(question_names_short)]
+answers_wide = answers_subset.pivot_table(
+    index="entry_id", columns="question_short", values="answer_value"
+).reset_index()
+
+answerset = answers_wide.merge(entrydata, on="entry_id", how="inner")
+
+# z-score year from 
+year_mean = answerset["year_from"].mean()
+year_sd   = answerset["year_from"].std()
+answerset["year_scaled"] = (answerset["year_from"] - year_mean) / year_sd
+
+answerset["entry_id"].nunique()  # 551
+answerset.to_csv("../data/preprocessed/answerset.csv", index=False)
+
+### just a few quick overviews ###
+answerset['world_region'].value_counts()
+answerset['year_from'].describe()

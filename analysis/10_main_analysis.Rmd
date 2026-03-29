@@ -8,7 +8,7 @@ output:
 
 ```{r setup, message=FALSE, warning=FALSE}
 library(pacman)
-p_load(brms, ape, tidyverse, here, HDInterval, marginaleffects, loo, ggdist)
+p_load(brms, ape, tidyverse, here, HDInterval, marginaleffects, loo, ggdist, tidybayes, ggokabeito, ggthemes)
 
 set.seed(1342)
 
@@ -40,6 +40,21 @@ model_labels <- c(
   "fit_phylo_year"   = "Phylogenetic + Year + Region"
 )
 
+# Shared theme for grand mean / empirical plots (matches 4_plot_main.R style)
+theme_size <- function(base = 13) {
+  theme(
+    plot.title   = element_text(size = base + 4, face = "bold"),
+    plot.subtitle = element_text(size = base + 1),
+    axis.title.x = element_text(size = base + 2),
+    axis.title.y = element_text(size = base + 2),
+    axis.text.x  = element_text(size = base),
+    axis.text.y  = element_text(size = base),
+    legend.title = element_text(size = base),
+    legend.text  = element_text(size = base),
+    plot.margin  = margin(10, 14, 10, 14)
+  )
+}
+
 # Output directories
 for (d in c(
   here("data", "mdl_fits", "fit_base"),
@@ -60,13 +75,14 @@ for (m in markers)
 
 Set `REFIT <- TRUE` to refit from scratch; otherwise loads cached `.rds` files.
 
+NB: consider whether we should fit model 3 at all (f_rep)
+
 ```{r fit_models, message=FALSE, warning=FALSE}
 tree <- read.tree(here("asjp", "raw", "world.tre"))
 
 fits <- list()
 
 for (marker in markers) {
-  cat("\n--- Processing:", marker, "---\n")
 
   data <- read_csv(
     here("data", "phylo_input", paste0(marker, ".csv")),
@@ -446,6 +462,139 @@ ggsave(here("figures", "summary", "m4_dist_ame.png"), p, width = 9, height = 7)
 p
 ```
 
+## 6. Main model: grand mean and empirical predictions
+
+Two complementary probability-scale views of `fit_phylo_year`. Both use `re_formula = NA`
+(population-level, stripping the phylogenetic RE) so predictions are not tied to specific language groups.
+
+- **Grand mean**: predictions at `year_scaled = 0`, averaged across all observed world regions.
+  Cleanest view of the pure fixed effect.
+- **Empirical**: averaged over actual observed `(world_region, year_scaled)` rows in each marker's data.
+  More honest about the covariate distribution in the sample.
+
+If grand mean AME ≈ empirical AME, results are robust to the choice. For the main text, the grand mean
+AME is the most direct plot; the two-condition version shows absolute prevalence alongside the shift.
+
+```{r grand_mean_draws, message=FALSE, warning=FALSE}
+grand_mean_draws <- map_dfr(markers, function(marker) {
+  fit  <- fits[[marker]]$fit_phylo_year
+  data <- fits[[marker]]$data
+
+  nd <- expand_grid(
+    violent_external = c(0, 1),
+    year_scaled      = 0,
+    world_region     = unique(data$world_region)
+  )
+
+  epred_draws(fit, newdata = nd, re_formula = NA) |>
+    ungroup() |>
+    mutate(
+      marker           = marker,
+      violent_external = factor(violent_external, levels = c(0, 1), labels = c("No", "Yes"))
+    ) |>
+    group_by(marker, .draw, violent_external) |>
+    summarise(.epred = mean(.epred), .groups = "drop")
+})
+
+grand_ame_draws <- grand_mean_draws |>
+  group_by(marker, .draw) |>
+  summarise(ame = .epred[violent_external == "Yes"] - .epred[violent_external == "No"],
+            .groups = "drop")
+```
+
+```{r empirical_draws, message=FALSE, warning=FALSE}
+empirical_draws <- map_dfr(markers, function(marker) {
+  fit  <- fits[[marker]]$fit_phylo_year
+  data <- fits[[marker]]$data
+
+  set.seed(1342)
+  nd_cov <- data |>
+    select(world_region, year_scaled) |>
+    slice_sample(n = min(300, nrow(data)))
+  nd <- expand_grid(violent_external = c(0, 1), nd_cov)
+
+  epred_draws(fit, newdata = nd, re_formula = NA) |>
+    ungroup() |>
+    mutate(
+      marker           = marker,
+      violent_external = factor(violent_external, levels = c(0, 1), labels = c("No", "Yes"))
+    ) |>
+    group_by(marker, .draw, violent_external) |>
+    summarise(.epred = mean(.epred), .groups = "drop")
+})
+
+empirical_ame_draws <- empirical_draws |>
+  group_by(marker, .draw) |>
+  summarise(ame = .epred[violent_external == "Yes"] - .epred[violent_external == "No"],
+            .groups = "drop")
+```
+
+```{r plot_grand_mean_predictions}
+# Marker order by grand mean AME
+gm_order <- grand_ame_draws |>
+  group_by(marker) |>
+  summarise(med = median(ame), .groups = "drop") |>
+  arrange(med) |>
+  pull(marker)
+
+p <- grand_mean_draws |>
+  mutate(marker_label = factor(n_labels[marker], levels = n_labels[gm_order])) |>
+  ggplot(aes(x = .epred, y = marker_label, fill = violent_external)) +
+  stat_halfeye(alpha = 0.9, normalize = "groups", adjust = 0.8) +
+  scale_fill_okabe_ito(name = "Violent external conflict") +
+  labs(x = "Expected probability (E[Y | X])", y = NULL,
+       title = "Posterior mean probability by marker",
+       subtitle = "Population-level (no phylo RE), year scaled = 0, averaged over regions") +
+  theme_clean() +
+  theme_size(base = 13) +
+  theme(legend.position = "bottom")
+
+ggsave(here("figures", "summary", "m4_grand_mean_predictions.png"), p, width = 9.5, height = 6.5)
+p
+```
+
+```{r plot_grand_ame}
+p <- grand_ame_draws |>
+  mutate(marker_label = factor(n_labels[marker], levels = n_labels[gm_order])) |>
+  ggplot(aes(x = ame, y = marker_label)) +
+  stat_halfeye(alpha = 0.95, adjust = 0.8, fill = palette_okabe_ito(order = 7),
+               .width = c(0.66, 0.95), point_interval = median_hdi) +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "grey40") +
+  labs(x = "AME in expected probability (E[Y|Yes] - E[Y|No])", y = NULL,
+       title = "Average marginal effect (Yes - No) by marker",
+       subtitle = "Population-level (no phylo RE), year scaled = 0, averaged over regions") +
+  theme_clean() +
+  theme_size(base = 13)
+
+ggsave(here("figures", "summary", "m4_grand_ame.png"), p, width = 9.5, height = 6.5)
+p
+```
+
+```{r plot_empirical_ame}
+emp_order <- empirical_ame_draws |>
+  group_by(marker) |>
+  summarise(med = median(ame), .groups = "drop") |>
+  arrange(med) |>
+  pull(marker)
+
+p <- empirical_ame_draws |>
+  mutate(marker_label = factor(n_labels[marker], levels = n_labels[emp_order])) |>
+  ggplot(aes(x = ame, y = marker_label)) +
+  stat_halfeye(alpha = 0.95, adjust = 0.8, fill = palette_okabe_ito(order = 7),
+               .width = c(0.66, 0.95), point_interval = median_hdi) +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "grey40") +
+  labs(x = "AME in expected probability (E[Y|Yes] - E[Y|No])", y = NULL,
+       title = "Average marginal effect (Yes - No) by marker",
+       subtitle = "Empirical: averaged over observed region × year distribution") +
+  theme_clean() +
+  theme_size(base = 13)
+
+ggsave(here("figures", "summary", "m4_empirical_ame.png"), p, width = 9.5, height = 6.5)
+p
+```
+
+---
+
 ## 7. Phylogenetic signal plot
 
 ```{r phylo_signal_plot}
@@ -466,3 +615,128 @@ p <- phylo_signal |>
 ggsave(here("figures", "summary", "phylo_signal.png"), p, width = 10, height = 7)
 p
 ```
+
+---
+
+## 8. Exploratory: AME by region
+
+For each marker: posterior AME of `violent_external` broken down by `world_region`,
+at `year_scaled = 0`, population-level (`re_formula = NA`). Useful for understanding
+whether the effect is driven by particular regions. Saved to `figures/diagnostics/{marker}/`.
+
+```{r region_ame, message=FALSE, warning=FALSE}
+for (marker in markers) {
+  fit  <- fits[[marker]]$fit_phylo_year
+  data <- fits[[marker]]$data
+
+  nd <- expand_grid(
+    violent_external = c(0, 1),
+    year_scaled      = 0,
+    world_region     = unique(data$world_region)
+  )
+
+  region_ame <- epred_draws(fit, newdata = nd, re_formula = NA) |>
+    ungroup() |>
+    mutate(violent_external = factor(violent_external, levels = c(0, 1), labels = c("No", "Yes"))) |>
+    group_by(.draw, world_region) |>
+    summarise(ame = .epred[violent_external == "Yes"] - .epred[violent_external == "No"],
+              .groups = "drop")
+
+  p <- region_ame |>
+    ggplot(aes(x = ame, y = reorder(world_region, ame, median))) +
+    stat_halfeye(.width = c(0.66, 0.95), point_interval = median_hdi,
+                 fill = "#C8839E", color = "black", alpha = 0.85) +
+    geom_vline(xintercept = 0, linetype = "dashed", color = "grey40") +
+    labs(x = "AME (probability scale)", y = NULL,
+         title = paste("AME by region:", n_labels[marker]),
+         subtitle = "Phylogenetic + Year + Region — year scaled = 0, population-level") +
+    theme_bw()
+
+  ggsave(here("figures", "diagnostics", marker, "region_ame.png"), p, width = 8, height = 6)
+}
+```
+
+---
+
+## Notes: AME approaches compared
+
+There are several different AME-related quantities computed in this script. They answer
+slightly different questions and are worth comparing carefully before deciding what goes
+in the paper.
+
+### 1. `avg_slopes` AME — section 5 (`m4_dist_ame`)
+
+**How**: `marginaleffects::avg_slopes(fit, variables = "violent_external", newdata = data)`,
+then `posterior_draws()` to get the full distribution.
+
+**What it averages over**: the actual observed rows in the data (all `world_region` and
+`year_scaled` combinations present in the sample, with their observed frequency).
+
+**Phylo RE**: by default `marginaleffects` uses `re_formula = NULL`, meaning it conditions
+on the fitted phylogenetic random intercepts. This means the AME reflects predictions
+for the specific language groups in the sample, not a generic new society.
+
+**In short**: "for the societies in our sample, what is the average change in predicted
+probability when violent_external switches from 0 to 1?"
+
+---
+
+### 2. Grand mean AME — section 6 (`m4_grand_ame`)
+
+**How**: `epred_draws()` with `re_formula = NA`, `year_scaled = 0`, expanded over all
+unique `world_region` values, then averaged over regions within each posterior draw.
+
+**What it averages over**: all world regions equally (unweighted average), at average year.
+
+**Phylo RE**: `re_formula = NA` strips the phylogenetic random intercept entirely.
+Predictions are purely from fixed effects — the population-level trend, not tied to
+any specific language group.
+
+**In short**: "at average year, ignoring which language family a society belongs to,
+what is the expected change in probability across world regions?"
+
+---
+
+### 3. Empirical AME — section 6 (`m4_empirical_ame`)
+
+**How**: same as grand mean but `newdata` is a random sample of actual observed
+`(world_region, year_scaled)` rows from the data (up to n=300 per marker).
+
+**What it averages over**: the observed joint distribution of region and year in the sample.
+
+**Phylo RE**: `re_formula = NA` (same as grand mean).
+
+**In short**: "at the actual distribution of time periods and regions observed in this
+marker's data, what is the expected change in probability?"
+
+---
+
+### Key differences to check
+
+| | averages over | phylo RE | year |
+|---|---|---|---|
+| `avg_slopes` | observed rows | included | observed |
+| Grand mean AME | regions equally | excluded | fixed at 0 |
+| Empirical AME | observed region × year | excluded | observed |
+
+**Things to verify**:
+
+1. Do the three AME estimates agree? If yes, the effect is robust to these modelling choices.
+   If the `avg_slopes` AME (with phylo RE) differs from the grand mean AME (without), this
+   tells you something about how much the phylogenetic clustering is inflating or deflating
+   the estimated effect.
+
+2. The grand mean and empirical AME use `re_formula = NA`. This is appropriate for asking
+   "population-level" questions, but note it is a stronger extrapolation — it asks what would
+   happen for a generic society, not specifically for the language groups we observed.
+
+3. `year_scaled = 0` corresponds to the mean year in the sample. Check what actual calendar
+   year this maps to for each marker (it will differ slightly since each marker has a different
+   set of entries). If the year effect is small (which the model suggests it is), this choice
+   should not matter much.
+
+4. The `avg_slopes` approach computes the AME on the logit scale and then transforms, whereas
+   the `epred_draws` approach works directly on the probability scale. Both are valid but can
+   give slightly different results due to Jensen's inequality. The `epred_draws` approach is
+   arguably more honest as it avoids any ambiguity about the order of averaging and
+   transforming.
