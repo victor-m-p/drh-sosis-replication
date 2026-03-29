@@ -2,17 +2,6 @@ import glob
 import pandas as pd
 from Bio import Phylo
 
-# --- step 1: collect all entry_ids that appear in any mdl_input file ---
-# These are the entries we actually care about for the analysis.
-mdl_files = glob.glob("../data/mdl_input/*.csv")
-mdl_entries = set()
-for f in mdl_files:
-    df = pd.read_csv(f)
-    if 'entry_id' in df.columns:
-        mdl_entries.update(df['entry_id'].unique())
-
-print(f"Unique entries across all mdl_input files: {len(mdl_entries)}")
-
 # --- step 2: load DRH tags, filter to relevant entries only ---
 drh_tags = pd.read_csv("../data/raw/entity_tags.csv")
 drh_tags = drh_tags[drh_tags["entry_id"].isin(mdl_entries)]
@@ -106,3 +95,7 @@ drh_asjp[['entry_id', 'entrytag_name', 'entrytag_level', 'ID', 'Glottocode', 'ti
     "data/matched.csv", index=False)
 lost_records.to_csv("data/lost_records.csv", index=False)
 drh_asjp.to_csv("data/drh_asjp.csv", index=False)
+
+### look at the ones we lose on the merge ####
+asjp = pd.read_csv("../asjp/cldf/languages.csv")[["ID", "Name", "Glottocode", "Glottolog_Name", "Family", "classification_wals", "classification_ethnologue", "classification_glottolog"]].drop_duplicates()
+asjp.to_csv("data/asjp.csv", index=False)
