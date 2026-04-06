@@ -17,7 +17,7 @@ set.seed(1342)
 
 ```{r load}
 data <- read_csv(here("data", "phylo_input", "tattoos_scarification.csv"))
-tree <- read.tree(here("asjp", "raw", "world.tre"))
+tree <- read.tree(here("data", "jaeger2018", "world.tre"))
 
 cat("Entries:", nrow(data), "\n")
 cat("Unique tips in data:", n_distinct(data$tip_name), "\n")

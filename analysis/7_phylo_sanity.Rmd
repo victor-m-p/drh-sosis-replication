@@ -21,7 +21,7 @@ p_load(brms, ape, tidyverse, here, HDInterval, phytools)
 
 ```{r load, message=FALSE}
 data <- read_csv(here("data", "phylo_input", "extra_ritual_group_markers.csv"))
-tree <- read.tree(here("asjp", "raw", "world.tre"))
+tree <- read.tree(here("data", "jaeger2018", "world.tre"))
 
 tips_in_data <- unique(data$tip_name)
 tree_pruned  <- keep.tip(tree, tips_in_data)

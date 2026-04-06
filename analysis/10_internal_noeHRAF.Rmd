@@ -1,0 +1,744 @@
+---
+title: "Main Analysis: Ritual markers ~ violent external conflict"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+```{r setup, message=FALSE, warning=FALSE}
+library(pacman)
+p_load(brms, ape, tidyverse, here, HDInterval, marginaleffects, loo, ggdist, tidybayes, ggokabeito, ggthemes)
+
+set.seed(1342)
+
+REFIT <- TRUE  # set TRUE to refit all models from scratch
+
+markers <- c(
+  "circumcision", "dress", "extra_ritual_group_markers",
+  "food_taboos", "hair", "ornaments",
+  "permanent_scarring", "tattoos_scarification"
+)
+
+model_names <- c("fit_base", "fit_phylo", "fit_phylo_repeat", "fit_phylo_year")
+
+marker_labels <- c(
+  "circumcision"               = "Circumcision",
+  "dress"                      = "Dress",
+  "extra_ritual_group_markers" = "Extra-Ritual In-Group Markers",
+  "food_taboos"                = "Food Taboos",
+  "hair"                       = "Hair",
+  "ornaments"                  = "Ornaments",
+  "permanent_scarring"         = "Permanent Scarring",
+  "tattoos_scarification"      = "Tattoos or Scarification"
+)
+
+model_labels <- c(
+  "fit_base"         = "Baseline",
+  "fit_phylo"        = "Phylogenetic",
+  "fit_phylo_repeat" = "Phylogenetic + Repeated",
+  "fit_phylo_year"   = "Phylogenetic + Year + Region"
+)
+
+# Shared theme for grand mean / empirical plots (matches 4_plot_main.R style)
+theme_size <- function(base = 13) {
+  theme(
+    plot.title   = element_text(size = base + 4, face = "bold"),
+    plot.subtitle = element_text(size = base + 1),
+    axis.title.x = element_text(size = base + 2),
+    axis.title.y = element_text(size = base + 2),
+    axis.text.x  = element_text(size = base),
+    axis.text.y  = element_text(size = base),
+    legend.title = element_text(size = base),
+    legend.text  = element_text(size = base),
+    plot.margin  = margin(10, 14, 10, 14)
+  )
+}
+
+# Output directories
+for (d in c(
+  here("data", "model", "internal_noeHRAF", "fits", "fit_base"),
+  here("data", "model", "internal_noeHRAF", "fits", "fit_phylo"),
+  here("data", "model", "internal_noeHRAF", "fits", "fit_phylo_repeat"),
+  here("data", "model", "internal_noeHRAF", "fits", "fit_phylo_year"),
+  here("data", "model", "internal_noeHRAF", "fits"),
+  here("data", "model", "internal_noeHRAF", "results"),
+  here("figures", "internal_noeHRAF")
+)) dir.create(d, recursive = TRUE, showWarnings = FALSE)
+
+for (m in markers)
+  dir.create(here("figures", "internal_noeHRAF", "diagnostics", m), recursive = TRUE, showWarnings = FALSE)
+```
+
+---
+
+## 1. Fit models
+
+Set `REFIT <- TRUE` to refit from scratch; otherwise loads cached `.rds` files.
+
+NB: consider whether we should fit model 3 at all (f_rep)
+
+```{r fit_models, message=FALSE, warning=FALSE}
+tree <- read.tree(here("data", "jaeger2018", "world.tre"))
+
+fits <- list()
+
+for (marker in markers) {
+
+  data <- read_csv(
+    here("data", "model", "internal_noeHRAF", "input", paste0(marker, ".csv")),
+    show_col_types = FALSE
+  ) |> mutate(tip_name_rep = tip_name)
+
+  tips        <- unique(data$tip_name)
+  tree_pruned <- keep.tip(tree, tips)
+  A           <- vcv.phylo(tree_pruned, corr = TRUE)
+
+  f_base  <- formula(paste(marker, "~ 1 + violent_internal"))
+  f_phylo <- formula(paste(marker, "~ 1 + violent_internal + (1 | gr(tip_name, cov = A))"))
+  f_rep   <- formula(paste(marker, "~ 1 + violent_internal + (1 | gr(tip_name, cov = A)) + (1 | tip_name_rep)"))
+  f_year  <- formula(paste(marker, "~ 1 + violent_internal + year_scaled + world_region + (1 | gr(tip_name, cov = A))"))
+
+  prior_base  <- c(prior(normal(0, 1.5), class = Intercept), prior(normal(0, 1), class = b))
+  prior_phylo <- c(prior_base, prior(exponential(1), class = sd))
+
+  shared <- list(family = bernoulli(link = logit),
+                 chains = 4, iter = 4000, warmup = 2000, cores = 4,
+                 backend = "cmdstanr",
+                 control = list(adapt_delta = .95, max_treedepth = 15),
+                 seed = 1342, silent = 2)
+
+  load_or_fit <- function(model_name, fit_fn) {
+    path <- here("data", "model", "internal_noeHRAF", "fits", model_name, paste0(marker, ".rds"))
+    if (!REFIT && file.exists(path)) {
+      readRDS(path)
+    } else {
+      fit <- fit_fn()
+      saveRDS(fit, path)
+      fit
+    }
+  }
+
+  fit_base <- load_or_fit("fit_base", function()
+    do.call(brm, c(list(formula = f_base, data = data, prior = prior_base), shared)))
+
+  fit_phylo <- load_or_fit("fit_phylo", function()
+    do.call(brm, c(list(formula = f_phylo, data = data, data2 = list(A = A), prior = prior_phylo), shared)))
+
+  fit_phylo_repeat <- load_or_fit("fit_phylo_repeat", function()
+    do.call(brm, c(list(formula = f_rep, data = data, data2 = list(A = A), prior = prior_phylo), shared)))
+
+  fit_phylo_year <- load_or_fit("fit_phylo_year", function()
+    do.call(brm, c(list(formula = f_year, data = data, data2 = list(A = A), prior = prior_phylo), shared)))
+
+  fits[[marker]] <- list(
+    fit_base         = fit_base,
+    fit_phylo        = fit_phylo,
+    fit_phylo_repeat = fit_phylo_repeat,
+    fit_phylo_year   = fit_phylo_year,
+    data             = data,
+    A                = A
+  )
+}
+
+# Marker labels with sample sizes
+n_labels <- map_chr(markers, function(marker) {
+  paste0(marker_labels[marker], " (n=", nrow(fits[[marker]]$data), ")")
+}) |> setNames(markers)
+```
+
+---
+
+## 2. Extract results
+
+### Fixed effects (log-odds scale)
+
+```{r fixed_effects}
+fixed_effects <- map_dfr(markers, function(marker) {
+  map_dfr(model_names, function(mname) {
+    fe <- fixef(fits[[marker]][[mname]], summary = FALSE)
+    map_dfr(colnames(fe), function(param) {
+      draws <- fe[, param]
+      tibble(marker = marker, model = mname, parameter = param,
+             median = median(draws), lo95 = hdi(draws)[1], hi95 = hdi(draws)[2])
+    })
+  })
+})
+
+fixed_effects <- fixed_effects |> mutate(across(where(is.numeric), \(x) round(x, 2)))
+
+write_csv(fixed_effects, here("data", "model", "internal_noeHRAF", "results", "coefficients.csv"))
+fixed_effects |> filter(parameter == "violent_internal")
+```
+
+### Hypothesis tests: P(violent_internal > 0)
+
+```{r hypothesis_tests}
+hypothesis_tests <- map_dfr(markers, function(marker) {
+  map_dfr(model_names, function(mname) {
+    h <- hypothesis(fits[[marker]][[mname]], "violent_internal > 0")$hypothesis
+    tibble(marker = marker, model = mname,
+           estimate   = h$Estimate,
+           lo95       = h$CI.Lower,
+           hi95       = h$CI.Upper,
+           post_prob  = h$Post.Prob,
+           evid_ratio = h$Evid.Ratio)
+  })
+})
+
+hypothesis_tests <- hypothesis_tests |> mutate(across(where(is.numeric), \(x) round(x, 2)))
+
+write_csv(hypothesis_tests, here("data", "model", "internal_noeHRAF", "results", "hypothesis_tests.csv"))
+hypothesis_tests
+```
+
+### Natural scale: OR and AME
+
+OR = exp(b_violent_internal): multiplicative change in odds.
+
+The odds of a marker being present (e.g. tattoos) are X times higher in societies with violent external conflict than in societies without it, holding everything else constant. E.g., OR=2 means double, but applies everywhere one scale (e.g., 1%-->2% or 10%-->20%).
+
+AME = average change in P(outcome = 1) for violent_internal 0 → 1, averaged over the data.
+
+Result is in probability units e.g., 0.12 means that, on average across the sample, having violent external conflict is associated with 12 percentage-point higher probability of marker being present. AME accounts for the nonlinearity of the logistic function — the same log-odds coefficient translates to a larger probability shift near P=0.5 and a smaller shift near P=0 or P=1. The AME averages over where each observation actually sits on that curve, so it's more directly interpretable as a real-world effect size. (read more up on this.)
+
+```{r natural_scale}
+natural_scale <- map_dfr(markers, function(marker) {
+  map_dfr(model_names, function(mname) {
+    fit  <- fits[[marker]][[mname]]
+    data <- fits[[marker]]$data
+
+    # Odds ratio from posterior draws
+    draws    <- as_draws_df(fit)$b_violent_internal
+    or_draws <- exp(draws)
+
+    # Average marginal effect (probability scale)
+    ame <- avg_slopes(fit, variables = "violent_internal", newdata = data)
+
+    tibble(
+      marker     = marker,
+      model      = mname,
+      or_median  = median(or_draws),
+      or_lo95    = hdi(or_draws)[1],
+      or_hi95    = hdi(or_draws)[2],
+      ame_median = ame$estimate,
+      ame_lo95   = ame$conf.low,
+      ame_hi95   = ame$conf.high
+    )
+  })
+})
+
+natural_scale <- natural_scale |> mutate(across(where(is.numeric), \(x) round(x, 2)))
+
+write_csv(natural_scale, here("data", "model", "internal_noeHRAF", "results", "natural_scale.csv"))
+natural_scale
+```
+
+### Phylogenetic signal (λ)
+
+```{r phylo_signal}
+phylo_signal <- map_dfr(markers, function(marker) {
+  # fit_phylo
+  h1 <- hypothesis(
+    fits[[marker]]$fit_phylo,
+    "sd_tip_name__Intercept^2 / (sd_tip_name__Intercept^2 + 3.289868) = 0",
+    class = NULL
+  )$hypothesis
+
+  # fit_phylo_repeat
+  h2 <- hypothesis(
+    fits[[marker]]$fit_phylo_repeat,
+    paste("sd_tip_name__Intercept^2 /",
+          "(sd_tip_name__Intercept^2 + sd_tip_name_rep__Intercept^2 + 3.289868) = 0"),
+    class = NULL
+  )$hypothesis
+
+  bind_rows(
+    tibble(marker = marker, model = "fit_phylo",        lambda = h1$Estimate, lo95 = h1$CI.Lower, hi95 = h1$CI.Upper),
+    tibble(marker = marker, model = "fit_phylo_repeat", lambda = h2$Estimate, lo95 = h2$CI.Lower, hi95 = h2$CI.Upper)
+  )
+})
+
+phylo_signal <- phylo_signal |> mutate(across(where(is.numeric), \(x) round(x, 2)))
+
+write_csv(phylo_signal, here("data", "model", "internal_noeHRAF", "results", "phylo_signal.csv"))
+phylo_signal
+```
+
+### Diagnostics (Rhat, ESS)
+
+```{r diagnostics}
+diagnostics <- map_dfr(markers, function(marker) {
+  map_dfr(model_names, function(mname) {
+    s <- summary(fits[[marker]][[mname]])$fixed
+    tibble(marker = marker, model = mname, parameter = rownames(s),
+           rhat = s[, "Rhat"], ess_bulk = s[, "Bulk_ESS"], ess_tail = s[, "Tail_ESS"])
+  })
+})
+
+diagnostics <- diagnostics |> mutate(across(where(is.numeric), \(x) round(x, 2)))
+
+write_csv(diagnostics, here("data", "model", "internal_noeHRAF", "results", "diagnostics.csv"))
+
+# Flag any potential issues
+diagnostics |> filter(rhat > 1.01 | ess_bulk < 400 | ess_tail < 400)
+```
+
+---
+
+## 3. LOO model comparison
+
+```{r loo_comparison, message=FALSE, warning=FALSE}
+loo_results <- map_dfr(markers, function(marker) {
+  loos <- list(
+    fit_base         = loo(fits[[marker]]$fit_base),
+    fit_phylo        = loo(fits[[marker]]$fit_phylo),
+    fit_phylo_repeat = loo(fits[[marker]]$fit_phylo_repeat),
+    fit_phylo_year   = loo(fits[[marker]]$fit_phylo_year)
+  )
+  comparison <- loo_compare(x = loos)
+  as.data.frame(comparison) |>
+    rownames_to_column("model") |>
+    mutate(marker = marker)
+})
+
+loo_results <- loo_results |> mutate(across(where(is.numeric), \(x) round(x, 2)))
+
+write_csv(loo_results, here("data", "model", "internal_noeHRAF", "results", "loo_comparison.csv"))
+loo_results
+```
+
+---
+
+## 4. Summary forest plots (all models)
+
+Point + range plots showing all four models per marker.
+
+```{r forest_logodds}
+coef_ve <- fixed_effects |>
+  filter(parameter == "violent_internal") |>
+  mutate(
+    marker_label = factor(n_labels[marker], levels = n_labels[markers]),
+    model_label  = factor(model_labels[model], levels = model_labels)
+  )
+
+p <- ggplot(coef_ve, aes(x = median, xmin = lo95, xmax = hi95,
+                          y = marker_label, color = model_label)) +
+  geom_pointrange(position = position_dodge(width = 0.6)) +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "grey40") +
+  labs(x = "Coefficient (log-odds)", y = NULL, color = NULL,
+       title = "Effect of violent external conflict on ritual markers",
+       subtitle = "All models — posterior median and 95% HDI") +
+  theme_bw() +
+  theme(legend.position = "bottom")
+
+ggsave(here("figures", "internal_noeHRAF", "forest_logodds.png"), p, width = 10, height = 7)
+p
+```
+
+```{r forest_or}
+ns_plot <- natural_scale |>
+  mutate(
+    marker_label = factor(n_labels[marker], levels = n_labels[markers]),
+    model_label  = factor(model_labels[model], levels = model_labels)
+  )
+
+p <- ggplot(ns_plot, aes(x = or_median, xmin = or_lo95, xmax = or_hi95,
+                          y = marker_label, color = model_label)) +
+  geom_pointrange(position = position_dodge(width = 0.6)) +
+  geom_vline(xintercept = 1, linetype = "dashed", color = "grey40") +
+  scale_x_log10() +
+  labs(x = "Odds Ratio (log scale)", y = NULL, color = NULL,
+       title = "Effect of violent external conflict on ritual markers",
+       subtitle = "All models — odds ratios") +
+  theme_bw() +
+  theme(legend.position = "bottom")
+
+ggsave(here("figures", "internal_noeHRAF", "forest_or.png"), p, width = 10, height = 7)
+p
+```
+
+```{r forest_ame}
+p <- ggplot(ns_plot, aes(x = ame_median, xmin = ame_lo95, xmax = ame_hi95,
+                          y = marker_label, color = model_label)) +
+  geom_pointrange(position = position_dodge(width = 0.6)) +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "grey40") +
+  labs(x = "Average Marginal Effect (probability scale)", y = NULL, color = NULL,
+       title = "Effect of violent external conflict on ritual markers",
+       subtitle = "All models — AME") +
+  theme_bw() +
+  theme(legend.position = "bottom")
+
+ggsave(here("figures", "internal_noeHRAF", "forest_ame.png"), p, width = 10, height = 7)
+p
+```
+
+---
+
+## 5. Main model distribution plots (fit_phylo_year)
+
+Posterior distributions for `fit_phylo_year` only. Markers ordered by median effect size.
+
+```{r m4_draws}
+# Log-odds posterior draws from fit_phylo_year
+draws_logodds <- map_dfr(markers, function(marker) {
+  draws <- as_draws_df(fits[[marker]]$fit_phylo_year)$b_violent_internal
+  tibble(marker = marker, draw = draws)
+})
+
+# OR draws
+draws_or <- draws_logodds |> mutate(draw = exp(draw))
+
+# AME draws (full posterior distribution)
+draws_ame <- map_dfr(markers, function(marker) {
+  fit  <- fits[[marker]]$fit_phylo_year
+  data <- fits[[marker]]$data
+  pd   <- posterior_draws(avg_slopes(fit, variables = "violent_internal", newdata = data))
+  tibble(marker = marker, draw = pd$draw)
+})
+
+# Marker order by median log-odds effect (ascending, so largest is on top)
+marker_order <- draws_logodds |>
+  group_by(marker) |>
+  summarise(med = median(draw), .groups = "drop") |>
+  arrange(med) |>
+  pull(marker)
+```
+
+```{r m4_dist_logodds}
+p <- draws_logodds |>
+  mutate(marker_label = factor(n_labels[marker], levels = n_labels[marker_order])) |>
+  ggplot(aes(x = draw, y = marker_label)) +
+  stat_halfeye(.width = c(0.66, 0.95), point_interval = median_hdi,
+               fill = "#C8839E", color = "black", alpha = 0.85) +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "grey40") +
+  labs(x = "Coefficient (log-odds)", y = NULL,
+       title = "Effect of violent external conflict on ritual markers",
+       subtitle = "Phylogenetic + Year + Region — posterior distribution") +
+  theme_bw() +
+  theme(axis.text.y = element_text(size = 11))
+
+ggsave(here("figures", "internal_noeHRAF", "m4_dist_logodds.png"), p, width = 9, height = 7)
+p
+```
+
+```{r m4_dist_or}
+p <- draws_or |>
+  mutate(marker_label = factor(n_labels[marker], levels = n_labels[marker_order])) |>
+  ggplot(aes(x = draw, y = marker_label)) +
+  stat_halfeye(.width = c(0.66, 0.95), point_interval = median_hdi,
+               fill = "#C8839E", color = "black", alpha = 0.85) +
+  geom_vline(xintercept = 1, linetype = "dashed", color = "grey40") +
+  scale_x_log10() +
+  labs(x = "Odds Ratio (log scale)", y = NULL,
+       title = "Effect of violent external conflict on ritual markers",
+       subtitle = "Phylogenetic + Year + Region — posterior distribution") +
+  theme_bw() +
+  theme(axis.text.y = element_text(size = 11))
+
+ggsave(here("figures", "internal_noeHRAF", "m4_dist_or.png"), p, width = 9, height = 7)
+p
+```
+
+```{r m4_dist_ame}
+# Use same marker order as log-odds
+ame_order <- draws_ame |>
+  group_by(marker) |>
+  summarise(med = median(draw), .groups = "drop") |>
+  arrange(med) |>
+  pull(marker)
+
+p <- draws_ame |>
+  mutate(marker_label = factor(n_labels[marker], levels = n_labels[ame_order])) |>
+  ggplot(aes(x = draw, y = marker_label)) +
+  stat_halfeye(.width = c(0.66, 0.95), point_interval = median_hdi,
+               fill = "#C8839E", color = "black", alpha = 0.85) +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "grey40") +
+  labs(x = "Average Marginal Effect (probability scale)", y = NULL,
+       title = "Effect of violent external conflict on ritual markers",
+       subtitle = "Phylogenetic + Year + Region — posterior distribution") +
+  theme_bw() +
+  theme(axis.text.y = element_text(size = 11))
+
+ggsave(here("figures", "internal_noeHRAF", "m4_dist_ame.png"), p, width = 9, height = 7)
+p
+```
+
+## 6. Main model: grand mean and empirical predictions
+
+Two complementary probability-scale views of `fit_phylo_year`. Both use `re_formula = NA`
+(population-level, stripping the phylogenetic RE) so predictions are not tied to specific language groups.
+
+- **Grand mean**: predictions at `year_scaled = 0`, averaged across all observed world regions.
+  Cleanest view of the pure fixed effect.
+- **Empirical**: averaged over actual observed `(world_region, year_scaled)` rows in each marker's data.
+  More honest about the covariate distribution in the sample.
+
+If grand mean AME ≈ empirical AME, results are robust to the choice. For the main text, the grand mean
+AME is the most direct plot; the two-condition version shows absolute prevalence alongside the shift.
+
+```{r grand_mean_draws, message=FALSE, warning=FALSE}
+grand_mean_draws <- map_dfr(markers, function(marker) {
+  fit  <- fits[[marker]]$fit_phylo_year
+  data <- fits[[marker]]$data
+
+  nd <- expand_grid(
+    violent_internal = c(0, 1),
+    year_scaled      = 0,
+    world_region     = unique(data$world_region)
+  )
+
+  epred_draws(fit, newdata = nd, re_formula = NA) |>
+    ungroup() |>
+    mutate(
+      marker           = marker,
+      violent_internal = factor(violent_internal, levels = c(0, 1), labels = c("No", "Yes"))
+    ) |>
+    group_by(marker, .draw, violent_internal) |>
+    summarise(.epred = mean(.epred), .groups = "drop")
+})
+
+grand_ame_draws <- grand_mean_draws |>
+  group_by(marker, .draw) |>
+  summarise(ame = .epred[violent_internal == "Yes"] - .epred[violent_internal == "No"],
+            .groups = "drop")
+```
+
+```{r empirical_draws, message=FALSE, warning=FALSE}
+empirical_draws <- map_dfr(markers, function(marker) {
+  fit  <- fits[[marker]]$fit_phylo_year
+  data <- fits[[marker]]$data
+
+  set.seed(1342)
+  nd_cov <- data |>
+    select(world_region, year_scaled) |>
+    slice_sample(n = min(300, nrow(data)))
+  nd <- expand_grid(violent_internal = c(0, 1), nd_cov)
+
+  epred_draws(fit, newdata = nd, re_formula = NA) |>
+    ungroup() |>
+    mutate(
+      marker           = marker,
+      violent_internal = factor(violent_internal, levels = c(0, 1), labels = c("No", "Yes"))
+    ) |>
+    group_by(marker, .draw, violent_internal) |>
+    summarise(.epred = mean(.epred), .groups = "drop")
+})
+
+empirical_ame_draws <- empirical_draws |>
+  group_by(marker, .draw) |>
+  summarise(ame = .epred[violent_internal == "Yes"] - .epred[violent_internal == "No"],
+            .groups = "drop")
+```
+
+```{r plot_grand_mean_predictions}
+# Marker order by grand mean AME
+gm_order <- grand_ame_draws |>
+  group_by(marker) |>
+  summarise(med = median(ame), .groups = "drop") |>
+  arrange(med) |>
+  pull(marker)
+
+p <- grand_mean_draws |>
+  mutate(marker_label = factor(n_labels[marker], levels = n_labels[gm_order])) |>
+  ggplot(aes(x = .epred, y = marker_label, fill = violent_internal)) +
+  stat_halfeye(alpha = 0.9, normalize = "groups", adjust = 0.8) +
+  scale_fill_okabe_ito(name = "Violent external conflict") +
+  labs(x = "Expected probability (E[Y | X])", y = NULL,
+       title = "Posterior mean probability by marker",
+       subtitle = "Population-level (no phylo RE), year scaled = 0, averaged over regions") +
+  theme_clean() +
+  theme_size(base = 13) +
+  theme(legend.position = "bottom")
+
+ggsave(here("figures", "internal_noeHRAF", "m4_grand_mean_predictions.png"), p, width = 9.5, height = 6.5)
+p
+```
+
+```{r plot_grand_ame}
+p <- grand_ame_draws |>
+  mutate(marker_label = factor(n_labels[marker], levels = n_labels[gm_order])) |>
+  ggplot(aes(x = ame, y = marker_label)) +
+  stat_halfeye(alpha = 0.95, adjust = 0.8, fill = palette_okabe_ito(order = 7),
+               .width = c(0.66, 0.95), point_interval = median_hdi) +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "grey40") +
+  labs(x = "AME in expected probability (E[Y|Yes] - E[Y|No])", y = NULL,
+       title = "Average marginal effect (Yes - No) by marker",
+       subtitle = "Population-level (no phylo RE), year scaled = 0, averaged over regions") +
+  theme_clean() +
+  theme_size(base = 13)
+
+ggsave(here("figures", "internal_noeHRAF", "m4_grand_ame.png"), p, width = 9.5, height = 6.5)
+p
+```
+
+```{r plot_empirical_ame}
+emp_order <- empirical_ame_draws |>
+  group_by(marker) |>
+  summarise(med = median(ame), .groups = "drop") |>
+  arrange(med) |>
+  pull(marker)
+
+p <- empirical_ame_draws |>
+  mutate(marker_label = factor(n_labels[marker], levels = n_labels[emp_order])) |>
+  ggplot(aes(x = ame, y = marker_label)) +
+  stat_halfeye(alpha = 0.95, adjust = 0.8, fill = palette_okabe_ito(order = 7),
+               .width = c(0.66, 0.95), point_interval = median_hdi) +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "grey40") +
+  labs(x = "AME in expected probability (E[Y|Yes] - E[Y|No])", y = NULL,
+       title = "Average marginal effect (Yes - No) by marker",
+       subtitle = "Empirical: averaged over observed region × year distribution") +
+  theme_clean() +
+  theme_size(base = 13)
+
+ggsave(here("figures", "internal_noeHRAF", "m4_empirical_ame.png"), p, width = 9.5, height = 6.5)
+p
+```
+
+---
+
+## 7. Phylogenetic signal plot
+
+```{r phylo_signal_plot}
+p <- phylo_signal |>
+  mutate(
+    marker_label = factor(n_labels[marker], levels = n_labels[markers]),
+    model_label  = factor(model_labels[model], levels = model_labels)
+  ) |>
+  ggplot(aes(x = lambda, xmin = lo95, xmax = hi95, y = marker_label, color = model_label)) +
+  geom_pointrange(position = position_dodge(width = 0.5)) +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "grey40") +
+  labs(x = "Phylogenetic signal (λ)", y = NULL, color = NULL,
+       title = "Phylogenetic signal across markers",
+       subtitle = "Posterior median and 95% HDI") +
+  theme_bw() +
+  theme(legend.position = "bottom")
+
+ggsave(here("figures", "internal_noeHRAF", "phylo_signal.png"), p, width = 10, height = 7)
+p
+```
+
+---
+
+## 8. Exploratory: AME by region
+
+For each marker: posterior AME of `violent_internal` broken down by `world_region`,
+at `year_scaled = 0`, population-level (`re_formula = NA`). Useful for understanding
+whether the effect is driven by particular regions. Saved to `figures/diagnostics/{marker}/`.
+
+```{r region_ame, message=FALSE, warning=FALSE}
+for (marker in markers) {
+  fit  <- fits[[marker]]$fit_phylo_year
+  data <- fits[[marker]]$data
+
+  nd <- expand_grid(
+    violent_internal = c(0, 1),
+    year_scaled      = 0,
+    world_region     = unique(data$world_region)
+  )
+
+  region_ame <- epred_draws(fit, newdata = nd, re_formula = NA) |>
+    ungroup() |>
+    mutate(violent_internal = factor(violent_internal, levels = c(0, 1), labels = c("No", "Yes"))) |>
+    group_by(.draw, world_region) |>
+    summarise(ame = .epred[violent_internal == "Yes"] - .epred[violent_internal == "No"],
+              .groups = "drop")
+
+  p <- region_ame |>
+    ggplot(aes(x = ame, y = reorder(world_region, ame, median))) +
+    stat_halfeye(.width = c(0.66, 0.95), point_interval = median_hdi,
+                 fill = "#C8839E", color = "black", alpha = 0.85) +
+    geom_vline(xintercept = 0, linetype = "dashed", color = "grey40") +
+    labs(x = "AME (probability scale)", y = NULL,
+         title = paste("AME by region:", n_labels[marker]),
+         subtitle = "Phylogenetic + Year + Region — year scaled = 0, population-level") +
+    theme_bw()
+
+  ggsave(here("figures", "internal_noeHRAF", "diagnostics", marker, "region_ame.png"), p, width = 8, height = 6)
+}
+```
+
+---
+
+## Notes: AME approaches compared
+
+There are several different AME-related quantities computed in this script. They answer
+slightly different questions and are worth comparing carefully before deciding what goes
+in the paper.
+
+### 1. `avg_slopes` AME — section 5 (`m4_dist_ame`)
+
+**How**: `marginaleffects::avg_slopes(fit, variables = "violent_internal", newdata = data)`,
+then `posterior_draws()` to get the full distribution.
+
+**What it averages over**: the actual observed rows in the data (all `world_region` and
+`year_scaled` combinations present in the sample, with their observed frequency).
+
+**Phylo RE**: by default `marginaleffects` uses `re_formula = NULL`, meaning it conditions
+on the fitted phylogenetic random intercepts. This means the AME reflects predictions
+for the specific language groups in the sample, not a generic new society.
+
+**In short**: "for the societies in our sample, what is the average change in predicted
+probability when violent_internal switches from 0 to 1?"
+
+---
+
+### 2. Grand mean AME — section 6 (`m4_grand_ame`)
+
+**How**: `epred_draws()` with `re_formula = NA`, `year_scaled = 0`, expanded over all
+unique `world_region` values, then averaged over regions within each posterior draw.
+
+**What it averages over**: all world regions equally (unweighted average), at average year.
+
+**Phylo RE**: `re_formula = NA` strips the phylogenetic random intercept entirely.
+Predictions are purely from fixed effects — the population-level trend, not tied to
+any specific language group.
+
+**In short**: "at average year, ignoring which language family a society belongs to,
+what is the expected change in probability across world regions?"
+
+---
+
+### 3. Empirical AME — section 6 (`m4_empirical_ame`)
+
+**How**: same as grand mean but `newdata` is a random sample of actual observed
+`(world_region, year_scaled)` rows from the data (up to n=300 per marker).
+
+**What it averages over**: the observed joint distribution of region and year in the sample.
+
+**Phylo RE**: `re_formula = NA` (same as grand mean).
+
+**In short**: "at the actual distribution of time periods and regions observed in this
+marker's data, what is the expected change in probability?"
+
+---
+
+### Key differences to check
+
+| | averages over | phylo RE | year |
+|---|---|---|---|
+| `avg_slopes` | observed rows | included | observed |
+| Grand mean AME | regions equally | excluded | fixed at 0 |
+| Empirical AME | observed region × year | excluded | observed |
+
+**Things to verify**:
+
+1. Do the three AME estimates agree? If yes, the effect is robust to these modelling choices.
+   If the `avg_slopes` AME (with phylo RE) differs from the grand mean AME (without), this
+   tells you something about how much the phylogenetic clustering is inflating or deflating
+   the estimated effect.
+
+2. The grand mean and empirical AME use `re_formula = NA`. This is appropriate for asking
+   "population-level" questions, but note it is a stronger extrapolation — it asks what would
+   happen for a generic society, not specifically for the language groups we observed.
+
+3. `year_scaled = 0` corresponds to the mean year in the sample. Check what actual calendar
+   year this maps to for each marker (it will differ slightly since each marker has a different
+   set of entries). If the year effect is small (which the model suggests it is), this choice
+   should not matter much.
+
+4. The `avg_slopes` approach computes the AME on the logit scale and then transforms, whereas
+   the `epred_draws` approach works directly on the probability scale. Both are valid but can
+   give slightly different results due to Jensen's inequality. The `epred_draws` approach is
+   arguably more honest as it avoids any ambiguity about the order of averaging and
+   transforming.

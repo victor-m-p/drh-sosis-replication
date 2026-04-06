@@ -1,0 +1,17 @@
+marker,model,lambda,lo95,hi95
+circumcision,fit_phylo,0.45,0.19,0.71
+circumcision,fit_phylo_repeat,0.36,0.06,0.67
+dress,fit_phylo,0.07,0,0.23
+dress,fit_phylo_repeat,0.05,0,0.21
+extra_ritual_group_markers,fit_phylo,0.1,0,0.28
+extra_ritual_group_markers,fit_phylo_repeat,0.06,0,0.23
+food_taboos,fit_phylo,0.16,0.01,0.4
+food_taboos,fit_phylo_repeat,0.12,0,0.36
+hair,fit_phylo,0.13,0,0.38
+hair,fit_phylo_repeat,0.09,0,0.35
+ornaments,fit_phylo,0.16,0.01,0.39
+ornaments,fit_phylo_repeat,0.14,0,0.37
+permanent_scarring,fit_phylo,0.11,0,0.38
+permanent_scarring,fit_phylo_repeat,0.07,0,0.32
+tattoos_scarification,fit_phylo,0.13,0,0.55
+tattoos_scarification,fit_phylo_repeat,0.11,0,0.51

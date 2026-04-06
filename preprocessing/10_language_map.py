@@ -38,7 +38,7 @@ drh_asjp = drh_langs.merge(drh_asjp, on="entrytag_name", how="inner")
 print(f"Entries matched to ASJP:       {drh_asjp['entry_id'].nunique()}")
 
 # --- step 7: map ASJP ID → world.tre tip ---
-tree = Phylo.read("../asjp/raw/world.tre", "newick")
+tree = Phylo.read("../data/jaeger2018/world.tre", "newick")
 tips = [t.name for t in tree.get_terminals()]
 tips_by_id = {t.split('.')[-1]: t for t in tips}
 

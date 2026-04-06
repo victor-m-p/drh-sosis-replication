@@ -19,8 +19,16 @@ data/mdl_fits
 data/raw_old
 data/raw/answerset.csv
 data/language_tags
+data/model/*/fits/
+data/glottolog_5.3/
 .Rproj.user
 asjp
+
+# logs
+logs/
+
+# rendered outputs
+*.html
 
 # analysis
 analysis/reanalysis.Rmd

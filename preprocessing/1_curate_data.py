@@ -21,7 +21,7 @@ region_data = pd.read_csv("../data/raw/region_data.csv")[
     ["region_id", "world_region"]
 ].drop_duplicates()
 entrydata = pd.read_csv("../data/raw/entry_data.csv")[
-    ["entry_id", "year_from", "region_id"]
+    ["entry_id", "year_from", "region_id", "data_source"]
 ].merge(region_data, on="region_id", how="left")
 
 # Define the questions to investigate and create mapping dataframe
@@ -146,25 +146,34 @@ question_names = answers_subset_filtered[
 ].drop_duplicates()
 answers_complete = answers_complete.merge(question_names, on="question_id", how="inner")
 
-# infer no if parent is no + save
+# infer no if parent is no 
+# then also remove NA in answer after filling
 from helper_functions import fill_answers
 
 answers_inferred = fill_answers(answers_complete)
-answers_inferred[answers_inferred["answer_value"].notna()]
+answers_inferred = answers_inferred[answers_inferred["answer_value"].notna()]
 
 # keep only entries with a valid (0/1) answer to violent_external
 entries_with_ve = answers_inferred[
-    (answers_inferred["question_short"] == "violent_external") &
-    (answers_inferred["answer_value"].notna())
+    answers_inferred["question_short"] == "violent_external"
 ]["entry_id"].unique()
 
 answers_inferred = answers_inferred[answers_inferred["entry_id"].isin(entries_with_ve)]
 answers_inferred["entry_id"].nunique()  # 551
 
+# keep only entries with a coding on at least one main dependent variable
+dv_short = ["extra_ritual_group_markers", "permanent_scarring"]
+entries_with_dv = answers_inferred[
+    answers_inferred["question_short"].isin(dv_short)
+]["entry_id"].unique()
+
+answers_inferred = answers_inferred[answers_inferred["entry_id"].isin(entries_with_dv)]
+answers_inferred["entry_id"].nunique() # 458 
+
 ### combine with entry metadata (year + region) and pivot wide ###
 question_names_short = [
-    "violent_external", "circumcision", "tattoos_scarification", "permanent_scarring",
-    "extra_ritual_group_markers", "food_taboos", "hair", "dress", "ornaments",
+    "violent_external", "violent_internal", "circumcision", "tattoos_scarification",
+    "permanent_scarring", "extra_ritual_group_markers", "food_taboos", "hair", "dress", "ornaments",
 ]
 answers_subset = answers_inferred[answers_inferred["question_short"].isin(question_names_short)]
 answers_wide = answers_subset.pivot_table(
@@ -184,3 +193,5 @@ answerset.to_csv("../data/preprocessed/answerset.csv", index=False)
 ### just a few quick overviews ###
 answerset['world_region'].value_counts()
 answerset['year_from'].describe()
+
+answerset

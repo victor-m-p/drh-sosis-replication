@@ -38,7 +38,7 @@ glottolog.columns = ["Glottocode", "Glottolog_Name"]
 
 asjp = pd.read_csv("../asjp/cldf/languages.csv")[["ID", "Glottocode"]].drop_duplicates()
 
-tree     = Phylo.read("../asjp/raw/world.tre", "newick")
+tree     = Phylo.read("../data/jaeger2018/world.tre", "newick")
 tips_by_id = {t.name.split(".")[-1]: t.name for t in tree.get_terminals()}
 
 # ── 4. Chain lookups on unique tag names ───────────────────────────────────────
