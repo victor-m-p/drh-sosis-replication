@@ -29,23 +29,18 @@ drh_langs = drh_tags[drh_tags["entrytag_path"].astype(str).str.startswith("Langu
 drh_langs = drh_langs[["entry_id", "entrytag_name", "entrytag_level", "entrytag_path"]]
 drh_langs = drh_langs.drop_duplicates()
 drh_langs = drh_langs.dropna(subset='entrytag_name')
-drh_langs["Coding"] = "SCCSR.v3"
+drh_langs["coding"] = "SCCSR.v3"
 len(drh_langs) # 5730
 
 no_tag = entry_ids - set(drh_langs["entry_id"])
 print(f"No language tag (old):          {len(no_tag)}") 
 print(f"With language tag (old):        {drh_langs['entry_id'].nunique()}")
 
-# --- 2.1. recoded records ----
-# Matthew Hamm codings.
-coded_entries = pd.read_csv("../preprocessing/data/coded_entries.csv")
-coded_entries = coded_entries[["entry_id", "entrytag_name", "entrytag_level", "entrytag_path"]]
+# --- 2.1. added language tags ----
+# Matthew Hamm coded 58 entries that had no language tag.
+manual_codes_A = pd.read_csv('../data/raw/manual_lang_A.csv')
 
-# the ones that are not NA we already have
-# or we need to recode in another way
-coded_entries = coded_entries[coded_entries["entrytag_path"].isna()] # n=58
-coded_entries["Coding"] = "Matthew Hamm"
-drh_langs = pd.concat([drh_langs, coded_entries], ignore_index=True)
+drh_langs = pd.concat([drh_langs, manual_codes_A], ignore_index=True)
 drh_langs = drh_langs.drop_duplicates() 
 len(drh_langs) # 5788
 
@@ -53,14 +48,32 @@ no_tag = entry_ids - set(drh_langs["entry_id"])
 print(f"No language tag (new):          {len(no_tag)}")
 print(f"With language tag (new):        {drh_langs['entry_id'].nunique()}")
 
-# ── 3. Load reference tables ───────────────────────────────────────────────────
+'''
+Question: 
+Now we have NAN for some of: 
+- entrytag_level
+- entrytag_path
 
+How are we handling this?
+Does it matter?
+'''
+
+# --- 2.2. some entries had language tags but not matching to tree
+# Several experts coded these entries
+manual_codes_B = pd.read_csv('../data/raw/manual_lang_B.csv')
+
+'''
+This is the new thing we added.
+'''
+
+
+# ── 3. Load reference tables ───────────────────────────────────────────────────
 glottolog = pd.read_csv("../data/glottolog/languoid.csv")[["id", "name"]]
 glottolog.columns = ["Glottocode", "Glottolog_Name"]
 
 asjp = pd.read_csv("../asjp/cldf/languages.csv")[["ID", "Glottocode"]].drop_duplicates()
 
-tree     = Phylo.read("../data/jaeger2018/world.tre", "newick")
+tree = Phylo.read("../data/jaeger2018/world.tre", "newick")
 tips_by_id = {t.name.split(".")[-1]: t.name for t in tree.get_terminals()}
 
 # ── 4. Chain lookups on unique tag names ───────────────────────────────────────

@@ -1,0 +1,62 @@
+entry_id,entrytag_name,Glottocode,tip_name,coding,fit
+1250,Arabic,arab1395,AA.SEMITIC.IRAQ_MUSLIM_BAGHDAD_ARABIC,Julian Weideman,medium
+1689,Arabic,arab1395,AA.SEMITIC.SYRIAN_ARABIC,Julian Weideman,medium
+1708,Arabic,arab1395,AA.SEMITIC.ARABIC_GULF_SPOKEN,Julian Weideman,medium
+1759,Arabic,arab1395,AA.SEMITIC.STANDARD_ARABIC,Julian Weideman,medium
+1776,Arabic,arab1395,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,Julian Weideman,good
+1777,Arabic,arab1395,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,Julian Weideman,good
+1780,Arabic,arab1395,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,Julian Weideman,good
+1781,Arabic,arab1395,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,Julian Weideman,good
+1791,Arabic,arab1395,AA.SEMITIC.IRAQ_MUSLIM_BAGHDAD_ARABIC,Julian Weideman,good
+1903,Arabic,arab1395,AA.SEMITIC.SYRIAN_ARABIC,Julian Weideman,medium
+1904,Arabic,arab1395,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,Julian Weideman,good
+997,Archaic Egyptian,arch1248,AA.EGYPTIAN_COPTIC.MIDDLE_EGYPTIAN,Willis Monroe,perfect
+1441,Aztec,azte1234,UA.AZTECAN.CLASSICAL_NAHUATL,Diana Moreiras,medium
+1051,Canaanite,cana1267,AA.SEMITIC.BIBLICAL_HEBREW,Willis Monroe,poor
+1083,Classical Tibetan,clas1254,ST.BODIC.TIBETAN_WRITTEN,Ted Slingerland,medium
+869,Classical-Middle-Modern Sinitic,clas1255,ST.CHINESE.MIDDLE_CHINESE,Matthew Hamm,medium
+1044,Classical-Middle-Modern Sinitic,clas1255,ST.CHINESE.OLD_CHINESE,Matthew Hamm,medium
+1060,Classical-Middle-Modern Sinitic,clas1255,ST.CHINESE.SUZHOU_WU,Matthew Hamm,poor
+1134,Classical-Middle-Modern Sinitic,clas1255,ST.CHINESE.MIDDLE_CHINESE,Matthew Hamm,poor
+1154,Classical-Middle-Modern Sinitic,clas1255,ST.CHINESE.MANDARIN,Matthew Hamm,medium
+1172,Classical-Middle-Modern Sinitic,clas1255,ST.CHINESE.MIDDLE_CHINESE,Matthew Hamm,medium
+1241,Classical-Middle-Modern Sinitic,clas1255,ST.CHINESE.HAKKA,Matthew Hamm,medium
+1259,Classical-Middle-Modern Sinitic,clas1255,ST.CHINESE.MANDARIN,Matthew Hamm,poor
+1291,Classical-Middle-Modern Sinitic,clas1255,,Matthew Hamm,no
+1349,Classical-Middle-Modern Sinitic,clas1255,ST.CHINESE.XIANG,Matthew Hamm,medium
+1386,Classical-Middle-Modern Sinitic,clas1255,ST.CHINESE.MANDARIN,Matthew Hamm,medium
+1426,Classical-Middle-Modern Sinitic,clas1255,ST.CHINESE.MANDARIN,Matthew Hamm,poor
+1627,Classical-Middle-Modern Sinitic,clas1255,ST.CHINESE.MANDARIN,Matthew Hamm,medium
+1737,Classical-Middle-Modern Sinitic,clas1255,,Matthew Hamm,poor
+222,Epigraphic Mayan,epig1241,May.MAYAN.CHOL_TILA,Diana Moreiras,poor
+1454,Greek,gree1276,IE.GREEK.GREEK_ANCIENT,Willis Monroe,
+1468,Greek,gree1276,IE.GREEK.GREEK_ANCIENT,Willis Monroe,
+1626,Greek,gree1276,IE.GREEK.GREEK_ANCIENT,Willis Monroe,
+1636,Greek,gree1276,IE.GREEK.GREEK_ANCIENT,Willis Monroe,
+1690,Greek,gree1276,IE.GREEK.GREEK_ANCIENT,Willis Monroe,
+1694,Greek,gree1276,IE.GREEK.GREEK_ANCIENT,Willis Monroe,
+1697,Greek,gree1276,IE.GREEK.GREEK_ANCIENT,Willis Monroe,
+526,Hmongic,hmon1337,HM.HMONG_MIEN.HMONG_DAW,William Noseworthy,
+661,Imperial Latin,impe1234,IE.ROMANCE.LATIN,Edward Slingerland,
+1434,Kuna,kuna1280,Chi.KUNA.CUNA,Willis Monroe,
+608,Kurdish,kurd1259,IE.IRANIAN.KURDISH_CENTRAL,Willis Monroe,
+1037,Late Egyptian,late1256,AA.EGYPTIAN_COPTIC.MIDDLE_EGYPTIAN,Willis Monroe,perfect
+1069,Late Egyptian,late1256,AA.EGYPTIAN_COPTIC.MIDDLE_EGYPTIAN,Willis Monroe,perfect
+1419,Middle Egyptian,midd1369,AA.EGYPTIAN_COPTIC.MIDDLE_EGYPTIAN,Willis Monroe,perfect
+870,Mongolian,mong1331,Alt.MONGOLIC.MONGOLIAN,Edward Slingerland,
+887,Mongolian,mong1331,Alt.MONGOLIC.MONGOLIAN,Edward Slingerland,
+934,Mongolian,mong1331,Alt.MONGOLIC.MONGOLIAN,Edward Slingerland,
+1220,Mongolian,mong1331,Alt.MONGOLIC.MONGOLIAN,Edward Slingerland,
+1492,Nambiquaran,namb1299,Nam.NAMBIKUARAN.NAMBIKWARA,Edward Slingerland,
+1624,Neo-Assyrian,neoa1235,AA.SEMITIC.AKKADIAN,Willis Monroe,
+442,Neo-Punic,neop1239,AA.SEMITIC.PHOENICIAN,Willis Monroe,
+1337,Old Aramaic (up to 700 BCE),olda1246,AA.SEMITIC.AMEDYA_ARAMAIC,Willis Monroe,
+1006,Old Egyptian,olde1242,AA.EGYPTIAN_COPTIC.MIDDLE_EGYPTIAN,Willis Monroe,
+896,Old Japanese,oldj1239,Jap.JAPANESE.JAPANESE,Edward Slingerland,poor
+624,Pashto,pash1269,HM.HMONG_MIEN.HMONG_DAW,Julian Weideman ,
+626,Patamona,pata1262,Car.CARIBAN.TIRIYO,Edward Slingerland,
+1436,Semitic,semi1276,IE.GREEK.GREEK_ANCIENT,Willis Monroe,
+719,Trinidadian Creole English,trin1276,IE.GERMANIC.ENGLISH,Edward Slingerland,poor
+173,Turkic,turk1311,IE.GREEK.GREEK_ANCIENT,Willis Monroe,
+257,Zapotecan,zapo1436,OM.POPOLOCAN.SAN_JUAN_CHIQUIHUITLAN,Diana Moreiras,poor
+1397,Zapotec,zapo1437,OM.POPOLOCAN.SAN_JUAN_CHIQUIHUITLAN,Diana Moreiras,poor

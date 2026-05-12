@@ -21,6 +21,7 @@ data/raw/answerset.csv
 data/language_tags
 data/model/*/fits/
 data/glottolog_5.3/
+preprocessing/data/delete
 .Rproj.user
 asjp
 
