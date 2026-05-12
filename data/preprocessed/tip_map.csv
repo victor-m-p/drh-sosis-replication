@@ -1,11 +1,14 @@
-entry_id,entrytag_name,entrytag_path,Glottocode,ID,tip_name,Coding
+entry_id,entrytag_name,entrytag_path,Glottocode,ID,tip_name,coding
+173,Turkic,,turk1311,,IE.GREEK.GREEK_ANCIENT,
 174,Classical Syriac,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Aramaic[8598]->Imperial-Middle-Modern Aramaic[9970]->Middle-Modern Aramaic[11126]->Eastern Aramaic[12053]->Classical Syriac[12890],clas1252,CLASSICAL_SYRIAC,AA.SEMITIC.CLASSICAL_SYRIAC,SCCSR.v3
 180,Old Chinese,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Old Chinese[4344],oldc1244,OLD_CHINESE,ST.CHINESE.OLD_CHINESE,SCCSR.v3
 196,Ionic-Attic Ancient Greek,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Graeco-Phrygian[4027]->Greek[5341]->South Greek[6723]->Central Greek[8272]->Ionic-Attic Ancient Greek[9686],anci1242,GREEK_ANCIENT,IE.GREEK.GREEK_ANCIENT,SCCSR.v3
 212,Old Chinese,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Old Chinese[4344],oldc1244,OLD_CHINESE,ST.CHINESE.OLD_CHINESE,SCCSR.v3
 217,Latin,,lati1261,LATIN,IE.ROMANCE.LATIN,Matthew Hamm
+222,Epigraphic Mayan,,epig1241,,May.MAYAN.CHOL_TILA,
 230,Akkadian,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->East Semitic[4432]->Akkadian[5692],akka1240,AKKADIAN,AA.SEMITIC.AKKADIAN,SCCSR.v3
 231,Corsican,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Romance[9690]->Southern Romance[10910]->Sardo-Corsican[11858]->Corsic[12724]->Corsican[13421],cors1241,CORSICAN,IE.ROMANCE.CORSICAN,SCCSR.v3
+257,Zapotecan,,zapo1436,,OM.POPOLOCAN.SAN_JUAN_CHIQUIHUITLAN,
 284,Nuclear Dhuwal,Language[1747]->Pama-Nyungan[1984]->Yuulngu[3279]->Southern Yolngu[4514]->Southern-Eastern Yolngu[5793]->Dhuwal-Dhuwala[7230]->Western Dhuwal-Dhuwala[8746]->Dhuwal[10095]->Nuclear Dhuwal[34897],nucl1333,DHUWAL,Aus.PAMA_NYUNGAN.DHUWAL,SCCSR.v3
 354,Akkadian,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->East Semitic[4432]->Akkadian[5692],akka1240,AKKADIAN,AA.SEMITIC.AKKADIAN,SCCSR.v3
 381,Eastern Panjabi,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Indo-Iranian[4034]->Indo-Aryan[5357]->Middle-Modern Indo-Aryan[6751]->Continental Indo-Aryan[8297]->Indo-Aryan Northwestern zone[9715]->Sindhi-Lahnda[10938]->Greater Panjabic[11897]->Eastern Panjabic[12772]->Eastern Panjabi[13468],panj1256,PUNJABI_MAJHI,IE.INDIC.PUNJABI_MAJHI,SCCSR.v3
@@ -17,6 +20,7 @@ entry_id,entrytag_name,entrytag_path,Glottocode,ID,tip_name,Coding
 422,Ancient Greek,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Graeco-Phrygian[4027]->Greek[5341]->East Greek[29393]->Ancient Greek[30700],,COLAC,Aus.PAMA_NYUNGAN.COLAC,SCCSR.v3
 424,Jewish Babylonian Aramaic (ca. 200-1200 CE),Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Aramaic[8598]->Imperial-Middle-Modern Aramaic[9970]->Middle-Modern Aramaic[11126]->Eastern Aramaic[12053]->Central Eastern Aramaic[12891]->North-Eastern Neo-Aramaic[13595]->Jewish Babylonian Aramaic (ca. 200-1200 CE)[14063],jewi1240,ACHAEMENID_ARAMAIC,AA.SEMITIC.ACHAEMENID_ARAMAIC,SCCSR.v3
 441,Hindi,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Indo-Iranian[4034]->Indo-Aryan[5357]->Middle-Modern Indo-Aryan[6751]->Continental Indo-Aryan[8297]->Midlands Indo-Aryan[9718]->Shaurasenic[10945]->Indo-Aryan Central zone[11905]->Western Hindi[12783]->Hindustani[13478]->Hindi[13972],hind1269,HINDI,IE.INDIC.HINDI,SCCSR.v3
+442,Neo-Punic,,neop1239,,AA.SEMITIC.PHOENICIAN,
 455,Shan,Language[1747]->Tai-Kadai[1796]->Kam-Tai[2121]->Daic-Beic[3431]->Daic[4700]->Central-Southwestern Tai[5949]->Wenma-Southwestern Tai[7358]->Sapa-Southwestern Tai[8872]->Southwestern Tai[10143]->Southwestern Tai P[11243]->Shan Tai[12126]->Northern Shan[12930]->Shan[13618],shan1277,NORTHERN_SHAN,TK.KAM_TAI.NORTHERN_SHAN,SCCSR.v3
 456,Ancient Hebrew,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Hebrewic[9968]->Ancient Hebrew[11121],anci1244,BIBLICAL_HEBREW,AA.SEMITIC.BIBLICAL_HEBREW,SCCSR.v3
 469,Korean,Language[1747]->Koreanic[1826]->Korean[2251],kore1280,KOREAN,Kor.KOREAN.KOREAN,SCCSR.v3
@@ -30,6 +34,7 @@ entry_id,entrytag_name,entrytag_path,Glottocode,ID,tip_name,Coding
 492,Latin,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Latin[9691],lati1261,LATIN,IE.ROMANCE.LATIN,SCCSR.v3
 520,Coastal Chamic,Language[1747]->Austronesian[1807]->Malayo-Polynesian[2158]->Malayo-Sumbawan[3523]->North and East Malayo-Sumbawan[4858]->Aceh-Chamic[6154]->Chamic[7578]->Coastal Chamic[9076],,BIGAMBAL,Aus.PAMA_NYUNGAN.BIGAMBAL,SCCSR.v3
 525,English,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Germanic[4033]->Northwest Germanic[5354]->West Germanic[6740]->North Sea Germanic[8290]->Anglo-Frisian[9705]->Anglic[10924]->Later Anglic[11872]->Middle-Modern English[12745]->Macro-English[13445]->English[13951],stan1293,ENGLISH,IE.GERMANIC.ENGLISH,SCCSR.v3
+526,Hmongic,,hmon1337,,HM.HMONG_MIEN.HMONG_DAW,
 534,Latin,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Latin[9691],lati1261,LATIN,IE.ROMANCE.LATIN,SCCSR.v3
 562,Tamil,,tami1289,TAMIL,Dra.SOUTHERN_DRAVIDIAN.TAMIL,Matthew Hamm
 563,Hindi,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Indo-Iranian[4034]->Indo-Aryan[5357]->Middle-Modern Indo-Aryan[6751]->Continental Indo-Aryan[8297]->Midlands Indo-Aryan[9718]->Shaurasenic[10945]->Indo-Aryan Central zone[11905]->Western Hindi[12783]->Hindustani[13478]->Hindi[13972],hind1269,HINDI,IE.INDIC.HINDI,SCCSR.v3
@@ -46,7 +51,10 @@ entry_id,entrytag_name,entrytag_path,Glottocode,ID,tip_name,Coding
 602,Amharic,,amha1245,AMHARIC,AA.SEMITIC.AMHARIC,Matthew Hamm
 604,Bambara,Language[1747]->Mande[1836]->Western Mande[2273]->Manding-Kpelle[3658]->Central Mande[5063]->Manding-Jogo[6435]->Manding-Vai[8014]->Manding-Mokole[9552]->Manding[10850]->East Manding[11819]->Bambara[12699],bamb1269,BAMBARA,Man.WESTERN_MANDE.BAMBARA,SCCSR.v3
 607,Literary Chinese,,,ALLENTIAC,Hur.HUARPE.ALLENTIAC,Matthew Hamm
+608,Kurdish,,kurd1259,,IE.IRANIAN.KURDISH_CENTRAL,
 623,Hindi,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Indo-Iranian[4034]->Indo-Aryan[5357]->Middle-Modern Indo-Aryan[6751]->Continental Indo-Aryan[8297]->Midlands Indo-Aryan[9718]->Shaurasenic[10945]->Indo-Aryan Central zone[11905]->Western Hindi[12783]->Hindustani[13478]->Hindi[13972],hind1269,HINDI,IE.INDIC.HINDI,SCCSR.v3
+624,Pashto,,pash1269,,HM.HMONG_MIEN.HMONG_DAW,
+626,Patamona,,pata1262,,Car.CARIBAN.TIRIYO,
 629,Nepali,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Indo-Iranian[4034]->Indo-Aryan[5357]->Middle-Modern Indo-Aryan[6751]->Continental Indo-Aryan[8297]->Midlands Indo-Aryan[9718]->Indo-Aryan Northern zone[10943]->Eastern Pahari[11900]->Nepali[12779],nepa1254,NEPALI,IE.INDIC.NEPALI,SCCSR.v3
 630,Alyawarr,Language[1747]->Pama-Nyungan[1984]->Arandic-Thura-Yura[3283]->Arandic[4521]->South Arandic[5803]->Upper Arrernte[7243]->Alyawarr[8761],alya1239,ALYAWARRA,Aus.PAMA_NYUNGAN.ALYAWARRA,SCCSR.v3
 632,Ionic-Attic Ancient Greek,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Graeco-Phrygian[4027]->Greek[5341]->South Greek[6723]->Central Greek[8272]->Ionic-Attic Ancient Greek[9686],anci1242,GREEK_ANCIENT,IE.GREEK.GREEK_ANCIENT,SCCSR.v3
@@ -56,6 +64,7 @@ entry_id,entrytag_name,entrytag_path,Glottocode,ID,tip_name,Coding
 654,Latin,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Latin[9691],lati1261,LATIN,IE.ROMANCE.LATIN,SCCSR.v3
 655,Spanish,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Romance[9690]->Italo-Western Romance[10909]->Western Romance[11855]->Shifted Western Romance[12721]->Southwestern Shifted Romance[13415]->West Ibero-Romance[13935]->Castilic[14285]->Spanish[14455],stan1288,SPANISH,IE.ROMANCE.SPANISH,SCCSR.v3
 658,Spanish,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Romance[9690]->Italo-Western Romance[10909]->Western Romance[11855]->Shifted Western Romance[12721]->Southwestern Shifted Romance[13415]->West Ibero-Romance[13935]->Castilic[14285]->Spanish[14455],stan1288,SPANISH,IE.ROMANCE.SPANISH,SCCSR.v3
+661,Imperial Latin,,impe1234,,IE.ROMANCE.LATIN,
 662,Spanish,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Romance[9690]->Italo-Western Romance[10909]->Western Romance[11855]->Shifted Western Romance[12721]->Southwestern Shifted Romance[13415]->West Ibero-Romance[13935]->Castilic[14285]->Spanish[14455],stan1288,SPANISH,IE.ROMANCE.SPANISH,SCCSR.v3
 666,English,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Germanic[4033]->Northwest Germanic[5354]->West Germanic[6740]->North Sea Germanic[8290]->Anglo-Frisian[9705]->Anglic[10924]->Later Anglic[11872]->Middle-Modern English[12745]->Macro-English[13445]->English[13951],stan1293,ENGLISH,IE.GERMANIC.ENGLISH,SCCSR.v3
 667,Russian,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Balto-Slavic[4026]->Slavic[5339]->East Slavic[6720]->Russian[8263],russ1263,NINILCHIK_RUSSIAN,IE.SLAVIC.NINILCHIK_RUSSIAN,SCCSR.v3
@@ -76,6 +85,7 @@ entry_id,entrytag_name,entrytag_path,Glottocode,ID,tip_name,Coding
 710,Hidatsa,Language[1747]->Siouan[1788]->Core Siouan[2099]->Missouri River Siouan[3406]->Hidatsa[4667],hida1246,HIDATSA,Sio.SIOUAN.HIDATSA,SCCSR.v3
 711,Kwoma,Language[1747]->Sepik[1784]->Nukuma[2089]->Kwoma[3391],kwom1262,KWOMA,Sep.MIDDLE_SEPIK.KWOMA,SCCSR.v3
 714,Tamil,Language[1747]->Dravidian[1908]->South Dravidian[2492]->South Dravidian I[4058]->Tamil-Kannada[5382]->Tamil-Kota[6773]->Tamil-Toda[8325]->Tamil-Irula[9751]->Tamil-Kodagu[10977]->Tamil-Malayalam[11959]->Tamiloid[12845]->Tamil-Paliyan[13570]->Tamil[14047],tami1289,TAMIL,Dra.SOUTHERN_DRAVIDIAN.TAMIL,SCCSR.v3
+719,Trinidadian Creole English,,trin1276,,IE.GERMANIC.ENGLISH,
 721,Batek,Language[1747]->Austroasiatic[1937]->Aslian[2614]->Central-Northern Aslian[4241]->North Aslian[5493]->Maniq-Menraq-Batek[6864]->Menraq-Batek[8395]->Batekic[9787]->Batek[10990],bate1262,BATEK_DEQ,AuA.ASLIAN.BATEK_DEQ,SCCSR.v3
 726,Sanskrit,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Indo-Iranian[4034]->Indo-Aryan[5357]->Sanskrit[6749],sans1269,SANSKRIT,IE.INDIC.SANSKRIT,SCCSR.v3
 727,Chru,Language[1747]->Austronesian[1807]->Malayo-Polynesian[2158]->Malayo-Sumbawan[3523]->North and East Malayo-Sumbawan[4858]->Aceh-Chamic[6154]->Chamic[7578]->Highlands Chamic[9077]->Chru-Northern Cham[10310]->Chruic[11314]->Chru[12178],chru1239,CHRU,An.MALAYO_SUMBAWAN.CHRU,SCCSR.v3
@@ -110,6 +120,8 @@ entry_id,entrytag_name,entrytag_path,Glottocode,ID,tip_name,Coding
 862,English,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Germanic[4033]->Northwest Germanic[5354]->West Germanic[6740]->North Sea Germanic[8290]->Anglo-Frisian[9705]->Anglic[10924]->Later Anglic[11872]->Middle-Modern English[12745]->Macro-English[13445]->English[13951],stan1293,ENGLISH,IE.GERMANIC.ENGLISH,SCCSR.v3
 863,Jewish Babylonian Aramaic (ca. 200-1200 CE),Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Aramaic[8598]->Imperial-Middle-Modern Aramaic[9970]->Middle-Modern Aramaic[11126]->Eastern Aramaic[12053]->Central Eastern Aramaic[12891]->North-Eastern Neo-Aramaic[13595]->Jewish Babylonian Aramaic (ca. 200-1200 CE)[14063],jewi1240,ACHAEMENID_ARAMAIC,AA.SEMITIC.ACHAEMENID_ARAMAIC,SCCSR.v3
 867,Tibetan,Language[1747]->Sino-Tibetan[1946]->Bodic[3022]->Bodish[4302]->Early Old Tibetan[5558]->Middle Old Tibetan[6951]->Late Old Tibetan[8465]->Central Tibetan[9859]->Tibetan[11041],tibe1272,TIBETAN_WRITTEN,ST.BODIC.TIBETAN_WRITTEN,SCCSR.v3
+869,Classical-Middle-Modern Sinitic,,clas1255,,ST.CHINESE.MIDDLE_CHINESE,
+870,Mongolian,,mong1331,,Alt.MONGOLIC.MONGOLIAN,
 871,English,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Germanic[4033]->Northwest Germanic[5354]->West Germanic[6740]->North Sea Germanic[8290]->Anglo-Frisian[9705]->Anglic[10924]->Later Anglic[11872]->Middle-Modern English[12745]->Macro-English[13445]->English[13951],stan1293,ENGLISH,IE.GERMANIC.ENGLISH,SCCSR.v3
 877,Thai,Language[1747]->Tai-Kadai[1796]->Kam-Tai[2121]->Daic-Beic[3431]->Daic[4700]->Central-Southwestern Tai[5949]->Wenma-Southwestern Tai[7358]->Sapa-Southwestern Tai[8872]->Southwestern Tai[10143]->Southwestern Thai PH[11242]->Lao-Thai[12119]->Thai[12917],thai1261,THAI_3,TK.KAM_TAI.THAI_3,SCCSR.v3
 879,English,,stan1293,ENGLISH,IE.GERMANIC.ENGLISH,Matthew Hamm
@@ -119,8 +131,10 @@ entry_id,entrytag_name,entrytag_path,Glottocode,ID,tip_name,Coding
 884,English,,stan1293,ENGLISH,IE.GERMANIC.ENGLISH,Matthew Hamm
 885,Fon,Language[1747]->Atlantic-Congo[1822]->Volta-Congo[2237]->Kwa Volta-Congo[3615]->Gbe[5003]->Eastern Gbe[6344]->Fongbeic[7881]->Fon[9395],fonn1241,FONGBE,NC.KWA.FONGBE,SCCSR.v3
 886,English,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Germanic[4033]->Northwest Germanic[5354]->West Germanic[6740]->North Sea Germanic[8290]->Anglo-Frisian[9705]->Anglic[10924]->Later Anglic[11872]->Middle-Modern English[12745]->Macro-English[13445]->English[13951],stan1293,ENGLISH,IE.GERMANIC.ENGLISH,SCCSR.v3
+887,Mongolian,,mong1331,,Alt.MONGOLIC.MONGOLIAN,
 891,Spanish,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Romance[9690]->Italo-Western Romance[10909]->Western Romance[11855]->Shifted Western Romance[12721]->Southwestern Shifted Romance[13415]->West Ibero-Romance[13935]->Castilic[14285]->Spanish[14455],stan1288,SPANISH,IE.ROMANCE.SPANISH,SCCSR.v3
 892,English,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Germanic[4033]->Northwest Germanic[5354]->West Germanic[6740]->North Sea Germanic[8290]->Anglo-Frisian[9705]->Anglic[10924]->Later Anglic[11872]->Middle-Modern English[12745]->Macro-English[13445]->English[13951],stan1293,ENGLISH,IE.GERMANIC.ENGLISH,SCCSR.v3
+896,Old Japanese,,oldj1239,,Jap.JAPANESE.JAPANESE,
 897,Korean,Language[1747]->Koreanic[1826]->Korean[2251],kore1280,KOREAN,Kor.KOREAN.KOREAN,SCCSR.v3
 900,Jewish Babylonian Aramaic (ca. 200-1200 CE),Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Aramaic[8598]->Imperial-Middle-Modern Aramaic[9970]->Middle-Modern Aramaic[11126]->Eastern Aramaic[12053]->Central Eastern Aramaic[12891]->North-Eastern Neo-Aramaic[13595]->Jewish Babylonian Aramaic (ca. 200-1200 CE)[14063],jewi1240,ACHAEMENID_ARAMAIC,AA.SEMITIC.ACHAEMENID_ARAMAIC,SCCSR.v3
 906,English,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Germanic[4033]->Northwest Germanic[5354]->West Germanic[6740]->North Sea Germanic[8290]->Anglo-Frisian[9705]->Anglic[10924]->Later Anglic[11872]->Middle-Modern English[12745]->Macro-English[13445]->English[13951],stan1293,ENGLISH,IE.GERMANIC.ENGLISH,SCCSR.v3
@@ -134,6 +148,7 @@ entry_id,entrytag_name,entrytag_path,Glottocode,ID,tip_name,Coding
 928,Lakota,Language[1747]->Siouan[1788]->Core Siouan[2099]->Mississippi Valley[3407]->Dakotan[4670]->Sioux[5930]->Lakota[7339],lako1247,LAKHOTA,Sio.SIOUAN.LAKHOTA,SCCSR.v3
 931,English,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Germanic[4033]->Northwest Germanic[5354]->West Germanic[6740]->North Sea Germanic[8290]->Anglo-Frisian[9705]->Anglic[10924]->Later Anglic[11872]->Middle-Modern English[12745]->Macro-English[13445]->English[13951],stan1293,ENGLISH,IE.GERMANIC.ENGLISH,SCCSR.v3
 933,Jewish Babylonian Aramaic (ca. 200-1200 CE),Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Aramaic[8598]->Imperial-Middle-Modern Aramaic[9970]->Middle-Modern Aramaic[11126]->Eastern Aramaic[12053]->Central Eastern Aramaic[12891]->North-Eastern Neo-Aramaic[13595]->Jewish Babylonian Aramaic (ca. 200-1200 CE)[14063],jewi1240,ACHAEMENID_ARAMAIC,AA.SEMITIC.ACHAEMENID_ARAMAIC,SCCSR.v3
+934,Mongolian,,mong1331,,Alt.MONGOLIC.MONGOLIAN,
 935,Yoruba,Language[1747]->Atlantic-Congo[1822]->Volta-Congo[2237]->Benue-Congo[3616]->Defoid[5014]->Yoruboid[6375]->Edekiri[7956]->Ede[9517]->Eastern Ede[10813]->Southeastern Ede[11800]->Nuclear Yoruba[12689]->Lucumi-Yoruba[13394]->Yoruba[13930],yoru1245,OKA,NC.DEFOID.OKA,SCCSR.v3
 938,Ugaritic,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Ugarito-Phoenician[9969]->Ugaritic[11123],ugar1238,UGARITIC,AA.SEMITIC.UGARITIC,SCCSR.v3
 940,Latin,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Latin[9691],lati1261,LATIN,IE.ROMANCE.LATIN,SCCSR.v3
@@ -175,21 +190,32 @@ entry_id,entrytag_name,entrytag_path,Glottocode,ID,tip_name,Coding
 991,English,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Germanic[4033]->Northwest Germanic[5354]->West Germanic[6740]->North Sea Germanic[8290]->Anglo-Frisian[9705]->Anglic[10924]->Later Anglic[11872]->Middle-Modern English[12745]->Macro-English[13445]->English[13951],stan1293,ENGLISH,IE.GERMANIC.ENGLISH,SCCSR.v3
 993,Latin,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Latin[9691],lati1261,LATIN,IE.ROMANCE.LATIN,SCCSR.v3
 994,Classical Syriac,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Aramaic[8598]->Imperial-Middle-Modern Aramaic[9970]->Middle-Modern Aramaic[11126]->Eastern Aramaic[12053]->Classical Syriac[12890],clas1252,CLASSICAL_SYRIAC,AA.SEMITIC.CLASSICAL_SYRIAC,SCCSR.v3
+997,Archaic Egyptian,,arch1248,,AA.EGYPTIAN_COPTIC.MIDDLE_EGYPTIAN,
 1004,Ancient Hebrew,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Hebrewic[9968]->Ancient Hebrew[11121],anci1244,BIBLICAL_HEBREW,AA.SEMITIC.BIBLICAL_HEBREW,SCCSR.v3
+1006,Old Egyptian,,olde1242,,AA.EGYPTIAN_COPTIC.MIDDLE_EGYPTIAN,
 1010,Ionic-Attic Ancient Greek,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Graeco-Phrygian[4027]->Greek[5341]->South Greek[6723]->Central Greek[8272]->Ionic-Attic Ancient Greek[9686],anci1242,GREEK_ANCIENT,IE.GREEK.GREEK_ANCIENT,SCCSR.v3
 1011,Ancient Hebrew,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Hebrewic[9968]->Ancient Hebrew[11121],anci1244,BIBLICAL_HEBREW,AA.SEMITIC.BIBLICAL_HEBREW,SCCSR.v3
 1028,Ancient Hebrew,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Hebrewic[9968]->Ancient Hebrew[11121],anci1244,BIBLICAL_HEBREW,AA.SEMITIC.BIBLICAL_HEBREW,SCCSR.v3
+1037,Late Egyptian,,late1256,,AA.EGYPTIAN_COPTIC.MIDDLE_EGYPTIAN,
 1038,Language,Language[1747],,PAYAGUA,Pay.PAYAGUA.PAYAGUA,SCCSR.v3
 1041,Korean,Language[1747]->Koreanic[1826]->Korean[2251],kore1280,KOREAN,Kor.KOREAN.KOREAN,SCCSR.v3
 1043,Acehnese,Language[1747]->Austronesian[1807]->Malayo-Polynesian[2158]->Malayo-Sumbawan[3523]->North and East Malayo-Sumbawan[4858]->Aceh-Chamic[6154]->Acehnese[7577],achi1257,ACEH,An.MALAYO_SUMBAWAN.ACEH,SCCSR.v3
+1044,Classical-Middle-Modern Sinitic,,clas1255,,ST.CHINESE.OLD_CHINESE,
+1051,Canaanite,,cana1267,,AA.SEMITIC.BIBLICAL_HEBREW,
+1060,Classical-Middle-Modern Sinitic,,clas1255,,ST.CHINESE.SUZHOU_WU,
+1069,Late Egyptian,,late1256,,AA.EGYPTIAN_COPTIC.MIDDLE_EGYPTIAN,
 1071,Portuguese,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Romance[9690]->Italo-Western Romance[10909]->Western Romance[11855]->Shifted Western Romance[12721]->Southwestern Shifted Romance[13415]->West Ibero-Romance[13935]->Galician Romance[14287]->Macro-Portuguese[14461]->Brazil-Portugal Portuguese[14577]->Portuguese[14640],port1283,PORTUGUESE,IE.ROMANCE.PORTUGUESE,SCCSR.v3
 1076,Latin,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Latin[9691],lati1261,LATIN,IE.ROMANCE.LATIN,SCCSR.v3
+1083,Classical Tibetan,,clas1254,,ST.BODIC.TIBETAN_WRITTEN,
 1087,Bulgarian,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Balto-Slavic[4026]->Slavic[5339]->South Slavic[6721]->Eastern South Slavic[8268]->Macedo-Bulgarian[9677]->Bulgarian[10900],bulg1262,BULGARIAN,IE.SLAVIC.BULGARIAN,SCCSR.v3
 1127,Korean,Language[1747]->Koreanic[1826]->Korean[2251],kore1280,KOREAN,Kor.KOREAN.KOREAN,SCCSR.v3
 1129,Aeolic,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Graeco-Phrygian[4027]->Greek[5341]->East Greek[29393]->Ancient Greek[30700]->Aeolic[32456],,NAHUATL_CHINANCAHUATL_ZACUALTIPAN,UA.AZTECAN.NAHUATL_CHINANCAHUATL_ZACUALTIPAN,SCCSR.v3
+1134,Classical-Middle-Modern Sinitic,,clas1255,,ST.CHINESE.MIDDLE_CHINESE,
 1136,Mandarin Chinese,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342]->Middle-Modern Sinitic[5613]->Northern Chinese[7030]->Mandarinic[8557]->Mandarin Chinese[9940],mand1415,MANDARIN_2,ST.CHINESE.MANDARIN_2,SCCSR.v3
 1140,Language,Language[1747],,TOTONAC_OZELONACAXTLA,Tot.TOTONACAN.TOTONAC_OZELONACAXTLA,SCCSR.v3
+1154,Classical-Middle-Modern Sinitic,,clas1255,,ST.CHINESE.MANDARIN,
 1162,Language,Language[1747],,GUARANI_ANTIGO,Tup.TUPI_GUARANI.GUARANI_ANTIGO,SCCSR.v3
+1172,Classical-Middle-Modern Sinitic,,clas1255,,ST.CHINESE.MIDDLE_CHINESE,
 1178,French,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Romance[9690]->Italo-Western Romance[10909]->Western Romance[11855]->Shifted Western Romance[12721]->Northwestern Shifted Romance[13414]->Gallo-Rhaetian[13934]->Oil[14282]->Central Oil[14449]->Macro-French[14570]->Global French[14636]->French[14711],stan1290,FRENCH,IE.ROMANCE.FRENCH,SCCSR.v3
 1180,Batak Mandailing,Language[1747]->Austronesian[1807]->Malayo-Polynesian[2158]->Northwest Sumatra-Barrier Islands[3522]->Batakic[4853]->Southern Batak[6145]->Tobaic[7569]->Angkola-Mandailing[9070]->Batak Mandailing[10306],bata1291,BATAK_MANDAILING,An.NORTHWEST_SUMATRA_BARRIER_ISLANDS.BATAK_MANDAILING,SCCSR.v3
 1191,Ancient Hebrew,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Hebrewic[9968]->Ancient Hebrew[11121],anci1244,BIBLICAL_HEBREW,AA.SEMITIC.BIBLICAL_HEBREW,SCCSR.v3
@@ -197,16 +223,20 @@ entry_id,entrytag_name,entrytag_path,Glottocode,ID,tip_name,Coding
 1196,K'iche',Language[1747]->Mayan[1870]->Core Mayan[2397]->Quichean-Mamean[3799]->Greater Quichean[5167]->Core Quichean[6554]->Quiche-Achi[8129]->K'iche'[9601],kich1262,KICHEE_SAMAYAC_1,May.MAYAN.KICHEE_SAMAYAC_1,SCCSR.v3
 1199,Tiv,Language[1747]->Atlantic-Congo[1822]->Volta-Congo[2237]->Benue-Congo[3616]->Bantoid[5004]->Southern Bantoid[6347]->Tivoid[7887]->Central Tivoid[9410]->Central Tivoid A[10676]->Tiv-Evand[11640]->Tiv-Iyive-Otanga[12492]->Tiv[13152],tivv1240,TIV_1,NC.BANTOID.TIV_1,SCCSR.v3
 1210,Mende (Sierra Leone),Language[1747]->Mande[1836]->Western Mande[2273]->Manding-Kpelle[3658]->Southwest Mande[5062]->Mende-Loma[6434]->Mende-Bandi[8013]->Mende-Loko[9549]->Mende (Sierra Leone)[10844],mend1266,MENDE,Man.WESTERN_MANDE.MENDE,SCCSR.v3
+1220,Mongolian,,mong1331,,Alt.MONGOLIC.MONGOLIAN,
 1223,Toda,Language[1747]->Dravidian[1908]->South Dravidian[2492]->South Dravidian I[4058]->Tamil-Kannada[5382]->Tamil-Kota[6773]->Tamil-Toda[8325]->Toda[9752],toda1252,TODA,Dra.SOUTHERN_DRAVIDIAN.TODA,SCCSR.v3
 1227,Sabaic,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Sayhadic[7094]->Sabaic[8594],saba1279,SABEAN,AA.SEMITIC.SABEAN,SCCSR.v3
 1229,Mandarin Chinese,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342]->Middle-Modern Sinitic[5613]->Northern Chinese[7030]->Mandarinic[8557]->Mandarin Chinese[9940],mand1415,MANDARIN_2,ST.CHINESE.MANDARIN_2,SCCSR.v3
 1231,Mandarin Chinese,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342]->Middle-Modern Sinitic[5613]->Northern Chinese[7030]->Mandarinic[8557]->Mandarin Chinese[9940],mand1415,MANDARIN_2,ST.CHINESE.MANDARIN_2,SCCSR.v3
 1234,Akan,Language[1747]->Atlantic-Congo[1822]->Volta-Congo[2237]->Kwa Volta-Congo[3615]->Nyo[5002]->Potou-Tano[6340]->Tano[7874]->Central Tano[9387]->Akanic[10674]->Akan[11637],akan1250,TWI_FANTE,NC.KWA.TWI_FANTE,SCCSR.v3
+1241,Classical-Middle-Modern Sinitic,,clas1255,,ST.CHINESE.HAKKA,
 1246,Shilluk,Language[1747]->Nilotic[1844]->Western Nilotic[2296]->Lwoo[3685]->Northern Lwoo[5090]->Shilluk[6458],shil1265,SHILLUK,ESu.NILOTIC.SHILLUK,SCCSR.v3
 1247,French,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Romance[9690]->Italo-Western Romance[10909]->Western Romance[11855]->Shifted Western Romance[12721]->Northwestern Shifted Romance[13414]->Gallo-Rhaetian[13934]->Oil[14282]->Central Oil[14449]->Macro-French[14570]->Global French[14636]->French[14711],stan1290,FRENCH,IE.ROMANCE.FRENCH,SCCSR.v3
 1248,Akkadian,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->East Semitic[4432]->Akkadian[5692],akka1240,AKKADIAN,AA.SEMITIC.AKKADIAN,SCCSR.v3
 1249,Modern Greek,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Graeco-Phrygian[4027]->Greek[5341]->East Greek[29393]->Koineic Greek[30702]->Modern Koineic Greek[32459]->Nuclear Modern Greek[34062]->Modern Greek[35856],mode1248,GREEK,IE.GREEK.GREEK,SCCSR.v3
+1250,Arabic,,arab1395,,AA.SEMITIC.IRAQ_MUSLIM_BAGHDAD_ARABIC,
 1258,Ancient Hebrew,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Hebrewic[9968]->Ancient Hebrew[11121],anci1244,BIBLICAL_HEBREW,AA.SEMITIC.BIBLICAL_HEBREW,SCCSR.v3
+1259,Classical-Middle-Modern Sinitic,,clas1255,,ST.CHINESE.MANDARIN,
 1268,Sabaic,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Sayhadic[7094]->Sabaic[8594],saba1279,SABEAN,AA.SEMITIC.SABEAN,SCCSR.v3
 1279,Mandar,Language[1747]->Austronesian[1807]->Malayo-Polynesian[2158]->South Sulawesi[3527]->Northern South Sulawesi[4865]->Mandar[6162],mand1442,MANDAR,An.SOUTH_SULAWESI.MANDAR,SCCSR.v3
 1281,Otoro,Language[1747]->Heibanic[1956]->West-Central Heibanic[3066]->Central Heibanic[4369]->Ebang-Logol[5628]->Otoro[7048],otor1240,UTORO,Krd.HEIBAN.UTORO,SCCSR.v3
@@ -222,26 +252,38 @@ entry_id,entrytag_name,entrytag_path,Glottocode,ID,tip_name,Coding
 1323,Luguru,Language[1747]->Atlantic-Congo[1822]->Volta-Congo[2237]->Benue-Congo[3616]->Bantoid[5004]->Southern Bantoid[6347]->Narrow Bantu[7890]->East Bantu[9419]->Northeast Savanna Bantu[10697]->Northeast Coastal Bantu[11683]->Ruvu[12551]->East Ruvu[13220]->Luguru[13795],lugu1238,LUGURU,NC.BANTOID.LUGURU,SCCSR.v3
 1333,Classical Syriac,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Aramaic[8598]->Imperial-Middle-Modern Aramaic[9970]->Middle-Modern Aramaic[11126]->Eastern Aramaic[12053]->Classical Syriac[12890],clas1252,CLASSICAL_SYRIAC,AA.SEMITIC.CLASSICAL_SYRIAC,SCCSR.v3
 1335,Latin,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Latin[9691],lati1261,LATIN,IE.ROMANCE.LATIN,SCCSR.v3
+1337,Old Aramaic (up to 700 BCE),,olda1246,,AA.SEMITIC.AMEDYA_ARAMAIC,
 1340,French,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Romance[9690]->Italo-Western Romance[10909]->Western Romance[11855]->Shifted Western Romance[12721]->Northwestern Shifted Romance[13414]->Gallo-Rhaetian[13934]->Oil[14282]->Central Oil[14449]->Macro-French[14570]->Global French[14636]->French[14711],stan1290,FRENCH,IE.ROMANCE.FRENCH,SCCSR.v3
 1344,Tibetan,Language[1747]->Sino-Tibetan[1946]->Bodic[3022]->Bodish[4302]->Early Old Tibetan[5558]->Middle Old Tibetan[6951]->Late Old Tibetan[8465]->Central Tibetan[9859]->Tibetan[11041],tibe1272,LHASA_TIBETAN,ST.BODIC.LHASA_TIBETAN,SCCSR.v3
 1348,Modern Hebrew,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Hebrewic[9968]->Modern Hebrew[11122],hebr1245,HEBREW,AA.SEMITIC.HEBREW,SCCSR.v3
+1349,Classical-Middle-Modern Sinitic,,clas1255,,ST.CHINESE.XIANG,
 1352,Sanskrit,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Indo-Iranian[4034]->Indo-Aryan[5357]->Sanskrit[6749],sans1269,SANSKRIT,IE.INDIC.SANSKRIT,SCCSR.v3
 1369,Akkadian,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->East Semitic[4432]->Akkadian[5692],akka1240,AKKADIAN_2,AA.SEMITIC.AKKADIAN_2,SCCSR.v3
 1370,French,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Romance[9690]->Italo-Western Romance[10909]->Western Romance[11855]->Shifted Western Romance[12721]->Northwestern Shifted Romance[13414]->Gallo-Rhaetian[13934]->Oil[14282]->Central Oil[14449]->Macro-French[14570]->Global French[14636]->French[14711],stan1290,FRENCH,IE.ROMANCE.FRENCH,SCCSR.v3
 1371,Western Farsi,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Indo-Iranian[4034]->Iranian[5358]->Southwestern Iranian[6761]->Middle-Modern Persian[8310]->Modern Southwestern Iranian[9735]->Farsic-Caucasian Tat[10970]->Farsic[11958]->Western Farsi[12840],west2369,PERSIAN,IE.IRANIAN.PERSIAN,SCCSR.v3
 1374,French,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Romance[9690]->Italo-Western Romance[10909]->Western Romance[11855]->Shifted Western Romance[12721]->Northwestern Shifted Romance[13414]->Gallo-Rhaetian[13934]->Oil[14282]->Central Oil[14449]->Macro-French[14570]->Global French[14636]->French[14711],stan1290,FRENCH,IE.ROMANCE.FRENCH,SCCSR.v3
 1376,Zulu,Language[1747]->Atlantic-Congo[1822]->Volta-Congo[2237]->Benue-Congo[3616]->Bantoid[5004]->Southern Bantoid[6347]->Narrow Bantu[7890]->East Bantu[9419]->Southern Bantu[10692]->Nuclear Southern Bantu[11668]->Dimsuffix Southern Bantu[12529]->Nguni-Tsonga-Copi[13200]->Nguni (S.40)[13779]->Nuclear Nguni[14143]->Southern Ndebele-Lowland[14372]->Zulu[14516],zulu1248,NGONI_2,NC.BANTOID.NGONI_2,SCCSR.v3
+1386,Classical-Middle-Modern Sinitic,,clas1255,,ST.CHINESE.MANDARIN,
 1390,Jicarilla Apache,Language[1747]->Athabaskan-Eyak-Tlingit[1886]->Athabaskan-Eyak[2438]->Athabaskan[3881]->Apachean[5258]->Southwestern Apachean[6628]->Eastern Southwestern Apachean[8203]->Jicarilla Apache[9644],jica1244,JICARILLA_APACHE,NDe.ATHAPASKAN.JICARILLA_APACHE,SCCSR.v3
 1392,Classical Syriac,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Aramaic[8598]->Imperial-Middle-Modern Aramaic[9970]->Middle-Modern Aramaic[11126]->Eastern Aramaic[12053]->Classical Syriac[12890],clas1252,SYRIAC_2,AA.SEMITIC.SYRIAC_2,SCCSR.v3
 1396,East Greek,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Graeco-Phrygian[4027]->Greek[5341]->East Greek[29393],,NATI,An.OCEANIC.NATI,SCCSR.v3
+1397,Zapotec,,zapo1437,,OM.POPOLOCAN.SAN_JUAN_CHIQUIHUITLAN,
 1400,Literary Chinese,Language[1747]->Sino-Tibetan[1946]->Sinitic[3038]->Classical-Middle-Modern Sinitic[4342]->Literary Chinese[5612],,COMMON_TOCHARIAN,IE.TOCHARIAN.COMMON_TOCHARIAN,SCCSR.v3
 1409,Language,Language[1747],,PAYAGUA,Pay.PAYAGUA.PAYAGUA,SCCSR.v3
 1412,Japanese,Language[1747]->Japonic[1889]->Japanesic[2444]->Japan-Taiwan Japanese[3890]->Japanese[5264],nucl1643,TOKYO_JAPANESE,Jap.JAPANESE.TOKYO_JAPANESE,SCCSR.v3
 1415,East Greek,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Graeco-Phrygian[4027]->Greek[5341]->East Greek[29393],,TOTONAC_TEJERIA,Tot.TOTONACAN.TOTONAC_TEJERIA,SCCSR.v3
+1419,Middle Egyptian,,midd1369,,AA.EGYPTIAN_COPTIC.MIDDLE_EGYPTIAN,
 1420,Mikasuki,Language[1747]->Muskogean[1845]->Mikasuki[2301],mika1239,MIKASUKI,Mus.MUSKOGEAN.MIKASUKI,SCCSR.v3
+1426,Classical-Middle-Modern Sinitic,,clas1255,,ST.CHINESE.MANDARIN,
 1433,Latin,,lati1261,LATIN,IE.ROMANCE.LATIN,Matthew Hamm
+1434,Kuna,,kuna1280,,Chi.KUNA.CUNA,
+1436,Semitic,,semi1276,,IE.GREEK.GREEK_ANCIENT,
+1441,Aztec,,azte1234,,UA.AZTECAN.CLASSICAL_NAHUATL,
 1450,Spanish,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Romance[9690]->Italo-Western Romance[10909]->Western Romance[11855]->Shifted Western Romance[12721]->Southwestern Shifted Romance[13415]->West Ibero-Romance[13935]->Castilic[14285]->Spanish[14455],stan1288,SPANISH,IE.ROMANCE.SPANISH,SCCSR.v3
+1454,Greek,,gree1276,,IE.GREEK.GREEK_ANCIENT,
+1468,Greek,,gree1276,,IE.GREEK.GREEK_ANCIENT,
 1474,Sharanahua,Language[1747]->Pano-Tacanan[1853]->Panoan[2317]->Mainline Pano[3710]->Pano Nawa[5121]->Headwaters Pano[6503]->Yaminawa Complex[8075]->Sharanahua[9583],shar1245,SHARANAHUA,Pan.PANOAN.SHARANAHUA,SCCSR.v3
+1492,Nambiquaran,,namb1299,,Nam.NAMBIKUARAN.NAMBIKWARA,
 1495,English,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Germanic[4033]->Northwest Germanic[5354]->West Germanic[6740]->North Sea Germanic[8290]->Anglo-Frisian[9705]->Anglic[10924]->Later Anglic[11872]->Middle-Modern English[12745]->Macro-English[13445]->English[13951],stan1293,ENGLISH,IE.GERMANIC.ENGLISH,SCCSR.v3
 1511,Hausa,Language[1747]->Afro-Asiatic[1977]->Chadic[3241]->West Chadic[4451]->West Chadic A[5722]->West Chadic A.1[7147]->Hausa[8667],haus1257,HAUSA_2,AA.WEST_CHADIC.HAUSA_2,SCCSR.v3
 1517,French,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Italic[4031]->Latino-Faliscan[5349]->Latinic[6736]->Imperial Latin[8284]->Romance[9690]->Italo-Western Romance[10909]->Western Romance[11855]->Shifted Western Romance[12721]->Northwestern Shifted Romance[13414]->Gallo-Rhaetian[13934]->Oil[14282]->Central Oil[14449]->Macro-French[14570]->Global French[14636]->French[14711],stan1290,FRENCH,IE.ROMANCE.FRENCH,SCCSR.v3
@@ -253,12 +295,27 @@ entry_id,entrytag_name,entrytag_path,Glottocode,ID,tip_name,Coding
 1574,Akkadian,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->East Semitic[4432]->Akkadian[5692],akka1240,AKKADIAN_2,AA.SEMITIC.AKKADIAN_2,SCCSR.v3
 1619,Akkadian,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->East Semitic[4432]->Akkadian[5692],akka1240,AKKADIAN_2,AA.SEMITIC.AKKADIAN_2,SCCSR.v3
 1621,Akkadian,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->East Semitic[4432]->Akkadian[5692],akka1240,AKKADIAN,AA.SEMITIC.AKKADIAN,SCCSR.v3
+1624,Neo-Assyrian,,neoa1235,,AA.SEMITIC.AKKADIAN,
+1626,Greek,,gree1276,,IE.GREEK.GREEK_ANCIENT,
+1627,Classical-Middle-Modern Sinitic,,clas1255,,ST.CHINESE.MANDARIN,
+1636,Greek,,gree1276,,IE.GREEK.GREEK_ANCIENT,
 1653,Gothic,,goth1244,GOTHIC,IE.GERMANIC.GOTHIC,Matthew Hamm
 1654,Language,Language[1747],,TZOTZIL_ZINACANTAN_1600,May.MAYAN.TZOTZIL_ZINACANTAN_1600,SCCSR.v3
 1667,French,,stan1290,FRENCH,IE.ROMANCE.FRENCH,Matthew Hamm
 1677,Akkadian,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->East Semitic[4432]->Akkadian[5692],akka1240,AKKADIAN,AA.SEMITIC.AKKADIAN,SCCSR.v3
+1689,Arabic,,arab1395,,AA.SEMITIC.SYRIAN_ARABIC,
+1690,Greek,,gree1276,,IE.GREEK.GREEK_ANCIENT,
+1694,Greek,,gree1276,,IE.GREEK.GREEK_ANCIENT,
+1697,Greek,,gree1276,,IE.GREEK.GREEK_ANCIENT,
 1701,French,,stan1290,FRENCH,IE.ROMANCE.FRENCH,Matthew Hamm
+1708,Arabic,,arab1395,,AA.SEMITIC.ARABIC_GULF_SPOKEN,
 1734,Unknown,Language[1747]->Unknown[14806],,ARAMAIC_ANCIENT,AA.SEMITIC.ARAMAIC_ANCIENT,SCCSR.v3
+1759,Arabic,,arab1395,,AA.SEMITIC.STANDARD_ARABIC,
+1776,Arabic,,arab1395,,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,
+1777,Arabic,,arab1395,,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,
+1780,Arabic,,arab1395,,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,
+1781,Arabic,,arab1395,,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,
+1791,Arabic,,arab1395,,AA.SEMITIC.IRAQ_MUSLIM_BAGHDAD_ARABIC,
 1820,Yoruba; English,,,ALLENTIAC,Hur.HUARPE.ALLENTIAC,Matthew Hamm
 1829,Yoruba; English,,,ALLENTIAC,Hur.HUARPE.ALLENTIAC,Matthew Hamm
 1835,Yoruba; English,,,ALLENTIAC,Hur.HUARPE.ALLENTIAC,Matthew Hamm
@@ -266,6 +323,8 @@ entry_id,entrytag_name,entrytag_path,Glottocode,ID,tip_name,Coding
 1869,Yoruba,Language[1747]->Atlantic-Congo[1822]->Volta-Congo[2237]->Benue-Congo[3616]->Defoid[5014]->Yoruboid[6375]->Edekiri[7956]->Ede[9517]->Eastern Ede[10813]->Southeastern Ede[11800]->Nuclear Yoruba[12689]->Lucumi-Yoruba[13394]->Yoruba[13930],yoru1245,OKA,NC.DEFOID.OKA,SCCSR.v3
 1872,Yoruba,,yoru1245,OKA,NC.DEFOID.OKA,Matthew Hamm
 1897,Yoruba,,yoru1245,OKA,NC.DEFOID.OKA,Matthew Hamm
+1903,Arabic,,arab1395,,AA.SEMITIC.SYRIAN_ARABIC,
+1904,Arabic,,arab1395,,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,
 1908,Japanese,Language[1747]->Japonic[1889]->Japanesic[2444]->Japan-Taiwan Japanese[3890]->Japanese[5264],nucl1643,TOKYO_JAPANESE,Jap.JAPANESE.TOKYO_JAPANESE,SCCSR.v3
 1938,Iranian ,,,ALLENTIAC,Hur.HUARPE.ALLENTIAC,Matthew Hamm
 1940,Yoruba,,yoru1245,OKA,NC.DEFOID.OKA,Matthew Hamm

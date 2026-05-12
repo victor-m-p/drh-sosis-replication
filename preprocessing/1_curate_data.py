@@ -9,13 +9,12 @@ Full data curation pipeline. Output: data/preprocessed/answerset.csv
 """
 
 import pandas as pd
+from helper_functions import fill_answers, unique_combinations
 
 pd.options.mode.chained_assignment = None  # default='warn'
 
 # Load data
 data = pd.read_csv("../data/raw/answerset.csv")
-data["entry_id"].nunique() # 1687
-data[data['poll_name'].str.contains("Group")]['entry_id'].nunique() # 926
 
 region_data = pd.read_csv("../data/raw/region_data.csv")[
     ["region_id", "world_region"]
@@ -34,12 +33,12 @@ question_coding = {
     "Are extra-ritual in-group markers present:": "extra_ritual_group_markers", 
     "Does membership in this religious group require permanent scarring or painful bodily alterations:": "permanent_scarring",
     # sub-questions of extra-ritual in-group markers
-    "Tattoos/scarification:": "tattoos_scarification",  # sub of extra-ritual in-group markers
-    "Circumcision:": "circumcision",  # sub of extra-ritual in-group markers
-    "Food taboos:": "food_taboos",  # sub of extra-ritual in-group markers
-    "Hair:": "hair",  # sub of extra-ritual in-group markers
-    "Dress:": "dress",  # sub of extra-ritual in-group markers
-    "Ornaments:": "ornaments",  # sub of extra-ritual in-group markers
+    "Tattoos/scarification:": "tattoos_scarification",
+    "Circumcision:": "circumcision",
+    "Food taboos:": "food_taboos",
+    "Hair:": "hair",
+    "Dress:": "dress",
+    "Ornaments:": "ornaments",
 }
 
 # Take out the relevant columns
@@ -57,11 +56,9 @@ answers = data[
 # Subset the data to only include the questions of interest
 answers_subset = answers[answers["question_name"].isin(question_coding.keys())]
 answers_subset["question_short"] = answers_subset["question_name"].map(question_coding)
-answers_subset["entry_id"].nunique() # 842
 
 # Make sure that we are only working with groups
 answers_subset = answers_subset[answers_subset["poll_name"].str.contains("Group")]
-answers_subset["entry_id"].nunique() # 842
 
 # Merge with questionrelation to get related names
 questionrelations = pd.read_csv("../data/raw/questionrelation.csv")
@@ -72,7 +69,6 @@ answers_subset = answers_subset.merge(
 )
 answers_subset = answers_subset.drop(columns=["question_id"])
 answers_subset = answers_subset.rename(columns={"related_question_id": "question_id"})
-answers_subset["entry_id"].nunique() # 842
 
 # Handle this for Parent Question ID
 answers_subset["parent_question_id"] = (
@@ -87,7 +83,6 @@ answers_subset["parent_question_id"] = answers_subset["parent_question_id"].repl
 
 # only keep answers that are 0 (no) or 1 (yes)
 answers_subset = answers_subset[answers_subset["answer_value"].isin([0, 1])]  # n=4567
-answers_subset["entry_id"].nunique() # 830
 
 # Identify inconsistent answers by checking if more than one exists for each (entry_id, question_id) group
 answers_inconsistent = answers_subset.groupby(["entry_id", "question_id"]).size()
@@ -127,7 +122,6 @@ answers_subset_filtered = answers_subset[
 ]
 
 # unique combinations (needed for inferring no answers below)
-from helper_functions import unique_combinations
 
 unique_columns = ["question_id", "question_short", "parent_question_id"]
 question_entry_combinations = unique_combinations(
@@ -148,7 +142,6 @@ answers_complete = answers_complete.merge(question_names, on="question_id", how=
 
 # infer no if parent is no 
 # then also remove NA in answer after filling
-from helper_functions import fill_answers
 
 answers_inferred = fill_answers(answers_complete)
 answers_inferred = answers_inferred[answers_inferred["answer_value"].notna()]
@@ -157,18 +150,14 @@ answers_inferred = answers_inferred[answers_inferred["answer_value"].notna()]
 entries_with_ve = answers_inferred[
     answers_inferred["question_short"] == "violent_external"
 ]["entry_id"].unique()
-
 answers_inferred = answers_inferred[answers_inferred["entry_id"].isin(entries_with_ve)]
-answers_inferred["entry_id"].nunique()  # 551
 
 # keep only entries with a coding on at least one main dependent variable
 dv_short = ["extra_ritual_group_markers", "permanent_scarring"]
 entries_with_dv = answers_inferred[
     answers_inferred["question_short"].isin(dv_short)
 ]["entry_id"].unique()
-
 answers_inferred = answers_inferred[answers_inferred["entry_id"].isin(entries_with_dv)]
-answers_inferred["entry_id"].nunique() # 458 
 
 ### combine with entry metadata (year + region) and pivot wide ###
 question_names_short = [
@@ -187,11 +176,4 @@ year_mean = answerset["year_from"].mean()
 year_sd   = answerset["year_from"].std()
 answerset["year_scaled"] = (answerset["year_from"] - year_mean) / year_sd
 
-answerset["entry_id"].nunique()  # 551
 answerset.to_csv("../data/preprocessed/answerset.csv", index=False)
-
-### just a few quick overviews ###
-answerset['world_region'].value_counts()
-answerset['year_from'].describe()
-
-answerset
