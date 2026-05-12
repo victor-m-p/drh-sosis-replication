@@ -1,5 +1,5 @@
 ---
-title: "Main Analysis: Ritual markers ~ violent external conflict"
+title: "Supplementary Analysis: Ritual markers ~ violent internal conflict (eHRAF excluded)"
 output:
   html_document:
     toc: true

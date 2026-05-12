@@ -2,7 +2,7 @@
 .DS_Store
 
 # Python
-__pycache__/
+**/__pycache__/
 *.py[cod]
 .vscode
 
@@ -30,6 +30,9 @@ logs/
 
 # rendered outputs
 *.html
+
+# temporary / staging
+figures_old/
 
 # analysis
 analysis/reanalysis.Rmd
