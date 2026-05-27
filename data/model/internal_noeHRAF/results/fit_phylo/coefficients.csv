@@ -1,0 +1,17 @@
+marker,parameter,median,lo95,hi95
+circumcision,Intercept,-2.57,-3.78,-1.56
+circumcision,violent_internal,0.51,-0.46,1.47
+dress,Intercept,-1.16,-1.75,-0.67
+dress,violent_internal,-0.29,-1.05,0.41
+extra_ritual_group_markers,Intercept,-0.8,-1.28,-0.34
+extra_ritual_group_markers,violent_internal,0.07,-0.57,0.72
+food_taboos,Intercept,-1.6,-2.12,-1.12
+food_taboos,violent_internal,0.44,-0.22,1.18
+hair,Intercept,-1.54,-2.1,-0.99
+hair,violent_internal,-0.27,-1.06,0.56
+ornaments,Intercept,-1.62,-2.15,-1.09
+ornaments,violent_internal,-0.21,-1.07,0.62
+permanent_scarring,Intercept,-3.33,-4.2,-2.5
+permanent_scarring,violent_internal,0.98,-0.06,2.08
+tattoos_scarification,Intercept,-2.49,-3.17,-1.87
+tattoos_scarification,violent_internal,-0.5,-1.71,0.5

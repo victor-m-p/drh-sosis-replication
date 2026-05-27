@@ -53,7 +53,7 @@ entry_id,entrytag_name,entrytag_path,Glottocode,ID,tip_name,coding
 607,Literary Chinese,,,ALLENTIAC,Hur.HUARPE.ALLENTIAC,Matthew Hamm
 608,Kurdish,,kurd1259,,IE.IRANIAN.KURDISH_CENTRAL,
 623,Hindi,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Indo-Iranian[4034]->Indo-Aryan[5357]->Middle-Modern Indo-Aryan[6751]->Continental Indo-Aryan[8297]->Midlands Indo-Aryan[9718]->Shaurasenic[10945]->Indo-Aryan Central zone[11905]->Western Hindi[12783]->Hindustani[13478]->Hindi[13972],hind1269,HINDI,IE.INDIC.HINDI,SCCSR.v3
-624,Pashto,,pash1269,,HM.HMONG_MIEN.HMONG_DAW,
+624,Pashto,,pash1269,,IE.IRANIAN.PERSIAN,
 626,Patamona,,pata1262,,Car.CARIBAN.TIRIYO,
 629,Nepali,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Indo-Iranian[4034]->Indo-Aryan[5357]->Middle-Modern Indo-Aryan[6751]->Continental Indo-Aryan[8297]->Midlands Indo-Aryan[9718]->Indo-Aryan Northern zone[10943]->Eastern Pahari[11900]->Nepali[12779],nepa1254,NEPALI,IE.INDIC.NEPALI,SCCSR.v3
 630,Alyawarr,Language[1747]->Pama-Nyungan[1984]->Arandic-Thura-Yura[3283]->Arandic[4521]->South Arandic[5803]->Upper Arrernte[7243]->Alyawarr[8761],alya1239,ALYAWARRA,Aus.PAMA_NYUNGAN.ALYAWARRA,SCCSR.v3
@@ -195,6 +195,7 @@ entry_id,entrytag_name,entrytag_path,Glottocode,ID,tip_name,coding
 1006,Old Egyptian,,olde1242,,AA.EGYPTIAN_COPTIC.MIDDLE_EGYPTIAN,
 1010,Ionic-Attic Ancient Greek,Language[1747]->Indo-European[1904]->Classical Indo-European[2479]->Graeco-Phrygian[4027]->Greek[5341]->South Greek[6723]->Central Greek[8272]->Ionic-Attic Ancient Greek[9686],anci1242,GREEK_ANCIENT,IE.GREEK.GREEK_ANCIENT,SCCSR.v3
 1011,Ancient Hebrew,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Hebrewic[9968]->Ancient Hebrew[11121],anci1244,BIBLICAL_HEBREW,AA.SEMITIC.BIBLICAL_HEBREW,SCCSR.v3
+1013,Indo-Portuguesic,,port1283,,IE.ROMANCE.PORTUGUESE,
 1028,Ancient Hebrew,Language[1747]->Afro-Asiatic[1977]->Semitic[3237]->West Semitic[4434]->Central Semitic[5695]->Northwest Semitic[7096]->Canaanite[8597]->Hebrewic[9968]->Ancient Hebrew[11121],anci1244,BIBLICAL_HEBREW,AA.SEMITIC.BIBLICAL_HEBREW,SCCSR.v3
 1037,Late Egyptian,,late1256,,AA.EGYPTIAN_COPTIC.MIDDLE_EGYPTIAN,
 1038,Language,Language[1747],,PAYAGUA,Pay.PAYAGUA.PAYAGUA,SCCSR.v3
@@ -310,6 +311,7 @@ entry_id,entrytag_name,entrytag_path,Glottocode,ID,tip_name,coding
 1701,French,,stan1290,FRENCH,IE.ROMANCE.FRENCH,Matthew Hamm
 1708,Arabic,,arab1395,,AA.SEMITIC.ARABIC_GULF_SPOKEN,
 1734,Unknown,Language[1747]->Unknown[14806],,ARAMAIC_ANCIENT,AA.SEMITIC.ARAMAIC_ANCIENT,SCCSR.v3
+1737,Classical-Middle-Modern Sinitic,,clas1255,,IE.IRANIAN.EASTERN_FARSI,
 1759,Arabic,,arab1395,,AA.SEMITIC.STANDARD_ARABIC,
 1776,Arabic,,arab1395,,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,
 1777,Arabic,,arab1395,,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,

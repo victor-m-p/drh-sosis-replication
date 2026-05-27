@@ -1,0 +1,17 @@
+marker,parameter,rhat,ess_bulk,ess_tail
+circumcision,Intercept,1,5042.61,5279.63
+circumcision,violent_internal,1,11013.91,5856.78
+dress,Intercept,1,6808.17,4606.42
+dress,violent_internal,1,14029.42,5649.5
+extra_ritual_group_markers,Intercept,1,4857.58,4297.7
+extra_ritual_group_markers,violent_internal,1,9570.44,6227.79
+food_taboos,Intercept,1,10053.34,5944
+food_taboos,violent_internal,1,16726.43,5426.62
+hair,Intercept,1,10891.48,5427.27
+hair,violent_internal,1,15250.47,4986.25
+ornaments,Intercept,1,6367.7,5031.54
+ornaments,violent_internal,1,10008.05,5971.35
+permanent_scarring,Intercept,1,10740.36,5096.89
+permanent_scarring,violent_internal,1,14592.25,5890.72
+tattoos_scarification,Intercept,1,9942.86,5557.04
+tattoos_scarification,violent_internal,1,14192.89,5531.49
