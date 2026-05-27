@@ -72,5 +72,3 @@ entry_tip = (
 
 # ── 6. Save ────────────────────────────────────────────────────────────────────
 entry_tip.to_csv("../data/preprocessed/tip_map.csv", index=False)
-
-drh_tags[drh_tags['entry_id']==1013]
