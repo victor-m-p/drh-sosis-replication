@@ -1,0 +1,42 @@
+---
+title: "Phylogenetic covariance matrix"
+output: html_document
+---
+
+```{r setup, message=FALSE, warning=FALSE}
+library(ape)
+library(here)
+```
+
+Compute `A` for the union of all tips that appear in any analysis, exactly
+as in `10_external.Rmd`. Save as a flat CSV for exploration in Python.
+
+```{r compute}
+tip_map <- read.csv(here("data", "preprocessed", "tip_map.csv"))
+tips    <- unique(na.omit(tip_map$tip_name))
+
+tree        <- read.tree(here("data", "jaeger2018", "world.tre"))
+tree_pruned <- keep.tip(tree, tips)
+A           <- vcv.phylo(tree_pruned, corr = TRUE)
+
+write.csv(A, here("data", "preprocessed", "phylo_corr.csv"))
+cat("Saved", nrow(A), "×", ncol(A), "correlation matrix\n")
+```
+
+Quick sanity check on a few pairs.
+
+```{r sanity}
+pairs <- list(
+  c("IE.GERMANIC.ENGLISH", "IE.GERMANIC.DANISH"),
+  c("IE.GERMANIC.ENGLISH", "IE.GERMANIC.GOTHIC"),
+  c("IE.GERMANIC.ENGLISH", "IE.ROMANCE.LATIN"),
+  c("IE.GERMANIC.ENGLISH", "IE.ROMANCE.FRENCH"),
+  c("IE.GERMANIC.ENGLISH", "IE.INDIC.SANSKRIT"),
+  c("IE.GERMANIC.ENGLISH", "AA.SEMITIC.ARABIC_QURANIC"),
+  c("IE.GERMANIC.ENGLISH", "Kor.KOREAN.KOREAN")
+)
+
+for (p in pairs) {
+  cat(sprintf("%-30s vs %-30s  %.4f\n", p[1], p[2], A[p[1], p[2]]))
+}
+```

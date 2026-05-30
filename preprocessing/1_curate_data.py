@@ -88,7 +88,7 @@ answers_subset = answers_subset[answers_subset["answer_value"].isin([0, 1])]  # 
 answers_inconsistent = answers_subset.groupby(["entry_id", "question_id"]).size()
 answers_inconsistent = answers_inconsistent[answers_inconsistent > 1].reset_index()[
     ["entry_id", "question_id"]
-]
+] # n = 17
 
 # Create a mapping from parent questions to child questions
 parent_child_mapping = answers_subset[
@@ -122,7 +122,6 @@ answers_subset_filtered = answers_subset[
 ]
 
 # unique combinations (needed for inferring no answers below)
-
 unique_columns = ["question_id", "question_short", "parent_question_id"]
 question_entry_combinations = unique_combinations(
     df=answers_subset_filtered,
@@ -142,7 +141,6 @@ answers_complete = answers_complete.merge(question_names, on="question_id", how=
 
 # infer no if parent is no 
 # then also remove NA in answer after filling
-
 answers_inferred = fill_answers(answers_complete)
 answers_inferred = answers_inferred[answers_inferred["answer_value"].notna()]
 

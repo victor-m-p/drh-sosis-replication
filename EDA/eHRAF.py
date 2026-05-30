@@ -1,3 +1,7 @@
+'''
+Just wanted to check one of the markers that drops out of significance when excluding eHRAF.
+'''
+
 import pandas as pd 
 
 # load data for tattoos/scarification
