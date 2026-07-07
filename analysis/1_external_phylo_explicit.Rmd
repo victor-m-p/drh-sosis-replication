@@ -1,0 +1,114 @@
+---
+title: "1_external_phylo_explicit"
+output: html_document
+date: "2026-07-05"
+---
+
+```{r setup, include=FALSE}
+library(pacman)
+p_load(brms, tidyverse, here, tidybayes, ggdist, HDInterval, ape)
+set.seed(12412)
+```
+
+```{r}
+
+# one marker, load and keep only mapped entries (tip_name present)
+m <- "permanent_scarring"
+d <- read_csv(here("data","model","external","input", paste0(m,".csv")),
+              show_col_types = FALSE) |>
+  mutate(y = as.integer(.data[[m]]),
+         world_region = fct_relevel(factor(world_region), "Africa"))
+
+d_phylo <- d |> filter(!is.na(tip_name))
+cat("baseline N:", nrow(d), " | phylo N (mapped):", nrow(d_phylo), "\n")
+cat("distinct tips in this marker:", n_distinct(d_phylo$tip_name), "\n")
+
+# prune the tree to the tips we use
+tree <- read.tree(here("data","jaeger2018","world.tre"))
+tips <- unique(d_phylo$tip_name)
+cat("tips in data:", length(tips),
+    " | of which in tree:", sum(tips %in% tree$tip.label), "\n")   # MUST be all
+
+tree_pruned <- keep.tip(tree, tips)
+
+# THE key checks on the tree before building A
+cat("\n--- tree diagnostics ---\n")
+cat("is.ultrametric:", is.ultrametric(tree_pruned), "\n")
+cat("is.rooted     :", is.rooted(tree_pruned), "\n")
+cat("has branch lengths:", !is.null(tree_pruned$edge.length), "\n")
+cat("root-to-tip distance range:",
+    round(range(diag(vcv.phylo(tree_pruned))), 3), "\n")  # equal => ultrametric
+
+```
+
+```{r}
+A <- vcv.phylo(tree_pruned, corr = TRUE)
+
+# 1. For each tip, its MEAN correlation with all others.
+#    A tip that's anomalously isolated (near-0 with everything) shows up here.
+mean_cor <- (rowSums(A) - 1) / (ncol(A) - 1)   # subtract self (=1)
+sort(mean_cor)[1:15]                            # the 15 MOST isolated tips
+
+# 2. Are the ancient tips among the isolated ones?
+ancient <- c("ST.CHINESE.OLD_CHINESE","IE.GREEK.GREEK_ANCIENT",
+             "AA.SEMITIC.CLASSICAL_SYRIAC","AA.SEMITIC.AKKADIAN",
+             "AA.SEMITIC.BIBLICAL_HEBREW")  # adjust to your actual tips
+mean_cor[names(mean_cor) %in% ancient]
+```
+```{r}
+# --- build A with names matching tip_name exactly (brms matches by name) ---
+A <- vcv.phylo(tree_pruned, corr = TRUE)
+stopifnot(all(d_phylo$tip_name %in% rownames(A)))   # every entry's tip is in A
+
+d_phylo <- d_phylo |>
+  mutate(phylo = tip_name)     # identical values, different column name
+
+f_phylo <- bf(
+  permanent_scarring ~ 1 + violent_external + year_scaled +
+    (1 | world_region) +
+    (1 | gr(phylo, cov = A)) +   # phylogenetic: keyed on `phylo`, structured by A
+    (1 | tip_name)               # non-phylogenetic: keyed on `tip_name`
+)
+
+priors <- c(
+  prior(normal(0, 1.5), class = Intercept),
+  prior(normal(0, 1),   class = b),
+  prior(exponential(1), class = sd)   # applies to ALL three sd terms
+)
+
+
+
+fit_phylo <- brm(
+  formula = f_phylo,
+  data    = d_phylo,
+  data2   = list(A = A),               # <-- A passed here, by name
+  family  = bernoulli("logit"),
+  prior   = priors,
+  chains = 4, iter = 4000, warmup = 2000, cores = 4,
+  control = list(adapt_delta = 0.95, max_treedepth = 12),
+  seed = 1342, backend = "cmdstanr", silent = 2
+)
+```
+
+```{r}
+
+# 1. convergence + divergences FIRST
+cat("divergences:", sum(subset(nuts_params(fit_phylo), Parameter=="divergent__")$Value), "\n")
+cat("max Rhat   :", round(max(rhat(fit_phylo), na.rm=TRUE), 4), "\n")
+
+# 2. THE key check: do the two tip variances separate?
+summary(fit_phylo)$random    # look at sd(Intercept) for BOTH tip_name terms + world_region
+
+# 3. are the two tip SDs trading off? (posterior correlation between them)
+vc <- as_draws_df(fit_phylo) |>
+  select(matches("^sd_.*Intercept")) |>          # the three sd parameters
+  set_names(c("sd_region","sd_phylo","sd_tip"))  # adjust order after seeing names
+cat("\nposterior cor(sd_phylo, sd_tip):",
+    round(cor(vc$sd_phylo, vc$sd_tip), 2), "\n")  # strongly negative = trading off
+
+```
+
+```{r}
+summary(fit_phylo)
+```
+

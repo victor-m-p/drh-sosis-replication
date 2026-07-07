@@ -1,0 +1,230 @@
+---
+title: "1_internal"
+output: html_document
+---
+
+Analysis of marker ~ internal violent conflict.
+First fits baseline models, then adds phylogenetic control.
+Fits models for all markers. 
+
+```{r}
+
+library(pacman)
+p_load(brms, tidyverse, here, tidybayes, ggdist, HDInterval)
+set.seed(12532)
+
+```
+
+```{r}
+
+# all markers 
+markers <- c(
+  "circumcision", "dress", "extra_ritual_group_markers", "food_taboos",
+  "hair", "ornaments", "permanent_scarring", "tattoos_scarification"
+)
+
+# labels for markers (nicer for plots, outputs)
+marker_labels <- c(
+  circumcision="Circumcision", dress="Dress",
+  extra_ritual_group_markers="Extra-Ritual In-Group Markers",
+  food_taboos="Food Taboos", hair="Hair", ornaments="Ornaments",
+  permanent_scarring="Permanent Scarring", tattoos_scarification="Tattoos/Scarification"
+)
+
+# priors 
+priors <- c(
+  prior(normal(0, 1.5), class = Intercept),
+  prior(normal(0, 1),   class = b),
+  prior(exponential(1), class = sd)
+)
+
+# list to hold fits 
+fits <- list()
+for (m in markers) {
+  d <- read_csv(here("data","model","internal","input", paste0(m, ".csv")),
+                show_col_types = FALSE) |>
+    mutate(
+      y = as.integer(.data[[m]]), 
+      world_region = fct_relevel(factor(world_region), "Africa")) 
+
+  f <- bf(as.formula(paste(m, "~ 1 + violent_internal + year_scaled + (1 | world_region)")))
+
+  fit <- brm(f, data = d, family = bernoulli("logit"), prior = priors,
+             chains = 4, iter = 4000, warmup = 2000, cores = 4,
+             control = list(adapt_delta = 0.99),
+             seed = 51252, backend = "cmdstanr", silent = 2)
+
+  fits[[m]] <- list(fit = fit, data = d, n = nrow(d))
+}
+
+```
+
+```{r}
+
+results_tbl <- map_dfr(markers, function(m) {
+  fit <- fits[[m]]$fit
+  d   <- fits[[m]]$data
+
+  h <- hypothesis(fit, "violent_internal > 0", alpha = 0.025)$hypothesis
+
+  nd <- expand_grid(violent_internal = c(0,1), year_scaled = 0,
+                    world_region = unique(d$world_region))
+  ame <- fit |> epred_draws(newdata = nd, re_formula = NA) |> ungroup() |>
+    group_by(.draw, violent_internal) |>
+    summarise(p = mean(.epred), .groups = "drop") |>
+    pivot_wider(names_from = violent_internal, values_from = p, names_prefix = "cond") |>
+    mutate(ame = cond1 - cond0) |> pull(ame)
+
+  tibble(
+    Marker = marker_labels[m],
+    N = fits[[m]]$n,
+    beta = h$Estimate,
+    ci_lo = h$CI.Lower,
+    ci_hi = h$CI.Upper,
+    post_prob = h$Post.Prob,
+    AME = mean(ame)
+  )
+}) |> mutate(across(where(is.numeric), \(x) round(x, 2)))
+
+results_tbl
+write_csv(results_tbl, here("data","model","internal","results","hypothesis_ame.csv"))
+
+```
+
+```{r}
+
+# AME draws for ALL markers (kept as draws for the plot)
+ame_all <- map_dfr(markers, function(m) {
+  fit <- fits[[m]]$fit; d <- fits[[m]]$data
+  nd <- expand_grid(violent_internal = c(0,1), year_scaled = 0,
+                    world_region = unique(d$world_region))
+  fit |> epred_draws(newdata = nd, re_formula = NA) |> ungroup() |>
+    group_by(.draw, violent_internal) |>
+    summarise(p = mean(.epred), .groups = "drop") |>
+    pivot_wider(names_from = violent_internal, values_from = p, names_prefix = "cond") |>
+    mutate(ame = cond1 - cond0, marker = m)
+})
+
+marker_order <- ame_all |> group_by(marker) |>
+  summarise(md = median(ame)) |> arrange(md) |> pull(marker)
+
+n_labels <- map_chr(markers, \(m) paste0(marker_labels[m], " (n=", fits[[m]]$n, ")")) |>
+  setNames(markers)
+
+p_ame_all <- ame_all |>
+  mutate(marker_label = factor(n_labels[marker], levels = n_labels[marker_order])) |>
+  ggplot(aes(x = ame, y = marker_label)) +
+  stat_halfeye(.width = c(0.66, 0.95), point_interval = mean_qi,
+               fill = "#C8839E", color = "black", alpha = 0.85) +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "grey40") +
+  labs(x = "Average marginal effect (probability)", y = NULL,
+       title = "") + #Effect of violent interl conflict on ritual markers; Baseline model: AME at mean year, average region) 
+  theme_bw(base_size = 16) +               # <- bumps ALL text at once
+  theme(
+    plot.title    = element_text(size = 20, face = "bold"),
+    plot.subtitle = element_text(size = 16),
+    axis.title.x  = element_text(size = 17),
+    axis.text.y   = element_text(size = 15),
+    axis.text.x   = element_text(size = 14),
+    plot.margin   = margin(12, 16, 12, 16)
+  )
+
+ggsave(here("figures","internal","ame_baseline_all.pdf"),
+       p_ame_all, width = 9, height = 7, device = "pdf")
+p_ame_all
+
+```
+
+
+## PHYLO ##
+
+```{r}
+
+tree <- read.tree(here("data","jaeger2018","world.tre"))   # load ONCE, prune per marker
+
+```
+
+
+```{r fit_phylo}
+fits <- list()
+for (m in markers) {
+  d <- read_csv(here("data","model","internal","input", paste0(m,".csv")),
+                show_col_types = FALSE) |>
+    mutate(y = as.integer(.data[[m]]),
+           world_region = fct_relevel(factor(world_region), "Africa"))
+
+  # phylo sample = mapped entries only; duplicate tip col for the two effects
+  d_phylo <- d |> filter(!is.na(tip_name)) |> mutate(phylo = tip_name)
+
+  # per-marker tree prune + correlation matrix
+  tips <- unique(d_phylo$tip_name)
+  stopifnot(all(tips %in% tree$tip.label)) # guard 
+  tree_pruned <- keep.tip(tree, tips)
+  A <- vcv.phylo(tree_pruned, corr = TRUE)
+  stopifnot(all(d_phylo$phylo %in% rownames(A)))
+
+  f <- bf(as.formula(paste(
+    m, "~ 1 + violent_internal + year_scaled +",
+    "(1 | world_region) + (1 | gr(phylo, cov = A)) + (1 | tip_name)"
+  )))
+
+  fit <- brm(f, data = d_phylo, data2 = list(A = A),
+             family = bernoulli("logit"), prior = priors,
+             chains = 4, iter = 4000, warmup = 2000, cores = 4,
+             control = list(adapt_delta = 0.99, max_treedepth = 12),
+             seed = 52312, backend = "cmdstanr", silent = 2)
+
+  fits[[m]] <- list(fit = fit, data = d_phylo, n = nrow(d_phylo),
+                    n_tips = length(tips))
+}
+```
+
+We should save this as well, and have something corresponding for baseline.
+
+```{r diagnostics}
+
+# per-marker convergence sweep — CATCH bad fits before trusting results
+diag_tbl <- map_dfr(markers, function(m) {
+  fit <- fits[[m]]$fit
+  tibble(
+    Marker      = marker_labels[m],
+    N           = fits[[m]]$n,
+    n_tips      = fits[[m]]$n_tips,
+    divergences = sum(subset(nuts_params(fit), Parameter=="divergent__")$Value),
+    max_rhat    = round(max(rhat(fit), na.rm=TRUE), 4),
+    min_ess     = round(min(summary(fit)$fixed[,"Bulk_ESS"]), 0)
+  )
+})
+diag_tbl
+
+```
+
+```{r results_table}
+
+results_tbl <- map_dfr(markers, function(m) {
+  fit <- fits[[m]]$fit
+  d   <- fits[[m]]$data
+  h <- hypothesis(fit, "violent_internal > 0", alpha = 0.025)$hypothesis
+
+  # AME: re_formula = NA excludes ALL random effects (region, phylo, tip)
+  nd <- expand_grid(violent_internal = c(0,1), year_scaled = 0,
+                    world_region = unique(d$world_region))
+  ame <- fit |> epred_draws(newdata = nd, re_formula = NA) |> ungroup() |>
+    group_by(.draw, violent_internal) |>
+    summarise(p = mean(.epred), .groups = "drop") |>
+    pivot_wider(names_from = violent_internal, values_from = p, names_prefix = "cond") |>
+    mutate(ame = cond1 - cond0) |> pull(ame)
+
+  tibble(
+    Marker = marker_labels[m], N = fits[[m]]$n,
+    beta = h$Estimate, ci_lo = h$CI.Lower, ci_hi = h$CI.Upper,
+    post_prob = h$Post.Prob, AME = mean(ame)
+  )
+}) |> mutate(across(where(is.numeric), \(x) round(x, 2)))
+
+results_tbl
+write_csv(results_tbl, here("data","model","internal","results","hypothesis_ame_phylo.csv"))
+
+```
+
+We should have AME also here + consider doing both plots (also the ones showing both distributions.)

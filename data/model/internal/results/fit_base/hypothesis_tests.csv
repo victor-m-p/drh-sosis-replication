@@ -1,9 +1,0 @@
-marker,estimate,lo95,hi95,post_prob,evid_ratio
-circumcision,0.28,-0.45,0.99,0.74,2.91
-dress,-0.31,-0.93,0.29,0.2,0.26
-extra_ritual_group_markers,0.06,-0.44,0.57,0.58,1.4
-food_taboos,0.45,-0.14,1.02,0.9,8.85
-hair,-0.33,-1.02,0.34,0.21,0.27
-ornaments,-0.17,-0.86,0.48,0.35,0.53
-permanent_scarring,0.98,0.17,1.82,0.98,39.2
-tattoos_scarification,-0.3,-1.23,0.56,0.3,0.43

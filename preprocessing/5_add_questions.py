@@ -25,9 +25,9 @@ answerset = answerset[answerset['entry_id'].isin(entry_ids)]
 question_coding = {
     # enforcement
     'Does the religious group in question provide an institutionalized police force:': 'police_force_own',
-    'Do the group’s adherents interact with an institutionalized police force provided by an institution(s) other than the religious group in question:': 'police_force_other',
+    'Do the group’s adherents interact with an institutionalized police force provided by an institution(s) other than the religious group in question:': 'police_force_other', 
     'Does the religious group in question provide institutionalized judges:': 'judges_own',
-    'Do the group’s adherents interact with an institutionalized judicial system provided by an an institution(s) other than the religious group in question:': 'judges_other',
+    'Do the group’s adherents interact with an institutionalized judicial system provided by an an institution(s) other than the religious group in question:': 'judges_other', 
     'Does the religious group in question enforce institutionalized punishment:': 'punish_own',
     'Are the group’s adherents subject to institutionalized punishment enforced by an institution(s) other than the religious group in question:': 'punish_other',
     'Does the religious group in question have a formal legal code:': 'legal_code_own',

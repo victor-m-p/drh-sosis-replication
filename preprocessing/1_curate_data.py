@@ -15,13 +15,13 @@ pd.options.mode.chained_assignment = None  # default='warn'
 
 # Load data
 data = pd.read_csv("../data/raw/answerset.csv")
-
 region_data = pd.read_csv("../data/raw/region_data.csv")[
     ["region_id", "world_region"]
 ].drop_duplicates()
 entrydata = pd.read_csv("../data/raw/entry_data.csv")[
     ["entry_id", "year_from", "region_id", "data_source"]
 ].merge(region_data, on="region_id", how="left")
+entrydata['entry_id'].nunique() # 1687 (total SCCSR.v3)
 
 # Define the questions to investigate and create mapping dataframe
 question_coding = {
@@ -53,12 +53,14 @@ answers = data[
     ]
 ].drop_duplicates()
 
+# Only work with Religious Group (v5, v6)
+answers = answers[answers["poll_name"].str.contains("Group")]
+answers['entry_id'].nunique() # 926
+
 # Subset the data to only include the questions of interest
 answers_subset = answers[answers["question_name"].isin(question_coding.keys())]
 answers_subset["question_short"] = answers_subset["question_name"].map(question_coding)
-
-# Make sure that we are only working with groups
-answers_subset = answers_subset[answers_subset["poll_name"].str.contains("Group")]
+answers_subset['entry_id'].nunique() # 842
 
 # Merge with questionrelation to get related names
 questionrelations = pd.read_csv("../data/raw/questionrelation.csv")
@@ -83,12 +85,14 @@ answers_subset["parent_question_id"] = answers_subset["parent_question_id"].repl
 
 # only keep answers that are 0 (no) or 1 (yes)
 answers_subset = answers_subset[answers_subset["answer_value"].isin([0, 1])]  # n=4567
+answers_subset['entry_id'].nunique() # 830
 
 # Identify inconsistent answers by checking if more than one exists for each (entry_id, question_id) group
 answers_inconsistent = answers_subset.groupby(["entry_id", "question_id"]).size()
 answers_inconsistent = answers_inconsistent[answers_inconsistent > 1].reset_index()[
     ["entry_id", "question_id"]
-] # n = 17
+] 
+len(answers_inconsistent) # 17
 
 # Create a mapping from parent questions to child questions
 parent_child_mapping = answers_subset[
@@ -120,6 +124,7 @@ answers_subset_filtered = answers_subset[
         answers_affected.set_index(["entry_id", "question_id"]).index
     )
 ]
+answers_subset_filtered['entry_id'].nunique() # 828
 
 # unique combinations (needed for inferring no answers below)
 unique_columns = ["question_id", "question_short", "parent_question_id"]
@@ -138,6 +143,7 @@ question_names = answers_subset_filtered[
     ["question_name", "question_id"]
 ].drop_duplicates()
 answers_complete = answers_complete.merge(question_names, on="question_id", how="inner")
+answers_complete['entry_id'].nunique() # 828
 
 # infer no if parent is no 
 # then also remove NA in answer after filling
@@ -149,6 +155,7 @@ entries_with_ve = answers_inferred[
     answers_inferred["question_short"] == "violent_external"
 ]["entry_id"].unique()
 answers_inferred = answers_inferred[answers_inferred["entry_id"].isin(entries_with_ve)]
+answers_inferred['entry_id'].nunique() # 551
 
 # keep only entries with a coding on at least one main dependent variable
 dv_short = ["extra_ritual_group_markers", "permanent_scarring"]
@@ -156,6 +163,7 @@ entries_with_dv = answers_inferred[
     answers_inferred["question_short"].isin(dv_short)
 ]["entry_id"].unique()
 answers_inferred = answers_inferred[answers_inferred["entry_id"].isin(entries_with_dv)]
+answers_inferred['entry_id'].nunique() # 458
 
 ### combine with entry metadata (year + region) and pivot wide ###
 question_names_short = [
@@ -166,8 +174,8 @@ answers_subset = answers_inferred[answers_inferred["question_short"].isin(questi
 answers_wide = answers_subset.pivot_table(
     index="entry_id", columns="question_short", values="answer_value"
 ).reset_index()
-
 answerset = answers_wide.merge(entrydata, on="entry_id", how="inner")
+answerset['entry_id'].nunique() # 458
 
 # z-score year from 
 year_mean = answerset["year_from"].mean()
