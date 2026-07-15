@@ -1,0 +1,81 @@
+Marker,world_region,n,raw_rate,model_estimate,ci_lo,ci_hi
+Permanent Scarring,Africa,67,0.01,0.03,0.01,0.07
+Permanent Scarring,Central Eurasia,7,0,0.04,0.01,0.1
+Permanent Scarring,East Asia,34,0.06,0.04,0.01,0.09
+Permanent Scarring,Europe,40,0.03,0.03,0.01,0.07
+Permanent Scarring,North America,23,0.09,0.04,0.01,0.12
+Permanent Scarring,Oceania-Australia,3,0.33,0.05,0.01,0.16
+Permanent Scarring,South America,9,0.11,0.05,0.01,0.14
+Permanent Scarring,South Asia,30,0.07,0.04,0.01,0.09
+Permanent Scarring,Southeast Asia,12,0.08,0.04,0.01,0.12
+Permanent Scarring,Southwest Asia,16,0.06,0.03,0.01,0.08
+Extra-Ritual In-Group Markers,Africa,68,0.29,0.31,0.23,0.4
+Extra-Ritual In-Group Markers,Central Eurasia,7,0.29,0.32,0.2,0.46
+Extra-Ritual In-Group Markers,East Asia,34,0.35,0.33,0.23,0.44
+Extra-Ritual In-Group Markers,Europe,36,0.33,0.32,0.22,0.43
+Extra-Ritual In-Group Markers,North America,19,0.16,0.3,0.16,0.4
+Extra-Ritual In-Group Markers,Oceania-Australia,1,1,0.33,0.2,0.52
+Extra-Ritual In-Group Markers,South America,6,0.67,0.35,0.24,0.55
+Extra-Ritual In-Group Markers,South Asia,29,0.41,0.34,0.25,0.48
+Extra-Ritual In-Group Markers,Southeast Asia,10,0.2,0.31,0.18,0.43
+Extra-Ritual In-Group Markers,Southwest Asia,14,0.29,0.31,0.19,0.43
+Circumcision,Africa,66,0.23,0.21,0.11,0.33
+Circumcision,Central Eurasia,7,0,0.06,0,0.21
+Circumcision,East Asia,32,0.03,0.05,0.01,0.13
+Circumcision,Europe,35,0.03,0.04,0.01,0.12
+Circumcision,North America,19,0,0.04,0,0.14
+Circumcision,Oceania-Australia,1,1,0.27,0.02,0.93
+Circumcision,South America,4,0,0.07,0,0.26
+Circumcision,South Asia,28,0.07,0.07,0.01,0.18
+Circumcision,Southeast Asia,8,0,0.06,0,0.2
+Circumcision,Southwest Asia,14,0.29,0.2,0.05,0.45
+Dress,Africa,66,0.21,0.23,0.15,0.32
+Dress,Central Eurasia,7,0.29,0.25,0.13,0.41
+Dress,East Asia,32,0.28,0.25,0.16,0.38
+Dress,Europe,34,0.21,0.23,0.14,0.33
+Dress,North America,19,0.11,0.21,0.09,0.32
+Dress,Oceania-Australia,1,0,0.24,0.1,0.4
+Dress,South America,5,0.6,0.28,0.16,0.52
+Dress,South Asia,28,0.32,0.27,0.17,0.42
+Dress,Southeast Asia,10,0.1,0.22,0.1,0.34
+Dress,Southwest Asia,14,0.14,0.23,0.11,0.34
+Food Taboos,Africa,67,0.16,0.17,0.1,0.24
+Food Taboos,Central Eurasia,6,0,0.16,0.07,0.26
+Food Taboos,East Asia,31,0.23,0.18,0.11,0.28
+Food Taboos,Europe,35,0.2,0.17,0.1,0.25
+Food Taboos,North America,18,0.06,0.16,0.07,0.24
+Food Taboos,Oceania-Australia,1,1,0.18,0.1,0.33
+Food Taboos,South America,4,0.25,0.18,0.09,0.29
+Food Taboos,South Asia,28,0.25,0.18,0.11,0.29
+Food Taboos,Southeast Asia,10,0.1,0.16,0.08,0.26
+Food Taboos,Southwest Asia,14,0.29,0.18,0.1,0.28
+Hair,Africa,66,0.14,0.17,0.1,0.25
+Hair,Central Eurasia,7,0.14,0.18,0.07,0.33
+Hair,East Asia,32,0.28,0.21,0.12,0.35
+Hair,Europe,32,0.12,0.16,0.07,0.25
+Hair,North America,18,0.06,0.16,0.06,0.26
+Hair,Oceania-Australia,1,1,0.2,0.09,0.45
+Hair,South America,5,0.4,0.2,0.09,0.41
+Hair,South Asia,28,0.21,0.2,0.11,0.33
+Hair,Southeast Asia,10,0.1,0.17,0.07,0.3
+Hair,Southwest Asia,14,0.07,0.15,0.05,0.26
+Ornaments,Africa,66,0.15,0.17,0.09,0.28
+Ornaments,Central Eurasia,7,0.14,0.18,0.05,0.38
+Ornaments,East Asia,33,0.18,0.18,0.09,0.3
+Ornaments,Europe,33,0.03,0.1,0.02,0.21
+Ornaments,North America,19,0.05,0.13,0.03,0.26
+Ornaments,Oceania-Australia,1,1,0.24,0.06,0.68
+Ornaments,South America,5,0.6,0.28,0.11,0.66
+Ornaments,South Asia,28,0.29,0.25,0.13,0.43
+Ornaments,Southeast Asia,10,0.2,0.2,0.07,0.41
+Ornaments,Southwest Asia,14,0.14,0.15,0.05,0.3
+Tattoos/Scarification,Africa,65,0.08,0.09,0.04,0.17
+Tattoos/Scarification,Central Eurasia,7,0,0.07,0.01,0.19
+Tattoos/Scarification,East Asia,33,0.12,0.09,0.04,0.19
+Tattoos/Scarification,Europe,35,0,0.05,0,0.11
+Tattoos/Scarification,North America,19,0.05,0.08,0.02,0.19
+Tattoos/Scarification,Oceania-Australia,1,1,0.12,0.03,0.52
+Tattoos/Scarification,South America,4,0.25,0.11,0.03,0.35
+Tattoos/Scarification,South Asia,28,0.07,0.08,0.02,0.17
+Tattoos/Scarification,Southeast Asia,9,0.11,0.1,0.02,0.26
+Tattoos/Scarification,Southwest Asia,14,0,0.06,0.01,0.13

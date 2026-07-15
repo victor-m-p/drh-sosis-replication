@@ -1,0 +1,9 @@
+Marker,N,beta,ci_lo,ci_hi,post_prob,AME
+Permanent Scarring,393,1.24,0.5,2,1,0.12
+Extra-Ritual In-Group Markers,370,0.81,0.37,1.24,1,0.19
+Circumcision,360,0.86,0.28,1.43,1,0.11
+Dress,357,0.62,0.14,1.11,1,0.13
+Food Taboos,359,0.89,0.4,1.37,1,0.18
+Hair,350,0.53,0,1.1,0.98,0.09
+Ornaments,351,0.47,-0.1,1.06,0.94,0.08
+Tattoos/Scarification,355,0.32,-0.51,1.16,0.77,0.03

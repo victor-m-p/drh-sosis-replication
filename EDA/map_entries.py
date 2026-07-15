@@ -111,6 +111,5 @@ def plot_entry_check(entry_id, df, regions, world, buffer_deg=5):
     ax.set_title(f"entry_id={entry_id}, region_id={region_id}")
     plt.show()
 
-
 # this shows the problem we have.
 plot_entry_check(871, df, regions, world, buffer_deg=200)

@@ -150,12 +150,30 @@ answers_complete['entry_id'].nunique() # 828
 answers_inferred = fill_answers(answers_complete)
 answers_inferred = answers_inferred[answers_inferred["answer_value"].notna()]
 
-# keep only entries with a valid (0/1) answer to violent_external
+# keep only entries with a valid (no=0/yes=1) answer to violent_external
+# or a valid (no=0) answer to violent_internal
+'''
+This is assymetric because we evaluate two things.
+
+For the first hypothesis we just need to know violent external.
+For the second hypothesis we need to know violent internal (only).
+- if an entry has "yes" to internal but no code for external we don't know if it is internal ONLY (throw away).
+- if an entry has "no" to internal, we know that it is not internal (only). 
+'''
+
 entries_with_ve = answers_inferred[
     answers_inferred["question_short"] == "violent_external"
 ]["entry_id"].unique()
-answers_inferred = answers_inferred[answers_inferred["entry_id"].isin(entries_with_ve)]
-answers_inferred['entry_id'].nunique() # 551
+
+# new part added (only n=8 entries)
+entries_with_vi_zero = answers_inferred[
+    (answers_inferred["question_short"] == "violent_internal") &
+    (answers_inferred["answer_value"] == 0)
+]["entry_id"].unique()
+
+valid_entries = set(list(entries_with_ve) + list(entries_with_vi_zero))
+answers_inferred = answers_inferred[answers_inferred["entry_id"].isin(valid_entries)]
+answers_inferred['entry_id'].nunique() # 559 (up from 551.)
 
 # keep only entries with a coding on at least one main dependent variable
 dv_short = ["extra_ritual_group_markers", "permanent_scarring"]
@@ -163,7 +181,7 @@ entries_with_dv = answers_inferred[
     answers_inferred["question_short"].isin(dv_short)
 ]["entry_id"].unique()
 answers_inferred = answers_inferred[answers_inferred["entry_id"].isin(entries_with_dv)]
-answers_inferred['entry_id'].nunique() # 458
+answers_inferred['entry_id'].nunique() # 465 (up from 458)
 
 ### combine with entry metadata (year + region) and pivot wide ###
 question_names_short = [
@@ -175,7 +193,7 @@ answers_wide = answers_subset.pivot_table(
     index="entry_id", columns="question_short", values="answer_value"
 ).reset_index()
 answerset = answers_wide.merge(entrydata, on="entry_id", how="inner")
-answerset['entry_id'].nunique() # 458
+answerset['entry_id'].nunique() # 465 (up from 458)
 
 # z-score year from 
 year_mean = answerset["year_from"].mean()

@@ -1,0 +1,182 @@
+---
+title: "5_societal_scale"
+output: html_document
+---
+
+Bare-bones first pass. One marker only (extra_ritual_group_markers). Load once, reuse
+`d` across models -- brm()'s default na.action = na.omit only looks at the variables a
+given formula actually references, so no need to select/drop_na/rename per model.
+
+```{r}
+library(pacman)
+p_load(brms, tidyverse, here)
+set.seed(12532)
+
+d <- read_csv(here("data","preprocessed","answerset_large.csv"), show_col_types = FALSE)
+```
+
+Model 1: marker ~ state
+
+```{r}
+
+fit1 <- brm(extra_ritual_group_markers ~ 1 + state, data = d, family = bernoulli("logit"),
+                  chains = 4, iter = 4000, warmup = 2000, cores = 4,
+                  seed = 51252, backend = "cmdstanr", silent = 2)
+
+summary(fit1)
+
+```
+
+Okay, so state is strongly negatively associated with extra-ritual in-group markers, which we also saw from the correlation plots.
+
+Model 2: marker ~ police (police_force_other)
+
+```{r}
+
+fit2 <- brm(extra_ritual_group_markers ~ 1 + police_force_other, data = d, family = bernoulli("logit"),
+                   chains = 4, iter = 4000, warmup = 2000, cores = 4,
+                   seed = 51252, backend = "cmdstanr", silent = 2)
+
+summary(fit2)
+```
+
+Police force is not credibly associated with extra-ritual in-group markers; also makes sense given the correlations we have seen.
+
+Model 3: marker ~ state + violent_external
+
+```{r}
+
+fit3 <- brm(extra_ritual_group_markers ~ 1 + state + violent_external, data = d,
+                           family = bernoulli("logit"),
+                           chains = 4, iter = 4000, warmup = 2000, cores = 4,
+                           seed = 51252, backend = "cmdstanr", silent = 2)
+
+summary(fit3)
+```
+
+Violent external conflict survives, and we get that (1) state is a negative contributor, and (2) violent external is a positive contributor. Violent external is somewhat stronger than state, but both seem to contribute.
+
+The mediation idea that we had:
+State --> lower conflict --> lower marker
+
+Does not actually seem to be supported here, because the "state" coefficient remains essentially the same. If this was mediation, we would expect that the "state" coefficient would shrink when we introduce violent external conflict.
+
+Okay, take a step back and test the first leg of the story: is state --> lower conflict
+
+```{r}
+
+fit4 <- brm(violent_external ~ 1 + state, data = d, family = bernoulli("logit"),
+                           chains = 4, iter = 4000, warmup = 2000, cores = 4,
+                           seed = 51252, backend = "cmdstanr", silent = 2)
+
+summary(fit4)
+
+```
+
+This is not credible, but it is trending in the expected direction. So maybe the mediation story is not so convincing; although more models should be fitted to assess it.
+
+Model 5 - check interaction:
+
+```{r}
+
+fit5 <- brm(extra_ritual_group_markers ~ 1 + state * violent_external, data = d, family = bernoulli("logit"),
+                           chains = 4, iter = 4000, warmup = 2000, cores = 4,
+                           seed = 51252, backend = "cmdstanr", silent = 2)
+
+summary(fit5)
+
+```
+
+The interaction is not significant but is strongly trending and negative; so the effect of violent external is less when state is also present (which is consistent with our story; but again not significant). 
+
+```{r}
+
+fit6 <- brm(extra_ritual_group_markers ~ 1 + police_force_other * violent_external, 
+            data = d, family = bernoulli("logit"),
+            chains = 4, iter = 4000, warmup = 2000, cores = 4,
+            seed = 51252, backend = "cmdstanr", silent = 2)
+
+summary(fit6)
+
+
+```
+
+Again, we see the same suggestion (trending negative), but not significant. 
+
+____ include random effects ____
+
+```{r}
+
+fit7 <- brm(extra_ritual_group_markers ~ 1 + state * violent_external + year_scaled + (1|world_region), data = d,
+            family = bernoulli("logit"), chains = 4, iter = 4000, warmup = 2000, 
+            cores = 4, control = list(adapt_delta=.99),
+            seed = 51252, backend = "cmdstanr", silent = 2)
+
+summary(fit7)
+
+```
+
+
+```{r}
+
+fit8 <- brm(extra_ritual_group_markers ~ 1 + state + year_scaled + (1|world_region), data = d,
+            family = bernoulli("logit"), chains = 4, iter = 4000, warmup = 2000, 
+            cores = 4, control = list(adapt_delta=.99),
+            seed = 51252, backend = "cmdstanr", silent = 2)
+
+summary(fit8)
+
+```
+
+___ exploratory ___
+
+Aggregate all of the variables for other groups dominating (simple addition) and fit models.
+None of this is credible.
+
+```{r}
+
+colonized_cols <- c("military_participate", "military_protected", "police_force_other",
+                     "punish_other", "judges_other", "legal_code_other")
+
+d <- d |> mutate(colonized = rowSums(across(all_of(colonized_cols))))
+
+```
+
+Model A: marker ~ colonized
+
+```{r}
+
+fitA <- brm(extra_ritual_group_markers ~ 1 + colonized, data = d, family = bernoulli("logit"),
+            chains = 4, iter = 4000, warmup = 2000, cores = 4,
+            seed = 51252, backend = "cmdstanr", silent = 2)
+
+summary(fitA)
+
+```
+
+Model B: marker ~ colonized + violent_external
+
+```{r}
+
+fitB <- brm(extra_ritual_group_markers ~ 1 + colonized + violent_external, data = d,
+            family = bernoulli("logit"),
+            chains = 4, iter = 4000, warmup = 2000, cores = 4,
+            seed = 51252, backend = "cmdstanr", silent = 2)
+
+summary(fitB)
+
+```
+
+Model C: marker ~ colonized * violent_external
+
+```{r}
+
+fitC <- brm(extra_ritual_group_markers ~ 1 + colonized * violent_external, data = d,
+            family = bernoulli("logit"),
+            chains = 4, iter = 4000, warmup = 2000, cores = 4,
+            seed = 51252, backend = "cmdstanr", silent = 2)
+
+summary(fitC)
+
+```
+

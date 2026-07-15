@@ -1,0 +1,466 @@
+entry_id,entry_name,entrytag_name,tip_assigned,asjp_id,glottolog_id,glottolog_name,tip_coder,tip_confidence
+173,Johannine Christianity,Turkic,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+174,Matthew-James-Didache Movement,Classical Syriac,AA.SEMITIC.CLASSICAL_SYRIAC,CLASSICAL_SYRIAC,clas1252,Classical Syriac,Willis Monroe,good
+180,Chinese Folk Religion,Old Chinese,ST.CHINESE.OLD_CHINESE,OLD_CHINESE,oldc1244,Old Chinese,Willis Monroe,good
+196,Pauline Christianity (ca. 45-60 CE),Ottoman Turkish,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,perfect
+212,Warring States (China) Religion,Shanggu Hanyu,ST.CHINESE.OLD_CHINESE,OLD_CHINESE,oldc1244,Old Chinese,Willis Monroe,good
+217,Roman private religion,,IE.ROMANCE.LATIN,LATIN,lati1261,Latin,Matthew Hamm,perfect
+222,Late Classic Lowland Maya,Chol-Chontal,May.MAYAN.CHOL_TILA,CHOL_TILA,chol1282,Chol,Diana Moreiras,poor
+230,Religion in Mesopotamia,Akkadian,AA.SEMITIC.AKKADIAN,AKKADIAN,akka1240,Akkadian,Willis Monroe,perfect
+231,Roman private religion,Corsican,IE.ROMANCE.LATIN,LATIN,lati1261,Latin,Willis Monroe,good
+257,Classic Zapotec,Zapotecan,OM.POPOLOCAN.SAN_JUAN_CHIQUIHUITLAN,SAN_JUAN_CHIQUIHUITLAN,chiq1250,Chiquihuitlán Mazatec,Diana Moreiras,poor
+284,Yolngu religion,Wubulkarra,Aus.PAMA_NYUNGAN.DHUWAL,DHUWAL,nucl1333,Nuclear Dhuwal,Willis Monroe,poor
+354,Priests and Scholars of Hellenistic Uruk,Late Babylonian,AA.SEMITIC.AKKADIAN,AKKADIAN,akka1240,Akkadian,Willis Monroe,perfect
+381,Sikhism: Guru Nanak to Guru Arjan,Eastern Panjabi,IE.INDIC.PUNJABI_MAJHI,PUNJABI_MAJHI,panj1256,Eastern Panjabi,Willis Monroe,medium
+389,Iban traditional religion,Iban,An.MALAYO_SUMBAWAN.IBAN,IBAN,iban1264,Iban,Willis Monroe,medium
+392,Sikhism: Guru Hargobind to Guru Gobind Singh,Eastern Panjabi,IE.INDIC.PUNJABI_MAJHI,PUNJABI_MAJHI,panj1256,Eastern Panjabi,Willis Monroe,medium
+400,Singaporean Mega-Churches,Singlish,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,poor
+415,Shaiva World Renouncers,Hindi,IE.INDIC.HINDI,HINDI,hind1269,Hindi,Willis Monroe,good
+419,The Worship of Jagannath in Puri (Odisha),Odia,IE.INDIC.ORIYA,ORIYA,oriy1255,Odia,Willis Monroe,good
+422,Demeter Cult,Attic,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+424,Achaemenid Religion,Jewish Babylonian Aramaic (ca. 200-1200 CE),AA.SEMITIC.ACHAEMENID_ARAMAIC,ACHAEMENID_ARAMAIC,jewi1240,Jewish Babylonian Aramaic (ca. 200-1200 CE),Willis Monroe,good
+441,Worshipers of Śītalā,Urdu,IE.INDIC.URDU,URDU,urdu1245,Urdu,Willis Monroe,good
+442,Donatism,Neo-Punic,IE.ROMANCE.LATIN,LATIN,lati1261,Latin,Willis Monroe,good
+455,Lan Na Buddhism,Shan,TK.KAM_TAI.TAI_KHUEN,TAI_KHUEN,khun1259,Khün,Willis Monroe,poor
+456,The Essenes,Ancient Hebrew,AA.SEMITIC.BIBLICAL_HEBREW,BIBLICAL_HEBREW,anci1244,Ancient Hebrew,Willis Monroe,good
+469,Won-Buddhism,Ch'ungch'ongdo,Kor.KOREAN.KOREAN,KOREAN,kore1280,Korean,Willis Monroe,good
+470,Archaic Spartan Cults,Doric,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+476,Cham Bani,Eastern Cham,An.MALAYO_SUMBAWAN.CHAM_EASTERN,CHAM_EASTERN,east2563,Eastern Cham,Willis Monroe,poor
+483,Northern Irish Roman Catholics,Irish English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+484,Northern Irish Protestants,Irish English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+485,Sámi pre-Christian religion,Western Finnmarku Saami,Ura.SAAMI.LULE_SAAMI,LULE_SAAMI,lule1254,Lule Saami,Willis Monroe,good
+486,Church of Jesus Christ of Latter-day Saints (early),North American English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+490,Guglielmites,Vulgar Latin,IE.ROMANCE.LATIN,LATIN,lati1261,Latin,Willis Monroe,good
+492,Roman Divination,Vulgar Latin,IE.ROMANCE.LATIN,LATIN,lati1261,Latin,Willis Monroe,good
+520,Cham Ahiér,Haroi,An.MALAYO_SUMBAWAN.CHAM_EASTERN,CHAM_EASTERN,east2563,Eastern Cham,Willis Monroe,poor
+525,Church of Jesus Christ of Latter-day Saints (modern),North American English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+526,Hmong Christianity,Hmongic,HM.HMONG_MIEN.HMONG_DAW,HMONG_DAW,hmon1333,Hmong Daw,William Noseworthy,good
+534,Roman Imperial Cult,Vulgar Latin,IE.ROMANCE.LATIN,LATIN,lati1261,Latin,Willis Monroe,good
+562,Medieval Śrīvaiṣṇavism,,Dra.SOUTHERN_DRAVIDIAN.TAMIL,TAMIL,tami1289,Tamil,Matthew Hamm,good
+563,"Gaddi, a Hindu community of the Western Himalayas",Hindi,IE.INDIC.PAHARI_MAHASU,PAHARI_MAHASU,maha1287,Mahasu Pahari,Willis Monroe,poor
+564,Tribal Christianity (and allied castes) in the Himalayas,Nepali,IE.INDIC.NEPALI,NEPALI,nepa1254,Nepali,Willis Monroe,good
+565,Fellahin,Egyptian Arabic,AA.SEMITIC.CAIRO_ARABIC,CAIRO_ARABIC,egyp1253,Egyptian Arabic,Willis Monroe,good
+567,Gay and Lesbian Vaishnava Association (GALVA-108),English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,medium
+570,Supreme Master Ching Hai World Society,English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,medium
+576,Kuy traditional religions,Chang,AuA.KATUIC.KUI_THAILAND,KUI_THAILAND,kuyy1240,Kuy,Willis Monroe,good
+577,Ganda,Ganda,NC.BANTOID.J15_GANDA,J15_GANDA,gand1255,Ganda,Willis Monroe,good
+580,Nāth Sampradāya,Urdu,IE.INDIC.HINDI,HINDI,hind1269,Hindi,Willis Monroe,medium
+581,Mentawai (Rereiket),South Siberut,An.NORTHWEST_SUMATRA_BARRIER_ISLANDS.MENTAWAI,MENTAWAI,ment1249,Mentawai,Willis Monroe,good
+590,Huayan School (Early Tang),Middle Chinese,ST.CHINESE.MIDDLE_CHINESE,MIDDLE_CHINESE,midd1344,Middle Chinese,Willis Monroe,good
+592,Veerashaivas,Urdu,Dra.SOUTHERN_DRAVIDIAN.KANNADA,KANNADA,nucl1305,Kannada,Willis Monroe,medium
+598,Masai,Purko,ESu.NILOTIC.MAASAI,MAASAI,masa1300,Masai,Willis Monroe,good
+602,Amhara,,AA.SEMITIC.AMHARIC,AMHARIC,amha1245,Amharic,Willis Monroe,good
+604,Bambara,Standard Bambara,Man.WESTERN_MANDE.BAMBARA,BAMBARA,bamb1269,Bambara,Willis Monroe,good
+607,Mohism,,ST.CHINESE.MIDDLE_CHINESE,MIDDLE_CHINESE,midd1344,Middle Chinese,Willis Monroe,medium
+608,Kurd,Kurdish,IE.IRANIAN.KURDISH_CENTRAL,KURDISH_CENTRAL,cent1972,Central Kurdish,Willis Monroe,good
+623,Diasporic American Hinduism,North American English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,medium
+624,The Roshaniyya,Pashto,IE.IRANIAN.PERSIAN,PERSIAN,west2369,Western Farsi,Willis Monroe,medium
+626,Barama River Carib,Patamona,Car.CARIBAN.TIRIYO,TIRIYO,trio1238,Trió,Edward Slingerland,medium
+629,Newar Buddhists,Nepali,IE.INDIC.NEPALI,NEPALI,nepa1254,Nepali,Willis Monroe,good
+630,Aranda,Mparntwe Arrernte,Aus.PAMA_NYUNGAN.ARRERNTE_CENTRAL,ARRERNTE_CENTRAL,east2379,Eastern Arrernte,Willis Monroe,good
+632,Local Religion at Selinous,Ionic-Attic Ancient Greek,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+633,Mādhva,Konkan Marathi,IE.INDIC.SANSKRIT,SANSKRIT,sans1269,Sanskrit,Willis Monroe,poor
+645,"Meo Muslim, Mev, Mewati Muslim",Urdu,IE.INDIC.HINDI,HINDI,hind1269,Hindi,Willis Monroe,poor
+649,"Worshippers at the Chidambaram Nataraja Temple, Modern Period",Tamil,Dra.SOUTHERN_DRAVIDIAN.TAMIL,TAMIL,tami1289,Tamil,Willis Monroe,medium
+654,12th-13th c Cistercians,Vulgar Latin,IE.ROMANCE.LATIN,LATIN,lati1261,Latin,Willis Monroe,medium
+655,Siriono,Bolivian Spanish,Tup.TUPI_GUARANI.SIRIONO,SIRIONO,siri1273,Sirionó,Willis Monroe,good
+658,Mapuche,Rioplatense Spanish,Arc.ARAUCANIAN.MAPUDUNGUN,MAPUDUNGUN,mapu1245,Mapudungun,Willis Monroe,good
+661,Congregation of Savigny,Imperial Latin,IE.ROMANCE.LATIN,LATIN,lati1261,Latin,Edward Slingerland,poor
+662,Goajiro,Venezuelan Spanish,Arw.NORTHERN_ARAWAKAN.WAYUU,WAYUU,wayu1243,Wayuu,Willis Monroe,good
+666,Siuai,Tok Pisin,EB.EAST_BOUGAINVILLE.MOTUNA,MOTUNA,siwa1245,Siwai,Willis Monroe,good
+667,Ainu,Hokkaidō,Ain.AINU.KURIL_AINU,KURIL_AINU,ainu1240,Hokkaido Ainu,Willis Monroe,good
+674,Aymara,Bolivian Spanish,Aym.AYMARAN.CENTRAL_AYMARA,CENTRAL_AYMARA,cent2142,Central Aymara,Willis Monroe,good
+675,Chukchee,Ninilchik,CK.NORTHERN_CHUKOTKO_KAMCHATKAN.CHUKCHEE,CHUKCHEE,chuk1273,Chukchi,Willis Monroe,good
+676,"The Order of the Holy Trinity for the Redemption of Captives, 1198-1500",Vulgar Latin,IE.ROMANCE.LATIN,LATIN,lati1261,Latin,Willis Monroe,medium
+679,Santal,Karmali,AuA.MUNDA.SANTALI,SANTALI,sant1410,Santali,Willis Monroe,good
+680,Gujarati Mata Worshipers,Indian English,IE.INDIC.GUJARATI,GUJARATI,guja1252,Gujarati,Willis Monroe,good
+681,Sargonic Empire,Akkadian,AA.SEMITIC.AKKADIAN,AKKADIAN,akka1240,Akkadian,Willis Monroe,good
+682,Lakher,Lower Zyphe,ST.KUKI_CHIN.NAGA_MARAM,NAGA_MARAM,mara1379,Maram Naga,Willis Monroe,medium
+684,Huron,Wyandot,Iro.NORTHERN_IROQUOIAN.WENDAT_HURON,WENDAT_HURON,wyan1247,Huron-Wyandot,Willis Monroe,good
+685,Badjau,Simunul,An.SAMA_BAJAW.SAMAL,SAMAL,cent2092,Central Sama,Willis Monroe,poor
+688,Darul Uloom Deoband,Konkan Marathi,IE.INDIC.URDU,URDU,urdu1245,Urdu,Willis Monroe,medium
+689,Lengua,Enlhet Norte,Mas.MASCOIAN.LENGUA,LENGUA,sout2989,Enxet Sur,Willis Monroe,good
+690,Ahl-e-Sunnat wa Jamaat,Konkan Marathi,IE.INDIC.URDU,URDU,urdu1245,Urdu,Willis Monroe,medium
+691,Fur,Fur,Fur.FUR.FUR,FUR,furr1244,Fur,Willis Monroe,good
+694,Eyak,Eyak,NDe.EYAK.EYAK,EYAK,eyak1241,Eyak,Willis Monroe,good
+710,Hidatsa,Hidatsa,Sio.SIOUAN.HIDATSA,HIDATSA,hida1246,Hidatsa,Willis Monroe,good
+711,Kwoma,Kwoma,Sep.MIDDLE_SEPIK.KWOMA,KWOMA,kwom1262,Kwoma,Willis Monroe,good
+714,Tamil Śaiva Bhakti,Tamil,Dra.SOUTHERN_DRAVIDIAN.TAMIL,TAMIL,tami1289,Tamil,Willis Monroe,good
+719,Hinduism in Trinidad,Trinidadian Creole English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Edward Slingerland,poor
+721,Semang,Batek,AuA.ASLIAN.LANOH,LANOH,lano1248,Lanoh,Willis Monroe,poor
+726,Early Śramaṇas,Paisaci Prakrit,IE.INDIC.SANSKRIT,SANSKRIT,sans1269,Sanskrit,Willis Monroe,medium
+727,Raglai,Rai (Southern Roglai),An.MALAYO_SUMBAWAN.CHAM_EASTERN,CHAM_EASTERN,east2563,Eastern Cham,Willis Monroe,poor
+728,Pentecost,Suru Kavian,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,poor
+729,Kikuyu,Southern Gikuyu,NC.BANTOID.GIKUYU,GIKUYU,kiku1240,Kikuyu,Willis Monroe,good
+732,Marquesans,Nuku Hiva,An.OCEANIC.LANGUE_DE_ISLES_MARQUISES,LANGUE_DE_ISLES_MARQUISES,nort2845,North Marquesan,Willis Monroe,good
+739,Lakalai,Nakanai,An.OCEANIC.NAKANAI,NAKANAI,naka1262,Nakanai,Willis Monroe,medium
+745,Buka,Hanahan,An.OCEANIC.TAIOF,TAIOF,sapo1253,Saposa,Willis Monroe,poor
+749,Korean shamanism,Korean,Kor.KOREAN.KOREAN,KOREAN,kore1280,Korean,Willis Monroe,good
+750,Mekeo,Northwest Mekeo,An.OCEANIC.MEKEO,MEKEO,meke1243,Mekeo,Willis Monroe,good
+752,Haroi,Haroi,An.MALAYO_SUMBAWAN.CHAM_EASTERN,CHAM_EASTERN,east2563,Eastern Cham,Willis Monroe,poor
+755,Uyghur Islam,Uighur,Alt.TURKIC.UYGHUR,UYGHUR,uigh1240,Uighur,Willis Monroe,good
+759,Comanche,North American English,UA.NUMIC.COMANCHE,COMANCHE,coma1245,Comanche,Willis Monroe,good
+763,Moriori,Moriori,An.OCEANIC.SOUTH_ISLAND_MAORI,SOUTH_ISLAND_MAORI,maor1246,Maori,Willis Monroe,good
+766,Garo,Garo,ST.BODO_GARO.GARO,GARO,garo1247,Garo,Willis Monroe,good
+770,Thai Forest Tradition,Northern Thai,TK.KAM_TAI.THAI,THAI,thai1261,Thai,Willis Monroe,medium
+788,The Late Bronze Age City-State of Ugarit,Ugaritic,AA.SEMITIC.UGARITIC,UGARITIC,ugar1238,Ugaritic,Willis Monroe,perfect
+794,Omaha,North American English,Sio.SIOUAN.OMAHA_PONCA,OMAHA_PONCA,omah1247,Omaha-Ponca,Willis Monroe,good
+834,The Plum Village Sangha of Thich Nhat Hanh,Global French,AuA.VIET_MUONG.VIETNAMESE,VIETNAMESE,viet1252,Vietnamese,Willis Monroe,medium
+841,Sa skya,Tibetan,ST.BODIC.TIBETAN_WRITTEN,TIBETAN_WRITTEN,tibe1272,Tibetan,Willis Monroe,medium
+842,American Evangelicalism,English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,perfect
+846,Xuanzang's Yogācāra Tradition,Middle Chinese,ST.CHINESE.MIDDLE_CHINESE,MIDDLE_CHINESE,midd1344,Middle Chinese,Willis Monroe,medium
+848,Sadducees,Jewish Babylonian Aramaic (ca. 200-1200 CE),AA.SEMITIC.BIBLICAL_HEBREW,BIBLICAL_HEBREW,anci1244,Ancient Hebrew,Willis Monroe,good
+849,"""Gaiwiio Religion,"" ""Longhouse Religion,"" or ""The Way of Handsome Lake"" of the Seneca Tribe",Seneca,Iro.NORTHERN_IROQUOIAN.SENECA,SENECA,sene1264,Seneca,Willis Monroe,good
+850,Pre-Christian Religion / Paganism in Gaul,Transalpine Gaulish,IE.CELTIC.OLD_IRISH,OLD_IRISH,oldi1245,Early Irish,Willis Monroe,poor
+851,Sikhism in the United States,North American English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,medium
+852,Pre-Christian Religion / Paganism in Ireland,Primitive Irish (4-6th century),IE.CELTIC.OLD_IRISH,OLD_IRISH,oldi1245,Early Irish,Willis Monroe,good
+854,pre-Christian Irish,Middle Irish (10-12th century),IE.CELTIC.OLD_IRISH,OLD_IRISH,oldi1245,Early Irish,Willis Monroe,good
+855,Middle-Class Migrant Muslims in the UAE,Arabic,AA.SEMITIC.ARABIC_GULF_SPOKEN,ARABIC_GULF_SPOKEN,gulf1241,Gulf Arabic,Willis Monroe,medium
+857,Wesleyanism,Latin American Spanish,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+858,"The New Prophecy or ""Montanism""",Eastern Syriac,IE.ROMANCE.LATIN,LATIN,lati1261,Latin,Willis Monroe,good
+859,Valentinians,Jewish Babylonian Aramaic (ca. 200-1200 CE),IE.ROMANCE.LATIN,LATIN,lati1261,Latin,Willis Monroe,good
+862,Ilm-e-Khshnoom,Indian English,IE.INDIC.GUJARATI,GUJARATI,guja1252,Gujarati,Willis Monroe,medium
+863,Orphism,Jewish Babylonian Aramaic (ca. 200-1200 CE),IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+867,Nyingma Treasure,Tibetan,ST.BODIC.TIBETAN_WRITTEN,TIBETAN_WRITTEN,tibe1272,Tibetan,Willis Monroe,good
+869,Sichuan Esoteric Buddhist Cult,Classical-Middle-Modern Sinitic,ST.CHINESE.MIDDLE_CHINESE,MIDDLE_CHINESE,midd1344,Middle Chinese,Matthew Hamm,medium
+870,Postsocialist Mongolian Buddhism,Mongolian,Alt.MONGOLIC.MONGOLIAN,MONGOLIAN,halh1238,Halh Mongolian,Edward Slingerland,good
+871,Spiritualism,Canadian English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+877,The International Network of Engaged Buddhists - INEB,Thai,TK.KAM_TAI.THAI,THAI,thai1261,Thai,Willis Monroe,good
+879,Free Methodist Church,,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Matthew Hamm,good
+880,Egyptian Salafism (inluding North Africa and West Asia),Judeo-Yemeni Arabic,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,TUNISIAN_ARABIC_MAGHRIB,tuni1259,Tunisian Arabic,Willis Monroe,good
+882,Orphism,Jewish Babylonian Aramaic (ca. 200-1200 CE),IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+883,Catholics in the People's Republic of China (PRC),Mandarin Chinese,ST.CHINESE.MANDARIN,MANDARIN,mand1415,Mandarin Chinese,Willis Monroe,good
+884,Sub Saharan Africa Pentecostalism,,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,poor
+885,Contemporary West African Vodun,Ewe,NC.KWA.FONGBE,FONGBE,fonn1241,Fon,Willis Monroe,medium
+886,Pushtimarg (The Path of Grace) in the UK and Gujarat,English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,medium
+887,Postsocialist Mongolian Shamanism,Mongolian,Alt.MONGOLIC.MONGOLIAN,MONGOLIAN,halh1238,Halh Mongolian,Edward Slingerland,good
+891,Peruvian Mormons,Andean Spanish,IE.ROMANCE.SPANISH,SPANISH,stan1288,Spanish,Willis Monroe,good
+892,Charismatic Renewal Movement in Christianity - Second Wave Pentecostalism,North American English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+896,Sannō Shintō,Old Japanese,Jap.JAPANESE.JAPANESE,JAPANESE,nucl1643,Japanese,Edward Slingerland,poor
+897,Gaengjeongyudo,Kyongsangdo,Kor.KOREAN.KOREAN,KOREAN,kore1280,Korean,Willis Monroe,good
+900,Pharisees,Jewish Babylonian Aramaic (ca. 200-1200 CE),AA.SEMITIC.BIBLICAL_HEBREW,BIBLICAL_HEBREW,anci1244,Ancient Hebrew,Willis Monroe,good
+906,The Church of England,English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+910,Christian Base Community movement,Brazilian Portuguese,IE.ROMANCE.SPANISH,SPANISH,stan1288,Spanish,Willis Monroe,good
+914,Tariqa Shadhiliyya,Andalusian,AA.SEMITIC.CLASSICAL_ARABIC,CLASSICAL_ARABIC,stan1318,Standard Arabic,Willis Monroe,good
+915,Protestantism welcoming People with Disabilities,North American English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+918,Fangshi,Late Han Chinese,ST.CHINESE.OLD_CHINESE,OLD_CHINESE,oldc1244,Old Chinese,Willis Monroe,good
+919,Catholicism in contemporary Croatia,Croatian Standard,IE.SLAVIC.CROATIAN,CROATIAN,croa1245,Croatian Standard,Willis Monroe,good
+921,Bhils,Hindi,IE.INDIC.GUJARATI,GUJARATI,guja1252,Gujarati,Willis Monroe,poor
+924,Muridiyya of Senegal,Hassaniyya,NC.NORTHERN_ATLANTIC.WOLOF,WOLOF,nucl1347,Wolof,Willis Monroe,medium
+927,Zealots,Jewish Babylonian Aramaic (ca. 200-1200 CE),AA.SEMITIC.BIBLICAL_HEBREW,BIBLICAL_HEBREW,anci1244,Ancient Hebrew,Willis Monroe,medium
+928,The Ghost Dance Movement and the Lakota Sioux,Lakota,Sio.SIOUAN.LAKHOTA,LAKHOTA,lako1247,Lakota,Willis Monroe,good
+931,The Society of Jesus (Jesuits) in Britain,English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+933,Marcionites,Jewish Babylonian Aramaic (ca. 200-1200 CE),IE.ROMANCE.LATIN,LATIN,lati1261,Latin,Willis Monroe,good
+934,Mongolian Buddhism during the Revolutionary Period,Mongolian,Alt.MONGOLIC.MONGOLIAN,MONGOLIAN,halh1238,Halh Mongolian,Edward Slingerland,good
+935,Nigerian Pentecostalism,Yoruba,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,medium
+938,Ugarit,Ugaritic,AA.SEMITIC.UGARITIC,UGARITIC,ugar1238,Ugaritic,Willis Monroe,good
+940,Julio-Claudian Imperial Cult,Vulgar Latin,IE.ROMANCE.LATIN,LATIN,lati1261,Latin,Willis Monroe,good
+941,Chan Buddhists in early Qing period,Classical-Middle-Modern Sinitic,ST.CHINESE.MIDDLE_CHINESE,MIDDLE_CHINESE,midd1344,Middle Chinese,Willis Monroe,good
+942,African Methodist Episcopal Church,Brazilian Portuguese,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+943,Moravian Missionaries in Nunatsiavut,Nunatsiavut,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+944,Mohyla's Ukrainian Church,Ukrainian,IE.SLAVIC.UKRAINIAN,UKRAINIAN,ukra1253,Ukrainian,Willis Monroe,good
+946,Nyingma (rnying ma),Tibetan,ST.BODIC.TIBETAN_WRITTEN,TIBETAN_WRITTEN,tibe1272,Tibetan,Willis Monroe,good
+948,Christianity in Ephesus,Attic,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+949,The Church of All Worlds,Australian English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,perfect
+950,The Religious Society of Friends,Bolivian Spanish,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,perfect
+952,Ethiopian Jews,Kailina,AA.SEMITIC.AMHARIC,AMHARIC,amha1245,Amharic,Willis Monroe,medium
+953,Sachchai,Urdu,IE.INDIC.NEPALI,NEPALI,nepa1254,Nepali,Willis Monroe,medium
+957,Spartan Religion,Doric,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+958,Society of Jesus,Latin,IE.ROMANCE.ITALIAN,ITALIAN,ital1282,Italian,Willis Monroe,good
+960,Bön (Bon),Zhangzhung,ST.BODIC.TIBETAN_WRITTEN,TIBETAN_WRITTEN,tibe1272,Tibetan,Willis Monroe,good
+961,Romanian Orthodox Church,Romanian,IE.ROMANCE.ROMANIAN,ROMANIAN,roma1327,Romanian,Willis Monroe,good
+962,Amdo Gelukpa,Amdo Tibetan,ST.BODIC.TIBETAN_WRITTEN,TIBETAN_WRITTEN,tibe1272,Tibetan,Willis Monroe,good
+963,The Knights Templar,Old French (842-ca. 1400),IE.ROMANCE.LATIN,LATIN,lati1261,Latin,Willis Monroe,medium
+964,Baul Fakirs of Bengal,Bengali,IE.INDIC.BENGALI,BENGALI,beng1280,Bengali,Willis Monroe,poor
+966,"Naqshbandī Order, Naqshbandī Tarīqa, Naqshbandīyyah, Khwājagān,",Farsic-Caucasian Tat,IE.IRANIAN.EASTERN_FARSI,EASTERN_FARSI,dari1249,Dari,Willis Monroe,poor
+967,Unitarian Universalism,,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Matthew Hamm,perfect
+969,Adi Dravida/Valluva Sakya Buddhism,Tamil,Dra.SOUTHERN_DRAVIDIAN.TAMIL,TAMIL,tami1289,Tamil,Willis Monroe,good
+971,Gāṇapatya,Sanskrit,IE.INDIC.SANSKRIT,SANSKRIT,sans1269,Sanskrit,Willis Monroe,medium
+972,Nestorian Christianity,Classical Syriac,AA.SEMITIC.CLASSICAL_SYRIAC,CLASSICAL_SYRIAC,clas1252,Classical Syriac,Willis Monroe,medium
+973,The Sarna religion of the Oraons of Jharkhand,Sadri,AuA.MUNDA.MUNDARI,MUNDARI,mund1320,Mundari,Willis Monroe,medium
+974,"Greek Chalcedonian Christians, Nicaea",Medieval Greek,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+975,Neo-Charismatic Movement - Third Wave Charismatic Movement,North American English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+976,Mising Community,Assamese,ST.TANI.MISING,MISING,misi1242,Mising-Padam-Miri-Minyong,Willis Monroe,good
+978,Indonesian Catholicism,Latin,An.MALAYO_SUMBAWAN.INDONESIAN,INDONESIAN,indo1316,Standard Indonesian,Willis Monroe,good
+980,Pure Land Buddhist Schools in Early Medieval Japan,Japanese,Jap.JAPANESE.JAPANESE,JAPANESE,nucl1643,Japanese,Willis Monroe,medium
+982,The Samaritans (Persian to early Roman periods),Samaritan,AA.SEMITIC.BIBLICAL_HEBREW,BIBLICAL_HEBREW,anci1244,Ancient Hebrew,Willis Monroe,medium
+983,Tibetan and Himalayan Mundane and Landscape Cults,Gyalsumdo-Nubri,ST.BODIC.TIBETAN_WRITTEN,TIBETAN_WRITTEN,tibe1272,Tibetan,Willis Monroe,good
+984,Calvinism (Early/Reformation),Middle French,IE.ROMANCE.FRENCH,FRENCH,stan1290,French,Willis Monroe,good
+985,The Victorines,Medieval Latin,IE.ROMANCE.FRENCH,FRENCH,stan1290,French,Willis Monroe,good
+986,Theurgy,Late Latin,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+987,"Parsis, Zoroastrians of India",Gujarati,IE.INDIC.GUJARATI,GUJARATI,guja1252,Gujarati,Willis Monroe,medium
+988,Churches of Christ- United States,North American English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,perfect
+989,Opus Dei,French,IE.ROMANCE.LATIN,LATIN,lati1261,Latin,Willis Monroe,medium
+991,Beat Buddhism,North American English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,perfect
+993,Pontifex Maximus and Pontifices (Pontifical College),Latin,IE.ROMANCE.LATIN,LATIN,lati1261,Latin,Willis Monroe,good
+994,"Monastic Communities of Lower Egypt: Nitria, Kellia, Scetis",Classical Syriac,AA.SEMITIC.CLASSICAL_SYRIAC,CLASSICAL_SYRIAC,clas1252,Classical Syriac,Willis Monroe,good
+997,Ancient Egypt - Early Dynastic Period,Archaic Egyptian,AA.EGYPTIAN_COPTIC.MIDDLE_EGYPTIAN,MIDDLE_EGYPTIAN,,,Willis Monroe,perfect
+1004,Religion in Roman Ostia,Biblical Hebrew,IE.ROMANCE.LATIN,LATIN,lati1261,Latin,Willis Monroe,perfect
+1006,Ancient Egypt - Old Kingdom,Old Egyptian,AA.EGYPTIAN_COPTIC.MIDDLE_EGYPTIAN,MIDDLE_EGYPTIAN,,,Willis Monroe,perfect
+1010,Pythagoreanism,Late Latin,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+1011,Kingdom of Edom,Edomite,AA.SEMITIC.BIBLICAL_HEBREW,BIBLICAL_HEBREW,anci1244,Ancient Hebrew,Willis Monroe,medium
+1013,Estado da Índia Renegades in Deccan,Indo-Portuguesic,IE.ROMANCE.PORTUGUESE,PORTUGUESE,port1283,Portuguese,Willis Monroe,medium
+1028,German Pietists (Hasidei Ashkenaz),Biblical Hebrew,IE.GERMANIC.YIDDISH_WESTERN,YIDDISH_WESTERN,west2361,Western Yiddish,Willis Monroe,medium
+1037,Third Intermediate Period in Ancient Egypt,Late Egyptian,AA.EGYPTIAN_COPTIC.MIDDLE_EGYPTIAN,MIDDLE_EGYPTIAN,,,Willis Monroe,perfect
+1038,Sino-Muslims in Qing China,Classical-Middle-Modern Sinitic,ST.CHINESE.MIDDLE_CHINESE,MIDDLE_CHINESE,midd1344,Middle Chinese,Willis Monroe,medium
+1041,Korean Catholicism,Korean,Kor.KOREAN.KOREAN,KOREAN,kore1280,Korean,Willis Monroe,perfect
+1043,Islam in Aceh,Acehnese,An.MALAYO_SUMBAWAN.ACEH,ACEH,achi1257,Acehnese,Willis Monroe,perfect
+1044,Han Imperial Cult under Emperor Wu,Classical-Middle-Modern Sinitic,ST.CHINESE.OLD_CHINESE,OLD_CHINESE,oldc1244,Old Chinese,Matthew Hamm,medium
+1051,Religion at Tell el-Dab'a (ancient Avaris) in Ancient Egypt,Canaanite,AA.SEMITIC.BIBLICAL_HEBREW,BIBLICAL_HEBREW,anci1244,Ancient Hebrew,Willis Monroe,poor
+1060,The Taizhou Movement,Classical-Middle-Modern Sinitic,ST.CHINESE.SUZHOU_WU,SUZHOU_WU,wuch1236,Wu Chinese,Matthew Hamm,poor
+1069,Religion at Deir el-Medina,Late Egyptian,AA.EGYPTIAN_COPTIC.MIDDLE_EGYPTIAN,MIDDLE_EGYPTIAN,,,Willis Monroe,perfect
+1071,Digital Shinto Communities,Portuguese,Jap.JAPANESE.JAPANESE,JAPANESE,nucl1643,Japanese,Willis Monroe,perfect
+1076,Inquisitors of Goa's Santo Ofício,Indo-Portuguesic,IE.ROMANCE.PORTUGUESE,PORTUGUESE,port1283,Portuguese,Willis Monroe,good
+1083,Drukpa Kagyü School (Bhutan),Classical Tibetan,ST.BODIC.TIBETAN_WRITTEN,TIBETAN_WRITTEN,tibe1272,Tibetan,Edward Slingerland,medium
+1087,The Bogomils,Bulgarian,IE.SLAVIC.BULGARIAN,BULGARIAN,bulg1262,Bulgarian,Willis Monroe,good
+1127,Anglican Church of Korea,Korean,Kor.KOREAN.KOREAN,KOREAN,kore1280,Korean,Willis Monroe,perfect
+1129,Ancient Thessalians,Ionic-Attic Ancient Greek,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+1134,Tiantai,Classical-Middle-Modern Sinitic,ST.CHINESE.MIDDLE_CHINESE,MIDDLE_CHINESE,midd1344,Middle Chinese,Matthew Hamm,poor
+1136,The Fellowship of Goodness 同善社 (Tongshanshe),Mandarin Chinese,ST.CHINESE.MANDARIN,MANDARIN,mand1415,Mandarin Chinese,Willis Monroe,good
+1140,Early Medieval Confucianism,Classical-Middle-Modern Sinitic,ST.CHINESE.MIDDLE_CHINESE,MIDDLE_CHINESE,midd1344,Middle Chinese,Willis Monroe,good
+1154,The Cult of the Fox,Classical-Middle-Modern Sinitic,ST.CHINESE.MANDARIN,MANDARIN,mand1415,Mandarin Chinese,Matthew Hamm,medium
+1162,Lingbao dafa,Classical-Middle-Modern Sinitic,ST.CHINESE.MIDDLE_CHINESE,MIDDLE_CHINESE,midd1344,Middle Chinese,Willis Monroe,medium
+1172,Twofold Mystery (Chongxuan 重玄),Classical-Middle-Modern Sinitic,ST.CHINESE.MIDDLE_CHINESE,MIDDLE_CHINESE,midd1344,Middle Chinese,Matthew Hamm,medium
+1178,Modern Mystery School (MMS),Brazilian Portuguese,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,perfect
+1180,Batak Traditional Religions,Batak Angkola,An.NORTHWEST_SUMATRA_BARRIER_ISLANDS.BATAK_ANGKOLA,BATAK_ANGKOLA,bata1290,Batak Angkola,Willis Monroe,good
+1191,Religion in Greco-Roman Alexandria,Biblical Hebrew,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+1192,Kaharingan,Ma'anyan,An.BARITO.KATINGAN,KATINGAN,ngaj1237,Ngaju,Willis Monroe,medium
+1196,K’iche’ (Quiché),K'iche',May.MAYAN.CENTRAL_QUICHE,CENTRAL_QUICHE,kich1262,K'iche',Willis Monroe,medium
+1199,Tiv,Tiv,NC.BANTOID.TIV_1,TIV_1,tivv1240,Tiv,Willis Monroe,good
+1210,Mende,Mende (Sierra Leone),Man.WESTERN_MANDE.MENDE,MENDE,mend1266,Mende (Sierra Leone),Willis Monroe,good
+1220,The Cult of Chinggis Khan (a.k.a. Genghis Khan) in Mongolia,Mongolian,Alt.MONGOLIC.MONGOLIAN,MONGOLIAN,halh1238,Halh Mongolian,Edward Slingerland,good
+1223,Toda,Toda,Dra.SOUTHERN_DRAVIDIAN.TODA,TODA,toda1252,Toda,Willis Monroe,good
+1227,Polytheistic Pre-Islamic South Arabia,Sabaic,AA.SEMITIC.SABEAN,SABEAN,saba1279,Sabaic,Willis Monroe,good
+1229,Three Self Patriotic Movement (TSPM),Mandarin Chinese,ST.CHINESE.MANDARIN,MANDARIN,mand1415,Mandarin Chinese,Willis Monroe,good
+1231,"Shenxiao 神霄 (""Divine Empyrean"") Daoism",Mandarin Chinese,ST.CHINESE.MANDARIN,MANDARIN,mand1415,Mandarin Chinese,Willis Monroe,good
+1234,Ashanti,Twi,NC.KWA.TWI_ASANTE,TWI_ASANTE,akan1250,Akan,Willis Monroe,good
+1241,Taiping 太平 Movement,Classical-Middle-Modern Sinitic,ST.CHINESE.HAKKA,HAKKA,hakk1236,Hakka Chinese,Matthew Hamm,medium
+1246,Shilluk,Shilluk,ESu.NILOTIC.SHILLUK,SHILLUK,shil1265,Shilluk,Willis Monroe,good
+1247,Exovedate,French,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,medium
+1248,Religion in the Old Assyrian Period,Old Assyrian,AA.SEMITIC.AKKADIAN,AKKADIAN,akka1240,Akkadian,Willis Monroe,perfect
+1249,Cult of the Egyptian Gods at Demetrias,Macedonian Greek,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+1250,Hanbalism,Arabic,AA.SEMITIC.IRAQ_MUSLIM_BAGHDAD_ARABIC,IRAQ_MUSLIM_BAGHDAD_ARABIC,meso1252,Gilit Mesopotamian Arabic,Julian Weideman,medium
+1258,Religion in Judah,Biblical Hebrew,AA.SEMITIC.BIBLICAL_HEBREW,BIBLICAL_HEBREW,anci1244,Ancient Hebrew,Willis Monroe,perfect
+1259,"The LuWang School, the School of Lu Xiangshan and Wang Yangming",Classical-Middle-Modern Sinitic,ST.CHINESE.MANDARIN,MANDARIN,mand1415,Mandarin Chinese,Matthew Hamm,poor
+1268,Monotheistic Pre-Islamic South Arabia,Qatabanian,AA.SEMITIC.SABEAN,SABEAN,saba1279,Sabaic,Willis Monroe,good
+1279,Mandarese Muslims,Arabic,An.SOUTH_SULAWESI.MANDAR,MANDAR,mand1442,Mandar,Willis Monroe,good
+1281,Otoro Nuba,Arabic,Krd.HEIBAN.UTORO,UTORO,otor1240,Otoro,Willis Monroe,good
+1283,Butonese Muslims,Wolio,An.CELEBIC.WOLIO,WOLIO,woli1241,Wolio,Willis Monroe,medium
+1289,Buginese Muslims,Buginese,An.SOUTH_SULAWESI.BUGINESE,BUGINESE,bugi1244,Buginese,Willis Monroe,good
+1291,Mañjuśrī Devotionalism,,ST.CHINESE.MIDDLE_CHINESE,MIDDLE_CHINESE,midd1344,Middle Chinese,Willis Monroe,medium
+1295,Donatism,Late Latin,IE.ROMANCE.LATIN,LATIN,lati1261,Latin,Willis Monroe,good
+1299,Russians (of Viriatino Village),Russian,IE.SLAVIC.RUSSIAN,RUSSIAN,russ1263,Russian,Willis Monroe,perfect
+1300,"Enlace de Agentes de Pastoral Indígena (EAPI, Network of Indigenous Ministry Agents)",Mexican Spanish,IE.ROMANCE.SPANISH,SPANISH,stan1288,Spanish,Willis Monroe,perfect
+1303,Emar: A Hittite Vassal in Late Bronze Age Syria,Akkadian,AA.SEMITIC.AKKADIAN,AKKADIAN,akka1240,Akkadian,Willis Monroe,good
+1304,Peyote Religion (Peyotism) and the Native American Church,North American English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+1307,Southern Baptists,North American English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,perfect
+1311,Jehovah's Witnesses,,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,perfect
+1321,Mourides (Muridiyya),French,NC.NORTHERN_ATLANTIC.WOLOF,WOLOF,nucl1347,Wolof,Willis Monroe,medium
+1323,Luguru,Luguru,NC.BANTOID.LUGURU,LUGURU,lugu1238,Luguru,Willis Monroe,good
+1333,Cult of Thecla,Classical Syriac,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+1335,Congregation of the Oratory,Latin,IE.ROMANCE.ITALIAN,ITALIAN,ital1282,Italian,Willis Monroe,perfect
+1337,Tell Afis (Syria),Old Aramaic (up to 700 BCE),AA.SEMITIC.AMEDYA_ARAMAIC,AMEDYA_ARAMAIC,assy1241,Assyrian Neo-Aramaic,Willis Monroe,good
+1340,International Sivananda Yoga Vedanta Centers,French,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+1344,Tibetan Nonsectarianism (ris med),Tibetan,ST.BODIC.TIBETAN_WRITTEN,TIBETAN_WRITTEN,tibe1272,Tibetan,Willis Monroe,good
+1348,Disability-focused Christianity for Palestinians,Modern Hebrew,AA.SEMITIC.PALESTINIAN_ARABIC,PALESTINIAN_ARABIC,sout3123,South Levantine Arabic,Willis Monroe,perfect
+1349,The Dingxiang Wang Cult,Classical-Middle-Modern Sinitic,ST.CHINESE.XIANG,XIANG,xian1251,Xiang Chinese,Matthew Hamm,medium
+1352,Śākadvīpīya Brāhmaṇas,Sanskrit,IE.INDIC.SANSKRIT,SANSKRIT,sans1269,Sanskrit,Willis Monroe,good
+1369,Astronomers in Babylon,Late Babylonian,AA.SEMITIC.AKKADIAN,AKKADIAN,akka1240,Akkadian,Willis Monroe,perfect
+1370,Teda,French,Sah.WESTERN_SAHARAN.TEDAGA,TEDAGA,teda1241,Tedaga,Willis Monroe,perfect
+1371,Twelver Shi'ism in post-revolutionary Iran,Western Farsi,IE.IRANIAN.PERSIAN,PERSIAN,west2369,Western Farsi,Willis Monroe,perfect
+1374,The Reformed Church (Early Orthodoxy),Middle French,IE.ROMANCE.LATIN,LATIN,lati1261,Latin,Willis Monroe,medium
+1376,African Initiated Churches,Zulu,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,medium
+1386,Liumen (Liu School),Classical-Middle-Modern Sinitic,ST.CHINESE.MANDARIN,MANDARIN,mand1415,Mandarin Chinese,Matthew Hamm,medium
+1390,Eastern Apache,Jicarilla Apache,NDe.ATHAPASKAN.LIPAN,LIPAN,lipa1241,Lipan Apache,Willis Monroe,medium
+1392,Messalians,Classical Syriac,AA.SEMITIC.CLASSICAL_SYRIAC,CLASSICAL_SYRIAC,clas1252,Classical Syriac,Willis Monroe,good
+1396,Ptolemaic Egypt - Egyptian Religion,Koineic Greek,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+1397,The Classic Period Peripheral Coastal Lowlands Ritual Ballgame Cult,Zapotec,OM.POPOLOCAN.SAN_JUAN_CHIQUIHUITLAN,SAN_JUAN_CHIQUIHUITLAN,chiq1250,Chiquihuitlán Mazatec,Diana Moreiras,poor
+1400,The Buddhist Nuns of 4th - 6th century China,Literary Chinese,ST.CHINESE.MIDDLE_CHINESE,MIDDLE_CHINESE,midd1344,Middle Chinese,Willis Monroe,medium
+1409,Formative Olmec,Mixe-Zoque,MZ.MIXE_ZOQUE.LOWLAND_MIXE,LOWLAND_MIXE,coat1238,Coatlán Mixe,Willis Monroe,poor
+1412,Tenrikyo,Japanese,Jap.JAPANESE.JAPANESE,JAPANESE,nucl1643,Japanese,Willis Monroe,perfect
+1415,Anomeans,Medieval Greek,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+1419,Ancient Egyptian Religion in the Early 18th Dynasty,Late Egyptian,AA.EGYPTIAN_COPTIC.MIDDLE_EGYPTIAN,MIDDLE_EGYPTIAN,,,Willis Monroe,perfect
+1420,Creek,Mikasuki,Mus.MUSKOGEAN.CREEK,CREEK,cree1270,Creek,Willis Monroe,good
+1426,Early Missionary Christianity in China,Classical-Middle-Modern Sinitic,ST.CHINESE.MANDARIN,MANDARIN,mand1415,Mandarin Chinese,Matthew Hamm,poor
+1433,Novatians,,IE.ROMANCE.LATIN,LATIN,lati1261,Latin,Matthew Hamm,good
+1434,Kuna,Kuna,Chi.KUNA.CUNA,CUNA,bord1248,Border Kuna,Willis Monroe,good
+1436,The Monastic School of Gaza,Semitic,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,medium
+1441,Mexica (Aztec) Religion,Aztec,UA.AZTECAN.CLASSICAL_NAHUATL,CLASSICAL_NAHUATL,clas1250,Classical Nahuatl,Diana Moreiras,medium
+1450,Tehuelche,Latin American Spanish,Chn.CHON_PROPER.TEHUELCHE,TEHUELCHE,tehu1242,Tehuelche,Willis Monroe,good
+1454,Hesychastic Controversy,Greek,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+1468,Eastern Christianity From Nicaea to Chalcedon,Greek,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+1474,Amahuaca,Yaminahua,Pan.PANOAN.AMAHUACA,AMAHUACA,amah1246,Amahuaca,Willis Monroe,good
+1492,Nambicuara,Nambiquaran,Nam.NAMBIKUARAN.NAMBIKWARA,NAMBIKWARA,sout2994,Southern Nambikuára,Edward Slingerland,good
+1495,Secular Buddhists,English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+1511,Sokoto,Hausa,AA.WEST_CHADIC.HAUSA,HAUSA,haus1257,Hausa,Willis Monroe,good
+1517,Tunisian Women's Associations,French,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,TUNISIAN_ARABIC_MAGHRIB,tuni1259,Tunisian Arabic,Willis Monroe,good
+1521,Order of the Hermits of St Augustine (Augustinian friars),Latin,IE.ROMANCE.LATIN,LATIN,lati1261,Latin,Willis Monroe,medium
+1522,Tijaniyya Tariqa الطريقة التجانية,Arabic,AA.SEMITIC.ARABIC_QURANIC,ARABIC_QURANIC,stan1318,Standard Arabic,Willis Monroe,medium
+1544,Ukrainian Greek Catholic Church,Ukrainian,IE.SLAVIC.UKRAINIAN,UKRAINIAN,ukra1253,Ukrainian,Willis Monroe,good
+1555,Al-Ahbash الأحباش,Arabic,AA.SEMITIC.ARABIC_QURANIC,ARABIC_QURANIC,stan1318,Standard Arabic,Willis Monroe,medium
+1570,Tamil Muslims,English,Dra.SOUTHERN_DRAVIDIAN.TAMIL,TAMIL,tami1289,Tamil,Willis Monroe,good
+1574,Household religion at Ur,Old Akkadian,AA.SEMITIC.AKKADIAN,AKKADIAN,akka1240,Akkadian,Willis Monroe,perfect
+1619,"Saint Nicholas ""Maroulenas"", Kastania, southern Greece, byzantine church",Middle Assyrian,IE.GREEK.GREEK,GREEK,mode1248,Modern Greek,Willis Monroe,medium
+1621,"Saint Spyridon,Kardamyli, southern Greece, postbyzantine church",Neo-Assyrian,IE.GREEK.GREEK,GREEK,mode1248,Modern Greek,Willis Monroe,medium
+1624,Neo-Assyrian Healers (āšipu/mašmaššu-exorcists),Neo-Assyrian,AA.SEMITIC.AKKADIAN,AKKADIAN,akka1240,Akkadian,Willis Monroe,perfect
+1626,The Cult of Maritime Hera,Greek,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+1627,Mount Putuo 普陀山,Classical-Middle-Modern Sinitic,ST.CHINESE.MANDARIN,MANDARIN,mand1415,Mandarin Chinese,Matthew Hamm,medium
+1636,The second phase of the Iconoclastic Controversy,Greek,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+1653,Visigothic Homoian Christianity,,IE.GERMANIC.GOTHIC,GOTHIC,goth1244,Gothic,Willis Monroe,good
+1654,Le Parti du Mouvement de La Nahda حزب حركة النهضة,Arabic,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,TUNISIAN_ARABIC_MAGHRIB,tuni1259,Tunisian Arabic,Willis Monroe,good
+1667,Medérsiens,,IE.ROMANCE.FRENCH,FRENCH,stan1290,French,Willis Monroe,good
+1677,Royal Hittite Religion,Old Aramaic (up to 700 BCE),IE.ANATOLIAN.HITTITE,HITTITE,hitt1242,Hittite,Willis Monroe,perfect
+1689,The Isma'ilis in the Ottoman Empire,Arabic,AA.SEMITIC.SYRIAN_ARABIC,SYRIAN_ARABIC,nort3139,Levantine Arabic,Julian Weideman,medium
+1690,Christianity in Byzantium: between the end of Iconoclasm and the Schism,Greek,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+1694,Christianity in Byzantium: Between the Schism and the Fourth Crusade,Greek,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+1697,Stylite Monks,Greek,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+1701,The Premonstratensian Order in the Middle Ages,,IE.ROMANCE.FRENCH,FRENCH,stan1290,French,Willis Monroe,good
+1708,الإباضية  Al-Ibadia,Arabic,AA.SEMITIC.ARABIC_GULF_SPOKEN,ARABIC_GULF_SPOKEN,gulf1241,Gulf Arabic,Julian Weideman,medium
+1734,Cupisnique Culture Religion,Unknown,,,,,Willis Monroe,
+1737,الإمامية Al-Imamia,Classical-Middle-Modern Sinitic,IE.IRANIAN.EASTERN_FARSI,EASTERN_FARSI,dari1249,Dari,Willis Monroe,medium
+1759,الطريقة الشاذلية = Attarika Achadoulia,Arabic,AA.SEMITIC.STANDARD_ARABIC,STANDARD_ARABIC,stan1318,Standard Arabic,Julian Weideman,medium
+1776,الطريقة القادرية في البلاد التونسية The Qadiriyya Order in Tunisia,Arabic,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,TUNISIAN_ARABIC_MAGHRIB,tuni1259,Tunisian Arabic,Julian Weideman,good
+1777,الطريقة التّيجانية بالبلاد التونسية The Tijaniyya Order in Tunisia,Arabic,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,TUNISIAN_ARABIC_MAGHRIB,tuni1259,Tunisian Arabic,Julian Weideman,good
+1780,الطريقة الشاذلية في تونس The Shadhiliyya Order in Tunisia,Arabic,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,TUNISIAN_ARABIC_MAGHRIB,tuni1259,Tunisian Arabic,Julian Weideman,good
+1781,المذهب الشيعي في تونس The Shiʿi madhhab in Tunisia,Arabic,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,TUNISIAN_ARABIC_MAGHRIB,tuni1259,Tunisian Arabic,Julian Weideman,good
+1791,"الطريقة القادرية في بغداد: فترة التأسيس ق12 Attarika Al Qadiria à Bagdad: la période fondatrice, le XIIe siècle",Arabic,AA.SEMITIC.IRAQ_MUSLIM_BAGHDAD_ARABIC,IRAQ_MUSLIM_BAGHDAD_ARABIC,meso1252,Gilit Mesopotamian Arabic,Julian Weideman,good
+1820,"Cherubim and Seraphim Church Unification, Campus Fellowship",,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,medium
+1829,Cherubim and Seraphim Unification Church of Nigeria (C&SUCN),,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,medium
+1835,"The Cherubim and Seraphim Church of Zion, Ugbonla",,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,medium
+1845,Benedictine Order in Denmark,,IE.GERMANIC.DANISH,DANISH,dani1285,Danish,Willis Monroe,perfect
+1869,IFA RELIGIOUS GROUP IN ILE- IFE,Yoruba,NC.DEFOID.YORUBA,YORUBA,yoru1245,Yoruba,Willis Monroe,good
+1872,"The Holy Apostles Community, Ayetoro",,NC.DEFOID.YORUBA,YORUBA,yoru1245,Yoruba,Willis Monroe,good
+1897,"The Episcopal Church of Cherubim and Seraphim, Zion Pepe",,NC.DEFOID.YORUBA,YORUBA,yoru1245,Yoruba,Willis Monroe,good
+1903,The 'Abbāsids,Arabic,AA.SEMITIC.SYRIAN_ARABIC,SYRIAN_ARABIC,nort3139,Levantine Arabic,Julian Weideman,medium
+1904,الطريقة القادرية في تونس القرن  19 و20   =  L'ordre Qadiri en Tunisie aux XIXe et XXe siècles,Arabic,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,TUNISIAN_ARABIC_MAGHRIB,tuni1259,Tunisian Arabic,Julian Weideman,good
+1908,"Buddhist Traders in the Chinese Quarter in Hakata, Japan",Japanese,Jap.JAPANESE.JAPANESE,JAPANESE,nucl1643,Japanese,Willis Monroe,medium
+1918,Contemporary Neo-Confucianism 當代新儒家,Middle-Modern Sinitic,ST.CHINESE.MANDARIN,MANDARIN,mand1415,Mandarin Chinese,Willis Monroe,good
+1938,Bahai religion,,IE.IRANIAN.PERSIAN,PERSIAN,west2369,Western Farsi,Willis Monroe,good
+1940,"The Holy Apostles Community, Ori-Oke Iwamimo",,NC.DEFOID.YORUBA,YORUBA,yoru1245,Yoruba,Willis Monroe,good
+1943,Cult of Gauchito Gil,,IE.ROMANCE.SPANISH,SPANISH,stan1288,Spanish,Willis Monroe,perfect
+1961,"Grace Covenant Centre, Ado-Ekiti",,NC.DEFOID.YORUBA,YORUBA,yoru1245,Yoruba,Willis Monroe,good
+1962,Huayan School 華嚴宗,,ST.CHINESE.MIDDLE_CHINESE,MIDDLE_CHINESE,midd1344,Middle Chinese,Willis Monroe,good
+1966,Cherubim & Seraphim Movement Church (Worldwide) Ayo Ni O,Yoruba,NC.DEFOID.YORUBA,YORUBA,yoru1245,Yoruba,Willis Monroe,good
+1972,Shepherding Movement,Classical Indo-European,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,perfect
+1974,"Chapel of Grace, Ile-Ife",English,NC.DEFOID.YORUBA,YORUBA,yoru1245,Yoruba,Willis Monroe,good
+1978,"The Dharmalakshana Buddhist Institute 佛教法相學會, Hong Kong",Cantonese,ST.CHINESE.CANTONESE,CANTONESE,yuec1235,Yue Chinese,Willis Monroe,good
+1983,Early Byzantine Asceticism,Greek,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+1985,Christianity in Antioch. From the Apostolic Era to the Islamic conquest,Arabic,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+1989,Iron Age Celtic Spain and Portugal (Celtiberia),Indo-European,IE.ROMANCE.LATIN,LATIN,lati1261,Latin,Willis Monroe,poor
+1993,Ancient Boeotians,Greek,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+1994,Nigeria Fellowship of Evangelical Students (NIFES),English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+2000,"The Community Church of Apostles Nigeria and Oversea (COCANO), Ajegunle",Yoruba,NC.DEFOID.YORUBA,YORUBA,yoru1245,Yoruba,Willis Monroe,good
+2003,Nigerian Baptist Convention,English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+2006,New Life for All Nations Ministries,English,NC.DEFOID.YORUBA,YORUBA,yoru1245,Yoruba,Willis Monroe,good
+2009,Ancient Arcadians,Greek,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,perfect
+2010,Bektashi Tarika,Greek,Alt.TURKIC.TURKISH,TURKISH,nucl1301,Turkish,Willis Monroe,medium
+2011,Scripture Union Nigeria,English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+2016,الدولة الفاطمية Fatimid Dynasty,Arabic,AA.SEMITIC.CLASSICAL_ARABIC,CLASSICAL_ARABIC,stan1318,Standard Arabic,Willis Monroe,good
+2021,The United Missionary Church of Africa,English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+2023,الدولة الزيرية Zirid Dynasty,Arabic,AA.SEMITIC.CLASSICAL_ARABIC,CLASSICAL_ARABIC,stan1318,Standard Arabic,Willis Monroe,good
+2038,"Cathars, Catharism, Albigenses, Albigensians, Cathari, Catharistae, ""Pure Christians""",Unknown,IE.ROMANCE.LATIN,LATIN,lati1261,Latin,Willis Monroe,medium
+2048,الدولة الرستمية Rustamid Dynasty,Arabic,AA.SEMITIC.CLASSICAL_ARABIC,CLASSICAL_ARABIC,stan1318,Standard Arabic,Willis Monroe,good
+2051,Tibeto-Vietnamese Đạo Mẫu,Vietic,AuA.VIET_MUONG.VIETNAMESE,VIETNAMESE,viet1252,Vietnamese,Willis Monroe,good
+2052,Christ Way Ministries International,Yoruba,NC.DEFOID.YORUBA,YORUBA,yoru1245,Yoruba,Willis Monroe,good
+2054,Christ Apostolic Church,Yoruba,NC.DEFOID.YORUBA,YORUBA,yoru1245,Yoruba,Willis Monroe,good
+2061,OYA RELIGIOUS GROUP IN OYO,Yoruba,NC.DEFOID.YORUBA,YORUBA,yoru1245,Yoruba,Willis Monroe,good
+2069,L'ordre Soufi Qasimite Hadfite الطريقة الصوفية القاسميّة الهادفية,Arabic,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,TUNISIAN_ARABIC_MAGHRIB,tuni1259,Tunisian Arabic,Willis Monroe,good
+2070,Overcomers Evangelical Mission International (Ori-Oke Asegun),English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+2074,"Revolutionary Mahdism and Resistance to Colonial Rule in the Sokoto Caliphate, 1905-1906",Arabic,AA.SEMITIC.STANDARD_ARABIC,STANDARD_ARABIC,stan1318,Standard Arabic,Willis Monroe,medium
+2084,MAITATSINE: NIGERIA'S BLOODY RELIGIOUS TERRORIST MOVEMENT,Arabic,NC.DEFOID.YORUBA,YORUBA,yoru1245,Yoruba,Willis Monroe,good
+2089,L'ordre Soufit karkariya en Tunisie الطريقة الكركرية في تونس,Arabic,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,TUNISIAN_ARABIC_MAGHRIB,tuni1259,Tunisian Arabic,Willis Monroe,good
+2104,الطريقة التجانية في تونس ق18-ق19 ATARIKA TJENIA FI TOUNES  XVIII-XIXème siècle,Arabic,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,TUNISIAN_ARABIC_MAGHRIB,tuni1259,Tunisian Arabic,Willis Monroe,good
+2111,Tsinburbura Traditional Religion,Afro-Asiatic,AA.WEST_CHADIC.HAUSA,HAUSA,haus1257,Hausa,Willis Monroe,good
+2114,Tijaniyyah Sufi Movement in North-Western Nigeria,Arabic,AA.SEMITIC.STANDARD_ARABIC,STANDARD_ARABIC,stan1318,Standard Arabic,Willis Monroe,medium
+2116,Qadiriyyah Movement in the Sokoto Caliphate.,Arabic,AA.SEMITIC.STANDARD_ARABIC,STANDARD_ARABIC,stan1318,Standard Arabic,Willis Monroe,medium
+2122,Jama'at Izalat al-Bid'ah wa Iqamat al-Sunnah (JIBWIS),Arabic,AA.SEMITIC.STANDARD_ARABIC,STANDARD_ARABIC,stan1318,Standard Arabic,Willis Monroe,medium
+2126,Nasrul-lahi-li Fathi Society of Nigeria (NASFAT),Yoruba,AA.SEMITIC.STANDARD_ARABIC,STANDARD_ARABIC,stan1318,Standard Arabic,Willis Monroe,medium
+2128,Paulicians,Macedo-Bulgarian,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+2131,Chimú Empire Religion,Mochica,Cmu.CHIMUAN.MOCHICA,MOCHICA,moch1259,Mochica,Willis Monroe,good
+2133,ANSAR-UD-DEEN SOCIETY OF NIGERIA,Yoruba,AA.SEMITIC.STANDARD_ARABIC,STANDARD_ARABIC,stan1318,Standard Arabic,Willis Monroe,medium
+2138,الجماعة الأحمدية الإسلامية في نيجيريا,English,AA.SEMITIC.STANDARD_ARABIC,STANDARD_ARABIC,stan1318,Standard Arabic,Willis Monroe,medium
+2139,Shi'a Group in Nigeria,English,AA.SEMITIC.STANDARD_ARABIC,STANDARD_ARABIC,stan1318,Standard Arabic,Willis Monroe,medium
+2141,(Ahl al-Sunnah Group for Preaching and Jihad)جماعة أهل السنة للدعوة والجهاد,Arabic,AA.SEMITIC.STANDARD_ARABIC,STANDARD_ARABIC,stan1318,Standard Arabic,Willis Monroe,medium
+2146,Maruyamakyō,Japanese,Jap.JAPANESE.JAPANESE,JAPANESE,nucl1643,Japanese,Willis Monroe,perfect
+2147,الدولة الحفصية Hafsid Dynasty,Arabic,AA.SEMITIC.CLASSICAL_ARABIC,CLASSICAL_ARABIC,stan1318,Standard Arabic,Willis Monroe,good
+2149,Judaism in Byzantium,Ancient Hebrew,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,medium
+2160,Manichaeans,Greek,IE.IRANIAN.PERSIAN,PERSIAN,west2369,Western Farsi,Willis Monroe,good
+2178,Aladura Christianity in Nigeria,Yoruba,NC.DEFOID.YORUBA,YORUBA,yoru1245,Yoruba,Willis Monroe,good
+2194,The Redeemed Christian Church of God,English,NC.DEFOID.YORUBA,YORUBA,yoru1245,Yoruba,Willis Monroe,good
+2203,Huang-Lao Daoism,Late Han Chinese,ST.CHINESE.OLD_CHINESE,OLD_CHINESE,oldc1244,Old Chinese,Willis Monroe,good
+2209,The Church of Nigeria Anglican Communion,English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+2210,Living Faith Church Worldwide,Yoruba,NC.DEFOID.YORUBA,YORUBA,yoru1245,Yoruba,Willis Monroe,good
+2214,Tiwanaku Religion,Aymaran,,,,,Willis Monroe,unknown
+2228,Church of God Mission,English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+2232,"Lollards, Lollard, the Lollard movement, Lollardism,  Lollardy, Wycliffites",English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+2233,The Way of Former Heaven (Xiantiandao 先天道),Min,ST.CHINESE.MANDARIN,MANDARIN,mand1415,Mandarin Chinese,Willis Monroe,good
+2238,XX ــــــــ    ـق  XVIII   الطريقة التجانية في الجزائر :ق,Arabic,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,TUNISIAN_ARABIC_MAGHRIB,tuni1259,Tunisian Arabic,Willis Monroe,perfect
+2240,"Inka and non-Inka groups in Cusco, Peru",Cuscan Quechua,Que.QUECHUAN.CUZCO_GNL,CUZCO_GNL,cusc1236,Cusco Quechua,Willis Monroe,good
+2241,The Cult of Cybele and Attis,Latin,IE.ROMANCE.LATIN,LATIN,lati1261,Latin,Willis Monroe,good
+2244,"Catholicism in the Latin Empire, Catholicism in the Eastern Roman Empire (Byzantium), the Latin Patriarchate of Constantinople",Greek,IE.ROMANCE.LATIN,LATIN,lati1261,Latin,Willis Monroe,perfect
+2245,صقلية الإسلامية Islamic Sicily,Arabic,AA.SEMITIC.CLASSICAL_ARABIC,CLASSICAL_ARABIC,stan1318,Standard Arabic,Willis Monroe,good
+2246,المذهب الحنفي بالبلاد التونسية The Hanafi school in Tunisia,Arabic,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,TUNISIAN_ARABIC_MAGHRIB,tuni1259,Tunisian Arabic,Willis Monroe,perfect
+2247,الفتح العربي الإسلامي لشمال إفريقيا The Arab-Islamic Conquest of North Africa,Arabic,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,TUNISIAN_ARABIC_MAGHRIB,tuni1259,Tunisian Arabic,Willis Monroe,perfect
+2248,الدولة المرادية في تونس The Muradid Dynasty in Tunisia,Arabic,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,TUNISIAN_ARABIC_MAGHRIB,tuni1259,Tunisian Arabic,Willis Monroe,perfect
+2256,الطريقة الرحمانية في الجزائر  ق18-ق20,Arabic,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,TUNISIAN_ARABIC_MAGHRIB,tuni1259,Tunisian Arabic,Willis Monroe,perfect
+2264,Puritans,English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,perfect
+2266,Yangsheng Daoism from Laozi to Ge Hong,Old Chinese,ST.CHINESE.OLD_CHINESE,OLD_CHINESE,oldc1244,Old Chinese,Willis Monroe,good
+2271,The Gideons International in Ngeria,Yoruba,NC.DEFOID.YORUBA,YORUBA,yoru1245,Yoruba,Willis Monroe,good
+2273,Yuan divination schools,Sino-Tibetan,ST.CHINESE.MIDDLE_CHINESE,MIDDLE_CHINESE,midd1344,Middle Chinese,Willis Monroe,good
+2274,Ìjọ Àdìmúlà (An Institutionalised Indigenous Religious Movement in Yorubaland,Yoruba,NC.DEFOID.YORUBA,YORUBA,yoru1245,Yoruba,Willis Monroe,good
+2278,الطريقة القادرية البودشيشية في المغرب الأقصى,Arabic,AA.SEMITIC.MOROCCAN_ARABIC,MOROCCAN_ARABIC,moro1292,Moroccan Arabic,Willis Monroe,perfect
+2279,The Ndau people of Chimanimani area in Zimbabwe,Afro-Asiatic,NC.BANTOID.SHONA_NDAU,SHONA_NDAU,ndau1241,Ndau,Willis Monroe,perfect
+2283,Ge Hong 葛洪 and Outer Alchemy 外丹,Classical-Middle-Modern Sinitic,ST.CHINESE.OLD_CHINESE,OLD_CHINESE,oldc1244,Old Chinese,Willis Monroe,good
+2284,Tarascan Religion,Purepecha,Tar.TARASCAN.PUREPECHA,PUREPECHA,pure1242,Purepecha,Willis Monroe,good
+2286,Religious Practices of the Valdivians during Ecuador's Early Formative Period,Unknown,,,,,Willis Monroe,unknown
+2290,الطريقة القادرية في مصر ق13م-ق21م,Arabic,AA.SEMITIC.CLASSICAL_ARABIC,CLASSICAL_ARABIC,stan1318,Standard Arabic,Willis Monroe,good
+2297,Waldensians (Waldenses),English,IE.ROMANCE.LATIN,LATIN,lati1261,Latin,Willis Monroe,good
+2299,الحشاشين  ق11-ق13   =   Assassins   XI-XIII,Arabic,AA.SEMITIC.CLASSICAL_ARABIC,CLASSICAL_ARABIC,stan1318,Standard Arabic,Willis Monroe,good
+2301,Kaloutsiani Mosque,Arabic,IE.GREEK.GREEK,GREEK,mode1248,Modern Greek,Willis Monroe,medium
+2308,الفتح العربي الإسلامي للأندلس The Arab-Islamic Conquest of the Iberian Peninsula,Arabic,AA.SEMITIC.CLASSICAL_ARABIC,CLASSICAL_ARABIC,stan1318,Standard Arabic,Willis Monroe,good
+2309,الدولة الأموية بالأندلس The Umayyad Dynasty in the Iberian Peninsula,Arabic,AA.SEMITIC.CLASSICAL_ARABIC,CLASSICAL_ARABIC,stan1318,Standard Arabic,Willis Monroe,good
+2312,The philosophical system of 'Ubuntu' in Southern Africa,English,NC.BANTOID.XHOSA,XHOSA,xhos1239,Xhosa,Willis Monroe,medium
+2313,Dungan people,Common Chinese,ST.CHINESE.DUNGAN,DUNGAN,dung1253,Dungan,Willis Monroe,good
+2320,Sanjiejiao (三階教),Sinitic,ST.CHINESE.MIDDLE_CHINESE,MIDDLE_CHINESE,midd1344,Middle Chinese,Willis Monroe,good
+2321,Falungong 法輪功 (Falun Gong) / Falun Dafa 法輪大法,Classical-Middle-Modern Sinitic,ST.CHINESE.MANDARIN,MANDARIN,mand1415,Mandarin Chinese,Willis Monroe,perfect
+2322,الدّولة الأمويّة في المشرق  بين662 م و750م (The Umayyad State in the Mashriq from 662 to 750),Arabic,AA.SEMITIC.CLASSICAL_ARABIC,CLASSICAL_ARABIC,stan1318,Standard Arabic,Willis Monroe,good
+2324,"Justice and Development Party (PJD), Morocco",Arabic,AA.SEMITIC.MOROCCAN_ARABIC,MOROCCAN_ARABIC,moro1292,Moroccan Arabic,Willis Monroe,perfect
+2325,"Outer alchemy (外丹, waidan)",Sinitic,ST.CHINESE.OLD_CHINESE,OLD_CHINESE,oldc1244,Old Chinese,Willis Monroe,good
+2327,ỌBÀTÁLA RELIGIOUS GROUP AMONG THE YORUBA OF ILÉ-IFẸ̀,Yoruba,NC.DEFOID.YORUBA,YORUBA,yoru1245,Yoruba,Willis Monroe,good
+2328,Church of Almighty God (Quannengshen jiaohui 全能神教會) / Eastern Lightning (Dongfang shandian 東方閃電),Classical-Middle-Modern Sinitic,ST.CHINESE.MANDARIN,MANDARIN,mand1415,Mandarin Chinese,Willis Monroe,perfect
+2329,Hòa Hảo,Vietnamese,AuA.VIET_MUONG.VIETNAMESE,VIETNAMESE,viet1252,Vietnamese,Willis Monroe,good
+2330,Evangelical Church Winning All,Yoruba,NC.DEFOID.YORUBA,YORUBA,yoru1245,Yoruba,Willis Monroe,good
+2331,الدولة العباسيبّة في المشرق  من 750 م الى 1517 م (The Abbasid State in the Mashriq from 750 to 1517),Arabic,AA.SEMITIC.CLASSICAL_ARABIC,CLASSICAL_ARABIC,stan1318,Standard Arabic,Willis Monroe,good
+2333,Sōka Gakkai (創価学会),English,Jap.JAPANESE.JAPANESE,JAPANESE,nucl1643,Japanese,Willis Monroe,perfect
+2335,The Seventh-day Adventist Church in Nigeria,English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+2339,Yorùbá Traditional Religion,Yoruba,NC.DEFOID.YORUBA,YORUBA,yoru1245,Yoruba,Willis Monroe,perfect
+2341,The Totonacapan Culture-Religion,Totonac,Tot.TOTONACAN.PAPANTLA_TOTONAC,PAPANTLA_TOTONAC,papa1238,Papantla Totonac,Willis Monroe,medium
+2344,Sican Culture religion,Unknown,Cmu.CHIMUAN.MOCHICA,MOCHICA,moch1259,Mochica,Willis Monroe,medium
+2346,Igbo Traditional Religion,Pidgin,NC.IGBOID.IGBO_ONITSHA,IGBO_ONITSHA,nucl1417,Igbo,Willis Monroe,medium
+2347,Nichiren Buddhism,Japanese,Jap.JAPANESE.JAPANESE,JAPANESE,nucl1643,Japanese,Willis Monroe,perfect
+2348,Ancient Israelite Religion (Iron Age),Ancient Hebrew,AA.SEMITIC.BIBLICAL_HEBREW,BIBLICAL_HEBREW,anci1244,Ancient Hebrew,Willis Monroe,perfect
+2349,Methodism (Wesleyanism),English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,perfect
+2353,Sannō Ichijitsu Shintō,English,Jap.JAPANESE.JAPANESE,JAPANESE,nucl1643,Japanese,Willis Monroe,perfect
+2360,Toltecas,English,UA.AZTECAN.CLASSICAL_NAHUATL,CLASSICAL_NAHUATL,clas1250,Classical Nahuatl,Willis Monroe,good
+2363,"L'ordre Soufi Tunisien ""al-Hasaniyya"" الطريقة الحسنية التونسية",Arabic,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,TUNISIAN_ARABIC_MAGHRIB,tuni1259,Tunisian Arabic,Willis Monroe,perfect
+2365,Moriscos,Arabic,IE.ROMANCE.SPANISH,SPANISH,stan1288,Spanish,Willis Monroe,medium
+2369,Le Mouvement Sanussiyya الحركة السنوسيّة,Arabic,AA.SEMITIC.TUNISIAN_ARABIC_MAGHRIB,TUNISIAN_ARABIC_MAGHRIB,tuni1259,Tunisian Arabic,Willis Monroe,perfect
+2371,Tewa Pueblo Religion,Tewa,KT.KIOWA_TANOAN.TEWA_SAN_JUAN_PUEBLO,TEWA_SAN_JUAN_PUEBLO,tewa1260,Rio Grande Tewa,Willis Monroe,good
+2373,"The London Missionary Society in British Guiana, 1800-1824",English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,perfect
+2375,"Quakers in Barbados, 1655-1780",English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,perfect
+2376,"Baptists in Jamaica, 1780-1832",English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+2407,"Obeah in Jamaica, British Guiana, and Barbados, 1760-1834",English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+2418,Nasca Culture Religion,Unknown,,,,,Willis Monroe,unknown
+2420,Evangelistria of Kipseli Arta,Greek,IE.GREEK.GREEK,GREEK,mode1248,Modern Greek,Willis Monroe,perfect
+2428,Navayana Buddhism,English,IE.INDIC.HINDI,HINDI,hind1269,Hindi,Willis Monroe,good
+2429,Vyliza Monastery,Greek,IE.GREEK.GREEK,GREEK,mode1248,Modern Greek,Willis Monroe,perfect
+2433,Hellenistic Religion in the Seleucid Empire,Greek,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+2445,Priesthoods in Ptolemaic Thebes (Luxor),Demotic Egyptian,IE.GREEK.GREEK_ANCIENT,GREEK_ANCIENT,anci1242,Ionic-Attic Ancient Greek,Willis Monroe,good
+2451,Ethiopian Orthodox Tewahedo Church,English,AA.SEMITIC.AMHARIC,AMHARIC,amha1245,Amharic,Willis Monroe,perfect
+2455,New Orleans Voodoo,English,IE.GERMANIC.ENGLISH,ENGLISH,stan1293,English,Willis Monroe,good
+2464,Philippine Catholicism,English,An.GREATER_CENTRAL_PHILIPPINE.TAGALOG,TAGALOG,taga1270,Tagalog,Willis Monroe,good
+2490,Wu Zetian's State Buddhism,Literary Chinese,ST.CHINESE.MIDDLE_CHINESE,MIDDLE_CHINESE,midd1344,Middle Chinese,Willis Monroe,good
+2496,Vietnamese popular religion,Viet-Muong,AuA.VIET_MUONG.VIETNAMESE,VIETNAMESE,viet1252,Vietnamese,Willis Monroe,good
+2526,The Chontal Maya (Yoko t’anob),Tabasco Chontal,May.MAYAN.CHONTAL_TABASCO,CHONTAL_TABASCO,taba1266,Tabasco Chontal,Willis Monroe,good
+2567,Zahiriyyah [in the Iberian Peninsula],Arabic,AA.SEMITIC.CLASSICAL_ARABIC,CLASSICAL_ARABIC,stan1318,Standard Arabic,Willis Monroe,good
+2614,فيضة (An Overflow of Spiritual Grace),Arabic,AA.SEMITIC.STANDARD_ARABIC,STANDARD_ARABIC,stan1318,Standard Arabic,Willis Monroe,medium

@@ -1,0 +1,520 @@
+---
+title: "2_internal_only"
+output: html_document
+---
+
+Analysis of marker ~ internal-only conflict (Sosis et al. 2007 grouping: internal
+conflict present and external conflict absent, vs. everything else).
+First fits baseline models, then adds phylogenetic control.
+Fits models for all markers.
+
+```{r}
+library(pacman)
+p_load(brms, tidyverse, here, tidybayes, ggdist, HDInterval, ape, ggtext)
+set.seed(12532)
+
+dir.create(here("data","model","internal_only","results"), recursive = TRUE, showWarnings = FALSE)
+```
+
+```{r}
+
+# all markers 
+markers <- c(
+  "circumcision", "dress", "extra_ritual_group_markers", "food_taboos",
+  "hair", "ornaments", "permanent_scarring", "tattoos_scarification"
+)
+
+# labels for markers (nicer for plots, outputs)
+marker_labels <- c(
+  circumcision="Circumcision", dress="Dress",
+  extra_ritual_group_markers="Extra-Ritual In-Group Markers",
+  food_taboos="Food Taboos", hair="Hair", ornaments="Ornaments",
+  permanent_scarring="Permanent Scarring", tattoos_scarification="Tattoos/Scarification"
+)
+
+# fixed reporting order for all per-marker tables/plots: the two DRH top-level categories
+# first (Permanent Scarring, then Extra-Ritual In-Group Markers, whose sub-questions are the
+# other six), then the six sub-markers alphabetically. Single source of truth, reused for
+# table row order and for de-emphasizing (lower alpha) the six sub-markers in plots.
+markers_table_order <- c("permanent_scarring", "extra_ritual_group_markers",
+                          "circumcision", "dress", "food_taboos",
+                          "hair", "ornaments", "tattoos_scarification")
+
+marker_level <- c(
+  permanent_scarring          = "parent",
+  extra_ritual_group_markers  = "parent",
+  circumcision                = "sub",
+  dress                       = "sub",
+  food_taboos                 = "sub",
+  hair                        = "sub",
+  ornaments                   = "sub",
+  tattoos_scarification       = "sub"
+)
+
+# priors 
+priors <- c(
+  prior(normal(0, 1.5), class = Intercept), # wide enough, centering a bit skewed since the empirical rate <50% but fine.
+  prior(normal(0, 1),   class = b), # also wide enough (95% includes up to 2 logit shift.)
+  prior(exponential(1), class = sd) # could consider exponential(2) because our regions are so loopsided (to regularize more)
+)
+
+# list to hold fits 
+fits <- list()
+for (m in markers) {
+  d <- read_csv(here("data","model","internal_only","input", paste0(m, ".csv")),
+                show_col_types = FALSE) |>
+    mutate(
+      y = as.integer(.data[[m]]), 
+      world_region = fct_relevel(factor(world_region), "Africa")) 
+
+  f <- bf(as.formula(paste(m, "~ 1 + internal_only + year_scaled + (1 | world_region)")))
+
+  fit <- brm(f, data = d, family = bernoulli("logit"), prior = priors,
+             chains = 4, iter = 4000, warmup = 2000, cores = 4,
+             control = list(adapt_delta = 0.99),
+             seed = 51252, backend = "cmdstanr", silent = 2)
+
+  fits[[m]] <- list(fit = fit, data = d, n = nrow(d))
+}
+
+```
+
+
+Convergence
+
+```{r diagnostics_baseline}
+
+# per-marker check convergence
+diag_tbl <- map_dfr(markers_table_order, function(m) {
+  fit <- fits[[m]]$fit
+  tibble(
+    Marker      = marker_labels[m],
+    N           = fits[[m]]$n,
+    divergences   = sum(subset(nuts_params(fit), Parameter=="divergent__")$Value),
+    max_rhat      = round(max(rhat(fit), na.rm=TRUE), 3),
+    min_bulk_ess  = round(min(summary(fit)$fixed[,"Bulk_ESS"]), 0),
+    min_tail_ess  = round(min(summary(fit)$fixed[,"Tail_ESS"]), 0)
+  )
+})
+diag_tbl
+write_csv(diag_tbl, here("data","model","internal_only","results","diagnostics_baseline.csv"))
+
+```
+
+Fixed effects table
+
+```{r fixed_effects_baseline}
+
+# one row per marker; each term formatted as "estimate [lo, hi]" to go straight into paper.
+fmt <- function(est, lo, hi) sprintf("%.2f [%.2f, %.2f]", est, lo, hi)
+
+fixed_tbl <- map_dfr(markers_table_order, function(m) {
+  fit <- fits[[m]]$fit
+  fx  <- fixef(fit) # rows: Intercept, internal_only, year_scaled
+
+  tibble(
+    Marker           = marker_labels[m],
+    N                = fits[[m]]$n,
+    Intercept        = fmt(fx["Intercept","Estimate"], fx["Intercept","Q2.5"], fx["Intercept","Q97.5"]),
+    internal_only = fmt(fx["internal_only","Estimate"], fx["internal_only","Q2.5"], fx["internal_only","Q97.5"]),
+    year_scaled      = fmt(fx["year_scaled","Estimate"], fx["year_scaled","Q2.5"], fx["year_scaled","Q97.5"])
+  )
+})
+
+fixed_tbl
+write_csv(fixed_tbl, here("data","model","internal_only","results","fixed_effects_baseline.csv"))
+
+```
+
+Table for random effects (world region.)
+To really compare whether world region is predictive, we probably would need to fit also without and do model comparison.
+But this is not the main objective, and pretty clear that for some markers there is regional heterogeneity.
+
+```{r}
+
+sd_tbl <- map_dfr(markers_table_order, function(m) {
+  fit <- fits[[m]]$fit
+  rf  <- summary(fit)$random$world_region  # row: sd(Intercept)
+
+  tibble(
+    Marker          = marker_labels[m],
+    N               = fits[[m]]$n,
+    sd_world_region = fmt(rf["sd(Intercept)","Estimate"],
+                           rf["sd(Intercept)","l-95% CI"],
+                           rf["sd(Intercept)","u-95% CI"])
+  )
+})
+
+sd_tbl
+write_csv(sd_tbl, here("data","model","internal_only","results","random_effects_baseline.csv"))
+
+```
+
+Per-region breakdown: raw (unpooled) rate vs. model-estimated (partially pooled) rate,
+to see which regions drive a marker's regional heterogeneity.
+
+```{r region_effects_baseline}
+
+region_tbl <- map_dfr(markers_table_order, function(m) {
+  fit <- fits[[m]]$fit
+  d   <- fits[[m]]$data
+
+  raw <- d |> group_by(world_region) |>
+    summarise(n = n(), raw_rate = mean(y), .groups = "drop")
+
+  nd <- tibble(world_region = unique(d$world_region), internal_only = 0, year_scaled = 0)
+  model_est <- fit |> epred_draws(newdata = nd, re_formula = ~ (1 | world_region)) |> 
+    ungroup() |>
+    group_by(world_region) |>
+    summarise(model_estimate = mean(.epred),
+              ci_lo = quantile(.epred, 0.025),
+              ci_hi = quantile(.epred, 0.975), .groups = "drop")
+
+  raw |> left_join(model_est, by = "world_region") |>
+    mutate(Marker = marker_labels[m], .before = 1)
+})
+
+region_tbl <- region_tbl |>
+  mutate(across(c(raw_rate, model_estimate, ci_lo, ci_hi), \(x) round(x, 2)))
+
+region_tbl
+write_csv(region_tbl, here("data","model","internal_only","results","region_effects_baseline.csv"))
+
+```
+
+
+
+Hypothesis test + AME.
+
+```{r}
+
+results_tbl <- map_dfr(markers_table_order, function(m) {
+  fit <- fits[[m]]$fit
+  d   <- fits[[m]]$data
+
+  h <- hypothesis(fit, "internal_only > 0", alpha = 0.025)$hypothesis
+
+  nd <- expand_grid(internal_only = c(0,1), year_scaled = 0,
+                    world_region = unique(d$world_region))
+  ame <- fit |> epred_draws(newdata = nd, re_formula = NA) |> ungroup() |>
+    group_by(.draw, internal_only) |>
+    summarise(p = mean(.epred), .groups = "drop") |>
+    pivot_wider(names_from = internal_only, values_from = p, names_prefix = "cond") |>
+    mutate(ame = cond1 - cond0) |> pull(ame)
+
+  tibble(
+    Marker = marker_labels[m],
+    N = fits[[m]]$n,
+    beta = h$Estimate,
+    ci_lo = h$CI.Lower,
+    ci_hi = h$CI.Upper,
+    post_prob = h$Post.Prob,
+    AME = mean(ame)
+  )
+}) |> mutate(across(where(is.numeric), \(x) round(x, 2)))
+
+results_tbl
+write_csv(results_tbl, here("data","model","internal_only","results","hypothesis_ame_baseline.csv"))
+
+```
+
+Plot estimated base rates: baseline model's predicted probability under internal_only=0 vs.
+=1, per marker — distinct from the AME/beta plots below, which only show the difference between
+these two distributions, not their absolute level. Built from the same draws as the AME
+calculation above (cond0/cond1, before collapsing to the difference), so no new computation is
+needed. Sorted by effect size, same alpha convention as the tables (parents at full opacity).
+
+```{r}
+
+# AME draws for ALL markers (kept as draws for the plot); "_baseline" suffix kept for
+# clarity alongside ame_all_phylo, used in the baseline-vs-phylo comparison plot below.
+ame_all_baseline <- map_dfr(markers_table_order, function(m) {
+  fit <- fits[[m]]$fit; d <- fits[[m]]$data
+  nd <- expand_grid(internal_only = c(0,1), year_scaled = 0,
+                    world_region = unique(d$world_region))
+  fit |> epred_draws(newdata = nd, re_formula = NA) |> ungroup() |>
+    group_by(.draw, internal_only) |>
+    summarise(p = mean(.epred), .groups = "drop") |>
+    pivot_wider(names_from = internal_only, values_from = p, names_prefix = "cond") |>
+    mutate(ame = cond1 - cond0, marker = m)
+})
+
+marker_order <- ame_all_baseline |> group_by(marker) |>
+  summarise(md = median(ame)) |> arrange(md) |> pull(marker)
+
+# separate ordering for the base-rates plot: sorted by prevalence under cond1 (the focal
+# condition), not by AME. AME can be negative for some markers and positive for others, so
+# sorting by the *difference* doesn't give a visually clean prevalence ordering — sorting by
+# one condition's actual level does. marker_order (AME-based) stays as-is for the AME
+# comparison plot below, where sorting by effect size is what's wanted.
+marker_order_prevalence <- ame_all_baseline |> group_by(marker) |>
+  summarise(md = median(cond1)) |> arrange(md) |> pull(marker)
+
+# parent markers (Permanent Scarring, Extra-Ritual In-Group Markers) get **bold** markdown
+# around their label, rendered via ggtext::element_markdown() on the axis text below.
+n_labels <- map_chr(markers_table_order, \(m) {
+  lbl <- paste0(marker_labels[m], " (n=", fits[[m]]$n, ")")
+  if (marker_level[m] == "parent") paste0("**", lbl, "**") else lbl
+}) |> setNames(markers_table_order)
+
+p_base_rates <- ame_all_baseline |>
+  pivot_longer(c(cond0, cond1), names_to = "condition", values_to = "p") |>
+  mutate(condition = fct_recode(condition,
+                                 "Not internal (only)" = "cond0",
+                                 "Internal conflict (only)"  = "cond1"),
+         marker_label = factor(n_labels[marker], levels = n_labels[marker_order_prevalence])) |>
+  ggplot(aes(x = p, y = marker_label, fill = condition)) +
+  stat_halfeye(.width = c(0.66, 0.95), point_interval = mean_qi,
+               position = position_dodge(width = 0.3), scale = 1.5,
+               color = "black", alpha = 0.7) +
+  scale_fill_manual(values = c("Not internal (only)" = "#8FBF9F",
+                                "Internal conflict (only)" = "#D98B72")) +
+  labs(x = "Estimated prevalence", y = NULL, fill = NULL) +
+  theme_bw(base_size = 16) +               # <- bumps ALL text at once
+  theme(
+    plot.title    = element_text(size = 20, face = "bold"),
+    plot.subtitle = element_text(size = 16),
+    axis.title.x  = element_text(size = 17),
+    axis.text.y   = element_markdown(size = 15),
+    axis.text.x   = element_text(size = 14),
+    legend.position = "top",
+    plot.margin   = margin(12, 16, 12, 16)
+  )
+
+ggsave(here("data","model","internal_only","results","internal_only_base_rates_baseline.pdf"),
+       p_base_rates, width = 9, height = 7, device = "pdf")
+p_base_rates
+
+```
+
+
+## PHYLO ##
+
+```{r}
+
+tree <- read.tree(here("data","jaeger2018","world.tre"))   # load ONCE, prune per marker
+
+```
+
+Fit models.
+
+```{r fit_phylo}
+fits_phylo <- list()
+for (m in markers) {
+  d <- read_csv(here("data","model","internal_only","input", paste0(m,".csv")),
+                show_col_types = FALSE) |>
+    mutate(y = as.integer(.data[[m]]),
+           world_region = fct_relevel(factor(world_region), "Africa"))
+
+  # phylo sample = mapped entries only; duplicate tip col for the two effects
+  d_phylo <- d |> filter(!is.na(tip_name)) |> mutate(phylo = tip_name)
+
+  # per-marker tree prune + correlation matrix
+  tips <- unique(d_phylo$tip_name)
+  stopifnot(all(tips %in% tree$tip.label)) # guard 
+  tree_pruned <- keep.tip(tree, tips)
+  A <- vcv.phylo(tree_pruned, corr = TRUE)
+  stopifnot(all(d_phylo$phylo %in% rownames(A)))
+
+  f <- bf(as.formula(paste(
+    m, "~ 1 + internal_only + year_scaled +",
+    "(1 | world_region) + (1 | gr(phylo, cov = A)) + (1 | tip_name)"
+  )))
+
+  fit <- brm(f, data = d_phylo, data2 = list(A = A),
+             family = bernoulli("logit"), prior = priors,
+             chains = 4, iter = 4000, warmup = 2000, cores = 4,
+             control = list(adapt_delta = 0.99, max_treedepth = 12),
+             seed = 52312, backend = "cmdstanr", silent = 2)
+
+  fits_phylo[[m]] <- list(fit = fit, data = d_phylo, n = nrow(d_phylo),
+                    n_tips = length(tips))
+}
+```
+
+Per-marker convergence.
+
+```{r diagnostics_phylo}
+
+# per-marker convergence sweep — CATCH bad fits before trusting results
+diag_tbl <- map_dfr(markers_table_order, function(m) {
+  fit <- fits_phylo[[m]]$fit
+  tibble(
+    Marker        = marker_labels[m],
+    N             = fits_phylo[[m]]$n,
+    n_tips        = fits_phylo[[m]]$n_tips,
+    divergences   = sum(subset(nuts_params(fit), Parameter=="divergent__")$Value),
+    max_rhat      = round(max(rhat(fit), na.rm=TRUE), 3),
+    min_bulk_ess  = round(min(summary(fit)$fixed[,"Bulk_ESS"]), 0),
+    min_tail_ess  = round(min(summary(fit)$fixed[,"Tail_ESS"]), 0)
+  )
+})
+diag_tbl
+write_csv(diag_tbl, here("data","model","internal_only","results","diagnostics_phylo.csv"))
+
+```
+
+Fixed effects table
+
+```{r fixed_effects_phylo}
+
+# one row per marker; each term formatted as "estimate [lo, hi]" — same shape as fixed_effects_baseline
+fixed_tbl <- map_dfr(markers_table_order, function(m) {
+  fit <- fits_phylo[[m]]$fit
+  fx  <- fixef(fit) # rows: Intercept, internal_only, year_scaled
+
+  tibble(
+    Marker           = marker_labels[m],
+    N                = fits_phylo[[m]]$n,
+    Intercept        = fmt(fx["Intercept","Estimate"], fx["Intercept","Q2.5"], fx["Intercept","Q97.5"]),
+    internal_only = fmt(fx["internal_only","Estimate"], fx["internal_only","Q2.5"], fx["internal_only","Q97.5"]),
+    year_scaled      = fmt(fx["year_scaled","Estimate"], fx["year_scaled","Q2.5"], fx["year_scaled","Q97.5"])
+  )
+})
+
+fixed_tbl
+write_csv(fixed_tbl, here("data","model","internal_only","results","fixed_effects_phylo.csv"))
+
+```
+
+Random effects table: one row per marker, sd(Intercept) for world_region, phylo (covariance-
+structured tip effect), and tip_name (iid tip effect) — same "est [lo, hi]" format as baseline.
+
+```{r random_effects_phylo}
+
+sd_tbl <- map_dfr(markers_table_order, function(m) {
+  fit       <- fits_phylo[[m]]$fit
+  rf_region <- summary(fit)$random$world_region
+  rf_phylo  <- summary(fit)$random$phylo
+  rf_tip    <- summary(fit)$random$tip_name
+
+  tibble(
+    Marker          = marker_labels[m],
+    N               = fits_phylo[[m]]$n,
+    sd_world_region = fmt(rf_region["sd(Intercept)","Estimate"],
+                           rf_region["sd(Intercept)","l-95% CI"],
+                           rf_region["sd(Intercept)","u-95% CI"]),
+    sd_phylo        = fmt(rf_phylo["sd(Intercept)","Estimate"],
+                           rf_phylo["sd(Intercept)","l-95% CI"],
+                           rf_phylo["sd(Intercept)","u-95% CI"]),
+    sd_tip_name     = fmt(rf_tip["sd(Intercept)","Estimate"],
+                           rf_tip["sd(Intercept)","l-95% CI"],
+                           rf_tip["sd(Intercept)","u-95% CI"])
+  )
+})
+
+sd_tbl
+write_csv(sd_tbl, here("data","model","internal_only","results","random_effects_phylo.csv"))
+
+```
+
+Phylogenetic signal: proportion of tip-level variance that is phylogenetically structured
+(sd_phylo, tree-respecting) vs. idiosyncratic per-tip (sd_tip_name). Computed per posterior
+draw so the ratio itself carries uncertainty, not just from the two point estimates.
+
+```{r phylo_signal}
+
+phylo_signal_tbl <- map_dfr(markers_table_order, function(m) {
+  fit   <- fits_phylo[[m]]$fit
+  draws <- as_draws_df(fit, variable = c("sd_phylo__Intercept", "sd_tip_name__Intercept"))
+  h2    <- draws$sd_phylo__Intercept^2 /
+    (draws$sd_phylo__Intercept^2 + draws$sd_tip_name__Intercept^2)
+
+  tibble(
+    Marker       = marker_labels[m],
+    N            = fits_phylo[[m]]$n,
+    phylo_signal = fmt(mean(h2), quantile(h2, 0.025), quantile(h2, 0.975))
+  )
+})
+
+phylo_signal_tbl
+write_csv(phylo_signal_tbl, here("data","model","internal_only","results","phylo_signal.csv"))
+
+```
+
+AME + hypothesis table
+
+```{r results_table}
+
+results_tbl <- map_dfr(markers_table_order, function(m) {
+  fit <- fits_phylo[[m]]$fit
+  d   <- fits_phylo[[m]]$data
+  h <- hypothesis(fit, "internal_only > 0", alpha = 0.025)$hypothesis
+
+  # AME: re_formula = NA excludes ALL random effects (region, phylo, tip)
+  nd <- expand_grid(internal_only = c(0,1), year_scaled = 0,
+                    world_region = unique(d$world_region))
+  ame <- fit |> epred_draws(newdata = nd, re_formula = NA) |> ungroup() |> 
+    group_by(.draw, internal_only) |>
+    summarise(p = mean(.epred), .groups = "drop") |>
+    pivot_wider(names_from = internal_only, values_from = p, names_prefix = "cond") |>
+    mutate(ame = cond1 - cond0) |> pull(ame)
+
+  tibble(
+    Marker = marker_labels[m], N = fits_phylo[[m]]$n,
+    beta = h$Estimate, ci_lo = h$CI.Lower, ci_hi = h$CI.Upper,
+    post_prob = h$Post.Prob, AME = mean(ame)
+  )
+}) |> mutate(across(where(is.numeric), \(x) round(x, 2)))
+
+results_tbl
+write_csv(results_tbl, here("data","model","internal_only","results","hypothesis_ame_phylo.csv"))
+
+```
+
+Plot AME distributions: baseline vs. phylo, to see how much the internal_only effect
+shifts once phylogenetic + regional random effects are added.
+
+```{r}
+
+# AME draws for ALL markers under the phylo model (re_formula = NA, same as results_table above)
+ame_all_phylo <- map_dfr(markers_table_order, function(m) {
+  fit <- fits_phylo[[m]]$fit; d <- fits_phylo[[m]]$data
+  nd <- expand_grid(internal_only = c(0,1), year_scaled = 0,
+                    world_region = unique(d$world_region))
+  fit |> epred_draws(newdata = nd, re_formula = NA) |> ungroup() |>
+    group_by(.draw, internal_only) |>
+    summarise(p = mean(.epred), .groups = "drop") |>
+    pivot_wider(names_from = internal_only, values_from = p, names_prefix = "cond") |>
+    mutate(ame = cond1 - cond0, marker = m)
+})
+
+ame_compare <- bind_rows(
+  ame_all_baseline |> mutate(model = "Baseline"),
+  ame_all_phylo    |> mutate(model = "Phylogenetic")
+) |> mutate(model = fct_relevel(model, "Baseline", "Phylogenetic"))
+
+# marker order + labels from the baseline plot above, with N per model (fits/fits_phylo are
+# separate objects now, so both are still in memory here — no need to read baseline N back from disk)
+# parent markers get **bold** markdown around their label, rendered via
+# ggtext::element_markdown() on the axis text below — same trick as p_base_rates.
+n_labels_compare <- map_chr(markers, \(m) {
+  lbl <- paste0(marker_labels[m], " (n=", fits[[m]]$n, "/", fits_phylo[[m]]$n, ")")
+  if (marker_level[m] == "parent") paste0("**", lbl, "**") else lbl
+}) |> setNames(markers)
+
+p_ame_compare <- ame_compare |>
+  mutate(marker_label = factor(n_labels_compare[marker], levels = n_labels_compare[marker_order])) |>
+  ggplot(aes(x = ame, y = marker_label, fill = model)) +
+  stat_halfeye(.width = c(0.66, 0.95), point_interval = mean_qi,
+               position = position_dodge(width = 0.6), scale = 1.1,
+               color = "black", alpha = 0.7) +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "grey40") +
+  scale_fill_manual(values = c(Baseline = "#C8839E", Phylogenetic = "#6B9AC4")) +
+  labs(x = "Average marginal effect (probability)", y = NULL, fill = NULL) +
+  theme_bw(base_size = 16) +
+  theme(
+    plot.title    = element_text(size = 20, face = "bold"),
+    plot.subtitle = element_text(size = 16),
+    axis.title.x  = element_text(size = 17),
+    axis.text.y   = element_markdown(size = 15),
+    axis.text.x   = element_text(size = 14),
+    legend.position = "top",
+    plot.margin   = margin(12, 16, 12, 16)
+  )
+
+ggsave(here("data","model","internal_only","results","internal_only_ame_baseline_vs_phylo.pdf"),
+       p_ame_compare, width = 9, height = 7, device = "pdf")
+p_ame_compare
+
+```

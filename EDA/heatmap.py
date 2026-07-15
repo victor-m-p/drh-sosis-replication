@@ -13,21 +13,22 @@ columns = [
     # the two main predictors
     'violent_external',
     'violent_internal',
-    # institutions
+    # institutions (focus on other)
     'judges_other',
-    'judges_own',
+    #'judges_own',
     'legal_code_other',
-    'legal_code_own',
+    #'legal_code_own',
     'military_participate',
-    'military_possess',
+    #'military_possess',
     'military_protected',
     'police_force_other',
-    'police_force_own',
+    #'police_force_own',
     'punish_other',
-    'punish_own',
+    #'punish_own',
     # the two main markers (all others are sub)
     'extra_ritual_group_markers',
     'permanent_scarring',
+    'state',
 ]
 
 df = pd.read_csv("../data/preprocessed/answerset_large.csv")
