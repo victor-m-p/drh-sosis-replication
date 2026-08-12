@@ -46,7 +46,7 @@ glottolog.columns = ["glottocode", "glottolog_name"]
 gname = glottolog.drop_duplicates("glottocode").set_index("glottocode")["glottolog_name"]
 
 # ASJP languages.csv: code -> doculect ID (+ its own Glottolog name for verification)
-asjp = pd.read_csv("../asjp/cldf/languages.csv")[["ID", "Glottocode", "Glottolog_Name"]]
+asjp = pd.read_csv("../data/asjp/languages.csv")[["ID", "Glottocode", "Glottolog_Name"]]
 asjp = asjp.rename(columns={"ID": "asjp_id", "Glottocode": "glottocode",
                             "Glottolog_Name": "asjp_glottolog_name"})
 asjp["asjp_id"] = asjp["asjp_id"].astype(str)
