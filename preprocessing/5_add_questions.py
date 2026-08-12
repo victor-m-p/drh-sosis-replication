@@ -126,4 +126,3 @@ answers_wide = answers_wide.merge(answers_society_wide, on="entry_id", how="oute
 # merge with our existing data (should be left here, fill NAN.)
 answerset_large = answerset_main.merge(answers_wide, on = 'entry_id', how = 'left')
 answerset_large.to_csv("../data/preprocessed/answerset_large.csv", index=False)
-answerset_large
