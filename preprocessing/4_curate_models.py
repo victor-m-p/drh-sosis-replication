@@ -107,3 +107,38 @@ for dv in dependent_variables:
     )
     out = out.merge(tip_map, on="entry_id", how="left")
     out.to_csv(f"../data/model/internal_only_noeHRAF/input/{dv}.csv", index=False)
+
+# 7. External warfare analysis, restricted to entries where markers are present
+#
+# The six markers below are child questions of "Are extra-ritual in-group markers
+# present"; a coder only sees them when that parent is answered "Yes". 1_curate_data.py
+# therefore infers "No" for every child of a "No" parent (see fill_answers in
+# helper_functions.py), which makes roughly 62% of each child marker's rows a copy of
+# the parent's answer rather than an observed coding. Restricting to parent == 1 drops
+# exactly those inferred rows, so these models ask "given that markers are present,
+# does external conflict predict which kind?" rather than "are markers present at all?".
+child_variables = [
+    "circumcision", "tattoos_scarification",       # permanent
+    "dress", "food_taboos", "hair", "ornaments",   # transitory
+]
+
+# The filter above is only equivalent to "drop the inferred answers" as long as no child
+# answer was ever observed under a "No" or missing parent. That holds in SCCSR.v3; assert
+# it so a later data release cannot silently invalidate the restriction.
+parent_no = answerset[answerset["extra_ritual_group_markers"] == 0]
+parent_missing = answerset[answerset["extra_ritual_group_markers"].isna()]
+assert (parent_no[child_variables].fillna(0) == 0).all().all(), \
+    "observed 'Yes' child answer under a 'No' parent: parent filter would drop observed data"
+assert parent_missing[child_variables].isna().all().all(), \
+    "observed child answer under a missing parent: parent filter would drop observed data"
+
+answerset_markers_present = answerset[answerset["extra_ritual_group_markers"] == 1]
+
+os.makedirs("../data/model/external_markers_present/input", exist_ok=True)
+
+for dv in child_variables:
+    out = process_time_region(
+        answerset_markers_present, "entry_id", "violent_external", dv, "year_scaled", "world_region",
+    )
+    out = out.merge(tip_map, on="entry_id", how="left")
+    out.to_csv(f"../data/model/external_markers_present/input/{dv}.csv", index=False)

@@ -1,0 +1,7 @@
+Marker,Type,N,beta,ci_lo,ci_hi,post_prob,AME
+Circumcision,Permanent,142,0.26,-0.62,1.16,0.72,0.06
+Tattoos/Scarification,Permanent,138,0.31,-0.51,1.16,0.77,0.06
+Dress,Transitory,136,-0.02,-0.77,0.74,0.47,-0
+Food Taboos,Transitory,141,0.59,-0.11,1.31,0.95,0.11
+Hair,Transitory,133,0.19,-0.51,0.91,0.69,0.04
+Ornaments,Transitory,135,0.05,-0.65,0.77,0.56,0.01

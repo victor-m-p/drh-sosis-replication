@@ -1,0 +1,282 @@
+---
+title: "6_conditional"
+output: html_document
+---
+
+Analysis of marker ~ external violent conflict, restricted to entries where the parent
+question ("Are extra-ritual in-group markers present") is answered "Yes".
+
+The six markers modeled here are child questions of that parent, and a coder only sees
+them when the parent is "Yes". 1_curate_data.py therefore infers "No" for every child of
+a "No" parent, which makes ~62% of each child marker's rows in the main analysis a copy
+of the parent's answer rather than an observed coding. Dropping those rows (done in
+4_curate_models.py) changes the question from "does conflict predict that markers are
+present at all?" to "given that markers are present, does conflict predict which kind?".
+
+Note that the parent is itself an outcome of conflict, so this is a different estimand
+rather than a corrected version of 1_external.Rmd — conditioning on it is conditioning on
+a post-treatment variable. The two analyses are reported side by side, not one in place
+of the other.
+
+Baseline model only. The phylogenetic variant is deferred: this sample has 164 entries
+across 83 language tips (mostly singletons), so the tip-level random intercept would
+absorb most of the conflict effect and the result would be near-uninformative.
+
+```{r}
+library(pacman)
+p_load(brms, tidyverse, here, tidybayes, ggdist)
+set.seed(12532)
+
+dir.create(here("data","model","external_markers_present","results"),
+           recursive = TRUE, showWarnings = FALSE)
+```
+
+```{r}
+
+# the six sub-questions of "Are extra-ritual in-group markers present", ordered permanent
+# first then transitory (the contrast of interest) rather than alphabetically. Unlike
+# 1_external.Rmd there is no parent/sub distinction to encode here — every marker in this
+# analysis is a child question — so the marker_level machinery from that file is dropped.
+markers <- c(
+  "circumcision", "tattoos_scarification",       # permanent
+  "dress", "food_taboos", "hair", "ornaments"    # transitory
+)
+
+marker_labels <- c(
+  circumcision="Circumcision", tattoos_scarification="Tattoos/Scarification",
+  dress="Dress", food_taboos="Food Taboos", hair="Hair", ornaments="Ornaments"
+)
+
+marker_type <- c(
+  circumcision          = "Permanent",
+  tattoos_scarification = "Permanent",
+  dress                 = "Transitory",
+  food_taboos           = "Transitory",
+  hair                  = "Transitory",
+  ornaments             = "Transitory"
+)
+
+# identical to 1_external.Rmd so the two analyses stay comparable
+priors <- c(
+  prior(normal(0, 1.5), class = Intercept),
+  prior(normal(0, 1),   class = b),
+  prior(exponential(1), class = sd)
+)
+
+fits <- list()
+for (m in markers) {
+  d <- read_csv(here("data","model","external_markers_present","input", paste0(m, ".csv")),
+                show_col_types = FALSE) |>
+    mutate(world_region = fct_relevel(factor(world_region), "Africa"))
+
+  f <- bf(as.formula(paste(m, "~ 1 + violent_external + year_scaled + (1 | world_region)")))
+
+  fit <- brm(f, data = d, family = bernoulli("logit"), prior = priors,
+             chains = 4, iter = 4000, warmup = 2000, cores = 4,
+             control = list(adapt_delta = 0.99),
+             seed = 51252, backend = "cmdstanr", silent = 2)
+
+  fits[[m]] <- list(fit = fit, data = d, n = nrow(d))
+}
+
+```
+
+Convergence
+
+```{r diagnostics_baseline}
+
+diag_tbl <- map_dfr(markers, function(m) {
+  fit <- fits[[m]]$fit
+  tibble(
+    Marker       = marker_labels[m],
+    N            = fits[[m]]$n,
+    divergences  = sum(subset(nuts_params(fit), Parameter=="divergent__")$Value),
+    max_rhat     = round(max(rhat(fit), na.rm=TRUE), 3),
+    min_bulk_ess = round(min(summary(fit)$fixed[,"Bulk_ESS"]), 0),
+    min_tail_ess = round(min(summary(fit)$fixed[,"Tail_ESS"]), 0)
+  )
+})
+diag_tbl
+write_csv(diag_tbl, here("data","model","external_markers_present","results","diagnostics_baseline.csv"))
+
+```
+
+Fixed effects table
+
+```{r fixed_effects_baseline}
+
+fmt <- function(est, lo, hi) sprintf("%.2f [%.2f, %.2f]", est, lo, hi)
+
+fixed_tbl <- map_dfr(markers, function(m) {
+  fit <- fits[[m]]$fit
+  fx  <- fixef(fit) # rows: Intercept, violent_external, year_scaled
+
+  tibble(
+    Marker           = marker_labels[m],
+    N                = fits[[m]]$n,
+    Intercept        = fmt(fx["Intercept","Estimate"], fx["Intercept","Q2.5"], fx["Intercept","Q97.5"]),
+    violent_external = fmt(fx["violent_external","Estimate"], fx["violent_external","Q2.5"], fx["violent_external","Q97.5"]),
+    year_scaled      = fmt(fx["year_scaled","Estimate"], fx["year_scaled","Q2.5"], fx["year_scaled","Q97.5"])
+  )
+})
+
+fixed_tbl
+write_csv(fixed_tbl, here("data","model","external_markers_present","results","fixed_effects_baseline.csv"))
+
+```
+
+Random effects (world region). Per-region breakdown is deliberately not reported for this
+analysis: with 164 entries spread over 10 regions (5 in Central Eurasia, 5 in
+Oceania-Australia) the raw regional rates are too thin to interpret.
+
+```{r random_effects_baseline}
+
+sd_tbl <- map_dfr(markers, function(m) {
+  fit <- fits[[m]]$fit
+  rf  <- summary(fit)$random$world_region  # row: sd(Intercept)
+
+  tibble(
+    Marker          = marker_labels[m],
+    N               = fits[[m]]$n,
+    sd_world_region = fmt(rf["sd(Intercept)","Estimate"],
+                          rf["sd(Intercept)","l-95% CI"],
+                          rf["sd(Intercept)","u-95% CI"])
+  )
+})
+
+sd_tbl
+write_csv(sd_tbl, here("data","model","external_markers_present","results","random_effects_baseline.csv"))
+
+```
+
+Hypothesis test + AME. Same construction as 1_external.Rmd so the two are directly
+comparable.
+
+```{r hypothesis_ame_baseline}
+
+results_tbl <- map_dfr(markers, function(m) {
+  fit <- fits[[m]]$fit
+  d   <- fits[[m]]$data
+
+  h <- hypothesis(fit, "violent_external > 0", alpha = 0.025)$hypothesis
+
+  nd <- expand_grid(violent_external = c(0,1), year_scaled = 0,
+                    world_region = unique(d$world_region))
+  ame <- fit |> epred_draws(newdata = nd, re_formula = NA) |> ungroup() |>
+    group_by(.draw, violent_external) |>
+    summarise(p = mean(.epred), .groups = "drop") |>
+    pivot_wider(names_from = violent_external, values_from = p, names_prefix = "cond") |>
+    mutate(ame = cond1 - cond0) |> pull(ame)
+
+  tibble(
+    Marker = marker_labels[m],
+    Type   = marker_type[m],
+    N      = fits[[m]]$n,
+    beta   = h$Estimate,
+    ci_lo  = h$CI.Lower,
+    ci_hi  = h$CI.Upper,
+    post_prob = h$Post.Prob,
+    AME    = mean(ame)
+  )
+}) |> mutate(across(where(is.numeric), \(x) round(x, 2)))
+
+results_tbl
+write_csv(results_tbl, here("data","model","external_markers_present","results","hypothesis_ame_baseline.csv"))
+
+```
+
+AME draws for all markers, kept as draws so both plots below can be built from them (the
+base rates are the cond0/cond1 pair before collapsing to their difference). Same
+construction as the AME column of the table above.
+
+```{r ame_draws}
+
+ame_all <- map_dfr(markers, function(m) {
+  fit <- fits[[m]]$fit; d <- fits[[m]]$data
+  nd <- expand_grid(violent_external = c(0,1), year_scaled = 0,
+                    world_region = unique(d$world_region))
+  fit |> epred_draws(newdata = nd, re_formula = NA) |> ungroup() |>
+    group_by(.draw, violent_external) |>
+    summarise(p = mean(.epred), .groups = "drop") |>
+    pivot_wider(names_from = violent_external, values_from = p, names_prefix = "cond") |>
+    mutate(ame = cond1 - cond0, marker = m)
+})
+
+# two orderings, following 1_external.Rmd: the base-rates plot sorts by prevalence under
+# the focal condition, the AME plot by effect size. The permanent/transitory split is
+# deliberately not encoded in the labels — bold already means "top-level question" in the
+# figures of 1_external.Rmd, and the split is carried by the Type column of results_tbl.
+marker_order <- ame_all |> group_by(marker) |>
+  summarise(md = median(ame)) |> arrange(md) |> pull(marker)
+
+marker_order_prevalence <- ame_all |> group_by(marker) |>
+  summarise(md = median(cond1)) |> arrange(md) |> pull(marker)
+
+n_labels <- map_chr(markers, \(m) {
+  paste0(marker_labels[m], " (n=", fits[[m]]$n, ")")
+}) |> setNames(markers)
+
+```
+
+Estimated base rates: predicted probability under violent_external = 0 vs. = 1. Note that
+these are conditional prevalences (among groups that have markers at all), so they sit
+much higher than the corresponding plot in 1_external.Rmd and are not comparable to it.
+
+```{r base_rates_baseline}
+
+p_base_rates <- ame_all |>
+  pivot_longer(c(cond0, cond1), names_to = "condition", values_to = "p") |>
+  mutate(condition = fct_recode(condition,
+                                "No violent conflict" = "cond0",
+                                "Violent conflict"    = "cond1"),
+         marker_label = factor(n_labels[marker], levels = n_labels[marker_order_prevalence])) |>
+  ggplot(aes(x = p, y = marker_label, fill = condition)) +
+  stat_halfeye(.width = c(0.66, 0.95), point_interval = mean_qi,
+               position = position_dodge(width = 0.3), scale = 1.0,
+               color = "black", alpha = 0.7) +
+  # headroom at the top so the last marker's density is not clipped by the panel
+  scale_y_discrete(expand = expansion(add = c(0.6, 1.0))) +
+  scale_fill_manual(values = c("No violent conflict" = "#8FBF9F",
+                               "Violent conflict"    = "#D98B72")) +
+  labs(x = "Estimated prevalence (given markers present)", y = NULL, fill = NULL) +
+  theme_bw(base_size = 16) +
+  theme(
+    axis.title.x    = element_text(size = 17),
+    axis.text.y     = element_text(size = 15),
+    axis.text.x     = element_text(size = 14),
+    legend.position = "top",
+    plot.margin     = margin(12, 16, 12, 16)
+  )
+
+ggsave(here("data","model","external_markers_present","results","markers_present_base_rates_baseline.pdf"),
+       p_base_rates, width = 9, height = 7, device = "pdf")
+p_base_rates
+
+```
+
+Average marginal effect of external violent conflict per marker.
+
+```{r ame_baseline}
+
+p_ame <- ame_all |>
+  mutate(marker_label = factor(n_labels[marker], levels = n_labels[marker_order])) |>
+  ggplot(aes(x = ame, y = marker_label)) +
+  stat_halfeye(.width = c(0.66, 0.95), point_interval = mean_qi, scale = 0.9,
+               fill = "#6B9AC4", color = "black", alpha = 0.7) +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "grey40") +
+  # headroom at the top so the last marker's density is not clipped by the panel
+  scale_y_discrete(expand = expansion(add = c(0.6, 1.0))) +
+  labs(x = "Average marginal effect (probability)", y = NULL) +
+  theme_bw(base_size = 16) +
+  theme(
+    axis.title.x    = element_text(size = 17),
+    axis.text.y     = element_text(size = 15),
+    axis.text.x     = element_text(size = 14),
+    plot.margin     = margin(12, 16, 12, 16)
+  )
+
+ggsave(here("data","model","external_markers_present","results","markers_present_ame_baseline.pdf"),
+       p_ame, width = 9, height = 7, device = "pdf")
+p_ame
+
+```

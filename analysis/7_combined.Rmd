@@ -1,0 +1,284 @@
+---
+title: "7_combined"
+output: html_document
+---
+
+A single "shared" model over the six child markers of "Are extra-ritual in-group markers
+present", with marker type (permanent vs. transitory) as a moderator of the external
+conflict effect. Where 1_external.Rmd and 6_conditional.Rmd fit one model per marker and
+leave the reader to compare eight overlapping intervals, this estimates the
+permanent-minus-transitory difference directly, as a single posterior quantity.
+
+The same six markers and the same model are fitted to two samples:
+
+  Full sample      all entries with a coding on the marker (data/model/external/input)
+  Markers present  only entries whose parent question is "Yes", i.e. dropping the ~62%
+                   of rows whose child answer was inherited from the parent rather than
+                   observed (data/model/external_markers_present/input)
+
+Holding the marker set fixed across the two means the only thing that differs is the
+inherited rows, so the change in the contrast measures how much the coding hierarchy
+inflates it.
+
+Two limitations to keep in view when reading the output:
+
+  - Only two of the six markers are permanent (circumcision, tattoos/scarification), so
+    the model cannot fully separate "permanent markers behave differently" from "these
+    two markers behave differently". The by-marker random slope propagates that into the
+    contrast interval, which is why a wide interval is the expected result rather than a
+    failure of the fit.
+  - Restricting to parent = "Yes" conditions on a variable that is itself an outcome of
+    conflict, so the markers-present fit is a different estimand (compositional) rather
+    than a corrected version of the full-sample fit. Neither supersedes the other.
+
+The long frame is built here rather than in 4_curate_models.py, deliberately: it is a pure
+reshape of per-marker CSVs that already exist, and writing it to disk would create a second
+copy of the same rows that could drift out of sync with them.
+
+This file is exploratory and deliberately writes nothing to disk — no results CSVs, no
+figures. It is not (yet) part of the paper; 6_conditional.Rmd is. Everything below is
+printed inline only. If this analysis is adopted, add the saves then.
+
+```{r}
+library(pacman)
+p_load(brms, tidyverse, here, tidybayes, ggdist)
+set.seed(12532)
+```
+
+```{r}
+
+markers <- c(
+  "circumcision", "tattoos_scarification",       # permanent
+  "dress", "food_taboos", "hair", "ornaments"    # transitory
+)
+
+marker_labels <- c(
+  circumcision="Circumcision", tattoos_scarification="Tattoos/Scarification",
+  dress="Dress", food_taboos="Food Taboos", hair="Hair", ornaments="Ornaments"
+)
+
+# "Transitory" first so it is the reference level: the interaction term then reads as
+# permanent minus transitory, which is the direction the hypothesis is stated in.
+marker_type_lookup <- c(
+  circumcision          = "Permanent",
+  tattoos_scarification = "Permanent",
+  dress                 = "Transitory",
+  food_taboos           = "Transitory",
+  hair                  = "Transitory",
+  ornaments             = "Transitory"
+)
+
+sample_dirs <- c(
+  "Full sample"     = here("data","model","external","input"),
+  "Markers present" = here("data","model","external_markers_present","input")
+)
+
+# stack the six per-marker files into one long frame: one row per (entry, marker)
+read_long <- function(dir) {
+  map_dfr(markers, function(m) {
+    read_csv(file.path(dir, paste0(m, ".csv")), show_col_types = FALSE) |>
+      rename(y = all_of(m)) |>
+      mutate(marker = m)
+  }) |>
+    mutate(
+      marker       = factor(marker, levels = markers),
+      marker_type  = factor(marker_type_lookup[as.character(marker)],
+                            levels = c("Transitory", "Permanent")),
+      world_region = fct_relevel(factor(world_region), "Africa"),
+      entry_id     = factor(entry_id)
+    )
+}
+
+# lkj(2) mildly regularizes the marker intercept/slope correlation, which is estimated
+# from only six markers; the rest match 1_external.Rmd and 6_conditional.Rmd
+priors <- c(
+  prior(normal(0, 1.5), class = Intercept),
+  prior(normal(0, 1),   class = b),
+  prior(exponential(1), class = sd),
+  prior(lkj(2),         class = cor)
+)
+
+fits <- list()
+for (s in names(sample_dirs)) {
+  d <- read_long(sample_dirs[[s]])
+
+  f <- bf(y ~ 1 + violent_external * marker_type + year_scaled +
+            (1 | world_region) + (1 + violent_external | marker) + (1 | entry_id))
+
+  fit <- brm(f, data = d, family = bernoulli("logit"), prior = priors,
+             chains = 4, iter = 4000, warmup = 2000, cores = 4,
+             control = list(adapt_delta = 0.99, max_treedepth = 12),
+             seed = 51252, backend = "cmdstanr", silent = 2)
+
+  fits[[s]] <- list(fit = fit, data = d,
+                    n_rows = nrow(d), n_entries = n_distinct(d$entry_id))
+}
+
+```
+
+Convergence
+
+```{r diagnostics}
+
+diag_tbl <- map_dfr(names(fits), function(s) {
+  fit <- fits[[s]]$fit
+  tibble(
+    Sample       = s,
+    n_rows       = fits[[s]]$n_rows,
+    n_entries    = fits[[s]]$n_entries,
+    divergences  = sum(subset(nuts_params(fit), Parameter=="divergent__")$Value),
+    max_rhat     = round(max(rhat(fit), na.rm=TRUE), 3),
+    min_bulk_ess = round(min(summary(fit)$fixed[,"Bulk_ESS"]), 0),
+    min_tail_ess = round(min(summary(fit)$fixed[,"Tail_ESS"]), 0)
+  )
+})
+diag_tbl
+
+```
+
+The contrast. `b_violent_external` is the conflict slope for transitory markers (the
+reference level); the interaction is permanent minus transitory; their sum is the slope
+for permanent markers. Reported on the log-odds scale with a 95% credible interval, plus
+the directional posterior probability that permanent exceeds transitory.
+
+```{r contrast_logodds}
+
+fmt <- function(est, lo, hi) sprintf("%.2f [%.2f, %.2f]", est, lo, hi)
+
+qi <- function(x) fmt(median(x), quantile(x, 0.025), quantile(x, 0.975))
+
+contrast_draws <- map_dfr(names(fits), function(s) {
+  draws  <- as_draws_df(fits[[s]]$fit)
+  transitory <- draws$b_violent_external
+  difference <- draws$`b_violent_external:marker_typePermanent`
+
+  tibble(Sample = s, .draw = seq_along(transitory),
+         Transitory = transitory,
+         Permanent  = transitory + difference,
+         Difference = difference)
+})
+
+# intervals and probabilities are summarised separately and joined: doing both in one
+# summarise() would overwrite the numeric Difference draws with their formatted string
+# before the probabilities below could be computed from them
+contrast_intervals <- contrast_draws |>
+  group_by(Sample) |>
+  summarise(across(c(Transitory, Permanent, Difference), qi), .groups = "drop")
+
+contrast_probs <- contrast_draws |>
+  group_by(Sample) |>
+  summarise(
+    `P(diff > 0)` = round(mean(Difference > 0), 2),
+    # ROPE: probability the difference is smaller than a half unit of log odds in either
+    # direction. Stated explicitly because "no difference" cannot be read off an interval
+    # that merely overlaps zero.
+    `P(|diff| < 0.5)` = round(mean(abs(Difference) < 0.5), 2),
+    .groups = "drop"
+  )
+
+contrast_tbl <- left_join(contrast_intervals, contrast_probs, by = "Sample") |>
+  mutate(Sample = fct_relevel(Sample, "Full sample", "Markers present")) |>
+  arrange(Sample)
+
+contrast_tbl
+
+```
+
+The same contrast on the probability scale. AME for each marker type is the difference in
+predicted probability between conflict and no conflict, for a typical marker of that type
+(re_formula = NA, so marker, entry and region effects are all excluded), at the mean year.
+
+```{r contrast_ame}
+
+ame_draws <- map_dfr(names(fits), function(s) {
+  fit <- fits[[s]]$fit
+  d   <- fits[[s]]$data
+
+  # grouping columns must be present even though re_formula = NA drops their effects
+  nd <- expand_grid(
+    violent_external = c(0, 1),
+    marker_type      = factor(c("Transitory", "Permanent"),
+                              levels = c("Transitory", "Permanent")),
+    year_scaled      = 0
+  ) |>
+    mutate(world_region = d$world_region[1], marker = d$marker[1], entry_id = d$entry_id[1])
+
+  fit |> epred_draws(newdata = nd, re_formula = NA) |> ungroup() |>
+    select(.draw, violent_external, marker_type, .epred) |>
+    pivot_wider(names_from = violent_external, values_from = .epred, names_prefix = "cond") |>
+    mutate(ame = cond1 - cond0) |>
+    select(.draw, marker_type, ame) |>
+    pivot_wider(names_from = marker_type, values_from = ame) |>
+    mutate(Difference = Permanent - Transitory, Sample = s)
+})
+
+# split for the same reason as contrast_tbl above
+ame_intervals <- ame_draws |>
+  group_by(Sample) |>
+  summarise(across(c(Transitory, Permanent, Difference), qi), .groups = "drop")
+
+ame_probs <- ame_draws |>
+  group_by(Sample) |>
+  summarise(`P(diff > 0)` = round(mean(Difference > 0), 2), .groups = "drop")
+
+ame_tbl <- left_join(ame_intervals, ame_probs, by = "Sample") |>
+  mutate(Sample = fct_relevel(Sample, "Full sample", "Markers present")) |>
+  arrange(Sample)
+
+ame_tbl
+
+```
+
+Per-marker conflict slopes implied by the model, to check that the type contrast is not
+being carried by a single marker. These are shrunk toward their type mean, so they will
+be less spread out than the independent per-marker fits.
+
+```{r marker_slopes}
+
+slope_tbl <- map_dfr(names(fits), function(s) {
+  fit <- fits[[s]]$fit
+  draws <- as_draws_df(fit)
+
+  map_dfr(markers, function(m) {
+    slope <- draws$b_violent_external +
+      draws[[paste0("r_marker[", m, ",violent_external]")]] +
+      if (marker_type_lookup[m] == "Permanent") draws$`b_violent_external:marker_typePermanent` else 0
+
+    tibble(Sample = s, Marker = marker_labels[m],
+           Type = marker_type_lookup[m], slope = qi(slope))
+  })
+}) |>
+  mutate(Sample = fct_relevel(Sample, "Full sample", "Markers present")) |>
+  arrange(Sample, match(Marker, marker_labels[markers]))
+
+slope_tbl
+
+```
+
+```{r contrast_plot}
+
+p_contrast <- contrast_draws |>
+  pivot_longer(c(Transitory, Permanent, Difference),
+               names_to = "quantity", values_to = "value") |>
+  mutate(quantity = fct_relevel(quantity, "Difference", "Permanent", "Transitory"),
+         Sample   = fct_relevel(Sample, "Full sample", "Markers present")) |>
+  ggplot(aes(x = value, y = quantity, fill = Sample)) +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "grey40") +
+  stat_halfeye(.width = c(0.66, 0.95), point_interval = mean_qi,
+               position = position_dodge(width = 0.6), scale = 0.9,
+               color = "black", alpha = 0.7) +
+  scale_y_discrete(expand = expansion(add = c(0.6, 1.0))) +
+  scale_fill_manual(values = c("Full sample" = "#C8839E", "Markers present" = "#6B9AC4")) +
+  labs(x = "Effect of external violent conflict (log odds)", y = NULL, fill = NULL) +
+  theme_bw(base_size = 16) +
+  theme(
+    axis.title.x    = element_text(size = 17),
+    axis.text.y     = element_text(size = 15),
+    axis.text.x     = element_text(size = 14),
+    legend.position = "top",
+    plot.margin     = margin(12, 16, 12, 16)
+  )
+
+p_contrast
+
+```
