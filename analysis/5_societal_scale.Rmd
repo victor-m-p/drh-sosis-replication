@@ -11,6 +11,12 @@ set.seed(12532)
 
 d <- read_csv(here("data","preprocessed","answerset_large.csv"), show_col_types = FALSE)
 d %>% glimpse()
+
+# fit1/fit2 (state only) are compared with fit3/fit4 (state + conflict), so they are
+# fitted on the same rows: entries with conflict coded
+d_conflict <- d |> filter(!is.na(violent_external))
+
+dir.create(here("data","model","societal_scale","results"), recursive = TRUE, showWarnings = FALSE)
 ```
 
 ```{r}
@@ -25,13 +31,13 @@ priors <- c(
 
 
 Model 1: marker ~ state
-Extra-ritual in-group markers (credible)
+Extra-ritual in-group markers (same entries as model 3)
 
 ```{r}
 
 fit1 <- brm(extra_ritual_group_markers ~ 1 + state + year_scaled + (1|world_region), 
-            data = d, family = bernoulli("logit"), prior = priors,
-             chains = 4, iter = 4000, warmup = 2000, cores = 4,
+            data = d_conflict, family = bernoulli("logit"), prior = priors,
+             chains = 4, iter = 8000, warmup = 2000, cores = 4,
              control = list(adapt_delta = 0.99),
              seed = 51252, backend = "cmdstanr", silent = 2)
 
@@ -40,13 +46,13 @@ summary(fit1)
 ```
 
 Model 2: marker ~ state
-Permanent scarring (not credible)
+Permanent scarring (same entries as model 4)
 
 ```{r}
 
 fit2 <- brm(permanent_scarring ~ 1 + state + year_scaled + (1|world_region), 
-            data = d, family = bernoulli("logit"), prior = priors,
-             chains = 4, iter = 4000, warmup = 2000, cores = 4,
+            data = d_conflict, family = bernoulli("logit"), prior = priors,
+             chains = 4, iter = 8000, warmup = 2000, cores = 4,
              control = list(adapt_delta = 0.99),
              seed = 51252, backend = "cmdstanr", silent = 2)
 
@@ -61,7 +67,7 @@ Extra-ritual in-group markers
 
 fit3 <- brm(extra_ritual_group_markers ~ 1 + state + violent_external + year_scaled + (1|world_region), 
             data = d, family = bernoulli("logit"), prior = priors,
-             chains = 4, iter = 4000, warmup = 2000, cores = 4,
+             chains = 4, iter = 8000, warmup = 2000, cores = 4,
              control = list(adapt_delta = 0.99),
              seed = 51252, backend = "cmdstanr", silent = 2)
 
@@ -70,13 +76,13 @@ summary(fit3)
 ```
 
 Model 4: marker ~ state + violent_external
-Extra-ritual in-group markers (not credible)
+Permanent scarring
 
 ```{r}
 
 fit4 <- brm(permanent_scarring ~ 1 + state + violent_external + year_scaled + (1|world_region), 
             data = d, family = bernoulli("logit"), prior = priors,
-             chains = 4, iter = 4000, warmup = 2000, cores = 4,
+             chains = 4, iter = 8000, warmup = 2000, cores = 4,
              control = list(adapt_delta = 0.99),
              seed = 51252, backend = "cmdstanr", silent = 2)
 
@@ -90,7 +96,7 @@ Model 5: violent_external ~ state
 
 fit5 <- brm(violent_external ~ 1 + state + year_scaled + (1|world_region), 
             data = d, family = bernoulli("logit"), prior = priors,
-             chains = 4, iter = 4000, warmup = 2000, cores = 4,
+             chains = 4, iter = 8000, warmup = 2000, cores = 4,
              control = list(adapt_delta = 0.99),
              seed = 51252, backend = "cmdstanr", silent = 2)
 
@@ -98,50 +104,141 @@ summary(fit5)
 
 ```
 
-BRMS hypothesis
+Reporting order, shared by the diagnostics and fixed-effects tables below: the conflict
+model first, then each marker's total (state only) and conditional (state + conflict) model
+side by side.
 
-```{r}
+```{r state_fits}
 
-h_fit3_state <- hypothesis(fit3, "state < 0", alpha = 0.025)
-h_fit3_conflict <- hypothesis(fit3, "violent_external > 0", alpha = 0.025)
-h_fit4_state <- hypothesis(fit4, "state < 0", alpha = 0.025)
-h_fit4_conflict <- hypothesis(fit4, "violent_external > 0", alpha = 0.025)
-h_fit5_state <- hypothesis(fit5, "state < 0", alpha = 0.025)
-
-```
-
-Check each:
-
-```{r}
-
-h_fit3_state
+state_fits <- list(
+  "Violent external conflict ~ state" = fit5,
+  "Extra-ritual in-group markers ~ state" = fit1,
+  "Extra-ritual in-group markers ~ state + conflict" = fit3,
+  "Permanent scarring ~ state" = fit2,
+  "Permanent scarring ~ state + conflict" = fit4
+)
 
 ```
 
-```{r}
+Convergence
 
-h_fit3_conflict
+```{r diagnostics}
 
-```
+diag_tbl <- map_dfr(names(state_fits), function(nm) {
+  fit <- state_fits[[nm]]
+  fixed <- summary(fit)$fixed
+  sds <- bind_rows(map(summary(fit)$random, as.data.frame))
 
-```{r}
-
-h_fit3_state
-
-```
-
-
-```{r}
-
-h_fit4_conflict
-
-```
-
-```{r}
-
-h_fit4_state
+  tibble(
+    Model = nm,
+    N = nobs(fit),
+    divergences = sum(subset(nuts_params(fit), Parameter=="divergent__")$Value),
+    max_rhat = round(max(rhat(fit), na.rm=TRUE), 3),
+    min_bulk_ess = round(min(c(fixed[,"Bulk_ESS"], sds[,"Bulk_ESS"])), 0),
+    min_tail_ess = round(min(c(fixed[,"Tail_ESS"], sds[,"Tail_ESS"])), 0)
+  )
+})
+diag_tbl
+write_csv(diag_tbl, here("data","model","societal_scale","results","diagnostics.csv"))
 
 ```
 
+Posterior predictive check: observed prevalence against its posterior predictive
+interval, split by statehood (the predictor shared by all five models; external conflict
+is the outcome of the first one).
 
+```{r ppc}
 
+ppc <- map_dfr(names(state_fits), function(nm) {
+  fit <- state_fits[[nm]]
+  d <- fit$data
+  y <- d[[1]] # brms puts the response first in the model frame
+  yrep <- posterior_predict(fit, ndraws = 1000)
+  state <- ifelse(d$state == 1, "Yes", "No")
+
+  map_dfr(c("No", "Yes"), function(g) {
+    idx <- which(state == g)
+    prop <- rowMeans(yrep[, idx, drop = FALSE])
+    tibble(
+      Model = nm,
+      state = g,
+      observed = mean(y[idx]),
+      lo = as.numeric(quantile(prop, 0.025)),
+      hi = as.numeric(quantile(prop, 0.975))
+    )
+  })
+}) |>
+  mutate(Model = factor(Model, levels = rev(names(state_fits))))
+
+ggplot(ppc, aes(y = Model, colour = state)) +
+  geom_linerange(aes(xmin = lo, xmax = hi), linewidth = 3, alpha = 0.4,
+                 position = position_dodge(width = 0.5)) +
+  geom_point(aes(x = observed), size = 2,
+             position = position_dodge(width = 0.5)) +
+  scale_colour_manual(values = c(No = "#8FBF9F", Yes = "#D98B72")) +
+  labs(x = "Outcome prevalence", y = NULL, colour = "State",
+       subtitle = "Bars: 95% posterior predictive interval. Points: observed proportion.") +
+  theme_bw(base_size = 12) +
+  theme(legend.position = "top")
+
+```
+
+Fixed effects. A term absent from a model is written as NA here and rendered as a dash in
+the LaTeX table; external violent conflict is the outcome of the first model, not a term.
+
+```{r fixed_effects}
+
+fmt <- function(est, lo, hi) sprintf("%.2f [%.2f, %.2f]", est, lo, hi)
+
+fmt_term <- function(fx, term) {
+  if (!term %in% rownames(fx)) return(NA_character_)
+  fmt(fx[term,"Estimate"], fx[term,"Q2.5"], fx[term,"Q97.5"])
+}
+
+fixed_tbl <- map_dfr(names(state_fits), function(nm) {
+  fit <- state_fits[[nm]]
+  fx <- fixef(fit)
+
+  tibble(
+    Model = nm,
+    N = nobs(fit),
+    Intercept = fmt_term(fx, "Intercept"),
+    state = fmt_term(fx, "state"),
+    violent_external = fmt_term(fx, "violent_external"),
+    year_scaled = fmt_term(fx, "year_scaled")
+  )
+})
+
+fixed_tbl
+write_csv(fixed_tbl, here("data","model","societal_scale","results","state_fixed_effects.csv"))
+
+```
+
+Directional hypothesis tests, same form as the hypothesis tables in analyses 1-4.
+
+```{r hypothesis_table}
+
+hyp_tbl <- map_dfr(names(state_fits), function(nm) {
+  fit <- state_fits[[nm]]
+  terms <- intersect(c("state", "violent_external"), rownames(fixef(fit)))
+
+  map_dfr(terms, function(tm) {
+    # directions follow Section 3.4: statehood lowers rates, conflict raises them
+    dir <- if (tm == "state") "< 0" else "> 0"
+    h <- hypothesis(fit, paste(tm, dir), alpha = 0.025)$hypothesis
+
+    tibble(
+      Model = nm,
+      hypothesis = paste(tm, dir),
+      beta = round(h$Estimate, 2),
+      ci_lo = round(h$CI.Lower, 2),
+      ci_hi = round(h$CI.Upper, 2),
+      post_prob = round(h$Post.Prob, 2)
+    )
+  })
+})
+
+hyp_tbl
+write_csv(hyp_tbl, here("data","model","societal_scale","results","state_hypothesis.csv"))
+
+```

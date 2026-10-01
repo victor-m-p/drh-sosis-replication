@@ -1,0 +1,12 @@
+component,version
+R,4.6.1
+brms,2.23.0
+tidyverse,2.0.0
+here,1.0.2
+ggdist,3.3.3
+ape,5.8.1
+ggtext,0.1.2
+marginaleffects,1.0.0
+cmdstanr,0.9.0
+posterior,1.7.0
+cmdstan,2.39.0

@@ -22,7 +22,7 @@ for suffix in ["baseline", "phylo"]:
     df = order_by_marker(df)
     write_latex_table(
         df, OUT / f"fixed_effects_{suffix}.tex",
-        caption=f"Fixed effects, {suffix} model (95\% credibility intervals).",
+        caption=f"Fixed effects, {suffix} model (95\% credible intervals).",
         label=f"tab:{PIPELINE}_fixed_effects_{suffix}",
         bold_marker_col="Marker", group_by_marker=True,
         col_widths={"Marker": "p{4cm}"},
@@ -47,6 +47,7 @@ for suffix in ["baseline", "phylo"]:
 for suffix in ["baseline", "phylo"]:
     df = pd.read_csv(IN / f"hypothesis_ame_{suffix}.csv")
     df["beta"] = [fmt(b, lo, hi) for b, lo, hi in zip(df["beta"], df["ci_lo"], df["ci_hi"])]
+    df["AME"] = [fmt(a, lo, hi) for a, lo, hi in zip(df["AME"], df["AME_lo"], df["AME_hi"])]
     df = df[["Marker", "N", "beta", "post_prob", "AME"]]
     df = order_by_marker(df)
     write_latex_table(
@@ -54,7 +55,7 @@ for suffix in ["baseline", "phylo"]:
         caption=f"Hypothesis test ($\\beta > 0$) and average marginal effect, {suffix} model.",
         label=f"tab:{PIPELINE}_hypothesis_ame_{suffix}",
         bold_marker_col="Marker", group_by_marker=True,
-        col_labels={"beta": "$\\beta$ (log odds)", "post_prob": "PP"},
+        col_labels={"beta": "$\\beta$ (log odds)", "post_prob": "PP", "AME": "AME [95\\% CI]"},
     )
 
 # region effects (multiple rows per marker, one per world_region)
@@ -65,9 +66,14 @@ df = df[["Marker", "world_region", "n", "raw_rate", "model_estimate"]]
 df = order_by_marker(df)
 write_latex_table(
     df, OUT / "region_effects_baseline.tex",
-    caption="Per-region raw and model-estimated rates, baseline model.",
+    caption=(
+        "Per-region raw and model-estimated rates, baseline. Model estimates are "
+        "predicted prevalence averaged over the observed conflict values and start "
+        "years within each region, including the regional random intercept."
+    ),
     label=f"tab:{PIPELINE}_region_effects_baseline",
-    col_labels={"world_region": "Region", "raw_rate": "Raw Rate", "model_estimate": "Estimate"},
+    col_labels={"world_region": "Region", "raw_rate": "Raw Rate",
+                "model_estimate": "Estimate [95\\% CI]"},
     longtable=True,
 )
 
@@ -76,20 +82,34 @@ df = pd.read_csv(IN / "phylo_signal.csv")
 df = order_by_marker(df)
 write_latex_table(
     df, OUT / "phylo_signal.tex",
-    caption="Phylogenetic signal by marker.",
+    caption=(
+        "Phylogenetic signal by marker. Proportion of tip-level variance that is "
+        "tree-structured, computed per posterior draw as $\\sigma^2_{\\mathrm{phylo}} / "
+        "(\\sigma^2_{\\mathrm{phylo}} + \\sigma^2_{\\mathrm{tip}})$ on the logit scale. "
+        "This is not Pagel's $\\lambda$."
+    ),
     label=f"tab:{PIPELINE}_phylo_signal",
     bold_marker_col="Marker", group_by_marker=True,
-    col_labels={"phylo_signal": "Phylo signal ($\\lambda$)"},
+    col_labels={"phylo_signal": "$\\sigma^2_{\\mathrm{phylo}} / "
+                                "(\\sigma^2_{\\mathrm{phylo}} + \\sigma^2_{\\mathrm{tip}})$"},
 )
 
 # tattoos/scarification family breakdown: single-marker deep dive, not marker-keyed,
 # so no ordering/bolding applies
-df = pd.read_csv(IN / "tip_effects_tattoos_scarification.csv")
+df = pd.read_csv(IN / "family_effects_tattoos_scarification.csv")
 df["family"] = [f"{FAMILY_NAMES[c]} ({c})" if c in FAMILY_NAMES else c for c in df["family"]]
+df["model_estimate"] = [fmt(e, lo, hi) for e, lo, hi in
+                         zip(df["model_estimate"], df["ci_lo"], df["ci_hi"])]
+df = df[["family", "total_n", "n_tips", "raw_rate", "model_estimate"]]
 write_latex_table(
     df, OUT / "tattoos_scarification_family.tex",
-    caption="Tattoos/Scarification: raw and model-estimated rate by language family.",
+    caption=(
+        "Tattoos/Scarification: raw and model-estimated rate by language family. Both rates "
+        "are averaged over the entries in each family. Model estimates are predicted "
+        "prevalence at each entry's observed conflict value and start year, including the "
+        "phylogenetic and tip-level random effects."
+    ),
     label=f"tab:{PIPELINE}_tattoos_scarification_family",
     col_labels={"family": "Family", "total_n": "Total N", "n_tips": "Tips",
-                "mean_raw_rate": "Raw Rate", "mean_estimate": "Estimate"},
+                "raw_rate": "Raw Rate", "model_estimate": "Estimate [95\\% CI]"},
 )

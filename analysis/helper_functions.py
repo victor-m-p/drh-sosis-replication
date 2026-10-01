@@ -46,7 +46,8 @@ def fmt(est, lo, hi):
 
 
 def write_latex_table(df, out_path, caption, label, bold_marker_col=None, group_by_marker=False,
-                       col_widths=None, col_labels=None, longtable=False):
+                       col_widths=None, col_labels=None, longtable=False, midrule_after=None,
+                       font_size="\\small"):
     """
     Write a pandas DataFrame to a booktabs-style LaTeX table.
 
@@ -64,6 +65,9 @@ def write_latex_table(df, out_path, caption, label, bold_marker_col=None, group_
         on each page) instead of table+tabular. Needs \\usepackage{longtable} in the
         document preamble — for tables with too many rows to fit on one page (e.g.
         region_effects, one row per marker x region).
+    midrule_after: row positions (0-based) to follow with a \\midrule, for tables grouped
+        into blocks by something other than marker level (e.g. by outcome).
+    font_size: size command placed before the table, e.g. "\\footnotesize" for wide tables.
     """
     col_widths = col_widths or {}
     col_labels = col_labels or {}
@@ -71,11 +75,11 @@ def write_latex_table(df, out_path, caption, label, bold_marker_col=None, group_
     header_row = " & ".join(col_labels.get(c, c) for c in df.columns) + " \\\\"
     n_cols = len(df.columns)
 
-    midrule_after = None
+    midrules = set(midrule_after or [])
     if bold_marker_col is not None and group_by_marker:
         is_parent = df[bold_marker_col].map(MARKER_LEVEL).eq("parent").to_numpy()
         if is_parent.any():
-            midrule_after = is_parent.nonzero()[0].max()
+            midrules.add(is_parent.nonzero()[0].max())
 
     # raw numeric (float) columns get padded to 2 decimals, including trailing zeros
     # (e.g. 1.0 -> "1.00", 0.9 -> "0.90"); pre-formatted "est [lo, hi]" string columns and
@@ -89,12 +93,12 @@ def write_latex_table(df, out_path, caption, label, bold_marker_col=None, group_
             idx = df.columns.get_loc(bold_marker_col)
             cells[idx] = f"\\textbf{{{cells[idx]}}}"
         body.append(" & ".join(cells) + " \\\\")
-        if midrule_after is not None and i == midrule_after:
+        if i in midrules:
             body.append("\\midrule")
 
     if longtable:
         lines = [
-            "\\small",
+            font_size,
             f"\\begin{{longtable}}{{{col_format}}}",
             f"\\caption{{{caption}}} \\label{{{label}}} \\\\",
             "\\toprule", header_row, "\\midrule",
@@ -112,7 +116,7 @@ def write_latex_table(df, out_path, caption, label, bold_marker_col=None, group_
         ]
     else:
         lines = [
-            "\\begin{table}[!ht]", "\\centering", "\\small",
+            "\\begin{table}[!ht]", "\\centering", font_size,
             f"\\caption{{{caption}}}", f"\\label{{{label}}}",
             f"\\begin{{tabular}}{{{col_format}}}",
             "\\toprule", header_row, "\\midrule",

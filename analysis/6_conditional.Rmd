@@ -24,8 +24,13 @@ absorb most of the conflict effect and the result would be near-uninformative.
 
 ```{r}
 library(pacman)
-p_load(brms, tidyverse, here, tidybayes, ggdist)
+p_load(brms, tidyverse, here, ggdist, marginaleffects)
 set.seed(12532)
+
+# marginaleffects centres Bayesian estimates on the median by default.
+# should not matter a ton, but we use mean throughout in other analyses.
+# so just keeping it consistent here.
+options(marginaleffects_posterior_center = "mean")
 
 dir.create(here("data","model","external_markers_present","results"),
            recursive = TRUE, showWarnings = FALSE)
@@ -48,12 +53,12 @@ marker_labels <- c(
 )
 
 marker_type <- c(
-  circumcision          = "Permanent",
+  circumcision = "Permanent",
   tattoos_scarification = "Permanent",
-  dress                 = "Transitory",
-  food_taboos           = "Transitory",
-  hair                  = "Transitory",
-  ornaments             = "Transitory"
+  dress = "Transitory",
+  food_taboos = "Transitory",
+  hair = "Transitory",
+  ornaments = "Transitory"
 )
 
 # identical to 1_external.Rmd so the two analyses stay comparable
@@ -72,11 +77,11 @@ for (m in markers) {
   f <- bf(as.formula(paste(m, "~ 1 + violent_external + year_scaled + (1 | world_region)")))
 
   fit <- brm(f, data = d, family = bernoulli("logit"), prior = priors,
-             chains = 4, iter = 4000, warmup = 2000, cores = 4,
+             chains = 4, iter = 8000, warmup = 2000, cores = 4,
              control = list(adapt_delta = 0.99),
              seed = 51252, backend = "cmdstanr", silent = 2)
 
-  fits[[m]] <- list(fit = fit, data = d, n = nrow(d))
+  fits[[m]] <- list(fit = fit, data = d, n = nobs(fit))
 }
 
 ```
@@ -87,17 +92,58 @@ Convergence
 
 diag_tbl <- map_dfr(markers, function(m) {
   fit <- fits[[m]]$fit
+  fixed <- summary(fit)$fixed
+  sds <- bind_rows(map(summary(fit)$random, as.data.frame))
+
   tibble(
-    Marker       = marker_labels[m],
-    N            = fits[[m]]$n,
-    divergences  = sum(subset(nuts_params(fit), Parameter=="divergent__")$Value),
-    max_rhat     = round(max(rhat(fit), na.rm=TRUE), 3),
-    min_bulk_ess = round(min(summary(fit)$fixed[,"Bulk_ESS"]), 0),
-    min_tail_ess = round(min(summary(fit)$fixed[,"Tail_ESS"]), 0)
+    Marker = marker_labels[m],
+    N = fits[[m]]$n,
+    divergences = sum(subset(nuts_params(fit), Parameter=="divergent__")$Value),
+    max_rhat = round(max(rhat(fit), na.rm=TRUE), 3),
+    min_bulk_ess = round(min(c(fixed[,"Bulk_ESS"], sds[,"Bulk_ESS"])), 0),
+    min_tail_ess = round(min(c(fixed[,"Tail_ESS"], sds[,"Tail_ESS"])), 0)
   )
 })
 diag_tbl
 write_csv(diag_tbl, here("data","model","external_markers_present","results","diagnostics_baseline.csv"))
+
+```
+
+Posterior predictive check: observed prevalence against its posterior predictive
+interval, split by conflict status. 
+
+```{r ppc_baseline}
+
+ppc <- map_dfr(markers, function(m) {
+  fit <- fits[[m]]$fit
+  d <- fits[[m]]$data
+  yrep <- posterior_predict(fit, ndraws = 1000)
+  conflict <- ifelse(d$violent_external == 1, "Yes", "No")
+
+  map_dfr(c("No", "Yes"), function(g) {
+    idx <- which(conflict == g)
+    prop <- rowMeans(yrep[, idx, drop = FALSE])
+    tibble(
+      Marker = unname(marker_labels[m]),
+      conflict = g,
+      observed = mean(d[[m]][idx]),
+      lo = as.numeric(quantile(prop, 0.025)),
+      hi = as.numeric(quantile(prop, 0.975))
+    )
+  })
+}) |>
+  mutate(Marker = factor(Marker, levels = rev(unname(marker_labels[markers]))))
+
+ggplot(ppc, aes(y = Marker, colour = conflict)) +
+  geom_linerange(aes(xmin = lo, xmax = hi), linewidth = 3, alpha = 0.4,
+                 position = position_dodge(width = 0.5)) +
+  geom_point(aes(x = observed), size = 2,
+             position = position_dodge(width = 0.5)) +
+  scale_colour_manual(values = c(No = "#8FBF9F", Yes = "#D98B72")) +
+  labs(x = "Marker prevalence", y = NULL, colour = "External conflict",
+       subtitle = "Bars: 95% posterior predictive interval. Points: observed proportion.") +
+  theme_bw(base_size = 12) +
+  theme(legend.position = "top")
 
 ```
 
@@ -109,14 +155,23 @@ fmt <- function(est, lo, hi) sprintf("%.2f [%.2f, %.2f]", est, lo, hi)
 
 fixed_tbl <- map_dfr(markers, function(m) {
   fit <- fits[[m]]$fit
-  fx  <- fixef(fit) # rows: Intercept, violent_external, year_scaled
+  fx <- fixef(fit) # rows: Intercept, violent_external, year_scaled
 
   tibble(
-    Marker           = marker_labels[m],
-    N                = fits[[m]]$n,
-    Intercept        = fmt(fx["Intercept","Estimate"], fx["Intercept","Q2.5"], fx["Intercept","Q97.5"]),
-    violent_external = fmt(fx["violent_external","Estimate"], fx["violent_external","Q2.5"], fx["violent_external","Q97.5"]),
-    year_scaled      = fmt(fx["year_scaled","Estimate"], fx["year_scaled","Q2.5"], fx["year_scaled","Q97.5"])
+    Marker = marker_labels[m],
+    N = fits[[m]]$n,
+    Intercept = fmt(
+      fx["Intercept","Estimate"],
+      fx["Intercept","Q2.5"],
+      fx["Intercept","Q97.5"]),
+    violent_external = fmt(
+      fx["violent_external","Estimate"],
+      fx["violent_external","Q2.5"],
+      fx["violent_external","Q97.5"]),
+    year_scaled = fmt(
+      fx["year_scaled","Estimate"],
+      fx["year_scaled","Q2.5"],
+      fx["year_scaled","Q97.5"])
   )
 })
 
@@ -133,14 +188,15 @@ Oceania-Australia) the raw regional rates are too thin to interpret.
 
 sd_tbl <- map_dfr(markers, function(m) {
   fit <- fits[[m]]$fit
-  rf  <- summary(fit)$random$world_region  # row: sd(Intercept)
+  rf <- summary(fit)$random$world_region  # row: sd(Intercept)
 
   tibble(
-    Marker          = marker_labels[m],
-    N               = fits[[m]]$n,
-    sd_world_region = fmt(rf["sd(Intercept)","Estimate"],
-                          rf["sd(Intercept)","l-95% CI"],
-                          rf["sd(Intercept)","u-95% CI"])
+    Marker = marker_labels[m],
+    N = fits[[m]]$n,
+    sd_world_region = fmt(
+      rf["sd(Intercept)","Estimate"],
+      rf["sd(Intercept)","l-95% CI"],
+      rf["sd(Intercept)","u-95% CI"])
   )
 })
 
@@ -154,29 +210,32 @@ comparable.
 
 ```{r hypothesis_ame_baseline}
 
+# G-computation over the observed covariate distribution; draws are reused by the plots below.
+# avg_predictions rather than avg_comparisons: differencing the two levels gives the same
+# contrast. But we need this for the base-rates plot
+ame_all <- map_dfr(markers, function(m) {
+  avg_predictions(fits[[m]]$fit, variables = list(violent_external = c(0, 1)), re_formula = NA) |>
+    posterior_draws() |>
+    select(drawid, violent_external, draw) |>
+    pivot_wider(names_from = violent_external, values_from = draw, names_prefix = "cond") |>
+    mutate(ame = cond1 - cond0, marker = m)
+})
+
 results_tbl <- map_dfr(markers, function(m) {
-  fit <- fits[[m]]$fit
-  d   <- fits[[m]]$data
-
-  h <- hypothesis(fit, "violent_external > 0", alpha = 0.025)$hypothesis
-
-  nd <- expand_grid(violent_external = c(0,1), year_scaled = 0,
-                    world_region = unique(d$world_region))
-  ame <- fit |> epred_draws(newdata = nd, re_formula = NA) |> ungroup() |>
-    group_by(.draw, violent_external) |>
-    summarise(p = mean(.epred), .groups = "drop") |>
-    pivot_wider(names_from = violent_external, values_from = p, names_prefix = "cond") |>
-    mutate(ame = cond1 - cond0) |> pull(ame)
+  h <- hypothesis(fits[[m]]$fit, "violent_external > 0", alpha = 0.025)$hypothesis
+  ame <- ame_all$ame[ame_all$marker == m]
 
   tibble(
     Marker = marker_labels[m],
-    Type   = marker_type[m],
-    N      = fits[[m]]$n,
-    beta   = h$Estimate,
-    ci_lo  = h$CI.Lower,
-    ci_hi  = h$CI.Upper,
+    Type = marker_type[m],
+    N = fits[[m]]$n,
+    beta = h$Estimate,
+    ci_lo = h$CI.Lower,
+    ci_hi = h$CI.Upper,
     post_prob = h$Post.Prob,
-    AME    = mean(ame)
+    AME = mean(ame),
+    AME_lo = as.numeric(quantile(ame, 0.025)),
+    AME_hi = as.numeric(quantile(ame, 0.975))
   )
 }) |> mutate(across(where(is.numeric), \(x) round(x, 2)))
 
@@ -185,22 +244,10 @@ write_csv(results_tbl, here("data","model","external_markers_present","results",
 
 ```
 
-AME draws for all markers, kept as draws so both plots below can be built from them (the
-base rates are the cond0/cond1 pair before collapsing to their difference). Same
-construction as the AME column of the table above.
+Marker orderings and labels for both plots below, from the AME draws computed above (the
+base rates are the cond0/cond1 pair before collapsing to their difference).
 
-```{r ame_draws}
-
-ame_all <- map_dfr(markers, function(m) {
-  fit <- fits[[m]]$fit; d <- fits[[m]]$data
-  nd <- expand_grid(violent_external = c(0,1), year_scaled = 0,
-                    world_region = unique(d$world_region))
-  fit |> epred_draws(newdata = nd, re_formula = NA) |> ungroup() |>
-    group_by(.draw, violent_external) |>
-    summarise(p = mean(.epred), .groups = "drop") |>
-    pivot_wider(names_from = violent_external, values_from = p, names_prefix = "cond") |>
-    mutate(ame = cond1 - cond0, marker = m)
-})
+```{r plot_orderings}
 
 # two orderings, following 1_external.Rmd: the base-rates plot sorts by prevalence under
 # the focal condition, the AME plot by effect size. The permanent/transitory split is
@@ -228,7 +275,7 @@ p_base_rates <- ame_all |>
   pivot_longer(c(cond0, cond1), names_to = "condition", values_to = "p") |>
   mutate(condition = fct_recode(condition,
                                 "No violent conflict" = "cond0",
-                                "Violent conflict"    = "cond1"),
+                                "Violent conflict" = "cond1"),
          marker_label = factor(n_labels[marker], levels = n_labels[marker_order_prevalence])) |>
   ggplot(aes(x = p, y = marker_label, fill = condition)) +
   stat_halfeye(.width = c(0.66, 0.95), point_interval = mean_qi,
@@ -237,15 +284,15 @@ p_base_rates <- ame_all |>
   # headroom at the top so the last marker's density is not clipped by the panel
   scale_y_discrete(expand = expansion(add = c(0.6, 1.0))) +
   scale_fill_manual(values = c("No violent conflict" = "#8FBF9F",
-                               "Violent conflict"    = "#D98B72")) +
-  labs(x = "Estimated prevalence (given markers present)", y = NULL, fill = NULL) +
+                               "Violent conflict" = "#D98B72")) +
+  labs(x = "Estimated prevalence (given ERM)", y = NULL, fill = NULL) +
   theme_bw(base_size = 16) +
   theme(
-    axis.title.x    = element_text(size = 17),
-    axis.text.y     = element_text(size = 15),
-    axis.text.x     = element_text(size = 14),
+    axis.title.x = element_text(size = 17),
+    axis.text.y = element_text(size = 15),
+    axis.text.x = element_text(size = 14),
     legend.position = "top",
-    plot.margin     = margin(12, 16, 12, 16)
+    plot.margin = margin(12, 16, 12, 16)
   )
 
 ggsave(here("data","model","external_markers_present","results","markers_present_base_rates_baseline.pdf"),
@@ -269,10 +316,10 @@ p_ame <- ame_all |>
   labs(x = "Average marginal effect (probability)", y = NULL) +
   theme_bw(base_size = 16) +
   theme(
-    axis.title.x    = element_text(size = 17),
-    axis.text.y     = element_text(size = 15),
-    axis.text.x     = element_text(size = 14),
-    plot.margin     = margin(12, 16, 12, 16)
+    axis.title.x = element_text(size = 17),
+    axis.text.y = element_text(size = 15),
+    axis.text.x = element_text(size = 14),
+    plot.margin = margin(12, 16, 12, 16)
   )
 
 ggsave(here("data","model","external_markers_present","results","markers_present_ame_baseline.pdf"),

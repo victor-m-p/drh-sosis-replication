@@ -1,0 +1,6 @@
+Model,N,divergences,max_rhat,min_bulk_ess,min_tail_ess
+Violent external conflict ~ state,352,0,1,7549,11054
+Extra-ritual in-group markers ~ state,299,0,1.001,4910,7763
+Extra-ritual in-group markers ~ state + conflict,299,0,1.001,5189,7223
+Permanent scarring ~ state,330,0,1,6107,9245
+Permanent scarring ~ state + conflict,330,0,1.001,7178,9758

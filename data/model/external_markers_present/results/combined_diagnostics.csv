@@ -1,0 +1,3 @@
+model,divergences,max_rhat,min_bulk_ess,min_tail_ess
+A,0,1.001,4407,8477
+B,0,1.001,4048,8160
