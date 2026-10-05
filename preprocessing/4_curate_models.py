@@ -2,19 +2,19 @@
 vmp 2026-03-29
 Merge answerset with language tip mapping and save per-marker CSVs for these analyses:
 
-  model/external/input/             predictor: violent_external (all mapped entries)
-  model/internal/input/             predictor: violent_internal (violent_external == 0)
-  model/external_noeHRAF/input/     same as external, excluding eHRAF entries
-  model/internal_noeHRAF/input/     same as internal, excluding eHRAF entries
-  model/internal_only/input/        predictor: internal_only (Sosis et al. 2007's grouping —
-                                     internal conflict present AND external conflict absent,
-                                     vs. everything else; see internal_only_flag below)
-  model/internal_only_noeHRAF/input/  same as internal_only, excluding eHRAF entries
+  model/external/input/                  predictor: violent_external (full sample)
+  model/internal/input/                  predictor: violent_internal (violent_external == 0)
+  model/external_noeHRAF/input/          same as external, excluding eHRAF entries
+  model/internal_only/input/             predictor: internal_only (Sosis et al. 2007's grouping —
+                                          internal conflict present AND external conflict absent,
+                                          vs. everything else; see internal_only_flag below)
+  model/external_markers_present/input/  same as external, six child markers only,
+                                          restricted to extra_ritual_group_markers == 1
 
 Input:  data/preprocessed/answerset.csv
         data/preprocessed/language_master.csv
 Output: data/model/{analysis}/input/{marker}.csv
-        data/preprocessed/tip_map.csv (entry_id -> tip_name, for 6_language_phylo* and 7_covariance_matrix.Rmd)
+        data/preprocessed/tip_map.csv (entry_id -> tip_name, for 6_language_phylo*.py)
 """
 
 import os
@@ -33,7 +33,7 @@ dependent_variables = [
 
 # internal_only: 1 if internal conflict present and external conflict absent, else 0.
 # NaN if internal itself is missing (excluded downstream). Computed on the full answerset
-# before any filtering, so answerset_no_ehraf (below) inherits it directly.
+# before any filtering.
 def internal_only_flag(vi, ve):
     if pd.isna(vi):
         return float("nan")
@@ -76,19 +76,7 @@ for dv in dependent_variables:
     out = out.merge(tip_map, on="entry_id", how="left")
     out.to_csv(f"../data/model/external_noeHRAF/input/{dv}.csv", index=False)
 
-# 4. Internal warfare analysis — eHRAF excluded
-answerset_no_ext_no_ehraf = answerset_no_ext[answerset_no_ext["data_source"] != "eHRAF"]
-
-os.makedirs("../data/model/internal_noeHRAF/input", exist_ok=True)
-
-for dv in dependent_variables:
-    out = process_time_region(
-        answerset_no_ext_no_ehraf, "entry_id", "violent_internal", dv, "year_scaled", "world_region",
-    )
-    out = out.merge(tip_map, on="entry_id", how="left")
-    out.to_csv(f"../data/model/internal_noeHRAF/input/{dv}.csv", index=False)
-
-# 5. Internal-only warfare analysis (full sample)
+# 4. Internal-only warfare analysis (full sample)
 os.makedirs("../data/model/internal_only/input", exist_ok=True)
 
 for dv in dependent_variables:
@@ -98,17 +86,7 @@ for dv in dependent_variables:
     out = out.merge(tip_map, on="entry_id", how="left")
     out.to_csv(f"../data/model/internal_only/input/{dv}.csv", index=False)
 
-# 6. Internal-only warfare analysis — eHRAF excluded
-os.makedirs("../data/model/internal_only_noeHRAF/input", exist_ok=True)
-
-for dv in dependent_variables:
-    out = process_time_region(
-        answerset_no_ehraf, "entry_id", "internal_only", dv, "year_scaled", "world_region",
-    )
-    out = out.merge(tip_map, on="entry_id", how="left")
-    out.to_csv(f"../data/model/internal_only_noeHRAF/input/{dv}.csv", index=False)
-
-# 7. External warfare analysis, restricted to entries where markers are present
+# 5. External warfare analysis, restricted to entries where markers are present
 #
 # The six markers below are child questions of "Are extra-ritual in-group markers
 # present"; a coder only sees them when that parent is answered "Yes". 1_curate_data.py
