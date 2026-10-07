@@ -6,12 +6,8 @@ dependencies:
   - numpy
   - pandas
   - matplotlib
-  - scipy
-  - statsmodels
   - jupyterlab
   - ipykernel
   - biopython
-  - pip
-  - pip:
-      - seaborn==0.13.2
-      - prince
+  - geopandas
+  - geodatasets
